@@ -1,9 +1,9 @@
 /**
  * Created by Yanliang Han on 2016/3/12.
  */
-public class DynamicProgramming {
+public class DynamicProgrammingSolutions {
 
-    public static class Triangle {
+    public static class TriangleSolutions {
         /**
          * @param triangle: a list of lists of integers.
          * @return: An integer, minimum path sum.
@@ -71,7 +71,7 @@ public class DynamicProgramming {
         }
     }
 
-    public static class minPathValue {
+    public static class PathSolutions {
         /**
          * @param grid: a list of lists of integers.
          * @return: An integer, minimizes the sum of all numbers along its path
@@ -105,18 +105,63 @@ public class DynamicProgramming {
             // answer
             return minFromOrigin[M-1][N-1];
         }
+
+        /**
+         * @param n, m: positive integer (1 <= n ,m <= 100)
+         * @return an integer
+         */
+        public int uniquePaths(int m, int n) {
+            // write your code here
+            if (m < 1 || n < 1) {
+                return 1;
+            }
+
+            // state f[x][y] means Num of uniquePaths from 0,0
+            int[][] paths = new int[m][n];
+
+            // initialize
+            paths[0][0] = 1;
+            for (int x = 1; x < m; x++) {
+                paths[x][0] = 1;
+            }
+            for (int y = 1; y < n; y++) {
+                paths[0][y] = 1;
+            }
+
+            // top down
+            for (int x = 1; x < m; x++) {
+                for (int y = 1; y < n; y++) {
+                    paths[x][y] = paths[x-1][y] + paths[x][y-1];
+                }
+            }
+
+            // answer
+            if (IS_TESTING) {
+                for (int x = 0; x < m; x++) {
+                    for (int y = 0; y < n; y++) {
+                        System.out.print(paths[x][y] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+            return paths[m-1][n-1];
+        }
     }
+
+    private static final boolean IS_TESTING = true;
 
     public static void main(String[] args) {
 //        int[][] triangle = new int[2][];
 //        triangle[0] = new int[]{0};
 //        triangle[1] = new int[]{-1, 2};
-//        System.out.println(new Triangle().minimumTotalTopDown(triangle));
+//        System.out.println(new TriangleSolutions().minimumTotalTopDown(triangle));
 
 
-        int[][] grid = new int[2][];
-        grid[0] = new int[]{0, 2};
-        grid[1] = new int[]{-1, 0};
-        System.out.println(new minPathValue().minPathSum(grid));
+//        int[][] grid = new int[2][];
+//        grid[0] = new int[]{0, 2};
+//        grid[1] = new int[]{-1, 0};
+//        System.out.println(new PathSolutions().minPathSum(grid));
+
+        System.out.println(new PathSolutions().uniquePaths(3, 62));
     }
 }
