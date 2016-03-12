@@ -146,6 +146,32 @@ public class DynamicProgrammingSolutions {
             }
             return paths[m-1][n-1];
         }
+
+        /**
+         * @param n: An integer
+         * @return: An integer
+         */
+        public int climbStairs(int n) {
+            // write your code here
+            if (n <= 1) {
+                return 1;
+            }
+
+            // state f(n) number of ways to reach n
+            int[] numOfWays = new int[n];
+
+            // initialize
+            numOfWays[0] = 1;
+            numOfWays[1] = 2;
+
+            // top Down
+            for (int x = 2; x < n; x++) {
+                numOfWays[x] = numOfWays[x - 1] + numOfWays[x - 2];
+            }
+
+            // answer
+            return numOfWays[n-1];
+        }
     }
 
     private static final boolean IS_TESTING = true;
@@ -162,6 +188,12 @@ public class DynamicProgrammingSolutions {
 //        grid[1] = new int[]{-1, 0};
 //        System.out.println(new PathSolutions().minPathSum(grid));
 
-        System.out.println(new PathSolutions().uniquePaths(3, 62));
+//        System.out.println(new PathSolutions().uniquePaths(3, 62));
+
+        System.out.println(new PathSolutions().climbStairs(0));
+        System.out.println(new PathSolutions().climbStairs(1));
+        System.out.println(new PathSolutions().climbStairs(2));
+        System.out.println(new PathSolutions().climbStairs(3));
+        System.out.println(new PathSolutions().climbStairs(4));
     }
 }
