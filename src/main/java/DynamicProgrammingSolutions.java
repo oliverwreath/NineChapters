@@ -203,7 +203,7 @@ public class DynamicProgrammingSolutions {
             return canJump[n-1];
         }
 
-        public boolean canJump(int[] A) {
+        public boolean canJump2(int[] A) {
             // wirte your code here
             if (A == null || A.length < 1) {
                 return true;
@@ -228,6 +228,29 @@ public class DynamicProgrammingSolutions {
 
             // answer
             return canJump[n-1];
+        }
+
+        public boolean canJump(int[] A) {
+            // wirte your code here
+            if (A == null || A.length < 1) {
+                return true;
+            }
+
+            int n = A.length;
+            // state f[i] means is_i_reachable
+
+            // initialize
+            int farthest = A[0];
+
+            // jump right approach
+            for (int i = 1; i < n; i++) {
+                if (i <= farthest && i + A[i] > farthest) {
+                    farthest = i + A[i];
+                }
+            }
+
+            // answer
+            return farthest >= n-1? true: false;
         }
     }
 
