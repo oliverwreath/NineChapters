@@ -252,6 +252,70 @@ public class DynamicProgrammingSolutions {
             // answer
             return farthest >= n-1? true: false;
         }
+
+        /**
+         * @param A: A list of lists of integers
+         * @return: An integer
+         */
+        public int jump(int[] A) {
+            // wirte your code here
+            if (A == null || A.length < 1) {
+                return 0;
+            }
+
+            int n = A.length;
+            // state f[i] means is_i_reachable
+            JumpResult[] jumpResults = new JumpResult[n];
+
+            // initialize
+            jumpResults[0] = new JumpResult(true, 0);
+            for (int i = 1; i < n; i++) {
+                jumpResults[i] = new JumpResult();
+            }
+
+            // jump right approach
+            for (int i = 0; i < n-1; i++) {
+                if (jumpResults[i].canJump) {
+                    for (int j = 1; j <= A[i] && (i + j < n); j++) {
+                        jumpResults[i + j].canJump = true;
+                        jumpResults[i + j].minJump = Math.min(jumpResults[i + j].minJump, jumpResults[i].minJump+1);
+                    }
+                }
+            }
+
+            if (IS_TESTING) {
+                for (int i = 0; i < n-1; i++) {
+                    System.out.println(jumpResults[i]);
+                }
+            }
+            // answer
+            if (jumpResults[n-1].canJump) {
+                return jumpResults[n - 1].minJump;
+            } else {
+                return 0;
+            }
+        }
+
+        private class JumpResult{
+            boolean canJump = false;
+            int minJump = Integer.MAX_VALUE;
+
+            public JumpResult() {
+            }
+
+            public JumpResult(boolean canJump, int minJump) {
+                this.canJump = canJump;
+                this.minJump = minJump;
+            }
+
+            @Override
+            public String toString() {
+                return "JumpResult{" +
+                        "canJump=" + canJump +
+                        ", minJump=" + minJump +
+                        '}';
+            }
+        }
     }
 
     private static final boolean IS_TESTING = true;
@@ -276,9 +340,18 @@ public class DynamicProgrammingSolutions {
 //        System.out.println(new PathSolutions().climbStairs(3));
 //        System.out.println(new PathSolutions().climbStairs(4));
 
+//        int[] A = new int[]{2,3,1,1,4};
+//        System.out.println(new PathSolutions().canJump(A));
+//        int[] B = new int[]{3,2,1,0,4};
+//        System.out.println(new PathSolutions().canJump(B));
+//        int[] C = new int[]{13,52,42,21,58};
+//        System.out.println(new PathSolutions().canJump(C));
+
         int[] A = new int[]{2,3,1,1,4};
-        System.out.println(new PathSolutions().canJump(A));
+        System.out.println(new PathSolutions().jump(A));
         int[] B = new int[]{3,2,1,0,4};
-        System.out.println(new PathSolutions().canJump(B));
+        System.out.println(new PathSolutions().jump(B));
+        int[] C = new int[]{13,52,42,21,58};
+        System.out.println(new PathSolutions().jump(C));
     }
 }
