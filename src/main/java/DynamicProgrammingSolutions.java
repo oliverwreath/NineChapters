@@ -172,6 +172,63 @@ public class DynamicProgrammingSolutions {
             // answer
             return numOfWays[n-1];
         }
+
+        /**
+         * @param A: A list of integers
+         * @return: The boolean answer
+         */
+        public boolean canJump1(int[] A) {
+            // wirte your code here
+            if (A == null || A.length < 1) {
+                return true;
+            }
+
+            int n = A.length;
+            // state f[i] means is_i_reachable
+            boolean[] canJump = new boolean[n];
+
+            // initialize
+            canJump[0] = true;
+
+            // jump right approach
+            for (int i = 0; i < n-1; i++) {
+                if (canJump[i]) {
+                    for (int j = 1; j <= A[i] && (i + j < n); j++) {
+                        canJump[i + j] = true;
+                    }
+                }
+            }
+
+            // answer
+            return canJump[n-1];
+        }
+
+        public boolean canJump(int[] A) {
+            // wirte your code here
+            if (A == null || A.length < 1) {
+                return true;
+            }
+
+            int n = A.length;
+            // state f[i] means is_i_reachable
+            boolean[] canJump = new boolean[n];
+
+            // initialize
+            canJump[0] = true;
+
+            // search left
+            for (int i = 1; i < n; i++) {
+                for (int j = 0; j < i; j++) {
+                    if (canJump[j] && j + A[j] >= i) {
+                        canJump[i] = true;
+                        break;
+                    }
+                }
+            }
+
+            // answer
+            return canJump[n-1];
+        }
     }
 
     private static final boolean IS_TESTING = true;
@@ -190,10 +247,15 @@ public class DynamicProgrammingSolutions {
 
 //        System.out.println(new PathSolutions().uniquePaths(3, 62));
 
-        System.out.println(new PathSolutions().climbStairs(0));
-        System.out.println(new PathSolutions().climbStairs(1));
-        System.out.println(new PathSolutions().climbStairs(2));
-        System.out.println(new PathSolutions().climbStairs(3));
-        System.out.println(new PathSolutions().climbStairs(4));
+//        System.out.println(new PathSolutions().climbStairs(0));
+//        System.out.println(new PathSolutions().climbStairs(1));
+//        System.out.println(new PathSolutions().climbStairs(2));
+//        System.out.println(new PathSolutions().climbStairs(3));
+//        System.out.println(new PathSolutions().climbStairs(4));
+
+        int[] A = new int[]{2,3,1,1,4};
+        System.out.println(new PathSolutions().canJump(A));
+        int[] B = new int[]{3,2,1,0,4};
+        System.out.println(new PathSolutions().canJump(B));
     }
 }
