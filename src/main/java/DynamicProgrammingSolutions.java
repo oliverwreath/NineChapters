@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by Yanliang Han on 2016/3/12.
  */
@@ -318,9 +321,130 @@ public class DynamicProgrammingSolutions {
         }
     }
 
+    private static class SubSequenceSolutions{
+        /**
+         * @param nums: The integer array
+         * @return: The length of LIS (longest increasing subsequence)
+         */
+        public int longestIncreasingSubsequence(int[] nums) {
+            // write your code here
+            if (nums == null || nums.length == 0) {
+                return 0;
+            }
+
+            int n = nums.length;
+            // state f(x) the longest from 0->x
+            int[] longestBy = new int[n];
+
+            // initialization
+            for (int i = 0; i < n; i++) {
+                longestBy[i] = 1;
+            }
+
+            // left to right
+            for (int x = 1; x < n; x++) {
+                for (int before = 0; before < x; before++) {
+                    if (nums[before] <= nums[x]) {
+                        longestBy[x] = Math.max(longestBy[x], longestBy[before] +1);
+                    }
+                }
+                if (IS_TESTING) {
+                    System.out.println(longestBy[x] + "_" + longestBy[x]);
+                }
+            }
+
+            // answer
+            int max = longestBy[0];
+            for (int i = 1; i < n; i++) {
+                max = Math.max(max, longestBy[i]);
+            }
+            return max;
+        }
+    }
+
+    private static class PalindromSolutions{
+        /**
+         * @param s a string
+         * @return an integer
+         */
+        public int minCut(String s) {
+            // write your code here
+
+            return 0;
+        }
+
+        /**
+         * @param s: A string s
+         * @param dict: A dictionary of words dict
+         */
+        public boolean wordBreak(String s, Set<String> dict) {
+            // write your code here
+            if (s == null || s.length() == 0) {
+                return true;
+            }
+            if (dict == null || dict.size() == 0) {
+                return false;
+            }
+
+            int n = s.length();
+            // state
+            int maxLength = getMaxLength(dict);
+            boolean[] f = new boolean[n+1];
+
+            // initialize
+            f[0] = true;
+
+            // left to right approach
+            for (int i = 1; i <= n; i++) {
+                for (int j = (Math.max(0, i - maxLength)); j < i; j++) {
+                    if (f[j] && dict.contains(s.substring(j, i))) {
+                        f[i] = true;
+                        break;
+                    }
+                }
+                if (IS_TESTING) {
+                    System.out.print(f[i] + " ");
+                }
+                System.out.println();
+            }
+
+            // answer
+            return f[n];
+        }
+
+        private int getMaxLength(Set<String> dict) {
+            if (dict == null || dict.size() == 0) {
+                return 0;
+            }
+
+            int maxLength = Integer.MIN_VALUE;
+            for (String s : dict) {
+                maxLength = Math.max(maxLength, s.length());
+            }
+
+            return maxLength;
+        }
+    }
+
     private static final boolean IS_TESTING = true;
 
     public static void main(String[] args) {
+        String s = "lintcode";
+        Set<String> dict = new HashSet<String>(){{
+            add("lint");
+            add("code");
+        }};
+        System.out.println(s.substring(1, 4));
+        System.out.println(new PalindromSolutions().wordBreak(s, dict));
+
+//        int[] A = new int[]{5,4,1,2,3};
+//        System.out.println(new SubSequenceSolutions().longestIncreasingSubsequence(A));
+//        int[] B = new int[]{4,2,4,5,3,7};
+//        System.out.println(new SubSequenceSolutions().longestIncreasingSubsequence(B));
+
+//        给出[]，这个LIS是[1,2,3]，返回 3
+//
+//        给出[]，这个LIS是[4,4,5,7]，返回 4
 //        int[][] triangle = new int[2][];
 //        triangle[0] = new int[]{0};
 //        triangle[1] = new int[]{-1, 2};
@@ -347,11 +471,11 @@ public class DynamicProgrammingSolutions {
 //        int[] C = new int[]{13,52,42,21,58};
 //        System.out.println(new PathSolutions().canJump(C));
 
-        int[] A = new int[]{2,3,1,1,4};
-        System.out.println(new PathSolutions().jump(A));
-        int[] B = new int[]{3,2,1,0,4};
-        System.out.println(new PathSolutions().jump(B));
-        int[] C = new int[]{13,52,42,21,58};
-        System.out.println(new PathSolutions().jump(C));
+//        int[] A = new int[]{2,3,1,1,4};
+//        System.out.println(new PathSolutions().jump(A));
+//        int[] B = new int[]{3,2,1,0,4};
+//        System.out.println(new PathSolutions().jump(B));
+//        int[] C = new int[]{13,52,42,21,58};
+//        System.out.println(new PathSolutions().jump(C));
     }
 }
