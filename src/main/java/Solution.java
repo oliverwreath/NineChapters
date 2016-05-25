@@ -8,8 +8,8 @@ public class Solution {
 //        plusOneTest();
 //        strStrTest();
 //        searchInsertTest();
-//        removeDuplicatesTest();
-        removeElementTest();
+        removeDuplicatesTest();
+//        removeElementTest();
     }
 
     public static void removeElementTest() {
@@ -83,27 +83,24 @@ public class Solution {
             return 1;
         }
 
-        int len = nums.length;
-        int resultLength = len;
         int i = 0;
-        int k = 0;
-        while (k < len) {
-            int j = k;
-            while (k < (len - 1) && nums[k] == nums[k + 1]) {
-                k++;
+        int j = 0;
+        int len = nums.length;
+        int resultLength = 0;
+        while (j < len) {
+            int k = j;
+            while (j < (len - 1) && nums[j] == nums[j + 1]) {
+                j++;
             }
-            if (k - j == 0) {
-                // no duplicates
-                nums[i] = nums[k];
-                i++;
-            } else if (k - j >= 1) {
-                // 2 or more duplicates
-                nums[i] = nums[k - 1];
-                nums[i + 1] = nums[k];
-                resultLength -= (k - j - 1);
-                i += 2;
+            int diff = j - k;
+            if (diff == 0) {
+                nums[i++] = nums[j++];
+                resultLength++;
+            } else {
+                nums[i++] = nums[j];
+                nums[i++] = nums[j++];
+                resultLength += 2;
             }
-            k++;
         }
 
         return resultLength;
@@ -113,25 +110,20 @@ public class Solution {
         if (nums == null || nums.length < 1) {
             return 0;
         }
-        if (nums.length < 2) {
-            return 1;
-        }
 
-        int len = nums.length;
-        int uniqueLength = len;
         int i = 0;
         int j = 0;
+        int len = nums.length;
+        int resultLength = 0;
         while (j < len) {
-            while (j < (len - 1) && (nums[j] == nums[j + 1])) {
+            while (j < (len - 1) && (nums[j] == nums[j + 1]) ) {
                 j++;
-                uniqueLength--;
             }
-            nums[i] = nums[j];
-            i++;
-            j++;
+            nums[i++] = nums[j++];
+            resultLength++;
         }
 
-        return uniqueLength;
+        return resultLength;
     }
 
     public static void searchInsertTest() {
