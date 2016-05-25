@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * Created by Yanliang Han on 2016/5/23.
  */
-public class Solution {
+public class RemoveDuplicates {
     public static void main(String[] args) {
 //        plusOneTest();
 //        strStrTest();
