@@ -4,7 +4,136 @@
 public class BinarySearch {
     public static void main(String[] args) {
 //        searchInsertTest();
-        searchMatrixTest();
+//        searchMatrixTest();
+//        binarySearchTest();
+        findMinTest();
+    }
+
+    public static void findMinTest() {
+        int[] ints = {4,5,6,7,0,1,2};
+        System.out.println(findMin(ints));
+        int[] ints2 = {4,5,6,-1,0,1,2};
+        System.out.println(findMin(ints2));
+        int[] ints3 = {4,5,-2,-1,0,1,2};
+        System.out.println(findMin(ints3));
+        int[] ints4 = {999,999,1000,1000,10000,0,999,999,999};
+        System.out.println(findMin(ints4));
+    }
+
+    public static int findMin(int[] num) {
+        if (num == null || num.length < 1) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = num.length - 1;
+        while (start + 1 < end) {
+            int mid = (end - start) / 2 + start;
+            if (num[start] < num[end]) {
+                return start*1000000+num[start];
+            } else {
+                if (num[mid] == num[end]) {
+                    start = mid;
+                } else if (num[mid] < num[end]) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            }
+//            } else if (num[start] > num[end]){
+//                if (num[mid] <= num[end]) {
+//                    end = mid;
+//                } else {
+//                    start = mid;
+//                }
+//            } else {
+//                // ==
+//                if (num[mid] < num[end]) {
+//                    end = mid;
+//                } else if (num[mid] > num[end]) {
+//                    start = mid;
+//                } else {
+//
+//                }
+//            }
+        }
+
+        if (num[start] < num[end]) {
+            return start*1000000+num[start];
+        } else {
+            return end*1000000+num[end];
+        }
+    }
+
+    public static int findMin1(int[] num) {
+        if (num == null || num.length < 1) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = num.length - 1;
+        while (start + 1 < end) {
+            int mid = (end - start) / 2 + start;
+            if (num[start] < num[end]) {
+                return num[start];
+            } else {
+                if (num[mid] < num[end]) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            }
+        }
+
+        if (num[start] < num[end]) {
+            return num[start];
+        } else {
+            return num[end];
+        }
+    }
+
+    private static boolean ifMin(int index, int[] num) {
+        if (index == 0) {
+            return num[index] < num[num.length - 1];
+        } else {
+            return num[index] < num[index - 1];
+        }
+    }
+
+    public static void binarySearchTest() {
+        int[] ints = {1, 2, 3, 3, 4, 5, 10};
+        for (int i = 1; i < 11; i++) {
+            System.out.println(binarySearch(ints, i));
+        }
+        int[] ints2 = {1, 3, 5, 7};
+        System.out.println(binarySearch(ints2, 3));
+    }
+
+    public static int binarySearch(int[] nums, int target) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        int len = nums.length;
+        int start = 0;
+        int end = len - 1;
+        while (start + 1 < end) {
+            int mid = (end - start) / 2 + start;
+            if (nums[mid] < target) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+
+        if (nums[start] == target) {
+            return start;
+        }
+        if (nums[end] == target) {
+            return end;
+        }
+
+        return -1;
     }
 
     public static void searchMatrixTest() {
@@ -15,7 +144,15 @@ public class BinarySearch {
         System.out.println(searchMatrix(matrix, target));
     }
 
-    public static boolean searchMatrix(int[][] matrix, int target) {
+    public static int searchMatrix(int[][] matrix, int target) {
+        if (matrix == null || matrix.length < 1 || matrix[0].length < 1) {
+            return 0;
+        }
+
+        return -1;
+    }
+
+    public static boolean searchMatrix1(int[][] matrix, int target) {
         if (matrix == null || matrix.length < 1 || matrix[0].length < 1) {
             return false;
         }
