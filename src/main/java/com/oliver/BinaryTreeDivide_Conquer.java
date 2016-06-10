@@ -1,34 +1,113 @@
+package com.oliver;
+
+import com.oliver.BinaryTree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class BinaryTree {
-    private static class TreeNode {
-        public int val;
-        public TreeNode left, right;
+public class BinaryTreeDivide_Conquer {
+    public static void main(String[] args) {
+        testPreorderTraversal();
+        testInorderTraversal();
+        testPostorderTraversal();
+//        TreeNode root2 = new TreeNode(1);
+//        root2.right = new TreeNode(2);
+//        root2.right.left = new TreeNode(3);
+//
+//        System.out.println("root2=" + root2);
+//        ArrayList<Integer> result2 = inorderTraversal(root2);
+//        System.out.println("result2=" + result2);
 
-        public TreeNode(int val) {
-            this.val = val;
-            this.left = this.right = null;
-        }
-
-        @Override
-        public String toString() {
-            return "TreeNode{" +
-                    "val=" + val +
-                    ", left=" + left +
-                    ", right=" + right +
-                    '}';
-        }
+//        TreeNode root = new TreeNode(1);
+//        root.right = new TreeNode(2);
+//        root.right.left = new TreeNode(3);
+////        System.out.println("maxPathSum(root)=" + maxPathSum(root));
+//        MaxPathSumSolution maxPathSumSolution = new MaxPathSumSolution();
+//        System.out.println("result=" + maxPathSumSolution.maxPathSum(root.right));
+//        System.out.println("result=" + maxPathSum(root.left));
+//        System.out.println("result=" + maxPathSum(root.right.left));
+//        System.out.println("result=" + maxPathSum(root.right.right));
     }
 
-    private static class ResultType {
-        private int singleMax;
-        private int fullMax;
+    public static void testPreorderTraversal() {
+        BinaryTree.TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
 
-        public ResultType(int singleMax, int fullMax) {
-            this.singleMax = singleMax;
-            this.fullMax = fullMax;
+        System.out.println("root=" + root);
+        ArrayList<Integer> result = preorderTraversal(root);
+        System.out.println("result=" + result);
+    }
+
+    public static ArrayList<Integer> preorderTraversal(TreeNode root) {
+        ArrayList<Integer> ret = new ArrayList<Integer>();
+        if (root == null) {
+            return ret;
         }
+
+        ArrayList<Integer> left = preorderTraversal(root.left);
+        ArrayList<Integer> right = preorderTraversal(root.right);
+
+        ret.add(root.val);
+        ret.addAll(left);
+        ret.addAll(right);
+        return ret;
+    }
+
+    public static void testInorderTraversal() {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+
+        System.out.println("root=" + root);
+        ArrayList<Integer> result = inorderTraversal(root);
+        System.out.println("result=" + result);
+    }
+
+    public static ArrayList<Integer> inorderTraversal(TreeNode root) {
+        ArrayList<Integer> ret = new ArrayList<Integer>();
+        if (root == null) {
+            return ret;
+        }
+
+        ArrayList<Integer> left = inorderTraversal(root.left);
+        ArrayList<Integer> right = inorderTraversal(root.right);
+
+        ret.addAll(left);
+        ret.add(root.val);
+        ret.addAll(right);
+        return ret;
+    }
+
+    public static void testPostorderTraversal() {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+
+        System.out.println("root=" + root);
+        ArrayList<Integer> result = postorderTraversal(root);
+        System.out.println("result=" + result);
+    }
+
+    public static ArrayList<Integer> postorderTraversal(TreeNode root) {
+        ArrayList<Integer> ret = new ArrayList<Integer>();
+        if (root == null) {
+            return ret;
+        }
+
+        ArrayList<Integer> left = postorderTraversal(root.left);
+        ArrayList<Integer> right = postorderTraversal(root.right);
+
+        ret.addAll(left);
+        ret.addAll(right);
+        ret.add(root.val);
+        return ret;
     }
 
     private static class MaxPathSumSolution {
@@ -375,37 +454,6 @@ public class BinaryTree {
 
             return postorder;
         }
-    }
-
-    public static void main(String[] args) {
-//        TreeNode root = new TreeNode(1);
-//        root.left = new TreeNode(2);
-//        root.right = new TreeNode(3);
-//        root.left.left = new TreeNode(4);
-//        root.left.right = new TreeNode(5);
-//
-//        System.out.println("root=" + root);
-//        ArrayList<Integer> result = inorderTraversal(root);
-//        System.out.println("result=" + result);
-//
-//
-//        TreeNode root2 = new TreeNode(1);
-//        root2.right = new TreeNode(2);
-//        root2.right.left = new TreeNode(3);
-//
-//        System.out.println("root2=" + root2);
-//        ArrayList<Integer> result2 = inorderTraversal(root2);
-//        System.out.println("result2=" + result2);
-
-        TreeNode root = new TreeNode(1);
-        root.right = new TreeNode(2);
-        root.right.left = new TreeNode(3);
-//        System.out.println("maxPathSum(root)=" + maxPathSum(root));
-        MaxPathSumSolution maxPathSumSolution = new MaxPathSumSolution();
-        System.out.println("result=" + maxPathSumSolution.maxPathSum(root.right));
-//        System.out.println("result=" + maxPathSum(root.left));
-//        System.out.println("result=" + maxPathSum(root.right.left));
-//        System.out.println("result=" + maxPathSum(root.right.right));
     }
 }
 

@@ -1,4 +1,4 @@
-package test;
+package com.oliver.test;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Optional;
@@ -254,9 +254,9 @@ public class GuavaTester {
             }
             Student student = (Student) object;
             // no need to handle null here
-            // Objects.equal("test", "test") == true
-            // Objects.equal("test", null) == false
-            // Objects.equal(null, "test") == false
+            // Objects.equal("com.oliver.test", "com.oliver.test") == true
+            // Objects.equal("com.oliver.test", null) == false
+            // Objects.equal(null, "com.oliver.test") == false
             // Objects.equal(null, null) == true
             return Objects.equal(firstName, student.firstName) // first name can be null
                     && Objects.equal(lastName, student.lastName) // last name can be null

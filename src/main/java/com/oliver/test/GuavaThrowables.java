@@ -1,4 +1,4 @@
-package test;
+package com.oliver.test;
 
 import com.google.common.base.Throwables;
 
