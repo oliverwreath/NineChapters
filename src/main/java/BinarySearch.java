@@ -6,7 +6,59 @@ public class BinarySearch {
 //        searchInsertTest();
 //        searchMatrixTest();
 //        binarySearchTest();
-        findMinTest();
+//        findMinTest();
+        testSearchBigSortedArray();
+    }
+
+    public static void testSearchBigSortedArray() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i + ": " + searchBigSortedArray(new ArrayReader(), i));
+        }
+    }
+
+    private static class ArrayReader {
+        private int[] innerArray = new int[]{1, 3, 6, 9, 21};
+
+        public int get(int i) {
+            if (i >= 0 && i < innerArray.length) {
+                return innerArray[i];
+            } else {
+                return Integer.MAX_VALUE;
+            }
+        }
+    }
+
+    public static int searchBigSortedArray(ArrayReader reader, int target) {
+        int ret = -1;
+
+        if (reader.get(0) == target) {
+            return 0;
+        }
+        int start = 1;
+        int end = 8;
+        while(reader.get(end) != Integer.MAX_VALUE && (reader.get(end) < target)) {
+            start = end;
+            end = end * 2;
+        }
+
+        while(start + 1 < end) {
+            int mid = (end - start) / 2 + start;
+            if (reader.get(mid) == Integer.MAX_VALUE) {
+                end = mid;
+            } else if (reader.get(mid) < target) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+
+        if (reader.get(start) == target) {
+            return start;
+        } else if (reader.get(end) == target) {
+            return end;
+        }
+
+        return ret;
     }
 
     public static void findMinTest() {
