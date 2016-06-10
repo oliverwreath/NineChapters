@@ -1,4 +1,4 @@
-package com.oliver;
+package com.oliver.BinaryTree;
 
 /**
  * Created by Yanliang Han on 2016/6/10.

@@ -1,6 +1,6 @@
-package com.oliver;
+package com.oliver.BinaryTree;
 
-import com.oliver.BinaryTree.TreeNode;
+import com.oliver.BinaryTree.BinaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Stack;
