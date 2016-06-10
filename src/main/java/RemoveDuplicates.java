@@ -14,12 +14,12 @@ public class RemoveDuplicates {
 
     public static void removeElementTest() {
         // write your code here
-        int[] A = {0,4,4,0,0,2,4,4};
+        int[] A = {0, 4, 4, 0, 0, 2, 4, 4};
         int elem = 4;
         removeElementTestHelper(A, elem);
     }
 
-    public static void removeElementTestHelper(int[] A, int elem){
+    public static void removeElementTestHelper(int[] A, int elem) {
         System.out.print(Arrays.toString(A) + " > \t");
         int newLength = removeElement(A, elem);
         if (true) {
@@ -51,19 +51,19 @@ public class RemoveDuplicates {
     }
 
     public static void removeDuplicatesTest() {
-        int[] nums = {1,1,1};
+        int[] nums = {1, 1, 1};
         removeDuplicatesTestHelper(removeDuplicates(nums), nums);
-        int[] nums2 = {1,1,2};
+        int[] nums2 = {1, 1, 2};
         removeDuplicatesTestHelper(removeDuplicates(nums2), nums2);
-        int[] nums3 = {1,1,2,2};
+        int[] nums3 = {1, 1, 2, 2};
         removeDuplicatesTestHelper(removeDuplicates(nums3), nums3);
         int[] nums4 = {1};
         removeDuplicatesTestHelper(removeDuplicates(nums4), nums4);
-        int[] nums5 = {-1014,-1014,-1014,-1012,-1012,-1011,-899,-899,-899,-898};
+        int[] nums5 = {-1014, -1014, -1014, -1012, -1012, -1011, -899, -899, -899, -898};
         removeDuplicatesTestHelper(removeDuplicates(nums5), nums5);
     }
 
-    public static void removeDuplicatesTestHelper(int uniqueLength, int[] nums){
+    public static void removeDuplicatesTestHelper(int uniqueLength, int[] nums) {
         System.out.print(Arrays.toString(nums) + " > \t");
         if (true) {
             for (int k = 0; k < uniqueLength; k++) {
@@ -116,7 +116,7 @@ public class RemoveDuplicates {
         int len = nums.length;
         int resultLength = 0;
         while (j < len) {
-            while (j < (len - 1) && (nums[j] == nums[j + 1]) ) {
+            while (j < (len - 1) && (nums[j] == nums[j + 1])) {
                 j++;
             }
             nums[i++] = nums[j++];
@@ -127,7 +127,7 @@ public class RemoveDuplicates {
     }
 
     public static void searchInsertTest() {
-        int[] A = {1,3,5,6};
+        int[] A = {1, 3, 5, 6};
         System.out.println(searchInsert(A, 5));
         System.out.println(searchInsert(A, 2));
         System.out.println(searchInsert(A, 7));

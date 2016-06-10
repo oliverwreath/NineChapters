@@ -36,12 +36,12 @@ public class BinarySearch {
         }
         int start = 1;
         int end = 8;
-        while(reader.get(end) != Integer.MAX_VALUE && (reader.get(end) < target)) {
+        while (reader.get(end) != Integer.MAX_VALUE && (reader.get(end) < target)) {
             start = end;
             end = end * 2;
         }
 
-        while(start + 1 < end) {
+        while (start + 1 < end) {
             int mid = (end - start) / 2 + start;
             if (reader.get(mid) == Integer.MAX_VALUE) {
                 end = mid;
@@ -62,13 +62,13 @@ public class BinarySearch {
     }
 
     public static void findMinTest() {
-        int[] ints = {4,5,6,7,0,1,2};
+        int[] ints = {4, 5, 6, 7, 0, 1, 2};
         System.out.println(findMin(ints));
-        int[] ints2 = {4,5,6,-1,0,1,2};
+        int[] ints2 = {4, 5, 6, -1, 0, 1, 2};
         System.out.println(findMin(ints2));
-        int[] ints3 = {4,5,-2,-1,0,1,2};
+        int[] ints3 = {4, 5, -2, -1, 0, 1, 2};
         System.out.println(findMin(ints3));
-        int[] ints4 = {999,999,1000,1000,10000,0,999,999,999};
+        int[] ints4 = {999, 999, 1000, 1000, 10000, 0, 999, 999, 999};
         System.out.println(findMin(ints4));
     }
 
@@ -82,7 +82,7 @@ public class BinarySearch {
         while (start + 1 < end) {
             int mid = (end - start) / 2 + start;
             if (num[start] < num[end]) {
-                return start*1000000+num[start];
+                return start * 1000000 + num[start];
             } else {
                 if (num[mid] == num[end]) {
                     start = mid;
@@ -111,9 +111,9 @@ public class BinarySearch {
         }
 
         if (num[start] < num[end]) {
-            return start*1000000+num[start];
+            return start * 1000000 + num[start];
         } else {
-            return end*1000000+num[end];
+            return end * 1000000 + num[end];
         }
     }
 
@@ -189,9 +189,9 @@ public class BinarySearch {
     }
 
     public static void searchMatrixTest() {
-        int[][] matrix = { {1, 3, 5, 7},
-        {10, 11, 16, 20},
-        {23, 30, 34, 50}};
+        int[][] matrix = {{1, 3, 5, 7},
+                {10, 11, 16, 20},
+                {23, 30, 34, 50}};
         int target = 3;
         System.out.println(searchMatrix(matrix, target));
     }
@@ -278,7 +278,7 @@ public class BinarySearch {
 //    }
 
     public static void searchInsertTest() {
-        int[] A = {1,3,5,6};
+        int[] A = {1, 3, 5, 6};
         int target = 5;
         System.out.println(searchInsert(A, target));
         target = 2;

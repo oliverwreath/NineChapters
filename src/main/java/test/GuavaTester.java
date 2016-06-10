@@ -82,8 +82,8 @@ public class GuavaTester {
 
         System.out.print("[ ");
 
-        for(int grade : ContiguousSet.create(range, DiscreteDomain.integers())) {
-            System.out.print(grade +" ");
+        for (int grade : ContiguousSet.create(range, DiscreteDomain.integers())) {
+            System.out.print(grade + " ");
         }
         System.out.println("]");
     }
@@ -96,15 +96,15 @@ public class GuavaTester {
         System.out.println(s1.hashCode());
         System.out.println(
                 Objects.toStringHelper(s1)
-                        .add("Name",s1.getFirstName()+" " + s1.getLastName())
+                        .add("Name", s1.getFirstName() + " " + s1.getLastName())
                         .add("Class", s1.getClassName())
                         .add("Roll No", s1.getRollNo())
                         .toString());
     }
 
     public static void testOptional() {
-        Integer value1 =  null;
-        Integer value2 =  new Integer(10);
+        Integer value1 = null;
+        Integer value2 = new Integer(10);
 
         //Optional.fromNullable - allows passed parameter to be null.
         Optional<Integer> a = Optional.fromNullable(value1);
@@ -112,7 +112,7 @@ public class GuavaTester {
         //Optional.of - throws NullPointerException if passed parameter is null
         Optional<Integer> b = Optional.of(value2);
 
-        System.out.println(sum(a,b));
+        System.out.println(sum(a, b));
     }
 
     public static Integer sum(Optional<Integer> a, Optional<Integer> b) {

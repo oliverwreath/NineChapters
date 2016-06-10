@@ -24,21 +24,21 @@ public class DynamicProgrammingSolutions {
             // initialize
             minimumToTop[0][0] = triangle[0][0];
             for (int x = 1; x < m; x++) {
-                minimumToTop[x][0] = triangle[x][0] + minimumToTop[x-1][0];
-                minimumToTop[x][x] = triangle[x][x] + minimumToTop[x-1][x-1];
+                minimumToTop[x][0] = triangle[x][0] + minimumToTop[x - 1][0];
+                minimumToTop[x][x] = triangle[x][x] + minimumToTop[x - 1][x - 1];
             }
 
             // top down
             for (int x = 1; x < m; x++) {
                 for (int y = 1; y < x; y++) {
-                    minimumToTop[x][y] = triangle[x][y] + Math.min(triangle[x-1][y], triangle[x-1][y-1]);
+                    minimumToTop[x][y] = triangle[x][y] + Math.min(triangle[x - 1][y], triangle[x - 1][y - 1]);
                 }
             }
 
             // answer
             int best = Integer.MAX_VALUE;
             for (int y = 0; y < m; y++) {
-                best = Math.min(best, minimumToTop[m-1][y]);
+                best = Math.min(best, minimumToTop[m - 1][y]);
             }
             return best;
         }
@@ -58,14 +58,14 @@ public class DynamicProgrammingSolutions {
             int[][] minimumToBottom = new int[m][m];
 
             // initialize
-            for (int x = m-1, y = 0; y < m; y++) {
+            for (int x = m - 1, y = 0; y < m; y++) {
                 minimumToBottom[x][y] = triangle[x][y];
             }
 
             // bottom up
             for (int x = m - 2; x >= 0; x--) {
                 for (int y = 0; y <= x; y++) {
-                    minimumToBottom[x][y] = triangle[x][y] + Math.min(triangle[x+1][y], triangle[x+1][y+1]);
+                    minimumToBottom[x][y] = triangle[x][y] + Math.min(triangle[x + 1][y], triangle[x + 1][y + 1]);
                 }
             }
 
@@ -106,7 +106,7 @@ public class DynamicProgrammingSolutions {
             }
 
             // answer
-            return minFromOrigin[M-1][N-1];
+            return minFromOrigin[M - 1][N - 1];
         }
 
         /**
@@ -134,7 +134,7 @@ public class DynamicProgrammingSolutions {
             // top down
             for (int x = 1; x < m; x++) {
                 for (int y = 1; y < n; y++) {
-                    paths[x][y] = paths[x-1][y] + paths[x][y-1];
+                    paths[x][y] = paths[x - 1][y] + paths[x][y - 1];
                 }
             }
 
@@ -147,7 +147,7 @@ public class DynamicProgrammingSolutions {
                     System.out.println();
                 }
             }
-            return paths[m-1][n-1];
+            return paths[m - 1][n - 1];
         }
 
         /**
@@ -173,7 +173,7 @@ public class DynamicProgrammingSolutions {
             }
 
             // answer
-            return numOfWays[n-1];
+            return numOfWays[n - 1];
         }
 
         /**
@@ -194,7 +194,7 @@ public class DynamicProgrammingSolutions {
             canJump[0] = true;
 
             // jump right approach
-            for (int i = 0; i < n-1; i++) {
+            for (int i = 0; i < n - 1; i++) {
                 if (canJump[i]) {
                     for (int j = 1; j <= A[i] && (i + j < n); j++) {
                         canJump[i + j] = true;
@@ -203,7 +203,7 @@ public class DynamicProgrammingSolutions {
             }
 
             // answer
-            return canJump[n-1];
+            return canJump[n - 1];
         }
 
         public boolean canJump2(int[] A) {
@@ -230,7 +230,7 @@ public class DynamicProgrammingSolutions {
             }
 
             // answer
-            return canJump[n-1];
+            return canJump[n - 1];
         }
 
         public boolean canJump(int[] A) {
@@ -253,7 +253,7 @@ public class DynamicProgrammingSolutions {
             }
 
             // answer
-            return farthest >= n-1? true: false;
+            return farthest >= n - 1 ? true : false;
         }
 
         /**
@@ -277,29 +277,29 @@ public class DynamicProgrammingSolutions {
             }
 
             // jump right approach
-            for (int i = 0; i < n-1; i++) {
+            for (int i = 0; i < n - 1; i++) {
                 if (jumpResults[i].canJump) {
                     for (int j = 1; j <= A[i] && (i + j < n); j++) {
                         jumpResults[i + j].canJump = true;
-                        jumpResults[i + j].minJump = Math.min(jumpResults[i + j].minJump, jumpResults[i].minJump+1);
+                        jumpResults[i + j].minJump = Math.min(jumpResults[i + j].minJump, jumpResults[i].minJump + 1);
                     }
                 }
             }
 
             if (IS_TESTING) {
-                for (int i = 0; i < n-1; i++) {
+                for (int i = 0; i < n - 1; i++) {
                     System.out.println(jumpResults[i]);
                 }
             }
             // answer
-            if (jumpResults[n-1].canJump) {
+            if (jumpResults[n - 1].canJump) {
                 return jumpResults[n - 1].minJump;
             } else {
                 return 0;
             }
         }
 
-        private class JumpResult{
+        private class JumpResult {
             boolean canJump = false;
             int minJump = Integer.MAX_VALUE;
 
@@ -321,7 +321,7 @@ public class DynamicProgrammingSolutions {
         }
     }
 
-    private static class SubSequenceSolutions{
+    private static class SubSequenceSolutions {
         /**
          * @param nums: The integer array
          * @return: The length of LIS (longest increasing subsequence)
@@ -345,7 +345,7 @@ public class DynamicProgrammingSolutions {
             for (int x = 1; x < n; x++) {
                 for (int before = 0; before < x; before++) {
                     if (nums[before] <= nums[x]) {
-                        longestBy[x] = Math.max(longestBy[x], longestBy[before] +1);
+                        longestBy[x] = Math.max(longestBy[x], longestBy[before] + 1);
                     }
                 }
                 if (IS_TESTING) {
@@ -362,7 +362,7 @@ public class DynamicProgrammingSolutions {
         }
     }
 
-    private static class PalindromSolutions{
+    private static class PalindromSolutions {
         /**
          * @param s a string
          * @return an integer
@@ -374,7 +374,7 @@ public class DynamicProgrammingSolutions {
         }
 
         /**
-         * @param s: A string s
+         * @param s:    A string s
          * @param dict: A dictionary of words dict
          */
         public boolean wordBreak(String s, Set<String> dict) {
@@ -389,7 +389,7 @@ public class DynamicProgrammingSolutions {
             int n = s.length();
             // state
             int maxLength = getMaxLength(dict);
-            boolean[] f = new boolean[n+1];
+            boolean[] f = new boolean[n + 1];
 
             // initialize
             f[0] = true;
@@ -430,7 +430,7 @@ public class DynamicProgrammingSolutions {
 
     public static void main(String[] args) {
         String s = "lintcode";
-        Set<String> dict = new HashSet<String>(){{
+        Set<String> dict = new HashSet<String>() {{
             add("lint");
             add("code");
         }};
