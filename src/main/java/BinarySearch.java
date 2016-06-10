@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by Yanliang Han on 2016/5/25.
  */
@@ -7,7 +9,53 @@ public class BinarySearch {
 //        searchMatrixTest();
 //        binarySearchTest();
 //        findMinTest();
-        testSearchBigSortedArray();
+//        testSearchBigSortedArray();
+        testSearchRange();
+    }
+
+    public static void testSearchRange() {
+        System.out.println(Arrays.toString(searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8)));
+    }
+
+    public static int[] searchRange(int[] A, int target) {
+        int[] ret = new int[]{-1, -1};
+        if (A == null || A.length < 1) {
+            return ret;
+        }
+
+        int start = 0;
+        int end = A.length - 1;
+        while (start + 1 < end) {
+            int mid = (end - start) / 2 + start;
+            if (A[mid] < target) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+        if (A[start] == target) {
+            ret[0] = start;
+        } else if (A[end] == target) {
+            ret[0] = end;
+        }
+
+        start = 0;
+        end = A.length - 1;
+        while (start + 1 < end) {
+            int mid = (end - start) / 2 + start;
+            if (A[mid] <= target) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+        if (A[end] == target) {
+            ret[1] = end;
+        } else if (A[start] == target) {
+            ret[1] = start;
+        }
+
+        return ret;
     }
 
     public static void testSearchBigSortedArray() {
