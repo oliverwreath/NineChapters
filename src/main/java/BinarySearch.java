@@ -10,7 +10,21 @@ public class BinarySearch {
 //        binarySearchTest();
 //        findMinTest();
 //        testSearchBigSortedArray();
-        testSearchRange();
+//        testSearchRange();
+        testTotalOccurrence();
+    }
+
+    public static void testTotalOccurrence() {
+        System.out.println(totalOccurrence(new int[]{5, 7, 7, 8, 8, 10}, 8));
+    }
+
+    public static int totalOccurrence(int[] A, int target) {
+        int[] ints = searchRange(A, target);
+        if (ints[0] == -1) {
+            return 0;
+        } else {
+            return ints[1] - ints[0] + 1;
+        }
     }
 
     public static void testSearchRange() {
