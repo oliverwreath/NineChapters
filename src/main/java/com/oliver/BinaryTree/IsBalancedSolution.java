@@ -54,40 +54,6 @@ public class IsBalancedSolution {
         }
     }
 
-//    //isBalanced
-//    private class ResultType {
-//        private boolean isBalanced;
-//        private int depth;
-//
-//        public ResultType(int depth, boolean isBalanced) {
-//            this.depth = depth;
-//            this.isBalanced = isBalanced;
-//        }
-//    }
-//
-//    public boolean isBalanced(BinaryTree.TreeNode root) {
-//        // write your code here
-//        if (root == null) {
-//            return true;
-//        }
-//
-//        return isBalancedHelper(root).isBalanced;
-//    }
-//
-//    public ResultType isBalancedHelper(BinaryTree.TreeNode root) {
-//        // write your code here
-//        if (root == null) {
-//            return new ResultType(0, true);
-//        }
-//
-//        ResultType leftResult = isBalancedHelper(root.left);
-//        ResultType rightResult = isBalancedHelper(root.right);
-//
-//        int depth = 1 + Math.max(leftResult.depth, rightResult.depth);
-//        boolean isBalanced = leftResult.isBalanced && rightResult.isBalanced && Math.abs(leftResult.depth - rightResult.depth) <= 1;
-//        return new ResultType(depth, isBalanced);
-//    }
-//
 //    public boolean isBalanced2(BinaryTree.TreeNode root) {
 //        // write your code here
 //        if (root == null) {

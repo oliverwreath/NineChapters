@@ -20,6 +20,25 @@ public class BinaryTree {
 //        System.out.println("result=" + maxPathSum(root.right.right));
     }
 
+    public static class TreeNode {
+        public int val;
+        public TreeNode left, right;
+
+        public TreeNode(int val) {
+            this.val = val;
+            this.left = this.right = null;
+        }
+
+        @Override
+        public String toString() {
+            return "TreeNode{" +
+                    "val=" + val +
+                    ", left=" + left +
+                    "\n, right=" + right +
+                    '}';
+        }
+    }
+
     public static TreeNode getTree() {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -44,35 +63,6 @@ public class BinaryTree {
 
         logger.trace("root = {}", root);
         return root;
-    }
-
-    public static class TreeNode {
-        public int val;
-        public TreeNode left, right;
-
-        public TreeNode(int val) {
-            this.val = val;
-            this.left = this.right = null;
-        }
-
-        @Override
-        public String toString() {
-            return "TreeNode{" +
-                    "val=" + val +
-                    ", left=" + left +
-                    "\n, right=" + right +
-                    '}';
-        }
-    }
-
-    public static class ResultType {
-        private int singleMax;
-        private int fullMax;
-
-        public ResultType(int singleMax, int fullMax) {
-            this.singleMax = singleMax;
-            this.fullMax = fullMax;
-        }
     }
 
     private static class MaxPathSumSolution {
@@ -135,64 +125,6 @@ public class BinaryTree {
             fullMax = Math.max(fullMax, Math.max(0, left.singleMax) + root.val + Math.max(0, right.singleMax));
 
             return new ResultType(singleMax, fullMax);
-        }
-    }
-
-
-    //LCA - lowest common ancestor
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode A, TreeNode B) {
-        // write your code here
-        if (root == null || root == A || root == B) {
-            return root;
-        }
-
-        TreeNode left = lowestCommonAncestor(root.left, A, B);
-        TreeNode right = lowestCommonAncestor(root.right, A, B);
-
-        if (left != null && right != null) {
-            return root;
-        }
-        if (left != null) {
-            return left;
-        }
-        if (right != null) {
-            return right;
-        }
-        return null;
-    }
-
-    private static class MaxDepthSolution {
-        //maxDepth
-        public int maxDepth(TreeNode root) {
-            // write your code here
-            if (root == null) {
-                return 0;
-            }
-            return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
-        }
-
-        private int maxDepth = Integer.MIN_VALUE;
-
-        public int maxDepth2(TreeNode root) {
-            // write your code here
-            if (root == null) {
-                return 0;
-            }
-            int currentDepth = 1;
-            maxDepthHelper(root, currentDepth);
-            return maxDepth;
-        }
-
-        private void maxDepthHelper(TreeNode root, int currentDepth) {
-            if (root == null) {
-                return;
-            }
-            if (currentDepth > maxDepth) {
-                maxDepth = currentDepth;
-            }
-            maxDepthHelper(root.left, currentDepth + 1);
-            maxDepthHelper(root.right, currentDepth + 1);
-            return;
         }
     }
 }
