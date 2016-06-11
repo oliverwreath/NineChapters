@@ -1,19 +1,37 @@
 package com.oliver.BinaryTree;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created by Yanliang Han on 2016/6/10.
  */
 public class BinaryTree {
+    private final static Logger logger = LoggerFactory.getLogger(BinaryTree.class);
+
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.right = new TreeNode(2);
-        root.right.left = new TreeNode(3);
+        TreeNode root = getTree();
+
 //        System.out.println("maxPathSum(root)=" + maxPathSum(root));
         MaxPathSumSolution maxPathSumSolution = new MaxPathSumSolution();
         System.out.println("result=" + maxPathSumSolution.maxPathSum(root.right));
 //        System.out.println("result=" + maxPathSum(root.left));
 //        System.out.println("result=" + maxPathSum(root.right.left));
 //        System.out.println("result=" + maxPathSum(root.right.right));
+    }
+
+    public static TreeNode getTree() {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
+        root.left.left.left = new TreeNode(8);
+
+        logger.trace("root = {}", root);
+        return root;
     }
 
     public static class TreeNode {
@@ -30,7 +48,7 @@ public class BinaryTree {
             return "TreeNode{" +
                     "val=" + val +
                     ", left=" + left +
-                    ", right=" + right +
+                    "\n, right=" + right +
                     '}';
         }
     }

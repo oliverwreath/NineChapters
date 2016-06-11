@@ -4,6 +4,8 @@ import com.oliver.BinaryTree.BinaryTree.TreeNode;
 
 import java.util.ArrayList;
 
+import static com.oliver.BinaryTree.BinaryTree.getTree;
+
 
 /**
  * Created by Yanliang Han on 2016/6/10.
@@ -16,11 +18,7 @@ public class BinaryTreeTraverse {
     }
 
     public static void testPreorderTraversal() {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+        TreeNode root = getTree();
 
         System.out.println("root=" + root);
         ArrayList<Integer> result = preorderTraversal(root);
@@ -49,11 +47,7 @@ public class BinaryTreeTraverse {
     }
 
     public static void testInorderTraversal() {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+        TreeNode root = getTree();
 
         System.out.println("root=" + root);
         ArrayList<Integer> result = inorderTraversal(root);
@@ -82,11 +76,7 @@ public class BinaryTreeTraverse {
     }
 
     public static void testPostorderTraversal() {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+        TreeNode root = getTree();
 
         System.out.println("root=" + root);
         ArrayList<Integer> result = postorderTraversal(root);
