@@ -14,7 +14,6 @@ public class LowestCommonAncestor {
 
     public static void testLowestCommonAncestor() {
         TreeNode root = getTree();
-        System.out.println("root=" + root);
         System.out.println("result=" + lowestCommonAncestor(root, root.left, root.right));
     }
 

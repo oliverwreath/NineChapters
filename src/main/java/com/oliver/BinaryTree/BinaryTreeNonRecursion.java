@@ -19,8 +19,6 @@ public class BinaryTreeNonRecursion {
 
     public static void testPreorderTraversal() {
         TreeNode root = getTree();
-
-        System.out.println("root=" + root);
         ArrayList<Integer> result = preorderTraversal(root);
         System.out.println("result=" + result);
     }
@@ -51,8 +49,6 @@ public class BinaryTreeNonRecursion {
 
     public static void testInorderTraversal() {
         TreeNode root = getTree();
-
-        System.out.println("root=" + root);
         ArrayList<Integer> result = inorderTraversal(root);
         System.out.println("result=" + result);
     }

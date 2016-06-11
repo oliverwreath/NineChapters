@@ -15,8 +15,6 @@ public class MaxMinDepth {
 
     public static void testMaxDepth() {
         TreeNode root = getTree();
-
-        System.out.println("root=" + root);
         int i = maxDepth(root);
         System.out.println("result=" + i);
     }
@@ -31,8 +29,6 @@ public class MaxMinDepth {
 
     public static void testMinDepth() {
         TreeNode root = getTree();
-
-        System.out.println("root=" + root);
         int i = minDepth(root);
         System.out.println("result=" + i);
     }

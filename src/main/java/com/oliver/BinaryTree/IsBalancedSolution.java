@@ -15,11 +15,9 @@ public class IsBalancedSolution {
 
     public static void testIsBalanced() {
         TreeNode root = getTree();
-        System.out.println("root=" + root);
         System.out.println("result=" + isBalanced(root));
 
         TreeNode unBalancedTree = getUnBalancedTree();
-        System.out.println("root=" + unBalancedTree);
         System.out.println("result=" + isBalanced(unBalancedTree));
     }
 
