@@ -34,6 +34,18 @@ public class BinaryTree {
         return root;
     }
 
+    public static TreeNode getUnBalancedTree() {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.left.left.left = new TreeNode(8);
+
+        logger.trace("root = {}", root);
+        return root;
+    }
+
     public static class TreeNode {
         public int val;
         public TreeNode left, right;
@@ -147,66 +159,6 @@ public class BinaryTree {
             return right;
         }
         return null;
-    }
-
-    private static class IsBalancedSolution {
-        //isBalanced
-        private class ResultType {
-            private boolean isBalanced;
-            private int depth;
-
-            public ResultType(int depth, boolean isBalanced) {
-                this.depth = depth;
-                this.isBalanced = isBalanced;
-            }
-        }
-
-        public boolean isBalanced(TreeNode root) {
-            // write your code here
-            if (root == null) {
-                return true;
-            }
-
-            return isBalancedHelper(root).isBalanced;
-        }
-
-        public ResultType isBalancedHelper(TreeNode root) {
-            // write your code here
-            if (root == null) {
-                return new ResultType(0, true);
-            }
-
-            ResultType leftResult = isBalancedHelper(root.left);
-            ResultType rightResult = isBalancedHelper(root.right);
-
-            int depth = 1 + Math.max(leftResult.depth, rightResult.depth);
-            boolean isBalanced = leftResult.isBalanced && rightResult.isBalanced && Math.abs(leftResult.depth - rightResult.depth) <= 1;
-            return new ResultType(depth, isBalanced);
-        }
-
-        public boolean isBalanced2(TreeNode root) {
-            // write your code here
-            if (root == null) {
-                return true;
-            }
-
-            return maxDepth(root) != -1;
-        }
-
-        public int maxDepth(TreeNode root) {
-            // write your code here
-            if (root == null) {
-                return 0;
-            }
-
-            int left = maxDepth(root.left);
-            int right = maxDepth(root.right);
-            if (left == -1 || right == -1 || Math.abs(left - right) > 1) {
-                return -1;
-            } else {
-                return 1 + Math.max(left, right);
-            }
-        }
     }
 
     private static class MaxDepthSolution {
