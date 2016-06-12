@@ -1,4 +1,4 @@
-package com.oliver;
+package com.oliver.DynamicProgramming;
 
 import java.util.HashSet;
 import java.util.Set;
