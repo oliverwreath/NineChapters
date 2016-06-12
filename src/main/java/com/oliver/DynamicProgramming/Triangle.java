@@ -12,10 +12,10 @@ public class Triangle {
         System.out.println(minimumTotal(new int[][]{}));
         System.out.println(minimumTotal(new int[][]{{1}, {3, 4}}));
         System.out.println("- -");
-        System.out.println(minimumTotal(new int[][]{     {2},
-                {3,4},
-        {6,5,7},
-        {4,1,8,3}}));
+        System.out.println(minimumTotal(new int[][]{{2},
+                {3, 4},
+                {6, 5, 7},
+                {4, 1, 8, 3}}));
     }
 
     private static int minimumTotal(int[][] triangle) {
