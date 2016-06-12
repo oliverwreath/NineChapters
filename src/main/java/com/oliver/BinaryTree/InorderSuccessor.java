@@ -32,47 +32,7 @@ public class InorderSuccessor {
         System.out.println("result=" + inorderSuccessor(root, root));
         System.out.println("result=" + inorderSuccessor(getBST(), null));
         System.out.println("result=" + inorderSuccessor(null, null));
-//        List<TreeNode> treeNodes = inorderTraverseIterative(root);
-//        for (TreeNode treeNode : treeNodes) {
-//            System.out.println(treeNode);
-//        }
-//        System.out.println();
-//        treeNodes = inorderTraverse(root);
-//        for (TreeNode treeNode : treeNodes) {
-//            System.out.println(treeNode);
-//        }
     }
-
-//    public static List<TreeNode> inorderTraverseIterative(TreeNode root) {
-//        LinkedList<TreeNode> ret = new LinkedList<TreeNode>();
-//        if (root == null) {
-//            return ret;
-//        }
-//
-//        Stack<TreeNode> st = new Stack<TreeNode>();
-//        st.push(root);
-//        while(!st.isEmpty()) {
-//            TreeNode current = st.pop();
-//
-//            if (current.left == null && current.right == null) {
-//                ret.add(current);
-//            } else if (current.left == null) {
-//                ret.add(current);
-//                st.push(current.right);
-//            } else if (current.right == null) {
-//                st.push(current.left);
-//                current.left = null;
-//                st.push(current);
-//            } else {
-//                st.push(current.left);
-//                current.left = null;
-//                st.push(current);
-//                st.push(current.right);
-//            }
-//        }
-//
-//        return ret;
-//    }
 
     public static TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         TreeNode successor = null;
