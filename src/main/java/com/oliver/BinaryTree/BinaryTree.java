@@ -34,7 +34,7 @@ public class BinaryTree {
             return "TreeNode{" +
                     "val=" + val +
                     ", left=" + left +
-                    "\n, right=" + right +
+                    ", right=" + right +
                     '}';
         }
     }
