@@ -9,8 +9,8 @@ public class Jump {
     }
 
     private static void testJump() {
-        System.out.println(jump(new int[]{2,3,1,1,4}));
-        System.out.println(jump(new int[]{3,2,1,0,4}));
+        System.out.println(jump(new int[]{2, 3, 1, 1, 4}));
+        System.out.println(jump(new int[]{3, 2, 1, 0, 4}));
     }
 
     public static int jump(int[] A) {
