@@ -1,6 +1,5 @@
 package com.oliver.DynamicProgramming;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,25 +27,21 @@ public class WordBreak {
         if (dict == null || dict.size() < 1) {
             return false;
         }
-        int maxLen = getMaxLen(dict);
 
         int len = s.length();
         boolean[] f = new boolean[len + 1];
         f[0] = true;
+        int maxLen = getMaxLen(dict);
 
         for (int i = 1; i <= len; i++) {
-            for (int j = Math.max(0, i - maxLen); j < i; j++) {
-                if (f[j]) {
-//                    System.out.print("; " + i + ": " + j + " " + s.substring(j, i));
-                    if (dict.contains(s.substring(j, i))) {
-                        f[i] = true;
-                        break;
-                    }
+            for (int lastWordLength = 1; lastWordLength <= maxLen && lastWordLength <= i; lastWordLength++) {
+                if (f[i - lastWordLength] && dict.contains(s.substring(i - lastWordLength, i))) {
+                    f[i] = true;
+                    break;
                 }
             }
-//            System.out.println();
         }
-//        System.out.println(Arrays.toString(f));
+
         return f[len];
     }
 
