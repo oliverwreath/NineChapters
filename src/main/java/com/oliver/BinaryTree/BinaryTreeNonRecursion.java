@@ -1,9 +1,9 @@
 package com.oliver.BinaryTree;
 
-import com.oliver.BinaryTree.BinaryTree.TreeNode;
-
 import java.util.ArrayList;
 import java.util.Stack;
+
+import com.oliver.BinaryTree.BinaryTree.TreeNode;
 
 import static com.oliver.BinaryTree.BinaryTree.getTree;
 

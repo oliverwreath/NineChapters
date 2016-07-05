@@ -1,9 +1,9 @@
 package com.oliver.test;
 
+import java.util.ArrayList;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
 
 /**
  * Created by Yanliang Han on 2016/5/23.

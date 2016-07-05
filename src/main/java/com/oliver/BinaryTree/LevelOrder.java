@@ -1,12 +1,12 @@
 package com.oliver.BinaryTree;
 
-import com.oliver.BinaryTree.BinaryTree.TreeNode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+
+import com.oliver.BinaryTree.BinaryTree.TreeNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static com.oliver.BinaryTree.BinaryTree.getSmallTree;
 

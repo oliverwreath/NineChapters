@@ -1,5 +1,9 @@
 package com.oliver.test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import com.google.common.base.Objects;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -8,10 +12,6 @@ import com.google.common.collect.DiscreteDomain;
 import com.google.common.collect.Ordering;
 import com.google.common.collect.Range;
 import com.google.common.primitives.Ints;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by Yanliang Han on 2016/5/29.
