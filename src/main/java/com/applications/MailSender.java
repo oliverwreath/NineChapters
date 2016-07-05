@@ -1,9 +1,6 @@
 package com.applications;
 
-import javax.mail.Message;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
@@ -24,6 +21,39 @@ class MailSender {
     }
 
     private static void sendFoxmail() {
+        try {
+            Message foxmailMessage = getFoxmailMessage();
+            foxmailMessage.setRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse("199383447@qq.com"));
+            foxmailMessage.setSubject("地上鞋两双！");
+            foxmailMessage.setText("头先个黍米好难食");
+
+            Transport.send(foxmailMessage);
+
+            System.out.println("Sent and Done!");
+        } catch (Exception e) {
+            logger.error(Throwables.getStackTraceAsString(e));
+        }
+    }
+
+    private static void sendGmail() {
+        try {
+            Message gmailMessage = getGmailMessage();
+            gmailMessage.setRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse("199383447@qq.com"));
+            gmailMessage.setSubject("Testing Subject");
+            gmailMessage.setText("Dear Mail Crawler,"
+                    + "\n\n No spam to my email, please!");
+
+            Transport.send(gmailMessage);
+
+            System.out.println("Sent and Done!");
+        } catch (Exception e) {
+            logger.error(Throwables.getStackTraceAsString(e));
+        }
+    }
+
+    private static Message getFoxmailMessage() {
         final String USER_NAME = "skyoliver@foxmail.com";
         final String PASSWORD = "+++hyl7713996";
 
@@ -39,24 +69,17 @@ class MailSender {
                         return new PasswordAuthentication(USER_NAME, PASSWORD);
                     }
                 });
-
+        Message message = new MimeMessage(session);
         try {
-            Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(USER_NAME));
-            message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse("199383447@qq.com"));
-            message.setSubject("床前明月光！");
-            message.setText("头先个黍米好难食");
-
-            Transport.send(message);
-
-            System.out.println("Sent and Done!");
-        } catch (Exception e) {
+        } catch (MessagingException e) {
             logger.error(Throwables.getStackTraceAsString(e));
         }
+
+        return message;
     }
 
-    private static void sendGmail() {
+    private static Message getGmailMessage() {
         final String USER_NAME = "skywalkerhunter@gmail.com";
         final String PASSWORD = "+++hyl7713996";
 
@@ -72,21 +95,13 @@ class MailSender {
                         return new PasswordAuthentication(USER_NAME, PASSWORD);
                     }
                 });
-
+        Message message = new MimeMessage(session);
         try {
-            Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(USER_NAME));
-            message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse("199383447@qq.com"));
-            message.setSubject("Testing Subject");
-            message.setText("Dear Mail Crawler,"
-                    + "\n\n No spam to my email, please!");
-
-            Transport.send(message);
-
-            System.out.println("Sent and Done!");
-        } catch (Exception e) {
+        } catch (MessagingException e) {
             logger.error(Throwables.getStackTraceAsString(e));
         }
+
+        return message;
     }
 }
