@@ -58,22 +58,31 @@ public class RobotRockBand {
     }
 
     private class myCountedSet<E> implements Iterable<E> {
-        Set<E> set = new TreeSet<E>();
-        Map<E, Long> map = new HashMap<E, Long>();
+        Set<E> set = new HashSet<E>();
+        Map<E, BigInteger> map = new HashMap<E, BigInteger>();
 
         public myCountedSet() {
         }
 
         public void add(E key) {
             if (set.contains(key)) {
-                map.put(key, map.get(key) + 1);
+                map.put(key, map.get(key).add(BigInteger.ONE));
             } else {
                 set.add(key);
-                map.put(key, 1L);
+                map.put(key, BigInteger.ONE);
             }
         }
 
-        public long getCounter(long key) {
+        public void add(E key, BigInteger count) {
+            if (set.contains(key)) {
+                map.put(key, map.get(key).add(count));
+            } else {
+                set.add(key);
+                map.put(key, count);
+            }
+        }
+
+        public BigInteger getCounter(long key) {
             return map.get(key);
         }
 
@@ -85,7 +94,7 @@ public class RobotRockBand {
             return set;
         }
 
-        public Map<E, Long> getMap() {
+        public Map<E, BigInteger> getMap() {
             return map;
         }
 
@@ -101,41 +110,43 @@ public class RobotRockBand {
         }
     }
 
-    private static BigInteger getXORHitCount(myCountedSet<Long> set1, myCountedSet<Long> set2, myCountedSet<Long> set3, myCountedSet<Long> set4, long target) {
+    private BigInteger getXORHitCount(myCountedSet<Long> set1, myCountedSet<Long> set2, myCountedSet<Long> set3, myCountedSet<Long> set4, long target) {
         logger.debug("{}", set1);
         logger.debug("{}", set2);
         logger.debug("{}", set3);
         logger.debug("{}", set4);
-        logger.info("{}", set1.size());
-        logger.info("{}", set2.size());
-        logger.info("{}", set3.size());
-        logger.info("{}", set4.size());
+        logger.info("{} {} {} {}", set1.size(), set2.size(), set3.size(), set4.size());
         long loopSize = (long) set1.size() * set2.size() * set3.size() * set4.size();
-        if (loopSize > 16777216) {
+        if (loopSize > 16930262059200L) {
             logger.error("loopSize = {} too big!!", loopSize);
             return BigInteger.valueOf(-1);
         }
 
         BigInteger hitCount = BigInteger.ZERO;
+        myCountedSet<Long> mySet1 = new myCountedSet<Long>();
+        myCountedSet<Long> mySet2 = new myCountedSet<Long>();
         for (Long aLong1 : set1) {
             for (Long aLong2 : set2) {
-                long tmpResult = aLong1 ^ aLong2;
-                for (Long aLong3 : set3) {
-                    long tmpResult2 = tmpResult ^ aLong3;
-                    for (Long aLong4 : set4) {
-                        long xorResult = tmpResult2 ^ aLong4;
-                        if ((xorResult) == target) {
-                            logger.debug("HIT!! {} ^ {} ^ {} ^ {} = {}", aLong1, aLong2, aLong3, aLong4, xorResult);
-                            hitCount = hitCount.add(BigInteger.valueOf(set1.getCounter(aLong1)).multiply(BigInteger.valueOf(set2.getCounter(aLong2))).multiply(BigInteger.valueOf(set3.getCounter(aLong3))).multiply(BigInteger.valueOf(set4.getCounter(aLong4))));
-                        } else {
-                            logger.debug("MISS!! {} ^ {} ^ {} ^ {} = {}", aLong1, aLong2, aLong3, aLong4, xorResult);
-                        }
-                    }
-                }
+                mySet1.add(aLong1 ^ aLong2 ^ target, set1.getCounter(aLong1).multiply(set2.getCounter(aLong2)));
+            }
+        }
+        for (Long aLong3 : set3) {
+            for (Long aLong4 : set4) {
+                mySet2.add(aLong3 ^ aLong4, set3.getCounter(aLong3).multiply(set4.getCounter(aLong4)));
+            }
+        }
+        logger.info("{} {}", mySet1.size(), mySet2.size());
+        int loopSize2 = mySet1.size();
+        for (Long aLong1 : mySet1) {
+            if (mySet2.getSet().contains(aLong1)) {
+                hitCount = hitCount.add(mySet1.getCounter(aLong1).multiply(mySet2.getCounter(aLong1)));
+                logger.debug("HIT!! {}", aLong1);
+            } else {
+                logger.debug("MISS!! {}", aLong1);
             }
         }
 
-        logger.info("hit count is {}", hitCount);
+        logger.info("hloopSize = {}; loopSize2 = {}; hitCount is {}", loopSize, loopSize2, hitCount);
         return hitCount;
     }
 }
