@@ -7,9 +7,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.apac.Util.getPrintWriter;
-import static com.apac.Util.oneDTrappingWater;
-import static com.apac.Util.printArray;
+import static com.apac.Util.*;
 
 /**
  * Created by yanli_000 on 16/7/10.
