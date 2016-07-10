@@ -25,11 +25,10 @@ public class Util {
 
     private void test1DTrappingWater() {
         int[] heights = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        logger.info(Arrays.toString(heights));
-        int[] b = new int[heights.length];
-        System.arraycopy(heights, 0, b, 0, heights.length);
-        oneDTrappingWater(heights, b);
-        logger.info(Arrays.toString(b));
+        logger.info("a = {}", Arrays.toString(heights));
+
+        int[] b = oneDTrappingWater(heights);
+        logger.info("b = {}", Arrays.toString(b));
 //        int diff = 0;
 //        for (int i = 0; i < heights.length; i++) {
 //            diff += (b[i] - heights[i]);
@@ -37,32 +36,36 @@ public class Util {
 //        logger.info("diff = {}", diff);
     }
 
-    public int trapRainWater(int[] heights) {
-        if (heights == null || heights.length < 2) {
-            return 0;
-        }
+//    public int trapRainWater(int[] heights) {
+//        if (heights == null || heights.length < 2) {
+//            return 0;
+//        }
+//
+//        int[] b = new int[heights.length];
+//        System.arraycopy(heights, 0, b, 0, heights.length);
+//        oneDTrappingWater(heights, b);
+//        int diff = 0;
+//        for (int i = 0; i < heights.length; i++) {
+//            diff += (b[i] - heights[i]);
+//        }
+//        return diff;
+//    }
 
-        int[] b = new int[heights.length];
-        System.arraycopy(heights, 0, b, 0, heights.length);
-        oneDTrappingWater(heights, b);
-        int diff = 0;
-        for (int i = 0; i < heights.length; i++) {
-            diff += (b[i] - heights[i]);
-        }
-        return diff;
-    }
-
-    private static void oneDTrappingWater(int[] heights, int[] b) {
+    private static int[] oneDTrappingWater(int[] heights) {
         if (heights == null || heights.length < 2) {
-            return;
+            return heights;
         }
 
 //        logger.info("oneDTrappingWater begin");
         int leftFirstPeak = findLeftFirstPeak(heights, 0, heights.length - 1);
 //        logger.info("leftFirstPeak = {}, heights[{}] = {}", leftFirstPeak, leftFirstPeak, heights[leftFirstPeak]);
+
+        int[] b = new int[heights.length];
+        System.arraycopy(heights, 0, b, 0, heights.length);
+
         computeLeftHalf(heights, 0, leftFirstPeak, b);
         computeRightHalf(heights, leftFirstPeak, heights.length - 1, b);
-        return;
+        return b;
     }
 
     private static void computeLeftHalf(int[] a, int left, int right, int[] b) {
