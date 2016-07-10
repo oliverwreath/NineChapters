@@ -51,7 +51,7 @@ public class Util {
 //        return diff;
 //    }
 
-    private static int[] oneDTrappingWater(int[] heights) {
+    public static int[] oneDTrappingWater(int[] heights) {
         if (heights == null || heights.length < 2) {
             return heights;
         }
