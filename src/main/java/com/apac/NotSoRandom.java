@@ -70,8 +70,8 @@ public class NotSoRandom {
     }
 
     private void getOneExpectation(Map<BigInteger, BigDecimal> chanceMap, BigInteger K, final BigDecimal A, final BigDecimal B, final BigDecimal C) {
-        logger.debug("A = {}, B = {}, C = {}", A, B, C);
-        logger.info("chanceMap Before = {}", chanceMap);
+        logger.trace("A = {}, B = {}, C = {}", A, B, C);
+        logger.debug("chanceMap Before = {}", chanceMap);
         Map<BigInteger, BigDecimal> newChanceMap = new HashMap<BigInteger, BigDecimal>();
 
         for (BigInteger key : chanceMap.keySet()) {
@@ -85,7 +85,7 @@ public class NotSoRandom {
             chanceMap.put(key, newChanceMap.get(key));
         }
 
-        logger.info("chanceMap After = {}", chanceMap);
+        logger.debug("chanceMap After = {}", chanceMap);
         return;
     }
 
