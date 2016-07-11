@@ -23,23 +23,19 @@ public class DeleteDuplicates {
         head.next.next.next.next = new ListNode(4);
         head.next.next.next.next.next = new ListNode(4);
         head.next.next.next.next.next.next = new ListNode(5);
-        ListNode resultHead = deleteDuplicates(head);
-        logger.info("{}", resultHead);
+        logger.info("{}", deleteDuplicates(head));
 
         ListNode head2 = new ListNode(1);
         head2.next = new ListNode(1);
         head2.next.next = new ListNode(1);
         head2.next.next.next = new ListNode(2);
         head2.next.next.next.next = new ListNode(3);
-        ListNode resultHead2 = deleteDuplicates(head2);
-        logger.info("{}", resultHead2);
+        logger.info("{}", deleteDuplicates(head2));
 
         ListNode head3 = new ListNode(1);
-        ListNode resultHead3 = deleteDuplicates(head3);
-        logger.info("{}", resultHead3);
+        logger.info("{}", deleteDuplicates(head3));
 
-        ListNode resultHead4 = deleteDuplicates(null);
-        logger.info("{}", resultHead4);
+        logger.info("{}", deleteDuplicates(null));
     }
 
     public static ListNode deleteDuplicates(ListNode head) {
