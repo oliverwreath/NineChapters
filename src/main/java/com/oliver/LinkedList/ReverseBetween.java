@@ -1,6 +1,5 @@
 package com.oliver.LinkedList;
 
-import com.oliver.LinkedList.DeleteDuplicates.ListNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
