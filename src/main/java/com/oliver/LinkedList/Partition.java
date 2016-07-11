@@ -16,17 +16,48 @@ public class Partition {
     }
 
     private static void testPartition() {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(4);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(2);
-        head.next.next.next.next = new ListNode(5);
-        head.next.next.next.next.next = new ListNode(2);
-        logger.info("{}", partition(head, 3));
+        ListNode head1 = new ListNode(1);
+        head1.next = new ListNode(4);
+        head1.next.next = new ListNode(3);
+        head1.next.next.next = new ListNode(2);
+        head1.next.next.next.next = new ListNode(5);
+        head1.next.next.next.next.next = new ListNode(2);
+        logger.info("{}", partition(head1, 3));
+
+        ListNode head2 = new ListNode(1);
+        logger.info("{}", partition(head2, 1));
+
+        ListNode head3 = new ListNode(1);
+        logger.info("{}", partition(head3, 2));
+
+        logger.info("{}", partition(null, 0));
     }
 
     public static ListNode partition(ListNode head, int x) {
-        return head;
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode leftDummy = new ListNode(0);
+        ListNode leftFast = leftDummy;
+        ListNode rightDummy = new ListNode(0);
+        ListNode rightFast = rightDummy;
+
+        while (head != null) {
+            if (head.val >= x) {
+                rightFast.next = head;
+                rightFast = rightFast.next;
+            } else {
+                leftFast.next = head;
+                leftFast = leftFast.next;
+            }
+            head = head.next;
+        }
+
+        rightFast.next = null;
+        leftFast.next = rightDummy.next;
+
+        return leftDummy.next;
     }
 
     /**
