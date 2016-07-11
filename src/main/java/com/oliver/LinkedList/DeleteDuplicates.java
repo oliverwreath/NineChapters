@@ -49,6 +49,31 @@ public class DeleteDuplicates {
 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
+        head = dummy;
+
+        while (head.next != null && head.next.next != null) {
+            if (head.next.val == head.next.next.val) {
+                // duplication detected
+                int duplicatedValue = head.next.val;
+                while (head.next != null && head.next.val == duplicatedValue) {
+                    head.next = head.next.next;
+                }
+            } else {
+                // unique element
+                head = head.next;
+            }
+        }
+
+        return dummy.next;
+    }
+
+    public static ListNode deleteDuplicates2(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
         ListNode slow = dummy;
         ListNode fast = dummy.next;
 
