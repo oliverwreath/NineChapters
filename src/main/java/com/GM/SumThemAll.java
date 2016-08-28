@@ -1,7 +1,5 @@
 package com.GM;
 
-import java.util.Scanner;
-
 /**
  * Created by yanli on 8/27/2016.
  */
