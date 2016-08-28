@@ -1,4 +1,4 @@
-package com.apac;
+package com.apacRoundA;
 
 import java.io.PrintWriter;
 import java.math.BigDecimal;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.apac.Util.getPrintWriter;
+import static com.apacRoundA.Util.getPrintWriter;
 
 /**
  * Created by yanli_000 on 16/7/9.
