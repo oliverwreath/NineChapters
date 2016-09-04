@@ -1,7 +1,5 @@
 package com.lintCode.BinaryTree;
 
-import com.lintCode.BinaryTree.BinaryTree.TreeNode;
-
 import static com.lintCode.BinaryTree.BinaryTree.getTree;
 
 /**

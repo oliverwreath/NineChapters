@@ -3,7 +3,6 @@ package com.lintCode.BinaryTree;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.lintCode.BinaryTree.BinaryTree.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
