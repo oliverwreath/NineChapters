@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by yanli on 9/5/2016.
  */
-public class No106_BinaryTreefromInorderandPostorder {
-    private final static Logger logger = LoggerFactory.getLogger(No106_BinaryTreefromInorderandPostorder.class);
+public class No106_BinaryTreeFromInorderAndPostorder {
+    private final static Logger logger = LoggerFactory.getLogger(No106_BinaryTreeFromInorderAndPostorder.class);
 
     public static void main(String[] arg) {
         testBuildTree();
