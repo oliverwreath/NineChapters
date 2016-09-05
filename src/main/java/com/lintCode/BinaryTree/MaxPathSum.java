@@ -1,7 +1,5 @@
 package com.lintCode.BinaryTree;
 
-import com.lintCode.BinaryTree.BinaryTree.TreeNode;
-
 import static com.lintCode.BinaryTree.BinaryTree.getSmallTree;
 
 /**
@@ -14,7 +12,7 @@ public class MaxPathSum {
     }
 
     public static void testMaxPathSum2() {
-        BinaryTree.TreeNode root = getSmallTree();
+        TreeNode root = getSmallTree();
         System.out.println("result=" + maxPathSum2(root));
     }
 
@@ -31,7 +29,7 @@ public class MaxPathSum {
     }
 
     public static void testMaxPathSum() {
-        BinaryTree.TreeNode root = getSmallTree();
+        TreeNode root = getSmallTree();
         System.out.println("result=" + maxPathSum(root));
     }
 

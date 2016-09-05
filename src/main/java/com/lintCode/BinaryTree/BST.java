@@ -1,6 +1,5 @@
 package com.lintCode.BinaryTree;
 
-import com.lintCode.BinaryTree.BinaryTree.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +26,7 @@ public class BST {
     }
 
     public static void testIsValidBST() {
-        BinaryTree.TreeNode root = getSmallTree();
+        TreeNode root = getSmallTree();
         System.out.println("result=" + isValidBST(root));
         System.out.println("result=" + isValidBST(getBST()));
         System.out.println("result=" + isValidBST(null));

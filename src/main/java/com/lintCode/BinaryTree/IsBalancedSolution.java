@@ -50,7 +50,7 @@ public class IsBalancedSolution {
         }
     }
 
-//    public boolean isBalanced2(BinaryTree.TreeNode root) {
+//    public boolean isBalanced2(TreeNode root) {
 //        // write your code here
 //        if (root == null) {
 //            return true;
@@ -59,7 +59,7 @@ public class IsBalancedSolution {
 //        return maxDepth(root) != -1;
 //    }
 //
-//    public int maxDepth(BinaryTree.TreeNode root) {
+//    public int maxDepth(TreeNode root) {
 //        // write your code here
 //        if (root == null) {
 //            return 0;
