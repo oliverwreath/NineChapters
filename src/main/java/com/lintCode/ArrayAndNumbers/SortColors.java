@@ -1,7 +1,5 @@
 package com.lintCode.ArrayAndNumbers;
 
-import java.util.Arrays;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,30 +21,34 @@ public class SortColors {
 
     static void sortColors(int[] nums) {
         // filter abnormal inputs
-        if (nums == null || nums.length == 0) {
+        if (nums == null || nums.length <= 1) {
             return;
         }
 
         // counting sort
         int[] counter = new int[3];
         int len = nums.length;
-        for (int i = 0; i < len; i++) {
-            counter[nums[i]]++;
-        }
-//        System.out.println(Arrays.toString(nums));
-//        System.out.println(Arrays.toString(counter));
-
-        for (int i = 0; i < counter[0]; i++) {
-            nums[i] = 0;
-        }
-        for (int i = counter[0]; i < counter[0] + counter[1]; i++) {
-            nums[i] = 1;
-        }
-        for (int i = counter[0] + counter[1]; i < len; i++) {
-            nums[i] = 2;
+        int left = 0;
+        int right = len - 1;
+        int i = 0;
+        while (i <= right) {
+            if (nums[i] == 1) {
+                i++;
+            } else if (nums[i] == 0) {
+                swap(nums, left++, i++);
+            } else if (nums[i] == 2) {
+                swap(nums, right--, i);
+            }
         }
 
         // return
+        return;
+    }
+
+    static void swap(int[] a, int i, int j) {
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
         return;
     }
 }
