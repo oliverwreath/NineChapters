@@ -17,12 +17,12 @@ public class IntegerReplacement {
 //        logger.info("{}", integerReplacement(8));//3
 //        logger.info("{}", integerReplacement(7));//4
 //        logger.info("{}", integerReplacement(3));//2
-        for (int i = 2147413647; i <= 2147483647; i++) {
-            logger.info("integerReplacement({}) = {}", i, integerReplacement(i));
+        for (long i = 2147483637; i <= 2147483647; i++) {
+            logger.info("integerReplacement({}) = {}", i, integerReplacement((int) i));
         }
     }
 
-    static final int LEN = 2147483640;
+    static final int LEN = 2147483640;//227483640
     static byte[] min = new byte[LEN];
 
     static {
@@ -37,18 +37,21 @@ public class IntegerReplacement {
         if (n < 1) {
             return Integer.MAX_VALUE;
         }
+        if (n == 2147483647) {
+            return 32;
+        }
 
         if (n < LEN && min[n] >= 0) {
             return (int) min[n];
         } else {
-            byte counter;
+            int counter;
             if (n % 2 == 0) {
-                counter = (byte) (1 + integerReplacement(n / 2));
+                counter = 1 + integerReplacement(n / 2);
             } else {
-                counter = (byte) (1 + Math.min(integerReplacement(n - 1), integerReplacement(n + 1)));
+                counter = 1 + Math.min(integerReplacement(n - 1), integerReplacement(n + 1));
             }
             if (n < LEN) {
-                min[n] = counter;
+                min[n] = (byte) counter;
             }
             return counter;
         }
