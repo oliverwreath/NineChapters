@@ -23,11 +23,11 @@ public class IntegerReplacement {
     }
 
     static final int LEN = 100000002;
-    static short[] min = new short[LEN];
+    static byte[] min = new byte[LEN];
 
     static {
         for (int i = 0; i < LEN; i++) {
-            min[i] = -1;
+            min[i] = Byte.MIN_VALUE;
         }
         min[1] = 0;
     }
@@ -39,11 +39,11 @@ public class IntegerReplacement {
         }
 
         if (min[n] < 0) {
-            short counter;
+            byte counter;
             if (n % 2 == 0) {
-                counter = (short) (1 + integerReplacement(n / 2));
+                counter = (byte) (1 + integerReplacement(n / 2));
             } else {
-                counter = (short) (1 + Math.min(integerReplacement(n - 1), integerReplacement(n + 1)));
+                counter = (byte) (1 + Math.min(integerReplacement(n - 1), integerReplacement(n + 1)));
             }
             min[n] = counter;
             return counter;
