@@ -1,4 +1,4 @@
-package com.GM;
+package com.HackerRank;
 
 /**
  * Created by yanli on 8/29/2016.

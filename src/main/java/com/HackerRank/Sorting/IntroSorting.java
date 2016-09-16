@@ -1,4 +1,4 @@
-package com.GM.Sorting;
+package com.HackerRank.Sorting;
 
 import java.util.Scanner;
 

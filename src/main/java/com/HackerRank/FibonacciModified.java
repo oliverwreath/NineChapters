@@ -1,4 +1,4 @@
-package com.GM;
+package com.HackerRank;
 
 import java.math.BigInteger;
 import java.util.Scanner;

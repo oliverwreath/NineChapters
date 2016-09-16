@@ -1,4 +1,4 @@
-package com.GM.String;
+package com.HackerRank.String;
 
 import java.util.LinkedList;
 import java.util.List;

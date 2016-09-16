@@ -1,4 +1,4 @@
-package com.GM.Implementation;
+package com.HackerRank.Implementation;
 
 import java.util.Scanner;
 
