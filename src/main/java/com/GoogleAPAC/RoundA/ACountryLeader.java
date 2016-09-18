@@ -1,4 +1,4 @@
-package com.apacRoundA;
+package com.GoogleAPAC.RoundA;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.apacRoundA.Util.getPrintWriter;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 /**
  * Created by yanli_000 on 16/7/10.

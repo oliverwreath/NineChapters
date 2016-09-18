@@ -1,4 +1,4 @@
-package com.apacRoundB;
+package com.GoogleAPAC.RoundB;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.apacRoundA.Util.getPrintWriter;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 /**
  * Created by yanli on 8/28/2016.
