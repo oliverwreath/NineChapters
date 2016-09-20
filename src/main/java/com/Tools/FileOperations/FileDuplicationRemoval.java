@@ -12,14 +12,14 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.Tools.FileOperations.FileUtils.fileToMd5;
-import static com.Tools.FileOperations.FileUtils.getFileList;
+import static com.Tools.FileOperations.FileUtils.*;
 
 /**
  * Created by yanli on 9/15/2016.
  */
-public class FileDuplicationElimination {
-    private final static Logger logger = LoggerFactory.getLogger(FileDuplicationElimination.class);
+public class FileDuplicationRemoval {
+    private final static Logger logger = LoggerFactory.getLogger(FileDuplicationRemoval.class);
+    private final static boolean isDeleting = false;
 
     public static void main(String[] arg) {
         testRemoveDuplicateFile();
@@ -65,28 +65,51 @@ public class FileDuplicationElimination {
         int counter = 0;
         for (File currentFile : fileList) {
             String md5 = fileToMd5(currentFile);
-//            String sha1 = fileToSha1(currentFile);
-            if (map.containsKey(md5)) {
-                map.get(md5).add(currentFile);
+            String sha1 = fileToSha1(currentFile);
+            String hash = md5 + sha1;
+            if (map.containsKey(hash)) {
+                map.get(hash).add(currentFile);
             } else {
                 LinkedList<File> list = new LinkedList<File>();
                 list.add(currentFile);
-                map.put(md5, list);
+                map.put(hash, list);
             }
             counter++;
             logger.info("{} / {}", counter, fileList.size());
         }
 
         // remove none duplicate
-        for (String key : map.keySet()) {
-            if (map.get(key).size() <= 1) {
+        {
+            List<String> list = new LinkedList<String>();
+            for (String key : map.keySet()) {
+                if (map.get(key).size() <= 1) {
+                    list.add(key);
+                }
+            }
+            for (String key : list) {
                 map.remove(key);
             }
         }
+        for (List<File> files : map.values()) {
+            Collections.sort(files, shorterNameComparator);
+        }
 
         // print the remaining duplicates
-        System.out.println("map = " + map);
+        System.out.println("map.values() = " + map.values());
         System.out.println("map.size() = " + map.size());
+
+        // delete
+        if (isDeleting) {
+            for (List<File> files : map.values()) {
+                for (int i = 1; i < files.size(); i++) {
+                    if (!files.get(i).delete()) {
+                        logger.info("deletion failed = {}", files.get(i).getName());
+                    } else {
+                        logger.info("deleted = {}", files.get(i).getName());
+                    }
+                }
+            }
+        }
 
         return 0;
     }

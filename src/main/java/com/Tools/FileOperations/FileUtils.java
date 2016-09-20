@@ -76,11 +76,12 @@ public class FileUtils {
             e.printStackTrace();
         }
 
-        logger.info("time takened = {} s", (System.currentTimeMillis() - startTime) / 1000.0);
+        logger.info("fileToMd5() time taken = {} s", (System.currentTimeMillis() - startTime) / 1000.0);
         return md5;
     }
 
     static String fileToSha1(File file) {
+        long startTime = System.currentTimeMillis();
         FileInputStream fis = null;
         String sha1 = "";
         try {
@@ -90,6 +91,14 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        logger.info("fileToSha1() time taken = {} s", (System.currentTimeMillis() - startTime) / 1000.0);
         return sha1;
     }
+
+    static Comparator<File> shorterNameComparator = new Comparator<File>() {
+        public int compare(File o1, File o2) {
+            return o1.getName().length() - o2.getName().length();
+        }
+    };
 }
