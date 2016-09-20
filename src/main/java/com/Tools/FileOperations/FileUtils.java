@@ -64,7 +64,8 @@ public class FileUtils {
         return 0;
     }
 
-    static String getMd5OfFile(File file) {
+    static String fileToMd5(File file) {
+        long startTime = System.currentTimeMillis();
         FileInputStream fis = null;
         String md5 = "";
         try {
@@ -74,6 +75,21 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        logger.info("time takened = {} s", (System.currentTimeMillis() - startTime) / 1000.0);
         return md5;
+    }
+
+    static String fileToSha1(File file) {
+        FileInputStream fis = null;
+        String sha1 = "";
+        try {
+            fis = new FileInputStream(file);
+            sha1 = DigestUtils.sha1Hex(fis);
+            fis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return sha1;
     }
 }
