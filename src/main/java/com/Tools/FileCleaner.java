@@ -2,6 +2,7 @@ package com.Tools;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.util.*;
 
 import com.google.common.base.Preconditions;
 import org.apache.commons.lang3.StringUtils;
@@ -19,38 +20,62 @@ public class FileCleaner {
     }
 
     private static void testRemoveDuplicateFile() {
-        String pathname = "C:\\aaa\\bbb";
+        String pathname = "D:\\abc";
         logger.info("{}", removeDuplicateFile(pathname));
+    }
+
+    private static FilenameFilter filenameFilter = new FilenameFilter() {
+        public boolean accept(File dir, String name) {
+            if (name.toLowerCase().endsWith(")")) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };
+
+    static Set<File> getFileSet(String pathname) {
+        Preconditions.checkArgument(pathname != null);
+        Preconditions.checkArgument(StringUtils.isNotBlank(pathname));
+
+        Set<File> fileSet = new HashSet<File>();
+        File rootFile = new File(pathname);
+        Queue<File> queue = new LinkedList<File>();
+        queue.add(rootFile);
+        while (!queue.isEmpty()) {
+            File currentFile = queue.poll();
+            if (currentFile.exists()) {
+                if (currentFile.isDirectory()) {
+                    File[] files = currentFile.listFiles();
+                    if (files != null) {
+                        queue.addAll(Arrays.asList(files));
+                    }
+                } else {
+                    fileSet.add(currentFile);
+                }
+            }
+        }
+
+        return fileSet;
     }
 
     static int removeDuplicateFile(String pathname) {
         Preconditions.checkArgument(pathname != null);
         Preconditions.checkArgument(StringUtils.isNotBlank(pathname));
 
-        File file = new File(pathname);
-        if (file.exists() && file.isDirectory()) {
-            File[] dirs = file.listFiles();
-            for (File dir : dirs) {
-                if (dir.isDirectory() && !dir.getName().endsWith("galler")) {
-                    File[] files = dir.listFiles(new FilenameFilter() {
-                        public boolean accept(File dir, String name) {
-                            if (name.toLowerCase().contains(dir.getName().toLowerCase())) {//name.equalsIgnoreCase(dir.getName())
-                                return false;
-                            } else {
-                                return true;
-                            }
-                        }
-                    });
-                    for (int i = 0; i < files.length; i++) {
-                        System.out.println(files[i]);
-                    }
-                    logger.info("files.length = {}", files.length);
+        Set<File> fileSet = getFileSet(pathname);
+        for (File file : fileSet) {
+            System.out.println(file);
+        }
+        logger.info("fileSet.size() = {}", fileSet.size());
 
-//                    for (int i = 0; i < files.length; i++) {
-//                        files[i].delete();
-//                    }
-//                    logger.info("after deletion. files.length = {}", files.length);
-                }
+        return 0;
+    }
+
+    static int deleteFilesSet(Set<File> fileSet) {
+        for (File file : fileSet) {
+            if (!file.delete()) {
+                logger.info("deletion failed for: file.getName() = {}", file.getName());
             }
         }
 
