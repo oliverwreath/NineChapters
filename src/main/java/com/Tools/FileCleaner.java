@@ -34,11 +34,11 @@ public class FileCleaner {
         }
     };
 
-    static Set<File> getFileSet(String pathname) {
+    static List<File> getFileList(String pathname) {
         Preconditions.checkArgument(pathname != null);
         Preconditions.checkArgument(StringUtils.isNotBlank(pathname));
 
-        Set<File> fileSet = new HashSet<File>();
+        List<File> fileList = new LinkedList<File>();
         File rootFile = new File(pathname);
         Queue<File> queue = new LinkedList<File>();
         queue.add(rootFile);
@@ -51,23 +51,24 @@ public class FileCleaner {
                         queue.addAll(Arrays.asList(files));
                     }
                 } else {
-                    fileSet.add(currentFile);
+                    fileList.add(currentFile);
                 }
             }
         }
 
-        return fileSet;
+        return fileList;
     }
 
     static int removeDuplicateFile(String pathname) {
         Preconditions.checkArgument(pathname != null);
         Preconditions.checkArgument(StringUtils.isNotBlank(pathname));
 
-        Set<File> fileSet = getFileSet(pathname);
-        for (File file : fileSet) {
+        List<File> fileList = getFileList(pathname);
+        Collections.sort(fileList);
+        for (File file : fileList) {
             System.out.println(file);
         }
-        logger.info("fileSet.size() = {}", fileSet.size());
+        logger.info("fileList.size() = {}", fileList.size());
 
         return 0;
     }
