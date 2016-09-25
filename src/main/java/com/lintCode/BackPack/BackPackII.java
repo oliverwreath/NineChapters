@@ -6,25 +6,24 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by yanli on 2016-09-25.
  */
-public class BackPack {
-    private final static Logger logger = LoggerFactory.getLogger(BackPack.class);
+public class BackPackII {
+    private final static Logger logger = LoggerFactory.getLogger(BackPackII.class);
 
     public static void main(String[] arg) {
-        testBackPack();
+        testBackPackII();
     }
 
-    private static void testBackPack() {
-        logger.info("{}", backPack(11, new int[]{2, 3, 5, 7}));
+    private static void testBackPackII() {
+        logger.info("{}", backPackII(11, new int[]{2, 3, 5, 7}, new int[]{1, 5, 2, 4}));
     }
 
     /**
      * @param m: An integer m denotes the size of a backpack
-     * @param A: Given n items with size A[i]
-     * @return: The maximum size
+     * @param A  & V: Given n items with size A[i] and value V[i]
+     * @return: The maximum value
      */
-    static int backPack(int m, int[] A) {
+    static int backPackII(int m, int[] A, int V[]) {
         // write your code here
-        // filter abnormal inputs
         if (A == null || A.length == 0) {
             return 0;
         }
@@ -36,7 +35,7 @@ public class BackPack {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
                 if (j - A[i - 1] >= 0) {
-                    ret[i][j] = Math.max(ret[i - 1][j], ret[i - 1][j - A[i - 1]] + A[i - 1]);
+                    ret[i][j] = Math.max(ret[i - 1][j], ret[i - 1][j - A[i - 1]] + V[i - 1]);
                 } else {
                     ret[i][j] = ret[i - 1][j];
                 }
