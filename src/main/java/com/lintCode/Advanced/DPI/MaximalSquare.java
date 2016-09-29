@@ -1,7 +1,5 @@
 package com.lintCode.Advanced.DPI;
 
-import java.util.Arrays;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,20 +34,20 @@ public class MaximalSquare {
         // fill subproblem results
         int R = matrix.length;
         int C = matrix[0].length;
-        int[][] dp = new int[R][C];
+        int[][] dp = new int[2][C];
         int maxLength = 0;
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
                 if (i == 0 || j == 0) {
-                    dp[i][j] = matrix[i][j];
+                    dp[i % 2][j] = matrix[i][j];
                 } else {
                     if (matrix[i][j] == 0) {
-                        dp[i][j] = 0;
+                        dp[i % 2][j] = 0;
                     } else {
-                        dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i - 1][j], dp[i][j - 1])) + 1;
+                        dp[i % 2][j] = Math.min(dp[(i - 1) % 2][j - 1], Math.min(dp[(i - 1) % 2][j], dp[i % 2][j - 1])) + 1;
                     }
                 }
-                maxLength = Math.max(maxLength, dp[i][j]);
+                maxLength = Math.max(maxLength, dp[i % 2][j]);
             }
         }
 
