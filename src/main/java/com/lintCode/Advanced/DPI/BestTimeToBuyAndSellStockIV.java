@@ -57,14 +57,14 @@ public class BestTimeToBuyAndSellStockIV {
         }
 
         // print to check before committing
-        System.out.println("local = ");
-        for (int i = 0; i < n; i++) {
-            System.out.println(Arrays.toString(local[i]));
-        }
-        System.out.println("global = ");
-        for (int i = 0; i < n; i++) {
-            System.out.println(Arrays.toString(global[i]));
-        }
+//        System.out.println("local = ");
+//        for (int i = 0; i < n; i++) {
+//            System.out.println(Arrays.toString(local[i]));
+//        }
+//        System.out.println("global = ");
+//        for (int i = 0; i < n; i++) {
+//            System.out.println(Arrays.toString(global[i]));
+//        }
 
         // return the final result
         return global[n - 1][k];
