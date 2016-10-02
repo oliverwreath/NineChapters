@@ -17,6 +17,8 @@ public class ValidWordAbbreviation_408 {
         logger.info("{}", validWordAbbreviation("a", "2"));
         logger.info("{}", validWordAbbreviation("internationalization", "i12iz4n"));
         logger.info("{}", validWordAbbreviation("apple", "a2e"));
+        logger.info("{}", validWordAbbreviation("hi", "1"));
+        logger.info("{}", validWordAbbreviation("abbreviation", "a10n"));
     }
 
     static boolean validWordAbbreviation(String word, String abr) {
@@ -45,9 +47,6 @@ public class ValidWordAbbreviation_408 {
                 }
                 int number = currentAbr - '0';
                 while (j + 1 < m && Character.isDigit(abr.charAt(j + 1))) {
-                    if (abr.charAt(j + 1) == '0') {
-                        return false;
-                    }
                     number *= 10;
                     number += abr.charAt(j + 1) - '0';
                     j++;
@@ -61,7 +60,7 @@ public class ValidWordAbbreviation_408 {
             }
         }
 //        System.out.println("i = " + i + "; j = " + j + "; n = " + n);
-        if (i > n) {
+        if (i != n) {
             return false;
         }
 
