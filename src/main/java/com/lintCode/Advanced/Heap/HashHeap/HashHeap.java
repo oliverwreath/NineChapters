@@ -1,4 +1,4 @@
-package com.lintCode.Advanced.Heap;
+package com.lintCode.Advanced.Heap.HashHeap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,7 +48,7 @@ class HashHeap {
         return size_t;
     }
 
-    Boolean empty() {
+    Boolean isEmpty() {
         return (heap.size() == 0);
     }
 
