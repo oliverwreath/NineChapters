@@ -57,7 +57,7 @@ public class BuildingOutline {
         for (Point point : list) {
             if (point.isStart) {
                 maxHashHeap.add(point.height);
-                int tobeCurrentHeight = maxHashHeap.peak();
+                int tobeCurrentHeight = maxHashHeap.peek();
                 if (currentHeight != tobeCurrentHeight) {
                     if (lastStart != point.x && currentHeight != 0) {
                         ArrayList<Integer> tmpArray = new ArrayList<Integer>(Arrays.asList(lastStart, point.x, currentHeight));
@@ -72,7 +72,7 @@ public class BuildingOutline {
                 if (maxHashHeap.isEmpty()) {
                     tobeCurrentHeight = 0;
                 } else {
-                    tobeCurrentHeight = maxHashHeap.peak();
+                    tobeCurrentHeight = maxHashHeap.peek();
                 }
                 if (currentHeight != tobeCurrentHeight) {
                     if (lastStart != point.x) {

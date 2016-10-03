@@ -40,7 +40,7 @@ class HashHeap {
         size_t = 0;
     }
 
-    int peak() {
+    int peek() {
         return heap.get(0);
     }
 
