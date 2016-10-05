@@ -1,4 +1,4 @@
-package com.LeetCode.HourRank13;
+package com.HackerRank.HourRank13;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
