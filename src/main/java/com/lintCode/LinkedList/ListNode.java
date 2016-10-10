@@ -4,10 +4,10 @@ package com.lintCode.LinkedList;
  * Created by Yanliang Han on 2016/7/12.
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
         next = null;
     }
@@ -16,7 +16,7 @@ public class ListNode {
     public String toString() {
         return "ListNode{" +
                 "val=" + val +
-                ", next=" + next.val +
+                (next == null ? "" : ", next=" + next.val) +
                 '}';
     }
 }
