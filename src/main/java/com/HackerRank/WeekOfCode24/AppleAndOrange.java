@@ -1,4 +1,4 @@
-package com.LeetCode.WeekOfCode24;
+package com.HackerRank.WeekOfCode24;
 
 import java.util.Scanner;
 
