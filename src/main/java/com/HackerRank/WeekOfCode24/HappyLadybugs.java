@@ -46,6 +46,14 @@ public class HappyLadybugs {
                     map.put(b.charAt(i), 1);
                 }
             }
+            {
+                if (lastChar != '_') {
+                    // last is a ladyBug
+                    if (sameCounter == 1) {
+                        isAlreadyHappy = false;
+                    }
+                }
+            }
 //            System.out.println(map);
             if (isAlreadyHappy) {
                 System.out.println("YES");
