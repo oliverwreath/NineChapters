@@ -14,7 +14,7 @@ import java.util.HashMap;
  * trie.startsWith("lint"); will return true
  */
 class TrieNode {
-    Character s;
+    String s;
     boolean isString;
     HashMap<Character, TrieNode> subtree;
 
@@ -22,12 +22,7 @@ class TrieNode {
         // TODO Auto-generated constructor stub
         isString = false;
         subtree = new HashMap<Character, TrieNode>();
-    }
-
-    public TrieNode(char valChar) {
-        this.s = valChar;
-        isString = false;
-        subtree = new HashMap<Character, TrieNode>();
+        s = "";
     }
 }
 

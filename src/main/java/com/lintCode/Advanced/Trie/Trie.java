@@ -3,46 +3,38 @@ package com.lintCode.Advanced.Trie;
 /**
  * Created by yanli on 2016-10-02.
  */
-public class Trie {
-    private TrieNode root;
+class Trie {
+    TrieNode root;
 
     public Trie() {
         root = new TrieNode();
     }
 
-    // Inserts a word into the trie.
-    public void insert(String word) {
-        int n = word.length();
-        TrieNode current = root;
-        for (int i = 0; i < n; i++) {
-            char tmpChar = word.charAt(i);
-            if (current.subtree.containsKey(tmpChar)) {
-                current = current.subtree.get(tmpChar);
-                continue;
-            } else {
-                TrieNode newNode = new TrieNode(tmpChar);
-                current.subtree.put(tmpChar, newNode);
-                current = newNode;
-            }
-        }
-        current.isString = true;
+    public Trie(TrieNode TrieNode) {
+        root = TrieNode;
     }
 
-    // Returns if the word is in the trie.
-    public boolean search(String word) {
-        int n = word.length();
-        TrieNode current = root;
-        for (int i = 0; i < n; i++) {
-            char tmpChar = word.charAt(i);
-            if (current.subtree.containsKey(tmpChar)) {
-                current = current.subtree.get(tmpChar);
-                continue;
-            } else {
+    public void insert(String s) {
+        TrieNode now = root;
+        for (int i = 0; i < s.length(); i++) {
+            if (!now.subtree.containsKey(s.charAt(i))) {
+                now.subtree.put(s.charAt(i), new TrieNode());
+            }
+            now = now.subtree.get(s.charAt(i));
+        }
+        now.s = s;
+        now.isString = true;
+    }
+
+    public boolean search(String s) {
+        TrieNode now = root;
+        for (int i = 0; i < s.length(); i++) {
+            if (!now.subtree.containsKey(s.charAt(i))) {
                 return false;
             }
+            now = now.subtree.get(s.charAt(i));
         }
-
-        return current.isString;
+        return now.isString;
     }
 
     // Returns if there is any word in the trie
