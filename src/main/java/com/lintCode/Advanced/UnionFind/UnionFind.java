@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Created by yanli on 2016-10-14.
  */
-class UnionFind {
+public class UnionFind {
     HashMap<Integer, Integer> father = new HashMap<Integer, Integer>();
 
     public UnionFind(int n, int m) {
