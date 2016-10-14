@@ -62,51 +62,48 @@ public class WordSearchII {
         }
 
         // build trie
+        int n = board.length;
+        int m = board[0].length;
         Trie trie = new Trie();
         for (String word : words) {
             trie.insert(word);
         }
-//        System.out.println(trie);
 
-        // DFS
-        int n = board.length;
-        int m = board[0].length;
-//        System.out.println("n = " + n + "; m = " + m);
-//        for (int i = 0; i < n; i++) {
-//            System.out.println(Arrays.toString(board[i]));
-//        }
+        // dfs
         HashSet<String> ans = new HashSet<String>();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                dfs(i, j, n, m, trie.root, board, ans);
+                search(board, trie.root, ans, i, j, n, m);
             }
         }
 
-        // return the answer
+        // return ans
         return new ArrayList<String>(ans);
     }
 
-    private void dfs(int i, int j, int n, int m, TrieNode root, char[][] board, HashSet<String> ans) {
+    private boolean valide(int i, int j, int n, int m) {
+        return i >= 0 && i < n && j >= 0 && j < m;
+    }
+
+    private void search(char[][] board, TrieNode root, HashSet<String> ans, int i, int j, int n, int m) {
+        // got a result?
         if (root.isString) {
-//            System.out.println("i = " + i + "; j = " + j + "; n = " + n + "; m = " + m);
             ans.add(root.s);
         }
-        if (root != null && root.subtree.containsKey(board[i][j])) {
+        // for the children
+        if (!valide(i, j, n, m) || root == null) {
+            return;
+        }
+        if (root.subtree.containsKey(board[i][j])) {
             for (int t = 0; t < 4; t++) {
                 int X = i + dx[t];
                 int Y = j + dy[t];
-                if (valid(X, Y, n, m)) {
-                    char now = board[i][j];
-                    board[i][j] = 0;
-                    dfs(X, Y, n, m, root.subtree.get(now), board, ans);
-                    board[i][j] = now;
-                }
+                char current = board[i][j];
+                board[i][j] = 0;
+                search(board, root.subtree.get(current), ans, X, Y, n, m);
+                board[i][j] = current;
             }
         }
-    }
-
-    private boolean valid(int X, int Y, int n, int m) {
-        return X >= 0 && X < n && Y >= 0 && Y < m;
     }
 
     static int[] dx = new int[]{0, 0, 1, -1};
