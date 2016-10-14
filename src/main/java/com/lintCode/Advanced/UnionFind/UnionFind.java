@@ -11,7 +11,7 @@ class UnionFind {
     public UnionFind(int n, int m) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                int id = converttoId(i, j, m);
+                int id = convert2Id(i, j, m);
                 father.put(id, id);
             }
         }
@@ -44,7 +44,7 @@ class UnionFind {
         }
     }
 
-    int converttoId(int x, int y, int m) {
+    int convert2Id(int x, int y, int m) {
         return x * m + y;
     }
 }
