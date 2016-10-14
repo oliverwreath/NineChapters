@@ -54,4 +54,11 @@ class Trie {
 
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Trie{" +
+                "root=" + root +
+                '}';
+    }
 }

@@ -24,5 +24,14 @@ class TrieNode {
         subtree = new HashMap<Character, TrieNode>();
         s = "";
     }
+
+    @Override
+    public String toString() {
+        return "TrieNode{" +
+                "s='" + s + '\'' +
+                ", isString=" + isString +
+                ", subtree=" + subtree +
+                '}';
+    }
 }
 
