@@ -17,7 +17,7 @@ public class UnionFind {
         }
     }
 
-    int compressed_find(int key) {
+    public int compressed_find(int key) {
         // find
         int parent = father.get(key);
         while (parent != father.get(parent)) {
@@ -36,12 +36,15 @@ public class UnionFind {
 
     }
 
-    void union(int key, int keyBigger) {
+    public boolean union(int key, int keyBigger) {
         int boss = compressed_find(key);
         int bossBigger = compressed_find(keyBigger);
         if (boss != bossBigger) {
             father.put(boss, bossBigger);
+            return true;
         }
+
+        return false;
     }
 
     private int convert2Id(int x, int y, int m) {
