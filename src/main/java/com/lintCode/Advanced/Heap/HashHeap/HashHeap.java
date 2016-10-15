@@ -16,8 +16,7 @@ public class HashHeap {
         System.out.println("Hello!");
     }
 
-    public HashHeap(String mod) { // 传入min 表示最小堆，max 表示最大堆
-        // TODO Auto-generated constructor stub
+    public HashHeap(String mod) {
         heap = new ArrayList<Integer>();
         mode = mod;
         hash = new HashMap<Integer, Node>();
