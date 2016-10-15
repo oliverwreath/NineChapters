@@ -8,6 +8,12 @@ import java.util.HashMap;
 public class UnionFind {
     HashMap<Integer, Integer> father = new HashMap<Integer, Integer>();
 
+    public UnionFind(int n) {
+        for (int i = 1; i <= n; i++) {
+            father.put(i, i);
+        }
+    }
+
     public UnionFind(int n, int m) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
