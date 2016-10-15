@@ -22,8 +22,8 @@ public class DataStreamMedian {
         logger.info("2, 2, 20 = {}", medianII(new int[]{2, 20, 100}));
     }
 
-    PriorityQueue<Integer> maxHeap;
-    PriorityQueue<Integer> minHeap;
+    private PriorityQueue<Integer> maxHeap;
+    private PriorityQueue<Integer> minHeap;
 
     private static Comparator<Integer> maxComparator = new Comparator<Integer>() {
         public int compare(Integer o1, Integer o2) {
