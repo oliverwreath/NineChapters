@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * Created by yanli on 2016-10-02.
  */
-class HashHeap {
+public class HashHeap {
     ArrayList<Integer> heap;
     String mode;
     int size_t;
@@ -14,22 +14,6 @@ class HashHeap {
 
     public static void main(String[] args) {
         System.out.println("Hello!");
-    }
-
-    class Node {
-        public Integer id;
-        public Integer num;
-
-        Node(Node now) {
-            id = now.id;
-            num = now.num;
-        }
-
-        Node(Integer first, Integer second) {
-
-            this.id = first;
-            this.num = second;
-        }
     }
 
     public HashHeap(String mod) { // 传入min 表示最小堆，max 表示最大堆
@@ -40,15 +24,15 @@ class HashHeap {
         size_t = 0;
     }
 
-    int peek() {
+    public int peek() {
         return heap.get(0);
     }
 
-    int size() {
+    public int size() {
         return size_t;
     }
 
-    Boolean isEmpty() {
+    public Boolean isEmpty() {
         return (heap.size() == 0);
     }
 
@@ -94,7 +78,7 @@ class HashHeap {
         heap.set(idB, valA);
     }
 
-    Integer poll() {
+    public Integer poll() {
         size_t--;
         Integer now = heap.get(0);
         Node hashnow = hash.get(now);
@@ -111,7 +95,7 @@ class HashHeap {
         return now;
     }
 
-    void add(int now) {
+    public void add(int now) {
         size_t++;
         if (hash.containsKey(now)) {
             Node hashnow = hash.get(now);
@@ -125,7 +109,7 @@ class HashHeap {
         siftup(heap.size() - 1);
     }
 
-    void delete(int now) {
+    public void delete(int now) {
         size_t--;
         ;
         Node hashnow = hash.get(now);
@@ -173,6 +157,40 @@ class HashHeap {
                 swap(id, son);
             }
             id = son;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "HashHeap{" +
+                "heap=" + heap +
+                ", mode='" + mode + '\'' +
+                ", size_t=" + size_t +
+                ", hash=" + hash +
+                '}';
+    }
+
+    private class Node {
+        public Integer id;
+        public Integer num;
+
+        Node(Node now) {
+            id = now.id;
+            num = now.num;
+        }
+
+        Node(Integer first, Integer second) {
+
+            this.id = first;
+            this.num = second;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "id=" + id +
+                    ", num=" + num +
+                    '}';
         }
     }
 }
