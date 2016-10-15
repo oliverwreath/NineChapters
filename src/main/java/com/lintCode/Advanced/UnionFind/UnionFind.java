@@ -1,12 +1,22 @@
 package com.lintCode.Advanced.UnionFind;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Created by yanli on 2016-10-14.
  */
 public class UnionFind {
     HashMap<Integer, Integer> father = new HashMap<Integer, Integer>();
+
+    public UnionFind() {
+    }
+
+    public UnionFind(HashSet<Integer> set) {
+        for (Integer current : set) {
+            father.put(current, current);
+        }
+    }
 
     public UnionFind(int n) {
         for (int i = 1; i <= n; i++) {
@@ -31,15 +41,13 @@ public class UnionFind {
         }
 
         // compress
-        int temp = -1;
         int fa = key;
         while (fa != father.get(fa)) {
-            temp = father.get(fa);
+            int temp = father.get(fa);
             father.put(fa, parent);
             fa = temp;
         }
         return parent;
-
     }
 
     public boolean union(int key, int keyBigger) {
