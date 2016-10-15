@@ -109,8 +109,8 @@ public class HashHeap {
     }
 
     public boolean delete(int now) {
-        size_t--;
         if (hash.containsKey(now)) {
+            size_t--;
             Node hashnow = hash.get(now);
             int id = hashnow.id;
             int num = hashnow.num;
