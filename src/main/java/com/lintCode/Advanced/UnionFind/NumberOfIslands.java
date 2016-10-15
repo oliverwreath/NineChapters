@@ -1,7 +1,5 @@
 package com.lintCode.Advanced.UnionFind;
 
-import java.util.HashSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,59 +43,27 @@ public class NumberOfIslands {
 //        System.out.println("n = " + n + "; m = " + m + " " + unionFind);
 
         // DFS
+        int counter = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-//                search(grid, unionFind, i, j, n, m);
                 if (grid[i][j]) {
-                    // DFS
                     grid[i][j] = false;
+                    counter++;
                     for (int t = 0; t < 4; t++) {
                         int X = i + dx[t];
                         int Y = j + dy[t];
                         if (valid(X, Y, n, m) && grid[X][Y]) {
-                            unionFind.union(convert2Id(i, j, m), convert2Id(X, Y, m));
+                            if (unionFind.union(convert2Id(i, j, m), convert2Id(X, Y, m))) {
+                                counter--;
+                            }
                         }
                     }
-                    grid[i][j] = true;
                 }
             }
         }
 
-//        System.out.println("n = " + n + "; m = " + m + " " + unionFind);
-
-//        for (int i = 0; i < n * m; i++) {
-//            unionFind.compressed_find(i);
-//        }
-//        System.out.println("n = " + n + "; m = " + m + " " + unionFind);
-
-        HashSet<Integer> ans = new HashSet<Integer>();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (grid[i][j]) {
-                    ans.add(unionFind.compressed_find(convert2Id(i, j, m)));
-                }
-            }
-        }
-//        System.out.println("n = " + n + "; m = " + m + " " + unionFind);
-//        System.out.println("ans = " + ans);
-
-        return ans.size();
+        return counter;
     }
-
-//    private void search(boolean[][] grid, UnionFind unionFind, int i, int j, int n, int m) {
-//        if (grid[i][j]) {
-//            // DFS
-//            grid[i][j] = false;
-//            for (int t = 0; t < 4; t++) {
-//                int X = i + dx[t];
-//                int Y = j + dy[t];
-//                if (valid(X, Y, n, m)) {
-//                    search(grid, unionFind, X, Y, n, m);
-//                }
-//            }
-//            grid[i][j] = true;
-//        }
-//    }
 
     static int[] dx = new int[]{0, 0, 1, -1};
     static int[] dy = new int[]{1, -1, 0, 0};
