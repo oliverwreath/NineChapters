@@ -108,23 +108,26 @@ public class HashHeap {
         siftup(heap.size() - 1);
     }
 
-    public void delete(int now) {
+    public boolean delete(int now) {
         size_t--;
-        ;
-        Node hashnow = hash.get(now);
-        int id = hashnow.id;
-        int num = hashnow.num;
-        if (hashnow.num == 1) {
-
-            swap(id, heap.size() - 1);
-            hash.remove(now);
-            heap.remove(heap.size() - 1);
-            if (heap.size() > id) {
-                siftup(id);
-                siftdown(id);
+        if (hash.containsKey(now)) {
+            Node hashnow = hash.get(now);
+            int id = hashnow.id;
+            int num = hashnow.num;
+            if (hashnow.num == 1) {
+                swap(id, heap.size() - 1);
+                hash.remove(now);
+                heap.remove(heap.size() - 1);
+                if (heap.size() > id) {
+                    siftup(id);
+                    siftdown(id);
+                }
+            } else {
+                hash.put(now, new Node(id, num - 1));
             }
+            return true;
         } else {
-            hash.put(now, new Node(id, num - 1));
+            return false;
         }
     }
 
