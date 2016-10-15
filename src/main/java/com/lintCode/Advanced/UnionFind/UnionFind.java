@@ -44,7 +44,14 @@ public class UnionFind {
         }
     }
 
-    int convert2Id(int x, int y, int m) {
+    private int convert2Id(int x, int y, int m) {
         return x * m + y;
+    }
+
+    @Override
+    public String toString() {
+        return "UnionFind{" +
+                "father=" + father +
+                '}';
     }
 }
