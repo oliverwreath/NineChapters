@@ -16,16 +16,6 @@ public class RectangleArea_223 {
     }
 
     private void testSearchA2DMatrix_74() {
-//        String[] trueArray = new String[]{"()", "()[]{}"};
-//        for (String string : trueArray) {
-//            myLogger.info("{} true = {}", string, isValid(string));
-//        }
-//
-//        String[] falseArray = new String[]{"(", "{", "[", "(]", "([)]"};
-//        for (String string : falseArray) {
-//            myLogger.info("{} false = {}", string, isValid(string));
-//        }
-
         int[] a = new int[]{-3, 0, 3, 4, 0, -1, 9, 2};
         logger.info("{} 45 = {}", Arrays.toString(a), computeArea(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]));
         a = new int[]{0, 0, 0, 0, -1, -1, 1, 1};
@@ -50,27 +40,17 @@ public class RectangleArea_223 {
         long area1 = (C - A) * (D - B);
         long area2 = (G - E) * (H - F);
         long overlap = overLapRectangle(A, B, C, D, E, F, G, H);
-        myLogger.info("area1 = " + area1 + "; area2 = " + area2 + "; overlap = " + overlap);
 
-        return (int) (area1 - overlap + area2);
+        return (int) (area1 + area2 - overlap);
     }
 
     public long overLapRectangle(int A, int B, int C, int D, int E, int F, int G, int H) {
         // write your code here
         // handle extreme cases
         if (G < A || C < E || H < B || D < F) {
-            myLogger.info("flagC");
             return 0;
         } else {
-            long x = Math.min(C, G) - Math.max(A, E);
-            long y = Math.min(D, H) - Math.max(B, F);
-            if (x > 0 && y > 0) {
-                myLogger.info("flagA");
-                return x * y;
-            } else {
-                myLogger.info("flagB");
-                return 0;
-            }
+            return (Math.min(G, C) - Math.max(A, E)) * (Math.min(D, H) - Math.max(B, F));
         }
     }
 
