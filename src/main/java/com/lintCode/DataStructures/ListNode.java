@@ -4,10 +4,10 @@ package com.lintCode.DataStructures;
  * Created by yanli on 9/11/2016.
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
         next = null;
     }
