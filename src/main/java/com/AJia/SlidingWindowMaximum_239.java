@@ -1,4 +1,4 @@
-package com.Amazon;
+package com.AJia;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

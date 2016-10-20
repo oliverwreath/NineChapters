@@ -1,4 +1,4 @@
-package com.Amazon;
+package com.AJia;
 
 import com.lintCode.DataStructures.ListNode;
 import org.slf4j.Logger;
