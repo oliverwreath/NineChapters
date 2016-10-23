@@ -1,4 +1,4 @@
-package com.AJia;
+package com.AJia.LeetCode;
 
 import com.lintCode.DataStructures.ListNode;
 import org.slf4j.Logger;

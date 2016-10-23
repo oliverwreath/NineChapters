@@ -1,4 +1,4 @@
-package com.AJia;
+package com.AJia.LeetCode;
 
 import java.util.LinkedList;
 import java.util.List;

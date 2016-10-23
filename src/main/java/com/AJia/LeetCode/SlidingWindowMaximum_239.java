@@ -1,4 +1,4 @@
-package com.AJia;
+package com.AJia.LeetCode;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
