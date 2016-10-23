@@ -4,11 +4,11 @@ package com.LeetCode;
  * Created by yanli on 9/5/2016.
  */
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left = null;
+    public TreeNode right = null;
 
-    TreeNode(int x) {
+    public TreeNode(int x) {
         val = x;
     }
 
