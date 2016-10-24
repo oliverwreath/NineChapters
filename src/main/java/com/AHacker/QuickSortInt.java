@@ -74,16 +74,14 @@ public class QuickSortInt {
         }
 
         // partition
-        int pivotIndex = start + random.nextInt(end - start + 1);
-        int pivot = numbers[pivotIndex];
-        swap(numbers, start, pivotIndex);
-        int left = start + 1;
+        int pivot = numbers[start + random.nextInt(end - start + 1)];
+        int left = start;
         int right = end;
         while (left <= right) {
             while (left <= right && numbers[left] < pivot) {
                 left++;
             }
-            while (left <= right && numbers[right] >= pivot) {
+            while (left <= right && numbers[right] > pivot) {
                 right--;
             }
             if (left <= right) {
@@ -92,11 +90,10 @@ public class QuickSortInt {
                 right--;
             }
         }
-        swap(numbers, start, right);
 
         // recursive
-        QuickSortHelper(numbers, start, right - 1, random);
-        QuickSortHelper(numbers, right + 1, end, random);
+        QuickSortHelper(numbers, start, right, random);
+        QuickSortHelper(numbers, left, end, random);
     }
 
     private static void swap(int[] numbers, int i, int j) {
