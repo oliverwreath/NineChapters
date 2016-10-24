@@ -22,23 +22,10 @@ public class SameTree_100 {
         // write your code here
         // handle extreme cases
         if (p == null || q == null) {
-            if (p == null) {
-                return q == null;
-            } else {
-                return q != null;
-            }
+            return p == q;
         }
 
-        if (p.val != q.val) {
-            return false;
-        }
-        if (!isSameTree(p.left, q.left)) {
-            return false;
-        }
-        if (!isSameTree(p.right, q.right)) {
-            return false;
-        }
-        return true;
+        return p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 
     private MyTmpLogger myLogger = new MyTmpLogger();
