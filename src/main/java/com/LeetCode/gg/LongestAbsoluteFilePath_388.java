@@ -70,7 +70,7 @@ public class LongestAbsoluteFilePath_388 {
 
         @Override
         public String toString() {
-            return "Entry{" +
+            return "ResultEntry{" +
                     "level=" + level +
                     ", length=" + length +
                     ", isFile=" + isFile +
