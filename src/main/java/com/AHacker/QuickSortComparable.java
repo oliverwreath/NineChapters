@@ -17,7 +17,7 @@ public class QuickSortComparable {
     }
 
     private void testQuickSort() {
-//        logger.info("{}", QuickSelectTopK());
+//        logger.info("{}", QuickTopK());
         int n = 300;
         Integer[] numbers = new Integer[n];
         int[] numbers2 = new int[n];
@@ -49,7 +49,7 @@ public class QuickSortComparable {
         }
 
 //        for (int i = 0; i < numbers.length; i++) {
-//            System.out.println(Arrays.toString(QuickSelectTopK(numbers, i)));
+//            System.out.println(Arrays.toString(QuickTopK(numbers, i)));
 //        }
     }
 

@@ -16,8 +16,10 @@ public class QuickTopKComparable {
         new QuickTopKComparable().testQuickSelectTopK();
     }
 
+    /**
+     * caller
+     */
     private void testQuickSelectTopK() {
-//        logger.info("{}", QuickTopK());
         int n = 300;
         Integer[] numbers = new Integer[n];
         int[] numbers2 = new int[n];
@@ -26,20 +28,9 @@ public class QuickTopKComparable {
             numbers[i] = random.nextInt(99);
             numbers2[i] = numbers[i];
         }
-//        int goodCounter = 0;
-//        int badCounter = 0;
-//        for (int i = 0; i < 999999999; i++) {
-//            int num = random.nextInt(n);
-//            if (0 <= num && num < n) {
-//                goodCounter++;
-//            } else {
-//                badCounter++;
-//            }
-//        }
-//        System.out.println("goodCounter = " + goodCounter + "; badCounter = " + badCounter);
 
         int k = 99;
-        QuickSort(numbers, k);
+        QuickTopK(numbers, k);
         System.out.println(Arrays.toString(numbers));
         Arrays.sort(numbers2);
         for (int i = 0; i < numbers.length; i++) {
@@ -54,13 +45,15 @@ public class QuickTopKComparable {
             }
         }
         System.out.println(Arrays.toString(numbers2));
-
-//        for (int i = 0; i < numbers.length; i++) {
-//            System.out.println(Arrays.toString(QuickTopK(numbers, i)));
-//        }
     }
 
-    public static void QuickSort(Comparable[] numbers, int k) {
+    /**
+     * QuickTopK
+     *
+     * @param numbers
+     * @param k
+     */
+    public static void QuickTopK(Comparable[] numbers, int k) {
         // handle extreme cases
         if (numbers == null || numbers.length == 0) {
             return;
@@ -70,11 +63,20 @@ public class QuickTopKComparable {
         int start = 0;
         int end = n - 1;
         Random random = new Random();
-        QuickSortHelper(numbers, start, end, random, k);
+        QuickTopKHelper(numbers, start, end, random, k);
         return;
     }
 
-    private static void QuickSortHelper(Comparable[] numbers, int start, int end, Random random, int k) {
+    /**
+     * helper of QuickTopK
+     *
+     * @param numbers
+     * @param start
+     * @param end
+     * @param random
+     * @param k
+     */
+    private static void QuickTopKHelper(Comparable[] numbers, int start, int end, Random random, int k) {
         // handle extreme cases
         if (numbers == null || start >= end || start >= k) {
             return;
@@ -99,8 +101,8 @@ public class QuickTopKComparable {
         }
 
         // recursive
-        QuickSortHelper(numbers, start, right, random, k);
-        QuickSortHelper(numbers, left, end, random, k);
+        QuickTopKHelper(numbers, start, right, random, k);
+        QuickTopKHelper(numbers, left, end, random, k);
     }
 
     private static void swap(Comparable[] numbers, int i, int j) {
