@@ -24,9 +24,9 @@ public class FindMinimumInRotatedSortedArrayII_154 {
         logger.info("{}", binarySearch(new int[]{0, 1, 2, 4, 5, 6, 7}, -1));
         logger.info("{}", binarySearch(new int[]{0, 1, 2, 4, 5, 6, 7}, 9));
 
-        logger.info("{}", findMin(new int[]{0, 1, 2, 4, 5, 6, 7}));
-        logger.info("{}", findMin(new int[]{7, 0, 1, 2, 4, 5, 6,}));
-        logger.info("{}", findMin(new int[]{6, 7, 0, 1, 2, 4, 5}));
+        logger.info("{}", findMin(new int[]{0, 0, 2, 2, 5, 6, 6}));
+        logger.info("{}", findMin(new int[]{6, 0, 0, 2, 2, 5, 6}));
+        logger.info("{}", findMin(new int[]{6, 6, 0, 0, 2, 2, 5}));
     }
 
     public int findMin(int[] nums) {
