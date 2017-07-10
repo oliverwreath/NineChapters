@@ -8,10 +8,10 @@ import java.util.Arrays;
 public class DecodeWays {
     public static void main(String[] args) {
         DecodeWays decodeWays = new DecodeWays();
-        MyLogger.debug("2 = " + decodeWays.numDecodings("12"));
-        MyLogger.debug("1 = " + decodeWays.numDecodings("10"));
-        MyLogger.debug("0 = " + decodeWays.numDecodings("19261001"));
-        MyLogger.debug("0 = " + decodeWays.numDecodings("0"));
+        MyLogger.debug("result 2 = " + decodeWays.numDecodings("12"));
+        MyLogger.debug("result 1 = " + decodeWays.numDecodings("10"));
+        MyLogger.debug("result 0 = " + decodeWays.numDecodings("19261001"));
+        MyLogger.debug("result 0 = " + decodeWays.numDecodings("0"));
     }
 
     public int numDecodings(String s) {
@@ -27,14 +27,10 @@ public class DecodeWays {
 
         for (int i = 0; i < n; i++) {
             if (chars[i] > '0') {
-                dp[i] = i - 1 >= 0 ? dp[i - 1] : 1;
+                dp[i] += i - 1 >= 0 ? dp[i - 1] : 1;
             }
-            if (i - 1 >= 0 && chars[i - 1] > '0' && isValid(chars[i - 1], chars[i])) {
-                if (i - 2 >= 0) {
-                    dp[i] += dp[i - 2];
-                } else {
-                    dp[i] += 1;
-                }
+            if (i - 1 >= 0 && isValid(chars[i - 1], chars[i])) {
+                dp[i] += i - 2 >= 0 ? dp[i - 2] : 1;
             }
         }
 
@@ -44,6 +40,9 @@ public class DecodeWays {
 
     private boolean isValid(int x, int y) {
         MyLogger.debug("x = " + x + " y = " + y);
+        if (x != '1' && x != '2') {
+            return false;
+        }
         int number = (x - '0') * 10 + (y - '0');
         MyLogger.debug("number = " + number);
         return (number > 0 && number < 27);
