@@ -1,10 +1,9 @@
 package com.aTemplates;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Scanner;
 
 public class DFS_ConnectedCellInGrid {
     private final static Logger logger = LoggerFactory.getLogger(DFS_ConnectedCellInGrid.class);
@@ -26,7 +25,7 @@ public class DFS_ConnectedCellInGrid {
         System.out.println(getBiggestRegion(grid));
     }
 
-    private int getBiggestRegion(int[][] matrix) {
+    private static int getBiggestRegion(int[][] matrix) {
         // handle extreme cases
         if (matrix == null || matrix.length < 1 || matrix[0].length < 1) {
             return 0;
@@ -39,9 +38,8 @@ public class DFS_ConnectedCellInGrid {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (matrix[i][j] == 1) {
-                    count = 0;
-                    dfsHelper(n, m, i, j, matrix);
-                    maxCount = Math.max(maxCount, count);
+                    int tmpCount = dfsHelper(n, m, i, j, matrix);
+                    maxCount = Math.max(maxCount, tmpCount);
                 }
             }
         }
@@ -53,29 +51,32 @@ public class DFS_ConnectedCellInGrid {
         return maxCount;
     }
 
-    int count = 0;
-
-    private void dfsHelper(int n, int m, int i, int j, int[][] matrix) {
-        if (matrix[i][j] == 1) {
-            count++;
-            matrix[i][j] = -1;
-            // up
-            if (i - 1 >= 0) {
-                dfsHelper(n, m, i - 1, j, matrix);
-            }
-            // down
-            if (i + 1 < n) {
-                dfsHelper(n, m, i + 1, j, matrix);
-            }
-            // left
-            if (j - 1 >= 0) {
-                dfsHelper(n, m, i, j - 1, matrix);
-            }
-            // right
-            if (j + 1 < m) {
-                dfsHelper(n, m, i, j + 1, matrix);
+    private static int dfsHelper(int n, int m, int i, int j, int[][] matrix) {
+        if (valid(i, j, n, m)) {
+            if (matrix[i][j] == 1) {
+                int count = 1;
+                matrix[i][j] = -1;
+                // up
+                count += dfsHelper(n, m, i - 1, j, matrix);
+                // down
+                count += dfsHelper(n, m, i + 1, j, matrix);
+                // left
+                count += dfsHelper(n, m, i, j - 1, matrix);
+                // right
+                count += dfsHelper(n, m, i, j + 1, matrix);
+                // diagonal
+                count += dfsHelper(n, m, i - 1, j - 1, matrix);
+                count += dfsHelper(n, m, i - 1, j + 1, matrix);
+                count += dfsHelper(n, m, i + 1, j - 1, matrix);
+                count += dfsHelper(n, m, i + 1, j + 1, matrix);
+                return count;
             }
         }
+        return 0;
+    }
+
+    private static boolean valid(int i, int j, int n, int m) {
+        return i >= 0 && j >= 0 && i < n && j < m;
     }
 
     private static MyTmpLogger myLogger = new MyTmpLogger();
