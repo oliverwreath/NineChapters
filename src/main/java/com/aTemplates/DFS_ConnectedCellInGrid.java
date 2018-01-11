@@ -5,6 +5,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
+/**
+ * recursive DFS
+ */
 public class DFS_ConnectedCellInGrid {
     private final static Logger logger = LoggerFactory.getLogger(DFS_ConnectedCellInGrid.class);
 
