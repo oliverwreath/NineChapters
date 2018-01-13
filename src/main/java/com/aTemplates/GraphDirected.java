@@ -1,25 +1,35 @@
 package com.aTemplates;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class Graph {
+public class GraphDirected {
     private HashMap<Integer, Node> nodeLookup = new HashMap<>();
     private int size;
 
-    public Graph(int size) {
+    public GraphDirected(int size) {
         this.size = size;
     }
 
     public class Node {
-        private int id;
-        LinkedList<Node> adjacent = new LinkedList<>();
+        public int id;
+        public LinkedList<Node> require = new LinkedList<>();
 
         private Node(int id) {
             this.id = id;
         }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "id=" + id +
+                    '}';
+        }
     }
 
-    private Node getNode(int id) {
+    public Node getNode(int id) {
         if (!nodeLookup.containsKey(id)) {
             nodeLookup.put(id, new Node(id));
         }
@@ -29,8 +39,7 @@ public class Graph {
     public void addEdge(int source, int destination) {
         Node s = getNode(source);
         Node d = getNode(destination);
-        s.adjacent.add(d);
-        d.adjacent.add(s);
+        s.require.add(d);
     }
 
     private class Entry {
@@ -63,7 +72,7 @@ public class Graph {
             if (!visited.contains(currentEntry.id)) {
                 visited.add(currentEntry.id);
                 result[currentEntry.id] = currentEntry.distance;
-                for (Node child : getNode(currentEntry.id).adjacent) {
+                for (Node child : getNode(currentEntry.id).require) {
                     queue.add(new Entry(child.id, currentEntry.distance + 6));
                 }
             }
@@ -88,7 +97,7 @@ public class Graph {
         if (source == destination) {
             return true;
         }
-        for (Node child : source.adjacent) {
+        for (Node child : source.require) {
             if (hasPathDFS(child, destination, visited)) {
                 return true;
             }
@@ -116,7 +125,7 @@ public class Graph {
                 continue;
             }
             visited.add(node.id);
-            nextToVisit.addAll(node.adjacent);
+            nextToVisit.addAll(node.require);
         }
         return false;
     }
