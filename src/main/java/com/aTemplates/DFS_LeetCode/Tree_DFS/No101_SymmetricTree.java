@@ -16,8 +16,8 @@ public class No101_SymmetricTree {
 
     private static void testNo101_SymmetricTree() {
         No101_SymmetricTree No101_SymmetricTree = new No101_SymmetricTree();
-        MyLogger.info("result 2 v.s. " + No101_SymmetricTree.isSymmetric("12"));
-        MyLogger.info("result 1 v.s. " + No101_SymmetricTree.isSymmetric("10"));
+//        MyLogger.info("result 2 v.s. " + No101_SymmetricTree.isSymmetric("12"));
+//        MyLogger.info("result 1 v.s. " + No101_SymmetricTree.isSymmetric("10"));
     }
 
     /**
