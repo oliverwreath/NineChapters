@@ -10,10 +10,10 @@ public class No437_PathSumIII {
     private final static Logger logger = LoggerFactory.getLogger(No437_PathSumIII.class);
 
     public static void main(String[] args) {
-        testNo113_PathSumII();
+        testNo437_PathSumIII();
     }
 
-    private static void testNo113_PathSumII() {
+    private static void testNo437_PathSumIII() {
         No437_PathSumIII No113_PathSumII = new No437_PathSumIII();
         TreeNode root = new TreeNode(10);
 //        root.left = new TreeNode(5);
