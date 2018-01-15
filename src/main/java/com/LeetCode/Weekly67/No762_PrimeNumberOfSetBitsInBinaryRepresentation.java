@@ -5,18 +5,18 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashSet;
 
-public class No762 {
-    private final static Logger logger = LoggerFactory.getLogger(No762.class);
+public class No762_PrimeNumberOfSetBitsInBinaryRepresentation {
+    private final static Logger logger = LoggerFactory.getLogger(No762_PrimeNumberOfSetBitsInBinaryRepresentation.class);
 
     public static void main(String[] args) {
         testNo762();
     }
 
     private static void testNo762() {
-        No762 No762 = new No762();
-        MyLogger.info("result 4 v.s. " + No762.countPrimeSetBits(6, 10));
-        MyLogger.info("result 5 v.s. " + No762.countPrimeSetBits(10, 15));
-        MyLogger.info("result 5 v.s. " + No762.countPrimeSetBits(842, 888));
+        No762_PrimeNumberOfSetBitsInBinaryRepresentation No762_PrimeNumberOfSetBitsInBinaryRepresentation = new No762_PrimeNumberOfSetBitsInBinaryRepresentation();
+        MyLogger.info("result 4 v.s. " + No762_PrimeNumberOfSetBitsInBinaryRepresentation.countPrimeSetBits(6, 10));
+        MyLogger.info("result 5 v.s. " + No762_PrimeNumberOfSetBitsInBinaryRepresentation.countPrimeSetBits(10, 15));
+        MyLogger.info("result 23 v.s. " + No762_PrimeNumberOfSetBitsInBinaryRepresentation.countPrimeSetBits(842, 888));
     }
 
     /**
