@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by yanli on 2016-10-04.
  */
-public class BestTimetoBuyandSellStock_121 {
-    private final static Logger logger = LoggerFactory.getLogger(BestTimetoBuyandSellStock_121.class);
+public class No121_BestTimetoBuyandSellStock {
+    private final static Logger logger = LoggerFactory.getLogger(No121_BestTimetoBuyandSellStock.class);
 
     public static void main(String[] arg) {
-        new BestTimetoBuyandSellStock_121().testHouseRobber_198();
+        new No121_BestTimetoBuyandSellStock().testHouseRobber_198();
     }
 
     private void testHouseRobber_198() {

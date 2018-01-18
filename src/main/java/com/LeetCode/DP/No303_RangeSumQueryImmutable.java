@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by yanli on 2016-10-04.
  */
-public class RangeSumQueryImmutable_303 {
-    private final static Logger logger = LoggerFactory.getLogger(RangeSumQueryImmutable_303.class);
+public class No303_RangeSumQueryImmutable {
+    private final static Logger logger = LoggerFactory.getLogger(No303_RangeSumQueryImmutable.class);
 
     public static void main(String[] arg) {
-        new RangeSumQueryImmutable_303().testRangeSumQueryImmutable_303();
+        new No303_RangeSumQueryImmutable().testRangeSumQueryImmutable_303();
     }
 
     private void testRangeSumQueryImmutable_303() {

@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by yanli on 2016-10-04.
  */
-public class ClimbingStairs_70 {
-    private final static Logger logger = LoggerFactory.getLogger(ClimbingStairs_70.class);
+public class No70_ClimbingStairs {
+    private final static Logger logger = LoggerFactory.getLogger(No70_ClimbingStairs.class);
 
     public static void main(String[] arg) {
-        new ClimbingStairs_70().testHouseRobber_198();
+        new No70_ClimbingStairs().testHouseRobber_198();
     }
 
     private void testHouseRobber_198() {

@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by yanli on 2016-10-10.
  */
-public class MaximumSubarray_53 {
-    private final static Logger logger = LoggerFactory.getLogger(MaximumSubarray_53.class);
+public class No53_MaximumSubarray {
+    private final static Logger logger = LoggerFactory.getLogger(No53_MaximumSubarray.class);
 
     public static void main(String[] arg) {
-        new MaximumSubarray_53().testMaximumSubarray_53();
+        new No53_MaximumSubarray().testMaximumSubarray_53();
     }
 
     private void testMaximumSubarray_53() {
