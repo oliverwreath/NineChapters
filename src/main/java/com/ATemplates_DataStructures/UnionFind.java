@@ -28,20 +28,20 @@ public class UnionFind {
     /**
      * 2d matrix
      *
-     * @param n
      * @param m
+     * @param n
      */
-    public UnionFind(int n, int m) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                int id = convert2Id(i, j, m);
+    public UnionFind(int m, int n) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int id = convert2Id(i, j, n);
                 father.put(id, id);
             }
         }
     }
 
-    private int convert2Id(int i, int j, int m) {
-        return i * m + j;
+    public int convert2Id(int i, int j, int n) {
+        return i * n + j;
     }
 
     /**
@@ -55,6 +55,10 @@ public class UnionFind {
             key = father.get(key);
         }
         return key;
+    }
+
+    public void addNew(int key) {
+        father.put(key, key);
     }
 
     /**
@@ -80,6 +84,16 @@ public class UnionFind {
         if (boss != bossBigger) {
             father.put(boss, bossBigger);
         }
+    }
+
+    public boolean union_Number_Of_Island2(int key, int keyBigger) {
+        int boss = find(key);
+        int bossBigger = find(keyBigger);
+        if (boss != bossBigger) {
+            father.put(boss, bossBigger);
+            return true;
+        }
+        return false;
     }
 
     @Override
