@@ -1,4 +1,4 @@
-package com.aTemplates.DFS_LeetCode.Graph_DFS;
+package com.aTemplates_DataStructures.DFS_LeetCode.Graph_DFS;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

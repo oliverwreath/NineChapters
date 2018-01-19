@@ -1,4 +1,4 @@
-package com.aTemplates.DFS_LeetCode.Tree_BFS_LevelOrderTraversal;
+package com.aTemplates_DataStructures.DFS_LeetCode.Tree_BFS_LevelOrderTraversal;
 
 import com.LeetCode.TreeNode;
 import org.slf4j.Logger;

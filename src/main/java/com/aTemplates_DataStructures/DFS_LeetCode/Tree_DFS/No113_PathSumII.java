@@ -1,4 +1,4 @@
-package com.aTemplates.DFS_LeetCode.Tree_DFS;
+package com.aTemplates_DataStructures.DFS_LeetCode.Tree_DFS;
 
 import com.LeetCode.TreeNode;
 import org.slf4j.Logger;

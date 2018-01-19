@@ -1,4 +1,4 @@
-package com.aTemplates;
+package com.aTemplates_DataStructures;
 
 import java.util.*;
 
