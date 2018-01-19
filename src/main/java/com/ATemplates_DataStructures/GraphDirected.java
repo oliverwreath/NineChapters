@@ -1,4 +1,4 @@
-package com.aTemplates_DataStructures;
+package com.ATemplates_DataStructures;
 
 import java.util.HashMap;
 import java.util.HashSet;

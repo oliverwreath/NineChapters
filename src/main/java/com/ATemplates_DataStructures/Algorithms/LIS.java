@@ -1,4 +1,4 @@
-package com.aTemplates_DataStructures.Algorithms;
+package com.ATemplates_DataStructures.Algorithms;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

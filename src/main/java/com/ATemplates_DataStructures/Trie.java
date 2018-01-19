@@ -1,7 +1,4 @@
-package com.aTemplates_DataStructures;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.ATemplates_DataStructures;
 
 /**
  * Created by yanli on 2016-10-02.

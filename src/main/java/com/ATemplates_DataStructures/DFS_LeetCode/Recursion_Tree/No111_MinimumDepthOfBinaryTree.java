@@ -1,4 +1,4 @@
-package com.aTemplates_DataStructures.DFS_LeetCode.Recursion_Tree;
+package com.ATemplates_DataStructures.DFS_LeetCode.Recursion_Tree;
 
 import com.LeetCode.TreeNode;
 import org.slf4j.Logger;

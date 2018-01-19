@@ -1,4 +1,4 @@
-package com.aTemplates_DataStructures.Basic_Sorting;
+package com.ATemplates_DataStructures.Basic_Sorting;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

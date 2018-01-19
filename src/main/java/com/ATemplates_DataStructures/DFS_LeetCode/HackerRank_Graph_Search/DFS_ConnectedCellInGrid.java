@@ -1,4 +1,4 @@
-package com.aTemplates_DataStructures.DFS_LeetCode.HackerRank_Graph_Search;
+package com.ATemplates_DataStructures.DFS_LeetCode.HackerRank_Graph_Search;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
