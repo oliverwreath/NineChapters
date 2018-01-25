@@ -62,28 +62,40 @@ public class UnionFind {
     }
 
     /**
-     * Compressed_find
+     * find root
      *
-     * @param key
+     * @param a
      * @return
      */
-    public int find(int key) {
+    public int find(int a) {
         // is root itself
-        if (father.get(key) == key) {
-            return key;
+        if (father.get(a) == a) {
+            return a;
         }
 
         // not root itself
-        father.put(key, find(father.get(key)));
-        return father.get(key);
+        father.put(a, find(father.get(a)));
+        return father.get(a);
     }
 
-    public void union(int key, int keyBigger) {
-        int boss = find(key);
-        int bossBigger = find(keyBigger);
-        if (boss != bossBigger) {
-            father.put(boss, bossBigger);
-        }
+    /**
+     * @param a
+     * @param b
+     */
+    public void union(int a, int b) {
+        father.put(find(a), find(b));
+    }
+
+    /**
+     * isConnected
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public boolean query(int a, int b) {
+        // write your code here
+        return find(a) == find(b);
     }
 
     public boolean union_Number_Of_Island2(int key, int keyBigger) {
