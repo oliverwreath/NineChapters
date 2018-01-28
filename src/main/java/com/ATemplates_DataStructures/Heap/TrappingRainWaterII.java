@@ -3,7 +3,6 @@ package com.ATemplates_DataStructures.Heap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -17,7 +16,8 @@ public class TrappingRainWaterII {
     }
 
     private static void testTrappingRainWaterII() {
-        logger.info("{}", trapRainWater(new int[][]{{12, 13, 0, 12},
+        logger.info("14 == {}", new TrappingRainWaterII().trapRainWater(new int[][]{
+                {12, 13, 0, 12},
                 {13, 4, 13, 12},
                 {13, 8, 10, 12},
                 {12, 13, 12, 12},
@@ -28,73 +28,63 @@ public class TrappingRainWaterII {
      * @param heights: a matrix of integers
      * @return: an integer
      */
-    static int trapRainWater(int[][] heights) {
+    public int trapRainWater(int[][] heights) {
         // write your code here
-        // handle extreme inputs
-        if (heights == null || heights.length == 0 || heights[0] == null || heights[0].length == 0) {
+        //
+        if (heights == null || heights.length < 3 || heights[0].length < 3) {
             return 0;
         }
 
-        // initialize the min heap, and the flag matrix to make sure we don't revisit a visited place.
-        int n = heights.length;
-        int m = heights[0].length;
-        boolean[][] flag = new boolean[n][m];
-        PriorityQueue<Cell> heap = new PriorityQueue<Cell>(4 * n, cellComparator);
-        for (int i = 1; i < n - 1; i++) {
-            flag[i][0] = true;
-            flag[i][m - 1] = true;
+        //
+        int m = heights.length;
+        int n = heights[0].length;
+        int[][] flag = new int[m][n];
+        PriorityQueue<Cell> heap = new PriorityQueue<>((o1, o2) -> o1.val - o2.val);
+        for (int i = 1; i < m - 1; i++) {
+            flag[i][0] = 1;
+            flag[i][n - 1] = 1;
             heap.add(new Cell(i, 0, heights[i][0]));
-            heap.add(new Cell(i, m - 1, heights[i][m - 1]));
+            heap.add(new Cell(i, n - 1, heights[i][n - 1]));
         }
-        for (int j = 1; j < m - 1; j++) {
-            flag[0][j] = true;
-            flag[n - 1][j] = true;
+        for (int j = 1; j < n - 1; j++) {
+            flag[0][j] = 1;
+            flag[m - 1][j] = 1;
             heap.add(new Cell(0, j, heights[0][j]));
-            heap.add(new Cell(n - 1, j, heights[n - 1][j]));
+            heap.add(new Cell(m - 1, j, heights[m - 1][j]));
         }
-        flag[0][0] = true;
-        flag[0][m - 1] = true;
-        flag[n - 1][0] = true;
-        flag[n - 1][m - 1] = true;
-
-        long answer = 0;
-//        System.out.println("flag = ");
-//        for (int i = 0; i < n; i++) {
-//            System.out.println(Arrays.toString(flag[i]));
-//        }
-        while (!heap.isEmpty()) {
+        flag[0][0] = 1;
+        flag[0][n - 1] = 1;
+        flag[m - 1][0] = 1;
+        flag[m - 1][n - 1] = 1;
+        int result = 0;
+        int countDown = (m - 2) * (n - 2);
+        int max = Integer.MIN_VALUE;
+        while (countDown > 0) {
             Cell cell = heap.poll();
-            int min = cell.val;
-            for (int t = 0; t < 4; t++) {
-                int i = cell.x + dx[t];
-                int j = cell.y + dy[t];
-                if (i >= 0 && i < n && j >= 0 && j < m) {
-                    if (!flag[i][j]) {
-//                        System.out.println("flag! i = " + i + "; j = " + j);
-                        if (heights[i][j] <= min) {
-                            answer += min - heights[i][j];
-                            heap.add(new Cell(i, j, min));
-                        } else {
-                            heap.add(new Cell(i, j, heights[i][j]));
-                        }
-                        flag[i][j] = true;
+            max = Math.max(cell.val, max);
+            for (int i = 0; i < 4; i++) {
+                int x = cell.x + dx[i];
+                int y = cell.y + dy[i];
+                if (isValid(x, y, m, n) && flag[x][y] == 0) {
+                    if (max > heights[x][y]) {
+                        result += max - heights[x][y];
                     }
+                    flag[x][y] = 1;
+                    heap.add(new Cell(x, y, heights[x][y]));
+                    countDown--;
                 }
             }
         }
 
-        // return the answer
-        return (int) answer;
+        return result;
     }
-
-    static Comparator<Cell> cellComparator = new Comparator<Cell>() {
-        public int compare(Cell o1, Cell o2) {
-            return o1.val - o2.val;
-        }
-    };
 
     static int[] dx = new int[]{0, 0, 1, -1};
     static int[] dy = new int[]{1, -1, 0, 0};
+
+    private boolean isValid(int x, int y, int m, int n) {
+        return x >= 0 && y >= 0 && x < m && y < n;
+    }
 
     static class Cell {
         int x;
