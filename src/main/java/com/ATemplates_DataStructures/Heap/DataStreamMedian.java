@@ -3,7 +3,6 @@ package com.ATemplates_DataStructures.Heap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -22,15 +21,6 @@ public class DataStreamMedian {
         logger.info("2, 2, 20 = {}", medianII(new int[]{2, 20, 100}));
     }
 
-    private PriorityQueue<Integer> maxHeap;
-    private PriorityQueue<Integer> minHeap;
-
-    private static Comparator<Integer> maxComparator = new Comparator<Integer>() {
-        public int compare(Integer o1, Integer o2) {
-            return o2 - o1;
-        }
-    };
-
     /**
      * @param nums: A list of integers.
      * @return: the median of numbers
@@ -38,31 +28,26 @@ public class DataStreamMedian {
     public int[] medianII(int[] nums) {
         // write your code here
         // handle extreme inputs
-        if (nums == null || nums.length == 0) {
+        if (nums == null || nums.length < 1) {
             return new int[0];
         }
 
-        int n = nums.length;
-        maxHeap = new PriorityQueue<Integer>(n, maxComparator);
-        minHeap = new PriorityQueue<Integer>(n);
+        int len = nums.length;
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(len);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(len, (o1, o2) -> o2 - o1);
 
-        int[] ans = new int[n];
-        for (int i = 0; i < n; i++) {
-            minHeap.add(nums[i]);
-            maxHeap.add(minHeap.poll());
-            if (maxHeap.size() > minHeap.size() + 1) {
+        int[] answer = new int[len];
+        for (int i = 0; i < len; i++) {
+            if (maxHeap.size() <= minHeap.size()) {
+                minHeap.add(nums[i]);
+                maxHeap.add(minHeap.poll());
+            } else {
+                maxHeap.add(nums[i]);
                 minHeap.add(maxHeap.poll());
             }
-            if (maxHeap.size() == minHeap.size()) {
-                ans[i] = maxHeap.peek();
-            } else {
-                ans[i] = maxHeap.peek();
-            }
-//            System.out.println(maxHeap);
-//            System.out.println(minHeap);
-//            System.out.println(ans[i]);
+            answer[i] = maxHeap.peek();
         }
 
-        return ans;
+        return answer;
     }
 }
