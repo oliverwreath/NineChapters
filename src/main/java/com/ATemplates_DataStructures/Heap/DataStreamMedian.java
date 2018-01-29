@@ -33,18 +33,27 @@ public class DataStreamMedian {
         }
 
         int len = nums.length;
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>(len);
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(len, (o1, o2) -> o2 - o1);
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(len);
 
         int[] answer = new int[len];
         for (int i = 0; i < len; i++) {
             if (maxHeap.size() <= minHeap.size()) {
-                minHeap.add(nums[i]);
-                maxHeap.add(minHeap.poll());
+                if (minHeap.isEmpty() || minHeap.peek() > nums[i]) {
+                    maxHeap.add(nums[i]);
+                } else {
+                    maxHeap.add(minHeap.poll());
+                    minHeap.add(nums[i]);
+                }
             } else {
-                maxHeap.add(nums[i]);
-                minHeap.add(maxHeap.poll());
+                if (maxHeap.isEmpty() || maxHeap.peek() < nums[i]) {
+                    minHeap.add(nums[i]);
+                } else {
+                    minHeap.add(maxHeap.poll());
+                    maxHeap.add(nums[i]);
+                }
             }
+
             answer[i] = maxHeap.peek();
         }
 
