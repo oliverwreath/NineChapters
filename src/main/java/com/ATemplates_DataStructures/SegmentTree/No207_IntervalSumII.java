@@ -22,7 +22,7 @@ public class No207_IntervalSumII {
 
     class SegmentTreeNode {
         int start, end;
-        int sum;
+        long sum;
         SegmentTreeNode left, right;
 
         public SegmentTreeNode(int start, int end, int sum) {
@@ -53,7 +53,7 @@ public class No207_IntervalSumII {
             return root.sum;
         }
         int mid = (root.start + root.end) / 2;
-        int answer = 0;
+        long answer = 0;
         if (start <= mid) {
             answer += query(root.left, start, end);
         }
