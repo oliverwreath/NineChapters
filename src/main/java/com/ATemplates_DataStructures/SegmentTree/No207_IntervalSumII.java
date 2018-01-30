@@ -66,6 +66,7 @@ public class No207_IntervalSumII {
     public void modify(SegmentTreeNode root, int index, int value) {
         if (root.start == root.end && root.start == index) {
             root.sum = value;
+            return;
         }
         int mid = (root.start + root.end) / 2;
         if (index <= mid) {
