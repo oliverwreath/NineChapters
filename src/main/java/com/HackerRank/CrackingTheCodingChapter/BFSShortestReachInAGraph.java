@@ -96,7 +96,7 @@ public class BFSShortestReachInAGraph {
 
         @Override
         public String toString() {
-            return "Graph{" +
+            return "GraphUndirected{" +
                     "idAdjacentListMap=" + idAdjacentListMap +
                     ", size=" + size +
                     '}';
