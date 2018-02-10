@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures.BinarySearch;
+package com.ATemplates_DataStructures.FindPeak;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,54 +42,45 @@ public class No390_FindPeakElementII {
         }
 
         int midRow = (up + down) >> 1;
-        int max = A[midRow][left];
+        int midCol = (left + right) >> 1;
         int maxX = midRow;
-        int maxY = left;
-        for (int j = left + 1; j <= right; j++) {
+        int maxY = midCol;
+        int max = A[midRow][midCol];
+        for (int j = left; j <= right; j++) {
             if (A[midRow][j] > max) {
-                max = A[midRow][j];
                 maxX = midRow;
                 maxY = j;
+                max = A[midRow][j];
             }
         }
-
-        int midCol = (left + right) >> 1;
         for (int i = up; i <= down; i++) {
             if (A[i][midCol] > max) {
-                max = A[i][midCol];
                 maxX = i;
                 maxY = midCol;
+                max = A[i][midCol];
             }
         }
 
-        if (maxX == midRow && maxY == midCol) {
-            return Arrays.asList(maxX, maxY);
-        } else if (isPeak(maxX, maxY, A)) {
+        if (isPeak(maxX, maxY, max, A)) {
             return Arrays.asList(maxX, maxY);
         } else {
-            int newUp = maxX < midRow ? up : midRow + 1;
-            int newDown = maxX < midRow ? midRow - 1 : down;
-            int newLeft = maxY < midCol ? left : midCol + 1;
-            int newRight = maxY < midCol ? midCol - 1 : right;
             if (maxX == midRow) {
-                int x = maxX + 1;
-                int y = maxY;
-                if (x <= down && A[x][y] > A[maxX][maxY]) {
-                    return findPeakIIHelper(newUp, newDown, newLeft, newRight, A);
+                int newLeft = (maxY < midCol) ? left : midCol + 1;
+                int newRight = (maxY < midCol) ? midCol - 1 : right;
+                if (maxX - 1 >= up && A[maxX - 1][maxY] > max) {
+                    return findPeakIIHelper(up, midRow - 1, newLeft, newRight, A);
                 }
-                x = maxX - 1;
-                if (x >= up && A[x][y] > A[maxX][maxY]) {
-                    return findPeakIIHelper(newUp, newDown, newLeft, newRight, A);
+                if (maxX + 1 <= down && A[maxX + 1][maxY] > max) {
+                    return findPeakIIHelper(midRow + 1, down, newLeft, newRight, A);
                 }
             } else {
-                int x = maxX;
-                int y = maxY + 1;
-                if (y <= right && A[x][y] > A[maxX][maxY]) {
-                    return findPeakIIHelper(newUp, newDown, newLeft, newRight, A);
+                int newUp = (maxX < midRow) ? up : midRow + 1;
+                int newDown = (maxX < midRow) ? midRow - 1 : down;
+                if (maxY - 1 >= left && A[maxX][maxY - 1] > max) {
+                    return findPeakIIHelper(newUp, newDown, left, midCol - 1, A);
                 }
-                y = maxY - 1;
-                if (y >= left && A[x][y] > A[maxX][maxY]) {
-                    return findPeakIIHelper(newUp, newDown, newLeft, newRight, A);
+                if (maxY + 1 <= right && A[maxX][maxY + 1] > max) {
+                    return findPeakIIHelper(newUp, newDown, midCol + 1, right, A);
                 }
             }
         }
@@ -97,19 +88,8 @@ public class No390_FindPeakElementII {
         return Arrays.asList(-1, -1);
     }
 
-    int[] dx = new int[]{0, 0, 1, -1};
-    int[] dy = new int[]{1, -1, 0, 0,};
-
-    public boolean isPeak(int x, int y, int[][] A) {
-        for (int i = 0; i < 4; i++) {
-            int xx = x + dx[i];
-            int yy = y + dy[i];
-            if (A[x][y] < A[xx][yy]) {
-                return false;
-            }
-        }
-
-        return true;
+    boolean isPeak(int maxX, int maxY, int max, int[][] A) {
+        return max >= A[maxX - 1][maxY] && max >= A[maxX + 1][maxY] && max >= A[maxX][maxY - 1] && max >= A[maxX][maxY + 1];
     }
 
     private static class MyLogger {
