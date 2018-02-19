@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class No453_FlattenBinaryTreeToLinkedList {
     private final static Logger logger = LoggerFactory.getLogger(No453_FlattenBinaryTreeToLinkedList.class);
@@ -40,16 +41,45 @@ public class No453_FlattenBinaryTreeToLinkedList {
             return;
         }
 
-        list.clear();
-        preOrder(root);
-        for (int i = 0; i < list.size() - 1; i++) {
-            list.get(i).left = null;
-            list.get(i).right = list.get(i + 1);
+        Stack<TreeNode> stack = new Stack<>();
+        stack.add(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+
+            node.left = null;
+            if (!stack.empty()) {
+                node.right = stack.peek();
+            } else {
+                node.right = null;
+            }
         }
 
         // return the final result
         return;
     }
+
+//    public void flatten(TreeNode root) {
+//        // filter abnormal cases
+//        if (root == null || (root.left == null && root.right == null)) {
+//            return;
+//        }
+//
+//        list.clear();
+//        preOrder(root);
+//        for (int i = 0; i < list.size() - 1; i++) {
+//            list.get(i).left = null;
+//            list.get(i).right = list.get(i + 1);
+//        }
+//
+//        // return the final result
+//        return;
+//    }
 
     List<TreeNode> list = new ArrayList<>();
 
