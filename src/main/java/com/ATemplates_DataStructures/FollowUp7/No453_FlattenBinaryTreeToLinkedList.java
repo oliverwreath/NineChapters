@@ -70,11 +70,11 @@ public class No453_FlattenBinaryTreeToLinkedList {
 //            return;
 //        }
 //
-//        list.clear();
+//        combinations.clear();
 //        preOrder(root);
-//        for (int i = 0; i < list.size() - 1; i++) {
-//            list.get(i).left = null;
-//            list.get(i).right = list.get(i + 1);
+//        for (int i = 0; i < combinations.size() - 1; i++) {
+//            combinations.get(i).left = null;
+//            combinations.get(i).right = combinations.get(i + 1);
 //        }
 //
 //        // return the final result
