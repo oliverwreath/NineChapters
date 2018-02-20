@@ -79,17 +79,15 @@ public class No535_HouseRobberIII {
         if (root.left != null) {
             ResultType leftResult = dfs(root.left);
             rob += leftResult.noRob;
-            noRob += Math.max(leftResult.noRob, leftResult.rob);
+            noRob += Math.max(leftResult.rob, leftResult.noRob);
         }
         if (root.right != null) {
             ResultType rightResult = dfs(root.right);
             rob += rightResult.noRob;
-            noRob += Math.max(rightResult.noRob, rightResult.rob);
+            noRob += Math.max(rightResult.rob, rightResult.noRob);
         }
-
-        ResultType resultType = new ResultType(rob, noRob);
-        visited.put(root, resultType);
-        return resultType;
+        visited.put(root, new ResultType(rob, noRob));
+        return visited.get(root);
     }
 
     private static class MyLogger {
