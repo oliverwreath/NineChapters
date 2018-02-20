@@ -44,9 +44,8 @@ public class No808_MovieNetwork {
     int[][] G;
     int[] rating;
     HashSet<Integer> visited;
-//    private HashMap<Integer, HashSet<Integer>> related;
 
-    void dfs(int S) {
+    void bfs(int S) {
         Queue<Integer> queue = new ArrayDeque<>();
         queue.add(S);
         while (!queue.isEmpty()) {
@@ -55,6 +54,20 @@ public class No808_MovieNetwork {
                 visited.add(id);
                 for (int next : G[id]) {
                     queue.add(next);
+                }
+            }
+        }
+    }
+
+    void dfs(int S) {
+        Stack<Integer> stack = new Stack<>();
+        stack.add(S);
+        while (!stack.isEmpty()) {
+            int id = stack.pop();
+            if (!visited.contains(id)) {
+                visited.add(id);
+                for (int next : G[id]) {
+                    stack.add(next);
                 }
             }
         }
@@ -80,14 +93,33 @@ public class No808_MovieNetwork {
 
     int[] topK(int K) {
         int[] answer = new int[K];
-        PriorityQueue<Movie> pq = new PriorityQueue<>(K, ((o1, o2) -> o2.rating - o1.rating));
+        PriorityQueue<Movie> pq = new PriorityQueue<>(K, ((o1, o2) -> o1.rating - o2.rating));
+        int count = 0;
         for (Integer id : visited) {
-            pq.add(new Movie(id, rating[id]));
+            if (count < K) {
+                pq.add(new Movie(id, rating[id]));
+                count++;
+            } else {
+                if (rating[id] > pq.peek().rating) {
+                    pq.poll();
+                    pq.add(new Movie(id, rating[id]));
+                }
+            }
         }
         for (int i = 0; i < K; i++) {
             answer[i] = pq.poll().id;
         }
+
         return answer;
+//        int[] answer = new int[K];
+//        PriorityQueue<Movie> pq = new PriorityQueue<>(K, ((o1, o2) -> o2.rating - o1.rating));
+//        for (Integer id : visited) {
+//            pq.add(new Movie(id, rating[id]));
+//        }
+//        for (int i = 0; i < K; i++) {
+//            answer[i] = pq.poll().id;
+//        }
+//        return answer;
     }
 
     private static class MyLogger {
