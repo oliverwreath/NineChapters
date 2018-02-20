@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class No90_kSumII {
@@ -26,31 +27,50 @@ public class No90_kSumII {
             return answer;
         }
 
-        this.tans = new ArrayList<>();
+        Arrays.sort(A);
+        this.combinations = new ArrayList<>();
         this.A = A;
-        dfs(K, target, A.length - 1);
+        dfs(K, target, 0);
 
         // return the final result
         return answer;
     }
 
     List<List<Integer>> answer;
-    List<Integer> tans;
+    List<Integer> combinations;
     int A[];
 
-    public void dfs(int K, int target, int index) {
+    public void dfs(int K, int target, int start) {
         if (K == 0 && target == 0) {
-            answer.add(new ArrayList<>(tans));
+            answer.add(new ArrayList<>(combinations));
             return;
         }
-        if (K < 0 || target < 0 || index < 0) {
+        if (K < 0 || target < 0 || start > A.length - 1) {
             return;
         }
 
-        dfs(K, target, index - 1);
-        tans.add(A[index]);
-        dfs(K - 1, target - A[index], index - 1);
-        tans.remove(tans.size() - 1);
+        for (int i = start; i < A.length && target >= A[i]; i++) {
+            combinations.add(A[i]);
+            dfs(K - 1, target - A[i], i + 1);
+            combinations.remove(combinations.size() - 1);
+        }
+//        dfs(K, target, start - 1);
+//        combinations.add(A[start]);
+//        dfs(K - 1, target - A[start], start - 1);
+//        combinations.remove(combinations.size() - 1);
+
+//        if (K == 0 && target == 0) {
+//            answer.add(new ArrayList<>(combinations));
+//            return;
+//        }
+//        if (K < 0 || target < 0 || index < 0) {
+//            return;
+//        }
+//
+//        dfs(K, target, index - 1);
+//        combinations.add(A[index]);
+//        dfs(K - 1, target - A[index], index - 1);
+//        combinations.remove(combinations.size() - 1);
     }
 
 //    public void dfs(int A[], int K, int target, int index, List<Integer> tans) {
