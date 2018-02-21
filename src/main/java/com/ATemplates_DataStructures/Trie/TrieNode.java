@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures;
+package com.ATemplates_DataStructures.Trie;
 
 import java.util.HashMap;
 

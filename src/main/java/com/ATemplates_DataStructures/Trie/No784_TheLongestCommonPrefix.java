@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures.Trie1;
+package com.ATemplates_DataStructures.Trie;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

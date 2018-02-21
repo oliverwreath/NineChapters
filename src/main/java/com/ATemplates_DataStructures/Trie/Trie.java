@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures;
+package com.ATemplates_DataStructures.Trie;
 
 /**
  * Created by yanli on 2016-10-02.
