@@ -1,6 +1,6 @@
 package com.ATemplates_DataStructures.MyIslands;
 
-import com.ATemplates_DataStructures.UnionFind;
+import com.ATemplates_DataStructures.UnionFind.UnionFind;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

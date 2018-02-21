@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures.UnionFindQuiz;
+package com.ATemplates_DataStructures.UnionFind;
 
 public class ConnectingGraph2 {
     public static void main(String[] args) {

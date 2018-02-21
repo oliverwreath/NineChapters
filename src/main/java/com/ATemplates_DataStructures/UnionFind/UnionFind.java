@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures;
+package com.ATemplates_DataStructures.UnionFind;
 
 import java.util.HashMap;
 import java.util.HashSet;
