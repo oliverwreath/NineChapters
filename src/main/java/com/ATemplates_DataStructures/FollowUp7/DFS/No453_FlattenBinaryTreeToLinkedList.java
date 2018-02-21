@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures.FollowUp7;
+package com.ATemplates_DataStructures.FollowUp7.DFS;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
