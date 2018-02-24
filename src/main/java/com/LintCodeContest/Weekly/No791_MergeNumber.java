@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures.Weekly;
+package com.LintCodeContest.Weekly;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
