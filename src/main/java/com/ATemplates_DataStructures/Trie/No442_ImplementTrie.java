@@ -61,22 +61,25 @@ public class No442_ImplementTrie {
             node.isWord = true;
         }
 
-        public TrieNode find(String word) {
-            // write your code here
+        public TrieNode find(String word, int index) {
             if (word == null || word.length() == 0) {
                 return root;
             }
 
-            TrieNode node = root;
-            for (int i = 0; i < word.length(); i++) {
-                int pos = word.charAt(i) - 'a';
-                if (node.next[pos] == null) {
-                    return null;
-                } else {
-                    node = node.next[pos];
-                }
+            return find(word, index, root);
+        }
+
+        public TrieNode find(String word, int index, TrieNode node) {
+            if (index == word.length()) {
+                return node;
             }
-            return node;
+
+            int pos = word.charAt(index) - 'a';
+            if (node.next[pos] == null) {
+                return null;
+            } else {
+                return find(word, index + 1, node.next[pos]);
+            }
         }
 
         /*
@@ -85,11 +88,7 @@ public class No442_ImplementTrie {
          */
         public boolean search(String word) {
             // write your code here
-            if (word == null || word.length() == 0) {
-                return true;
-            }
-
-            TrieNode node = find(word);
+            TrieNode node = find(word, 0);
             return node != null && node.isWord;
         }
 
@@ -99,11 +98,7 @@ public class No442_ImplementTrie {
          */
         public boolean startsWith(String prefix) {
             // write your code here
-            if (prefix == null || prefix.length() == 0) {
-                return true;
-            }
-
-            TrieNode node = find(prefix);
+            TrieNode node = find(prefix, 0);
             return node != null;
         }
     }
