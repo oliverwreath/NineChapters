@@ -1,4 +1,4 @@
-package com.ATemplates_DataStructures.DP;
+package com.ATemplates_DataStructures.DP.OtherSimple;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
