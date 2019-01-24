@@ -17,7 +17,7 @@ class MailSender {
     private final static Logger logger = LoggerFactory.getLogger(MailSender.class);
 
     public static void main(String[] args) {
-        sendFoxmail();
+        sendFromCRM();
     }
 
     private static void sendFoxmail() {
@@ -46,6 +46,22 @@ class MailSender {
                     + "\n\n No spam to my email, please!");
 
             Transport.send(gmailMessage);
+
+            System.out.println("Sent and Done!");
+        } catch (Exception e) {
+            logger.error(Throwables.getStackTraceAsString(e));
+        }
+    }
+
+    private static void sendFromCRM() {
+        try {
+            Message gmailCRMMessage = getGmailCRMMessage();
+            gmailCRMMessage.setRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse("skywalkerhunter@gmail.com"));
+            gmailCRMMessage.setSubject("Testing Subject");
+            gmailCRMMessage.setText("hello");
+
+            Transport.send(gmailCRMMessage);
 
             System.out.println("Sent and Done!");
         } catch (Exception e) {
@@ -82,6 +98,32 @@ class MailSender {
     private static Message getGmailMessage() {
         final String USER_NAME = "skywalkerhunter@gmail.com";
         final String PASSWORD = "+++hyl7713996";
+
+        Properties properties = new Properties();
+        properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.host", "smtp.gmail.com");
+        properties.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(properties,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(USER_NAME, PASSWORD);
+                    }
+                });
+        Message message = new MimeMessage(session);
+        try {
+            message.setFrom(new InternetAddress(USER_NAME));
+        } catch (MessagingException e) {
+            logger.error(Throwables.getStackTraceAsString(e));
+        }
+
+        return message;
+    }
+
+    private static Message getGmailCRMMessage() {
+        final String USER_NAME = "crmtransformed@gmail.com";
+        final String PASSWORD = "QLRk5D7gesCgQhj";
 
         Properties properties = new Properties();
         properties.put("mail.smtp.starttls.enable", "true");

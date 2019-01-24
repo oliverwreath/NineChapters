@@ -84,7 +84,7 @@ public class FindTheConnectedComponentInTheUndirectedGraph {
             return new ArrayList<List<Integer>>();
         }
 
-        // init UnionFind
+        // init UnionFindQuiz
         HashSet<Integer> set = new HashSet<Integer>();
         for (UndirectedGraphNode node : nodes) {
             set.add(node.label);

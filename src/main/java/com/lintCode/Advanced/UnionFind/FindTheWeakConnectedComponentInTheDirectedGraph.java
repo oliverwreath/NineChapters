@@ -84,7 +84,7 @@ public class FindTheWeakConnectedComponentInTheDirectedGraph {
             return new ArrayList<List<Integer>>();
         }
 
-        // init UnionFind
+        // init UnionFindQuiz
         HashSet<Integer> set = new HashSet<Integer>();
         for (DirectedGraphNode node : nodes) {
             set.add(node.label);

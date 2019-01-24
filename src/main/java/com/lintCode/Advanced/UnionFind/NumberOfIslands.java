@@ -36,7 +36,7 @@ public class NumberOfIslands {
             return 0;
         }
 
-        // init UnionFind
+        // init UnionFindQuiz
         int n = grid.length;
         int m = grid[0].length;
         UnionFind unionFind = new UnionFind(n, m);

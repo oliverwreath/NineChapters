@@ -62,6 +62,9 @@ public class TrappingRainWaterII {
 //        for (int i = 0; i < n; i++) {
 //            System.out.println(Arrays.toString(flag[i]));
 //        }
+        for (Cell cell : heap) {
+
+        }
         while (!heap.isEmpty()) {
             Cell cell = heap.poll();
             int min = cell.val;
@@ -108,6 +111,15 @@ public class TrappingRainWaterII {
             this.x = x;
             this.y = y;
             this.val = val;
+        }
+
+        @Override
+        public String toString() {
+            return "Cell{" +
+                    "x=" + x +
+                    ", y=" + y +
+                    ", val=" + val +
+                    '}';
         }
     }
 }

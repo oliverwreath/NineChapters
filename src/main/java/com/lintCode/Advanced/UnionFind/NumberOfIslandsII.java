@@ -40,7 +40,7 @@ public class NumberOfIslandsII {
             return new ArrayList<Integer>();
         }
 
-        // init the UnionFind
+        // init the UnionFindQuiz
         UnionFind unionFind = new UnionFind(n, m);
         boolean[][] grid = new boolean[n][m];
         ArrayList<Integer> ans = new ArrayList<Integer>();

@@ -67,7 +67,7 @@ public class UnionFind {
 
     @Override
     public String toString() {
-        return "UnionFind{" +
+        return "UnionFindQuiz{" +
                 "father=" + father +
                 '}';
     }

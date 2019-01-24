@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -17,7 +18,7 @@ import com.google.common.primitives.Ints;
  * Created by Yanliang Han on 2016/5/29.
  */
 public class GuavaTester {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         testRange();
 //        testObjects();
 //        testOptional();
@@ -95,7 +96,7 @@ public class GuavaTester {
         System.out.println(s1.equals(s2));
         System.out.println(s1.hashCode());
         System.out.println(
-                Objects.toStringHelper(s1)
+                MoreObjects.toStringHelper(s1)
                         .add("Name", s1.getFirstName() + " " + s1.getLastName())
                         .add("Class", s1.getClassName())
                         .add("Roll No", s1.getRollNo())
@@ -104,7 +105,7 @@ public class GuavaTester {
 
     public static void testOptional() {
         Integer value1 = null;
-        Integer value2 = new Integer(10);
+        Integer value2 = 10;
 
         //Optional.fromNullable - allows passed parameter to be null.
         Optional<Integer> a = Optional.fromNullable(value1);

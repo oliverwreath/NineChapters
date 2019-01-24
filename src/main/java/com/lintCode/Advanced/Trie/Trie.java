@@ -24,6 +24,20 @@ class Trie {
         }
         now.s = s;
         now.isString = true;
+        now.times = 1;
+    }
+
+    public void insert(String s, int times) {
+        TrieNode now = root;
+        for (int i = 0; i < s.length(); i++) {
+            if (!now.subtree.containsKey(s.charAt(i))) {
+                now.subtree.put(s.charAt(i), new TrieNode());
+            }
+            now = now.subtree.get(s.charAt(i));
+        }
+        now.s = s;
+        now.isString = true;
+        now.times = times;
     }
 
     public boolean search(String s) {

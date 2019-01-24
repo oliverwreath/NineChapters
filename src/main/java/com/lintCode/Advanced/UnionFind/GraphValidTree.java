@@ -50,7 +50,7 @@ public class GraphValidTree {
             return false;
         }
 
-        // init UnionFind
+        // init UnionFindQuiz
         int m = edges.length;
         UnionFind unionFind = new UnionFind(n, 1);
         for (int[] edge : edges) {

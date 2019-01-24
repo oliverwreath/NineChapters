@@ -16,13 +16,15 @@ import java.util.HashMap;
 class TrieNode {
     String s;
     boolean isString;
+    int times;
     HashMap<Character, TrieNode> subtree;
 
     public TrieNode() {
         // TODO Auto-generated constructor stub
         isString = false;
-        subtree = new HashMap<Character, TrieNode>();
+        subtree = new HashMap<>();
         s = "";
+        times = 0;
     }
 
     @Override
