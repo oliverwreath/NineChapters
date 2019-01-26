@@ -23,11 +23,11 @@ public class ValidPalindrome_415 {
 
         int left = 0, right = s.length() - 1;
         while (left < right) {
-            if (!Character.isDigit(s.charAt(left)) && !Character.isAlphabetic(s.charAt(left))) {
+            if (!isValid(s.charAt(left))) {
                 left++;
                 continue;
             }
-            if (!Character.isDigit(s.charAt(right)) && !Character.isAlphabetic(s.charAt(right))) {
+            if (!isValid(s.charAt(right))) {
                 right--;
                 continue;
             }
@@ -43,6 +43,10 @@ public class ValidPalindrome_415 {
 
         // return the final result
         return true;
+    }
+
+    private static boolean isValid(char c) {
+        return Character.isDigit(c) || Character.isLetter(c);
     }
 
     private static class MyLogger {
