@@ -16,8 +16,8 @@
 - [Ch5 - 基于树的深度优先搜索 Tree-based DFS](#Ch5-基于树的深度优先搜索-Tree-based-DFS)
 - [Ch6 - 基于组合的深度优先搜索 Combination-based DFS](#Ch6-基于组合的深度优先搜索-Combination-based-DFS)
 - [Ch7 - 基于排列、图的深度优先搜索 Permutation / Graph based DFS](#Ch7-基于排列、图的深度优先搜索-Permutation-/-Graphbased-DFS)
-- [Ch8 - 数据结构 - 栈，队列，哈希表与堆 Stack, Queue, Hash & Heap](#Ch8-数据结构-栈，队列，哈希表与堆-Stack,-Queue,-Hash-&-Heap)
-- [Ch9 - 数据结构 - 区间、数组、矩阵与树状数组 Interval, Array, Matrix & Binary Indexed Tree](#Ch9-数据结构-区间、数组、矩阵与树状数组-Interval,-Array,-Matrix-&-BinaryIndexedTree)
+- [Ch8 - 数据结构 - 栈，队列，哈希表与堆 Stack, Queue, Hash & Heap](#Ch8-数据结构---栈，队列，哈希表与堆-Stack,-Queue,-Hash-&-Heap)
+- [Ch9 - 数据结构 - 区间、数组、矩阵与树状数组 Interval, Array, Matrix & Binary Indexed Tree](#Ch9-数据结构---区间、数组、矩阵与树状数组-Interval,-Array,-Matrix-&-BinaryIndexedTree)
 ### Ch2 Binary Search
 模板
 
@@ -52,17 +52,25 @@
 ### Ch5 基于树的深度优先搜索 Tree-based DFS
 ### Ch6 基于组合的深度优先搜索 Combination-based DFS
 ### Ch7 基于排列、图的深度优先搜索 Permutation / Graphbased DFS
-### Ch8 数据结构-栈，队列，哈希表与堆 Stack, Queue, Hash & Heap
-### Ch9 数据结构-区间、数组、矩阵与树状数组 Interval, Array, Matrix & BinaryIndexedTree
+### Ch8 数据结构 - 栈，队列，哈希表与堆 Stack, Queue, Hash & Heap
+### Ch9 数据结构 - 区间、数组、矩阵与树状数组 Interval, Array, Matrix & BinaryIndexedTree
+
+
 
 
 
 ## 强化班
 - [Ch1](#强化班)
-- [Ch2数据结构(上)之并查集与字典树](#强化班)
-- [Ch3数据结构(下)之堆与栈难题精讲](#强化班)
-- [Ch4二分法 和 扫描线](#强化班)
-- [Ch5动态规划(上) - 滚动数组与记忆化搜索，区间型](#强化班)
-- [Ch6动态规划(下) - 双序列与背包](#强化班)
-- [Ch7如何解决 follow up 问题](#强化班)
+- [Ch2 - 数据结构(上)之并查集与字典树](#Ch2-数据结构(上)之并查集与字典树)
+- [Ch3 - 数据结构(下)之堆与栈难题精讲](#Ch3-数据结构(下)之堆与栈难题精讲)
+- [Ch4 - 二分法 和 扫描线](#Ch4-二分法-和-扫描线)
+- [Ch5 - 动态规划(上) - 滚动数组与记忆化搜索，区间型](#Ch5-动态规划(上)---滚动数组与记忆化搜索，区间型)
+- [Ch6 - 动态规划(下) - 双序列与背包](#Ch6-动态规划(下)---双序列与背包)
+- [Ch7 - 如何解决 follow up 问题](#Ch7-如何解决-follow-up-问题)
 
+### Ch2 数据结构(上)之并查集与字典树
+### Ch3 数据结构(下)之堆与栈难题精讲
+### Ch4 二分法 和 扫描线
+### Ch5 动态规划(上) - 滚动数组与记忆化搜索，区间型
+### Ch6 动态规划(下) - 双序列与背包
+### Ch7 如何解决 follow up 问题
