@@ -30,7 +30,7 @@ public class FirstPositionOfTarget_14 {
             } else if (nums[mid] > target) {
                 right = mid - 1;
             } else {
-                return mid;
+                right = mid;
             }
         }
 
