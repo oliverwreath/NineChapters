@@ -1,22 +1,23 @@
-package com.NineChapters;
+package com.NineChapters.BinarySearch;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class FirstPositionOfTarget_14 {
-    private final static Logger logger = LoggerFactory.getLogger(FirstPositionOfTarget_14.class);
+public class ClassicalBinarySearch_457 {
+    private final static Logger logger = LoggerFactory.getLogger(ClassicalBinarySearch_457.class);
 
     public static void main(String[] args) {
-        testFirstPositionOfTarget_14();
+        ClassicalBinarySearch_457 ClassicalBinarySearch_457 = new ClassicalBinarySearch_457();
+        ClassicalBinarySearch_457.testClassicalBinarySearch_457();
     }
 
-    private static void testFirstPositionOfTarget_14() {
-        logger.info("result 0 v.s. {}", binarySearch(new int[]{1,4,4,5,7,7,8,9,9,10}, 1));
-        logger.info("result 2 v.s. {}", binarySearch(new int[]{1, 2, 3, 3, 4, 5, 10}, 3));
-        logger.info("result -1 v.s. {}", binarySearch(new int[]{1, 2, 3, 3, 4, 5, 10}, 6));
+    private void testClassicalBinarySearch_457() {
+        logger.info("result 1/2 v.s. {}", findPosition(new int[]{1, 2, 2, 4, 5, 5}, 2));
+        logger.info("result 4/5 v.s. {}", findPosition(new int[]{1, 2, 2, 4, 5, 5}, 5));
+        logger.info("result -1 v.s. {}", findPosition(new int[]{1, 2, 2, 4, 5, 5}, 6));
     }
 
-    public static int binarySearch(int[] nums, int target) {
+    public int findPosition(int[] nums, int target) {
         // filter abnormal cases
         if (nums == null || nums.length == 0) {
             return -1;
@@ -30,7 +31,7 @@ public class FirstPositionOfTarget_14 {
             } else if (nums[mid] > target) {
                 right = mid - 1;
             } else {
-                right = mid;
+                return mid;
             }
         }
 

@@ -1,4 +1,4 @@
-package com.NineChapters;
+package com.NineChapters.BinarySearch;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
