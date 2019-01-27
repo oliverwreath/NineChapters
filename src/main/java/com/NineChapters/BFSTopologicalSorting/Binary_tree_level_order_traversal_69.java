@@ -30,52 +30,34 @@ public class Binary_tree_level_order_traversal_69 {
             return new LinkedList<>();
         }
         List<List<Integer>> result = new LinkedList<>();
-        Queue<NodeLevel> queue = new LinkedList<>();
-        queue.add(new NodeLevel(root, 0));
-        int currentLevel = -1;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        queue.offer(null);
+
+        List<Integer> level = new LinkedList<>();
         while (!queue.isEmpty()) {
-            NodeLevel currentNodeLevel = ((LinkedList<NodeLevel>) queue).pop();
-            if (currentLevel < currentNodeLevel.getLevel()) {
-                result.add(new LinkedList<>());
-                currentLevel = currentNodeLevel.getLevel();
+            TreeNode currentTreeNode = queue.poll();
+            if (currentTreeNode == null) {
+                if (level.size() == 0) {
+                    break;
+                }
+                result.add(level);
+                level = new LinkedList<>();
+                queue.offer(null);
+                continue;
             }
-            result.get(currentLevel).add(currentNodeLevel.node.val);
-            if (currentNodeLevel.getNode().left != null) {
-                ((LinkedList<NodeLevel>) queue).addLast(new NodeLevel(currentNodeLevel.getNode().left, currentLevel + 1));
+
+            level.add(currentTreeNode.val);
+            if (currentTreeNode.left != null) {
+                queue.offer(currentTreeNode.left);
             }
-            if (currentNodeLevel.getNode().right != null) {
-                ((LinkedList<NodeLevel>) queue).addLast(new NodeLevel(currentNodeLevel.getNode().right, currentLevel + 1));
+            if (currentTreeNode.right != null) {
+                queue.offer(currentTreeNode.right);
             }
         }
 
         // return the final result
         return result;
-    }
-
-    static class NodeLevel {
-        private TreeNode node;
-        private int level;
-
-        public NodeLevel(TreeNode node, int level) {
-            this.node = node;
-            this.level = level;
-        }
-
-        public TreeNode getNode() {
-            return node;
-        }
-
-        public void setNode(TreeNode node) {
-            this.node = node;
-        }
-
-        public int getLevel() {
-            return level;
-        }
-
-        public void setLevel(int level) {
-            this.level = level;
-        }
     }
 
     private static class MyLogger {
