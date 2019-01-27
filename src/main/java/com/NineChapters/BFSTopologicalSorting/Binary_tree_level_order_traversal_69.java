@@ -1,6 +1,6 @@
 package com.NineChapters.BFSTopologicalSorting;
 
-import com.NineChapters.TreesUtil.TreeNode;
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

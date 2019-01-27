@@ -1,5 +1,6 @@
 package com.ATemplates_DataStructures.FollowUp7.DFS;
 
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,23 +24,6 @@ public class No628_MaximumSubtree {
         treeNode.right.left = new TreeNode(-4);
         treeNode.right.right = new TreeNode(-5);
         MyLogger.info("result 3 v.s. " + findSubtree(treeNode));
-    }
-
-    public class TreeNode {
-        public int val;
-        public TreeNode left, right;
-
-        public TreeNode(int val) {
-            this.val = val;
-            this.left = this.right = null;
-        }
-
-        @Override
-        public String toString() {
-            return "TreeNode{" +
-                    "val=" + val +
-                    '}';
-        }
     }
 
     public TreeNode findSubtree(TreeNode root) {

@@ -1,5 +1,6 @@
 package com.lintCode.LinkedList;
 
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

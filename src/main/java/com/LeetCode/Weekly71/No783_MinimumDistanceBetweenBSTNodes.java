@@ -1,5 +1,6 @@
 package com.LeetCode.Weekly71;
 
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,23 +17,6 @@ public class No783_MinimumDistanceBetweenBSTNodes {
         TreeNode node = new TreeNode(-7);
         node.left = new TreeNode(-9);
         MyLogger.info("result 2 v.s. " + minDiffInBST(node));
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "TreeNode{" +
-                    "val=" + val +
-                    '}';
-        }
     }
 
     public int minDiffInBST(TreeNode root) {

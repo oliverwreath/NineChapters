@@ -1,9 +1,10 @@
 package com.LeetCode;
 
-import java.util.HashMap;
-
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
 
 /**
  * Created by yanli on 9/5/2016.

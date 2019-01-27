@@ -1,5 +1,6 @@
 package com.ATemplates_DataStructures.FollowUp7.DFS;
 
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,23 +21,6 @@ public class No535_HouseRobberIII {
         treeNode.right = new TreeNode(3);
         treeNode.right.right = new TreeNode(1);
         MyLogger.info("result 7 v.s. " + houseRobber3(treeNode));
-    }
-
-    public class TreeNode {
-        public int val;
-        public TreeNode left, right;
-
-        public TreeNode(int val) {
-            this.val = val;
-            this.left = this.right = null;
-        }
-
-        @Override
-        public String toString() {
-            return "TreeNode{" +
-                    "val=" + val +
-                    '}';
-        }
     }
 
     class ResultType {

@@ -1,5 +1,6 @@
 package com.LintCodeContest.Weekly8;
 
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,16 +21,6 @@ public class No69_BinaryTreeLevelOrderTraversal {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
         MyLogger.info("result 2 v.s. " + levelOrder(root));
-    }
-
-    public class TreeNode {
-        public int val;
-        public TreeNode left, right;
-
-        public TreeNode(int val) {
-            this.val = val;
-            this.left = this.right = null;
-        }
     }
 
     List<List<Integer>> levelOrder(TreeNode root) {

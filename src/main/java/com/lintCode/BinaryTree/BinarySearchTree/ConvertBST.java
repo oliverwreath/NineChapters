@@ -1,6 +1,6 @@
 package com.lintCode.BinaryTree.BinarySearchTree;
 
-import com.lintCode.BinaryTree.TreeNode;
+import com.TreesUtil.TreeNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

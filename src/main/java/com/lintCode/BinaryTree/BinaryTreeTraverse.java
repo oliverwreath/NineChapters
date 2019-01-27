@@ -1,9 +1,10 @@
 package com.lintCode.BinaryTree;
 
+import com.TreesUtil.TreeNode;
+
 import java.util.ArrayList;
 
 import static com.lintCode.BinaryTree.BinaryTree.getTree;
-
 
 /**
  * Created by Yanliang Han on 2016/6/10.
