@@ -1,12 +1,12 @@
 package com.AdvancedAlgorithms.数据结构上之并查集与字典树;
 
-public class ConnectingGraph {
+public class ConnectingGraph_589 {
     private int[] father;
 
     /*
      * @param n: An integer
      */
-    public ConnectingGraph(int n) {
+    public ConnectingGraph_589(int n) {
         // do intialization if necessary
         father = new int[n + 1];
         for (int i = 1; i <= n; i++) {
