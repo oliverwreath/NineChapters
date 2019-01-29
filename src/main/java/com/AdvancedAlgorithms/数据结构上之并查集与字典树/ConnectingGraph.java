@@ -41,7 +41,8 @@ public class ConnectingGraph {
     private int find(int x) {
         if (father[x] == x) {
             return x;
+        } else {
+            return father[x] = find(father[x]);
         }
-        return father[x] = find(father[x]);
     }
 }
