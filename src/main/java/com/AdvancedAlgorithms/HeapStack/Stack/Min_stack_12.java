@@ -29,6 +29,47 @@ public class Min_stack_12 {
         return -1;
     }
 
+//    public class MinStack {
+//        Stack<Integer> stack;
+//        Stack<Integer> minStack;
+//        public MinStack() {
+//            // do intialization if necessary
+//            stack = new Stack<>();
+//            minStack = new Stack<>();
+//        }
+//
+//        /*
+//         * @param number: An integer
+//         * @return: nothing
+//         */
+//        public void push(int number) {
+//            // write your code here
+//            stack.push(number);
+//            if (minStack.isEmpty()) {
+//                minStack.push(number);
+//            } else {
+//                minStack.push(Math.min(minStack.peek(), number));
+//            }
+//        }
+//
+//        /*
+//         * @return: An integer
+//         */
+//        public int pop() {
+//            // write your code here
+//            minStack.pop();
+//            return stack.pop();
+//        }
+//
+//        /*
+//         * @return: An integer
+//         */
+//        public int min() {
+//            // write your code here
+//            return minStack.peek();
+//        }
+//    }
+
     public class MinStack {
         Stack<Integer> stack;
         Stack<Integer> minStack;
@@ -48,7 +89,9 @@ public class Min_stack_12 {
             if (minStack.isEmpty()) {
                 minStack.push(number);
             } else {
-                minStack.push(Math.min(minStack.peek(), number));
+                if (number <= minStack.peek()) {
+                    minStack.push(number);
+                }
             }
         }
 
@@ -57,7 +100,9 @@ public class Min_stack_12 {
          */
         public int pop() {
             // write your code here
-            minStack.pop();
+            if (stack.peek().equals(minStack.peek())) {
+                minStack.pop();
+            }
             return stack.pop();
         }
 
