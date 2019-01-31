@@ -5,6 +5,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Stack;
 
+/**
+ * Some say it's medium, I say it's tricky.
+ */
 public class DecodeString_575 {
     private final static Logger logger = LoggerFactory.getLogger(DecodeString_575.class);
 
