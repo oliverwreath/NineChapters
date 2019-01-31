@@ -28,50 +28,20 @@ public class Largest_rectangle_in_histogram_122 {
             return 0;
         }
 
-        int result = 0;
-        Stack<Bar> stack = new Stack<>();
-        for (int i = 0; i < height.length; i++) {
-            Bar newBar = new Bar(i, height[i]);
-            result = Math.max(result, addToStack(newBar, stack));
-            MyLogger.info(stack);
-        }
-        result = Math.max(result, addToStack(new Bar(height.length, 0), stack));
-        MyLogger.info(stack);
-
-        // return the final result
-        return result;
-    }
-
-    private int addToStack(Bar newBar, Stack<Bar> stack) {//new Bar(x, number)
-        int result = 0;
-        while (!stack.isEmpty() && stack.peek().h >= newBar.h) {
-            Bar pop = stack.pop();
-            if (!stack.isEmpty()) {
-                result = Math.max(result, (newBar.x - stack.peek().x - 1) * pop.h);
-            } else {
-                result = Math.max(result, newBar.x * pop.h);
+        int max = 0;
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i <= height.length; i++) {
+            int currentHeight = i == height.length ? -1 : height[i];
+            while (!stack.isEmpty() && height[stack.peek()] >= currentHeight) {
+                int h = height[stack.pop()];
+                int w = stack.isEmpty() ? i : (i - stack.peek() - 1);
+                max = Math.max(max, w * h);
             }
-        }
-        stack.push(newBar);
-        return result;
-    }
-
-    private class Bar {
-        int x;
-        int h;
-
-        public Bar(int x, int h) {
-            this.x = x;
-            this.h = h;
+            stack.push(i);
         }
 
-        @Override
-        public String toString() {
-            return "Bar{" +
-                    "x=" + x +
-                    ", h=" + h +
-                    '}';
-        }
+        // return the final max
+        return max;
     }
 
     private static class MyLogger {
