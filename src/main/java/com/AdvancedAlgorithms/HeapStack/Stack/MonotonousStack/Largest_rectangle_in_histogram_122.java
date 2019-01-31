@@ -31,11 +31,11 @@ public class Largest_rectangle_in_histogram_122 {
         int max = 0;
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i <= height.length; i++) {
-            int currentHeight = i == height.length ? -1 : height[i];
-            while (!stack.isEmpty() && height[stack.peek()] >= currentHeight) {
+            int currentHeight = i == height.length ? 0 : height[i];
+            while (!stack.isEmpty() && currentHeight <= height[stack.peek()]) {
                 int h = height[stack.pop()];
-                int w = stack.isEmpty() ? i : (i - stack.peek() - 1);
-                max = Math.max(max, w * h);
+                int w = stack.isEmpty() ? i : i - stack.peek() - 1;
+                max = Math.max(max, h * w);
             }
             stack.push(i);
         }
