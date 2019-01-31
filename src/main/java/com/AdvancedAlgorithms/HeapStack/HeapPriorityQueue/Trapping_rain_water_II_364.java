@@ -1,4 +1,4 @@
-package com.AdvancedAlgorithms.HeapStack;
+package com.AdvancedAlgorithms.HeapStack.HeapPriorityQueue;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
