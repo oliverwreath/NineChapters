@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Stack;
 
 /**
- * nicely done, could be more concise, suggest do it now.
+ * nicely done, could be more concise, consider it done.
  */
 public class Largest_rectangle_in_histogram_122 {
     private final static Logger logger = LoggerFactory.getLogger(Largest_rectangle_in_histogram_122.class);
