@@ -3,6 +3,9 @@ package com.AdvancedAlgorithms.BinarySearchSweepLineHard.BinarySearchOnResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * beautifully done! binary search with caution that if x < 1, we need to search up to 1.
+ */
 public class SqrtxII_586 {
     private final static Logger logger = LoggerFactory.getLogger(SqrtxII_586.class);
 
