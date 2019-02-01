@@ -4,7 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * nicely done! Also sliding Array trick. Be careful that you can't initialize the first column at once now. You need to embedded it in the row scanning.
+ * nicely done!
+ * Also sliding Array trick. Be careful that you can't initialize the first column at once now. You need to embedded it in the row scanning.
  */
 public class Minimum_path_sum_110 {
     private final static Logger logger = LoggerFactory.getLogger(Minimum_path_sum_110.class);
