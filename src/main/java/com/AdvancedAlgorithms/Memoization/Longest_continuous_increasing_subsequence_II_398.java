@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * version 1: Simply working.
+ * version 1: Simply working. aka DFS. TLE huh?
  */
 public class Longest_continuous_increasing_subsequence_II_398 {
     private final static Logger logger = LoggerFactory.getLogger(Longest_continuous_increasing_subsequence_II_398.class);
@@ -24,6 +24,8 @@ public class Longest_continuous_increasing_subsequence_II_398 {
         }));
     }
 
+    private int max = 0;
+
     public int longestContinuousIncreasingSubsequence2(int[][] grid) {
         // filter abnormal cases
         if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
@@ -32,10 +34,42 @@ public class Longest_continuous_increasing_subsequence_II_398 {
 
         // dp logic
         int m = grid.length, n = grid[0].length;
-        int[][] dp = new int[2][n];
+        boolean[][] hasVisited = new boolean[m][n];
+        max = 0;
+        for (int x = 0; x < m; x++) {
+            for (int y = 0; y < n; y++) {
+                hasVisited[x][y] = true;
+                dfs(grid, x, y, 1, hasVisited);
+                hasVisited[x][y] = false;
+            }
+        }
 
         // return the final result
-        return -1;
+        return max;
+    }
+
+    private int[] dx = new int[]{0, 0, 1, -1};
+    private int[] dy = new int[]{1, -1, 0, 0};
+
+    private void dfs(int[][] grid, int x, int y, int length, boolean[][] hasVisited) {
+        max = Math.max(max, length);
+        int m = grid.length, n = grid[0].length;
+        for (int t = 0; t < 4; t++) {
+            int nx = x + dx[t];
+            int ny = y + dy[t];
+            if (nx < 0 || nx >= m || ny < 0 || ny >= n) {
+                continue;
+            }
+            if (hasVisited[nx][ny]) {
+                continue;
+            }
+            if (grid[nx][ny] <= grid[x][y]) {
+                continue;
+            }
+            hasVisited[nx][ny] = true;
+            dfs(grid, nx, ny, length + 1, hasVisited);
+            hasVisited[nx][ny] = false;
+        }
     }
 
     private static class MyLogger {
