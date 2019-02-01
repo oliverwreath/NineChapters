@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * easily done! Now on to the sliding Array trick.
+ * nicely done! Also sliding Array trick. Be careful that you can't initialize the first column at once now. You need to embedded it in the row scanning.
  */
 public class Minimum_path_sum_110 {
     private final static Logger logger = LoggerFactory.getLogger(Minimum_path_sum_110.class);
@@ -26,22 +26,20 @@ public class Minimum_path_sum_110 {
         }
 
         int m = grid.length, n = grid[0].length;
-        long[][] dp = new long[m][n];
+        long[][] dp = new long[2][n];
         dp[0][0] = grid[0][0];
         for (int j = 1; j < n; j++) {
             dp[0][j] = grid[0][j] + dp[0][j - 1];
         }
         for (int i = 1; i < m; i++) {
-            dp[i][0] = grid[i][0] + dp[i - 1][0];
-        }
-        for (int i = 1; i < m; i++) {
+            dp[i % 2][0] = grid[i][0] + dp[(i - 1) % 2][0];
             for (int j = 1; j < n; j++) {
-                dp[i][j] = grid[i][j] + Math.min(dp[i - 1][j], dp[i][j - 1]);
+                dp[i % 2][j] = grid[i][j] + Math.min(dp[(i - 1) % 2][j], dp[i % 2][j - 1]);
             }
         }
 
         // return the final result
-        return (int) dp[m - 1][n - 1];
+        return (int) dp[(m - 1) % 2][n - 1];
     }
 
     private static class MyLogger {
