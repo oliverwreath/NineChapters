@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * version 1: Simply working. aka DFS. TLE huh?
+ * version 2: DP principle is all about removing redundant computation. So memoization should come in handy.
  */
 public class Longest_continuous_increasing_subsequence_II_398 {
     private final static Logger logger = LoggerFactory.getLogger(Longest_continuous_increasing_subsequence_II_398.class);
@@ -24,7 +25,7 @@ public class Longest_continuous_increasing_subsequence_II_398 {
         }));
     }
 
-    private int max = 0;
+    private int[][] dp;
 
     public int longestContinuousIncreasingSubsequence2(int[][] grid) {
         // filter abnormal cases
@@ -35,12 +36,20 @@ public class Longest_continuous_increasing_subsequence_II_398 {
         // dp logic
         int m = grid.length, n = grid[0].length;
         boolean[][] hasVisited = new boolean[m][n];
-        max = 0;
+        dp = new int[m][n];
+        for (int x = 0; x < m; x++) {
+            for (int y = 0; y < n; y++) {
+                dp[x][y] = -1;
+            }
+        }
+
+        int max = 0;
         for (int x = 0; x < m; x++) {
             for (int y = 0; y < n; y++) {
                 hasVisited[x][y] = true;
-                dfs(grid, x, y, 1, hasVisited);
+                dfs(grid, x, y, hasVisited);
                 hasVisited[x][y] = false;
+                max = Math.max(max, dp[x][y]);
             }
         }
 
@@ -51,9 +60,14 @@ public class Longest_continuous_increasing_subsequence_II_398 {
     private int[] dx = new int[]{0, 0, 1, -1};
     private int[] dy = new int[]{1, -1, 0, 0};
 
-    private void dfs(int[][] grid, int x, int y, int length, boolean[][] hasVisited) {
-        max = Math.max(max, length);
+    private int dfs(int[][] grid, int x, int y, boolean[][] hasVisited) {
+        // already calculated.
+        if (dp[x][y] != -1) {
+            return dp[x][y];
+        }
+
         int m = grid.length, n = grid[0].length;
+        dp[x][y] = 1;
         for (int t = 0; t < 4; t++) {
             int nx = x + dx[t];
             int ny = y + dy[t];
@@ -67,9 +81,10 @@ public class Longest_continuous_increasing_subsequence_II_398 {
                 continue;
             }
             hasVisited[nx][ny] = true;
-            dfs(grid, nx, ny, length + 1, hasVisited);
+            dp[x][y] = Math.max(dp[x][y], dfs(grid, nx, ny, hasVisited) + 1);
             hasVisited[nx][ny] = false;
         }
+        return dp[x][y];
     }
 
     private static class MyLogger {
