@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 /**
  * version 1 - nicely done! it's working!
+ * version 2 - nicely done! One dp array.
  */
 public class MaximalSquare_436 {
     private final static Logger logger = LoggerFactory.getLogger(MaximalSquare_436.class);
@@ -34,39 +35,21 @@ public class MaximalSquare_436 {
         }
 
         int m = matrix.length, n = matrix[0].length;
-        int[][] dpDown = new int[m][n];
-        int[][] dpRight = new int[m][n];
         int[][] dp = new int[m][n];
-        dpDown[0][0] = matrix[0][0];
-        dpRight[0][0] = matrix[0][0];
         dp[0][0] = matrix[0][0];
         for (int j = 1; j < n; j++) {
-            dpDown[0][j] = matrix[0][j] == 1 ? 1 : 0;
-            dpRight[0][j] = matrix[0][j] == 1 ? 1 + dpRight[0][j - 1] : 0;
             dp[0][j] = matrix[0][j] == 1 ? 1 : 0;
         }
         for (int i = 1; i < m; i++) {
-            dpDown[i][0] = matrix[i][0] == 1 ? 1 + dpDown[i - 1][0] : 0;
-            dpRight[i][0] = matrix[i][0] == 1 ? 1 : 0;
             dp[i][0] = matrix[i][0] == 1 ? 1 : 0;
             for (int j = 1; j < n; j++) {
-                dpDown[i][j] = matrix[i][j] == 1 ? 1 + dpDown[i - 1][j] : 0;
-                dpRight[i][j] = matrix[i][j] == 1 ? 1 + dpRight[i][j - 1] : 0;
                 if (matrix[i][j] == 1) {
-                    dp[i][j] = 1 + Math.min(Math.min(dp[i - 1][j - 1], dpDown[i - 1][j]), dpRight[i][j - 1]);
+                    dp[i][j] = 1 + Math.min(Math.min(dp[i - 1][j - 1], dp[i - 1][j]), dp[i][j - 1]);
                 } else {
                     dp[i][j] = 0;
                 }
             }
         }
-        for (int i = 0; i < m; i++) {
-            MyLogger.info(Arrays.toString(dpDown[i]));
-        }
-        MyLogger.info();
-        for (int i = 0; i < m; i++) {
-            MyLogger.info(Arrays.toString(dpRight[i]));
-        }
-        MyLogger.info();
         for (int i = 0; i < m; i++) {
             MyLogger.info(Arrays.toString(dp[i]));
         }
@@ -84,7 +67,7 @@ public class MaximalSquare_436 {
 
     private static class MyLogger {
         private static final boolean isDebugging = false;
-        private static final boolean isInfoing = true;
+        private static final boolean isInfoing = false;
         private static final String DEBUG = "[DEBUG]";
         private static final String INFO = "[INFO]";
 
