@@ -10,6 +10,11 @@ import org.slf4j.LoggerFactory;
  * <p>
  * TIME: O(1)
  * SPACE: O(1)
+ * <p>
+ * Version 2: DP Approach Babe!
+ * <p>
+ * TIME: O(n)
+ * SPACE: O(n)
  */
 public class Coins_in_a_line_394 {
     private final static Logger logger = LoggerFactory.getLogger(Coins_in_a_line_394.class);
@@ -28,18 +33,22 @@ public class Coins_in_a_line_394 {
     }
 
     public boolean firstWillWin(int n) {
-        return ! (n % 3 == 0);
         // filter abnormal cases
-//        if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
-//            return 0;
-//        }
-//
-//        // dp logic
-//        int m = grid.length, n = grid[0].length;
-//        int[][] dp = new int[2][n];
-//
-//        // return the final result
-//        return -1;
+        if (n <= 0) {
+            return false;
+        }
+
+        // dp logic
+        boolean[] dp = new boolean[Math.max(n + 1, 4)];
+        dp[1] = true;
+        dp[2] = true;
+        dp[3] = false;
+        for (int i = 4; i <= n; i++) {
+            dp[i] = dp[i - 3];
+        }
+
+        // return the final result
+        return dp[n];
     }
 
     private static class MyLogger {
