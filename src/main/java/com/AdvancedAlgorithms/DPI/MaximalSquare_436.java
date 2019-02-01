@@ -3,8 +3,6 @@ package com.AdvancedAlgorithms.DPI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
-
 /**
  * version 1 - nicely done! it's working!
  * version 2 - nicely done! One dp array.
@@ -43,27 +41,17 @@ public class MaximalSquare_436 {
             max = Math.max(max, dp[0][j]);
         }
         for (int i = 1; i < m; i++) {
-            dp[i%2][0] = matrix[i][0] == 1 ? 1 : 0;
-            max = Math.max(max, dp[i%2][0]);
+            dp[i % 2][0] = matrix[i][0] == 1 ? 1 : 0;
+            max = Math.max(max, dp[i % 2][0]);
             for (int j = 1; j < n; j++) {
                 if (matrix[i][j] == 1) {
-                    dp[i%2][j] = 1 + Math.min(Math.min(dp[(i - 1)%2][j - 1], dp[(i - 1)%2][j]), dp[i%2][j - 1]);
+                    dp[i % 2][j] = 1 + Math.min(Math.min(dp[(i - 1) % 2][j - 1], dp[(i - 1) % 2][j]), dp[i % 2][j - 1]);
                 } else {
-                    dp[i%2][j] = 0;
+                    dp[i % 2][j] = 0;
                 }
-                max = Math.max(max, dp[i%2][j]);
+                max = Math.max(max, dp[i % 2][j]);
             }
         }
-//        for (int i = 0; i < m; i++) {
-//            MyLogger.info(Arrays.toString(dp[i]));
-//        }
-
-//        int max = dp[0][0];
-//        for (int i = 0; i < m; i++) {
-//            for (int j = 0; j < n; j++) {
-//                max = Math.max(max, dp[i][j]);
-//            }
-//        }
 
         // return the final result
         return max * max;
