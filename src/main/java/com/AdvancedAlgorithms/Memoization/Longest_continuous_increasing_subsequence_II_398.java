@@ -4,8 +4,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * version 1: Simply working. aka DFS. TLE huh?
- * version 2: DP principle is all about removing redundant computation. So memoization should come in handy.
+ * Author: Oliver
+ *
+ * Version 1: Simply working. aka DFS. TLE huh?
+ * TIME: O(NM ^ NM)
+ * SPACE: O(NM)
+ *
+ * Version 2: DP principle is all about removing redundant computation. So memoization should come in handy.
+ * TIME: O(NM)
+ * SPACE: O(NM)
  */
 public class Longest_continuous_increasing_subsequence_II_398 {
     private final static Logger logger = LoggerFactory.getLogger(Longest_continuous_increasing_subsequence_II_398.class);
