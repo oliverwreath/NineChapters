@@ -8,6 +8,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * deque and space compression. Nicely done!
+ */
 public class Sliding_window_maximum_362 {
     private final static Logger logger = LoggerFactory.getLogger(Sliding_window_maximum_362.class);
 
