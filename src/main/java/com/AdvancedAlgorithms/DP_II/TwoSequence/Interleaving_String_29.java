@@ -15,21 +15,21 @@ import java.util.Arrays;
  * <p>
  * Version 2: TBD. Could use Sliding array - save space.
  */
-public class Edit_Distance_119 {
-    private final static Logger logger = LoggerFactory.getLogger(Edit_Distance_119.class);
+public class Interleaving_String_29 {
+    private final static Logger logger = LoggerFactory.getLogger(Interleaving_String_29.class);
 
     public static void main(String[] args) {
-        Edit_Distance_119 thisClass = new Edit_Distance_119();
-        thisClass.testEdit_Distance_119();
+        Interleaving_String_29 thisClass = new Interleaving_String_29();
+        thisClass.testInterleaving_String_29();
     }
 
-    private void testEdit_Distance_119() {
-        logger.info("result {} v.s. {}", "3", minDistance("mart", "karma"));
-        logger.info("result {} v.s. {}", "1", minDistance("b", ""));
-//        logger.info("result {} v.s. {}", "2", minDistance("ABCD", "EACB"));
+    private void testInterleaving_String_29() {
+        logger.info("result {} v.s. {}", "false", minDistance("", "", "1"));
+        logger.info("result {} v.s. {}", "true", minDistance("aabcc", "dbbca", "aadbbcbcac"));
+        logger.info("result {} v.s. {}", "false", minDistance("aabcc", "dbbca", "aadbbbaccc"));
     }
 
-    public int minDistance(String A, String B) {
+    public int minDistance(String A, String B, String C) {
         // filter abnormal cases
         if (A == null || A.length() == 0) {
             return B == null ? 0 : B.length();
