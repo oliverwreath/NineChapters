@@ -1,4 +1,4 @@
-package com.AdvancedAlgorithms.DPI.GameDP;
+package com.AdvancedAlgorithms.DP_I.GameDP;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

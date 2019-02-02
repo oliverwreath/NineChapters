@@ -1,4 +1,4 @@
-package com.AdvancedAlgorithms.DPI.Interval;
+package com.AdvancedAlgorithms.DP_I.Interval;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
