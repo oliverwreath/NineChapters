@@ -24,35 +24,38 @@ public class Interleaving_String_29 {
     }
 
     private void testInterleaving_String_29() {
-        logger.info("result {} v.s. {}", "false", minDistance("", "", "1"));
-        logger.info("result {} v.s. {}", "true", minDistance("aabcc", "dbbca", "aadbbcbcac"));
-        logger.info("result {} v.s. {}", "false", minDistance("aabcc", "dbbca", "aadbbbaccc"));
+        logger.info("result {} v.s. {}", "false", isInterleave("", "", "1"));
+        logger.info("result {} v.s. {}", "true", isInterleave("aabcc", "dbbca", "aadbbcbcac"));
+        logger.info("result {} v.s. {}", "false", isInterleave("aabcc", "dbbca", "aadbbbaccc"));
     }
 
-    public int minDistance(String A, String B, String C) {
+    public boolean isInterleave(String A, String B, String C) {
         // filter abnormal cases
+        if (C == null || C.length() == 0) {
+            return ((A == null || A.length() == 0) && (B == null || B.length() == 0));
+        }
         if (A == null || A.length() == 0) {
-            return B == null ? 0 : B.length();
+            return B.equals(C);
         }
         if (B == null || B.length() == 0) {
-            return A == null ? 0 : A.length();
+            return A.equals(C);
+        }
+        if (A.length() + B.length() != C.length()) {
+            return false;
         }
 
         // dp logic
         int m = A.length(), n = B.length();
-        int[][] dp = new int[m + 1][n + 1];
-        for (int j = 0; j <= n; j++) {
-            dp[0][j] = j;
+        boolean[][] dp = new boolean[m + 1][n + 1];
+        dp[0][0] = true;
+        for (int j = 1; j <= n; j++) {
+            dp[0][j] = dp[0][j - 1] && (B.charAt(j - 1) == C.charAt(j - 1));
         }
         for (int i = 1; i <= m; i++) {
-            dp[i][0] = i;
+            dp[i][0] = dp[i - 1][0] && (A.charAt(i - 1) == C.charAt(i - 1));
             for (int j = 1; j <= n; j++) {
-                dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1);
-                if (A.charAt(i - 1) == B.charAt(j - 1)) {
-                    dp[i][j] = Math.min(dp[i][j], dp[i - 1][j - 1]);
-                } else {
-                    dp[i][j] = Math.min(dp[i][j], dp[i - 1][j - 1] + 1);
-                }
+                dp[i][j] = (dp[i - 1][j] && (A.charAt(i - 1) == C.charAt(i + j - 1))) ||
+                        (dp[i][j - 1] && (B.charAt(j - 1) == C.charAt(i + j - 1)));
             }
         }
 
