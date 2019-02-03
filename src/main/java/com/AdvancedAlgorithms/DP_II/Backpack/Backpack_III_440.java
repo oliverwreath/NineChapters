@@ -7,10 +7,10 @@ import java.util.Arrays;
 
 /**
  * Author: Oliver
- *
+ * <p>
  * Now every item can use unlimited times.
  * <p>
- * Version 1: Simply Working. Backpack DP. MLE ok.
+ * Version 1: Simply Working. Backpack DP.
  * <p>
  * TIME: O(MN)
  * SPACE: O(MN)
@@ -26,10 +26,10 @@ public class Backpack_III_440 {
     }
 
     private void testBackpack_92() {
-        logger.info("result {} v.s. {}", "9", backPackII(10, new int[]{2, 3, 5, 7}, new int[]{1, 5, 2, 4}));
+        logger.info("result {} v.s. {}", "15", backPackIII(new int[]{2, 3, 5, 7}, new int[]{1, 5, 2, 4}, 10));
     }
 
-    public int backPackII(int m, int[] A, int[] V) {
+    public int backPackIII(int[] A, int[] V, int m) {
         // filter abnormal cases
         if (A == null || A.length == 0 || V == null || V.length == 0) {
             return 0;
@@ -47,8 +47,12 @@ public class Backpack_III_440 {
             dp[i][0] = 0;
             for (int j = 1; j < m + 1; j++) {
                 dp[i][j] = dp[(i - 1)][j];
-                if (j - A[i - 1] >= 0 && dp[(i - 1)][j - A[i - 1]] != -1) {
-                    dp[i][j] = Math.max(dp[i][j], dp[(i - 1)][j - A[i - 1]] + V[i - 1]);
+                int k = 1;
+                while (j - k * A[i - 1] >= 0) {
+                    if (dp[(i - 1)][j - k * A[i - 1]] != -1) {
+                        dp[i][j] = Math.max(dp[i][j], dp[(i - 1)][j - k * A[i - 1]] + k * V[i - 1]);
+                    }
+                    k++;
                 }
             }
         }
