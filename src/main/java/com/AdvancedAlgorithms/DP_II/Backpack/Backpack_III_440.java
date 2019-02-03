@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * Author: Oliver
  *
- * Now every item has different values.
+ * Now every item can use unlimited times.
  * <p>
  * Version 1: Simply Working. Backpack DP. MLE ok.
  * <p>
@@ -17,11 +17,11 @@ import java.util.Arrays;
  * <p>
  * Version 2: TBD. Sliding Array brings the SPACE: O(N)
  */
-public class Backpack_II_125 {
-    private final static Logger logger = LoggerFactory.getLogger(Backpack_II_125.class);
+public class Backpack_III_440 {
+    private final static Logger logger = LoggerFactory.getLogger(Backpack_III_440.class);
 
     public static void main(String[] args) {
-        Backpack_II_125 thisClass = new Backpack_II_125();
+        Backpack_III_440 thisClass = new Backpack_III_440();
         thisClass.testBackpack_92();
     }
 
