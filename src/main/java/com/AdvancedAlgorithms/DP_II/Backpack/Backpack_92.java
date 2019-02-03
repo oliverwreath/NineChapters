@@ -40,6 +40,7 @@ public class Backpack_92 {
         boolean[][] dp = new boolean[n + 1][m + 1];
         // first row true
         Arrays.fill(dp[0], false);
+        dp[0][0] = true;
 
         for (int i = 1; i < n + 1; i++) {
             // first col true
@@ -67,7 +68,7 @@ public class Backpack_92 {
 
     private static class MyLogger {
         private static final boolean isDebugging = false;
-        private static final boolean isInfoing = false;
+        private static final boolean isInfoing = true;
         private static final String DEBUG = "[DEBUG]";
         private static final String INFO = "[INFO]";
 
