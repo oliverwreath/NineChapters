@@ -26,6 +26,7 @@ public class Backpack_92 {
     private void testBackpack_92() {
         logger.info("result {} v.s. {}", "10", backPack(11, new int[]{2, 3, 5, 7}));
         logger.info("result {} v.s. {}", "12", backPack(12, new int[]{2, 3, 5, 7}));
+        logger.info("result {} v.s. {}", "83", backPack(90, new int[]{12, 3, 7, 4, 5, 13, 2, 8, 4, 7, 6, 5, 7}));
     }
 
     public int backPack(int m, int[] A) {
@@ -39,12 +40,10 @@ public class Backpack_92 {
         boolean[][] dp = new boolean[n + 1][m + 1];
         // first row true
         Arrays.fill(dp[0], false);
-        // first col true
-        for (int i = 0; i < n + 1; i++) {
-            dp[i][0] = true;
-        }
 
         for (int i = 1; i < n + 1; i++) {
+            // first col true
+            dp[i][0] = true;
             for (int j = 1; j < m + 1; j++) {
                 dp[i][j] = dp[i - 1][j];
                 if (j - A[i - 1] >= 0) {
