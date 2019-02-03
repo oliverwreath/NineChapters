@@ -37,28 +37,28 @@ public class Backpack_92 {
 
         // dp logic
         int n = A.length;
-        boolean[][] dp = new boolean[n + 1][m + 1];
+        boolean[][] dp = new boolean[2][m + 1];
         // first row true
         Arrays.fill(dp[0], false);
         dp[0][0] = true;
 
         for (int i = 1; i < n + 1; i++) {
             // first col true
-            dp[i][0] = true;
+            dp[i%2][0] = true;
             for (int j = 1; j < m + 1; j++) {
-                dp[i][j] = dp[i - 1][j];
+                dp[i%2][j] = dp[(i - 1)%2][j];
                 if (j - A[i - 1] >= 0) {
-                    dp[i][j] |= dp[i - 1][j - A[i - 1]];
+                    dp[i%2][j] |= dp[(i - 1)%2][j - A[i - 1]];
                 }
             }
         }
-        for (int i = 0; i < n + 1; i++) {
+        for (int i = 0; i < 2; i++) {
             MyLogger.info(Arrays.toString(dp[i]));
         }
 
         // return the final result
         for (int j = m; j >= 0; j--) {
-            if (dp[n][j]) {
+            if (dp[n%2][j]) {
                 return j;
             }
         }
@@ -68,7 +68,7 @@ public class Backpack_92 {
 
     private static class MyLogger {
         private static final boolean isDebugging = false;
-        private static final boolean isInfoing = true;
+        private static final boolean isInfoing = false;
         private static final String DEBUG = "[DEBUG]";
         private static final String INFO = "[INFO]";
 
