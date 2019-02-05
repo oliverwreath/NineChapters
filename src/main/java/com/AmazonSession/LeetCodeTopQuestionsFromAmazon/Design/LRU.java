@@ -8,12 +8,13 @@ import java.util.HashMap;
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply Working. HashMap with Deque(LinkedList). But they are not integrated.
+ * Version 1: Simply Working. HashMap with Deque(LinkedList). But they are not integrated. 257 ms
+ * TIME: O(N)
+ * SPACE: O(N)
  * <p>
- * TIME: O(MN)
- * SPACE: O(MN)
- * <p>
- * Version 2: TBD. Integrated customized DoublyLinkedList.
+ * Version 2: TBD. Integrated customized DoublyLinkedList. 0 ms
+ * TIME: O(1)
+ * SPACE: O(N)
  */
 public class LRU {
     private final static Logger logger = LoggerFactory.getLogger(LRUCache.class);
