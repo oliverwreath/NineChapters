@@ -3,9 +3,7 @@ package com.AmazonSession.LeetCodeTopQuestionsFromAmazon.Design;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Deque;
 import java.util.HashMap;
-import java.util.LinkedList;
 
 /**
  * Author: Oliver
@@ -52,46 +50,93 @@ public class LRU {
 
     class LRUCache {
         private int capacity;
-        private Deque<Integer> keyList;
-        private HashMap<Integer, Integer> hashMap;
+        private HashMap<Integer, Node> hashMap;
+        private Node head;
+        private Node tail;
 
         public LRUCache(int capacity) {
             this.capacity = capacity;
-            this.keyList = new LinkedList<>();
             this.hashMap = new HashMap<>();
+            this.head = new Node(-1, -1);
+            this.tail = new Node(-1, -1);
+            head.next = tail;
+            tail.prev = head;
         }
 
         public int get(int key) {
-            if (hashMap.containsKey(key)) {
-                if (keyList.getFirst() != key) {
-                    keyList.remove(Integer.valueOf(key));
-                    keyList.addFirst(key);
-                }
+            if (!hashMap.containsKey(key)) {
+                return -1;
+            } else {
+                Node node = hashMap.get(key);
+                refresh(node);
+                return hashMap.get(key).val;
             }
-            MyLogger.info("GET: " + keyList);
-            return hashMap.getOrDefault(key, -1);
         }
 
         public void put(int key, int value) {
             if (!hashMap.containsKey(key)) {
                 // insert
-                if (keyList.size() == capacity) {
-                    hashMap.remove(keyList.getLast());
-                    keyList.removeLast();
-                    keyList.addFirst(key);
-                } else {
-                    keyList.addFirst(key);
+                if (hashMap.size() == capacity) {
+                    Node LRUNode = tail.prev;
+                    LRUNode.prev.next = LRUNode.next;
+                    LRUNode.next.prev = LRUNode.prev;
+                    hashMap.remove(LRUNode.key);
                 }
-                hashMap.put(key, value);
+                Node node = new Node(key, value);
+                Node next = head.next;
+                head.next = node;
+                node.prev = head;
+                next.prev = node;
+                node.next = next;
+                hashMap.put(key, node);
             } else {
                 // update
-                if (keyList.getFirst() != key) {
-                    keyList.remove(Integer.valueOf(key));
-                    keyList.addFirst(key);
-                }
-                hashMap.put(key, value);
+                Node node = hashMap.get(key);
+                node.val = value;
+                refresh(node);
             }
-            MyLogger.info("PUT: " + keyList);
+        }
+
+        private void refresh(Node node) {
+            if (node.prev != head) {
+                node.prev.next = node.next;
+                node.next.prev = node.prev;
+                Node next = head.next;
+                head.next = node;
+                node.prev = head;
+                next.prev = node;
+                node.next = next;
+            }
+        }
+
+        class Node {
+            Node prev;
+            Node next;
+            int key;
+            int val;
+
+            public Node(int key, int val) {
+                this.key = key;
+                this.val = val;
+                this.prev = null;
+                this.next = null;
+            }
+
+            public Node(Node prev, Node next, int key, int val) {
+                this.prev = prev;
+                this.next = next;
+                this.key = key;
+                this.val = val;
+            }
+
+            @Override
+            public String toString() {
+                return "Node{" +
+                        "prev=" + prev +
+                        ", next=" + next +
+                        ", val=" + val +
+                        '}';
+            }
         }
     }
 
