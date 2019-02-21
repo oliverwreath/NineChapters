@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * Created by Yanliang Han on 2016/6/10.
  */
 public class BinaryTree {
-    private final static Logger logger = LoggerFactory.getLogger(BinaryTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(BinaryTree.class);
 
     public static void main(String[] args) {
         TreeNode root = getTree();

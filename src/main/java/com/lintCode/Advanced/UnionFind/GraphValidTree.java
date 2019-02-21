@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-14.
  */
 public class GraphValidTree {
-    private final static Logger logger = LoggerFactory.getLogger(GraphValidTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(GraphValidTree.class);
 
     public static void main(String[] arg) {
         new GraphValidTree().testNumberOfIslands();

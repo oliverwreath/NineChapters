@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class No398_LongestIncreasingContinuousSubsequenceII {
-    private final static Logger logger = LoggerFactory.getLogger(No398_LongestIncreasingContinuousSubsequenceII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No398_LongestIncreasingContinuousSubsequenceII.class);
 
     public static void main(String[] args) {
         testNo397_LongestIncreasingContinuousSubsequence();

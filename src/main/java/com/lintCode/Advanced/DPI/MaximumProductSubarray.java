@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-28.
  */
 public class MaximumProductSubarray {
-    private final static Logger logger = LoggerFactory.getLogger(MaximumProductSubarray.class);
+    private static final Logger logger = LoggerFactory.getLogger(MaximumProductSubarray.class);
 
     public static void main(String[] arg) {
         testMaximumProductSubarray();

@@ -12,7 +12,7 @@ import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
  * Created by yanli on 8/28/2016.
  */
 public class SherlockAndParentheses {
-    private final static Logger logger = LoggerFactory.getLogger(SherlockAndParentheses.class);
+    private static final Logger logger = LoggerFactory.getLogger(SherlockAndParentheses.class);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

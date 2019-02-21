@@ -17,7 +17,7 @@ import java.util.PriorityQueue;
  * Version 2: TBD.
  */
 public class MergeKSortedLists {
-    private final static Logger logger = LoggerFactory.getLogger(MergeKSortedLists.class);
+    private static final Logger logger = LoggerFactory.getLogger(MergeKSortedLists.class);
 
     public static void main(String[] args) {
         MergeKSortedLists thisClass = new MergeKSortedLists();

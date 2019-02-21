@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.util.LinkedList;
 
 public class No783_MinimumDistanceBetweenBSTNodes {
-    private final static Logger logger = LoggerFactory.getLogger(No783_MinimumDistanceBetweenBSTNodes.class);
+    private static final Logger logger = LoggerFactory.getLogger(No783_MinimumDistanceBetweenBSTNodes.class);
 
     public static void main(String[] args) {
         new No783_MinimumDistanceBetweenBSTNodes().testNo783_MinimumDistanceBetweenBSTNodes();

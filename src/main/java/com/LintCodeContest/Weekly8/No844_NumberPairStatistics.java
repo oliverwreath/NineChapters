@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No844_NumberPairStatistics {
-    private final static Logger logger = LoggerFactory.getLogger(No844_NumberPairStatistics.class);
+    private static final Logger logger = LoggerFactory.getLogger(No844_NumberPairStatistics.class);
 
     public static void main(String[] args) {
         No844_NumberPairStatistics No844_NumberPairStatistics = new No844_NumberPairStatistics();

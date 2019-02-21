@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No770_BasicCalculatorIV {
-    private final static Logger logger = LoggerFactory.getLogger(No770_BasicCalculatorIV.class);
+    private static final Logger logger = LoggerFactory.getLogger(No770_BasicCalculatorIV.class);
 
     public static void main(String[] args) {
         testNo770_BasicCalculatorIV();

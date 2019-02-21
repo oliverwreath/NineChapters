@@ -11,7 +11,7 @@ import java.util.List;
  * Created by yanli on 2016-10-23.
  */
 public class PathSum_112 {
-    private final static Logger logger = LoggerFactory.getLogger(PathSum_112.class);
+    private static final Logger logger = LoggerFactory.getLogger(PathSum_112.class);
 
     public static void main(String[] arg) {
         new PathSum_112().testSameTree_100();

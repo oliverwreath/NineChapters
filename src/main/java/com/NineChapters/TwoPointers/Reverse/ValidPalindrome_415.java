@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ValidPalindrome_415 {
-    private final static Logger logger = LoggerFactory.getLogger(ValidPalindrome_415.class);
+    private static final Logger logger = LoggerFactory.getLogger(ValidPalindrome_415.class);
 
     public static void main(String[] args) {
         testValidPalindrome_415();

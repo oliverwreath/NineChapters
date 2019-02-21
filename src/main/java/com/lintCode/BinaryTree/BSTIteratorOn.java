@@ -13,7 +13,7 @@ import static com.lintCode.BinaryTree.BinaryTree.getTree;
  * Created by Yanliang Han on 2016/6/12.
  */
 public class BSTIteratorOn {
-    private final static Logger logger = LoggerFactory.getLogger(BSTIteratorOn.class);
+    private static final Logger logger = LoggerFactory.getLogger(BSTIteratorOn.class);
     private List<TreeNode> treeNodes = new LinkedList<TreeNode>();
     private int index = -1;
 

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-29.
  */
 public class BestTimeToBuyAndSellStockIII {
-    private final static Logger logger = LoggerFactory.getLogger(BestTimeToBuyAndSellStockIII.class);
+    private static final Logger logger = LoggerFactory.getLogger(BestTimeToBuyAndSellStockIII.class);
 
     public static void main(String[] arg) {
         testBestTimeToBuyAndSellStockIV();

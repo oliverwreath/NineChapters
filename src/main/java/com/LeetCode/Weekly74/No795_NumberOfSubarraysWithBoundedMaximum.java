@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No795_NumberOfSubarraysWithBoundedMaximum {
-    private final static Logger logger = LoggerFactory.getLogger(No795_NumberOfSubarraysWithBoundedMaximum.class);
+    private static final Logger logger = LoggerFactory.getLogger(No795_NumberOfSubarraysWithBoundedMaximum.class);
 
     public static void main(String[] args) {
         No795_NumberOfSubarraysWithBoundedMaximum No795_NumberOfSubarraysWithBoundedMaximum = new No795_NumberOfSubarraysWithBoundedMaximum();

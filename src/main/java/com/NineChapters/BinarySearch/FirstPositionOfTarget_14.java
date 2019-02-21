@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class FirstPositionOfTarget_14 {
-    private final static Logger logger = LoggerFactory.getLogger(FirstPositionOfTarget_14.class);
+    private static final Logger logger = LoggerFactory.getLogger(FirstPositionOfTarget_14.class);
 
     public static void main(String[] args) {
         testFirstPositionOfTarget_14();

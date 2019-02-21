@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * Version 2: TBD.
  */
 public class ClimbingStairs {
-    private final static Logger logger = LoggerFactory.getLogger(ClimbingStairs.class);
+    private static final Logger logger = LoggerFactory.getLogger(ClimbingStairs.class);
 
     public static void main(String[] args) {
         ClimbingStairs thisClass = new ClimbingStairs();

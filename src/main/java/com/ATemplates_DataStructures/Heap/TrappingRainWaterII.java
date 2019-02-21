@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  * Created by yanli on 2016-10-02.
  */
 public class TrappingRainWaterII {
-    private final static Logger logger = LoggerFactory.getLogger(TrappingRainWaterII.class);
+    private static final Logger logger = LoggerFactory.getLogger(TrappingRainWaterII.class);
 
     public static void main(String[] arg) {
         testTrappingRainWaterII();

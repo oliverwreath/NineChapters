@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * Version 2: TBD.
  */
 public class BestTimeToBuyAndSellStock {
-    private final static Logger logger = LoggerFactory.getLogger(BestTimeToBuyAndSellStock.class);
+    private static final Logger logger = LoggerFactory.getLogger(BestTimeToBuyAndSellStock.class);
 
     public static void main(String[] args) {
         BestTimeToBuyAndSellStock thisClass = new BestTimeToBuyAndSellStock();

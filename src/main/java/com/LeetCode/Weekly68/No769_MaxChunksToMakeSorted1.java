@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class No769_MaxChunksToMakeSorted1 {
-    private final static Logger logger = LoggerFactory.getLogger(No769_MaxChunksToMakeSorted1.class);
+    private static final Logger logger = LoggerFactory.getLogger(No769_MaxChunksToMakeSorted1.class);
 
     public static void main(String[] args) {
         testNo769_MaxChunksToMakeSorted1();

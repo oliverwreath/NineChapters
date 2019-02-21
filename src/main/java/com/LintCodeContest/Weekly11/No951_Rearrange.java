@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No951_Rearrange {
-    private final static Logger logger = LoggerFactory.getLogger(No951_Rearrange.class);
+    private static final Logger logger = LoggerFactory.getLogger(No951_Rearrange.class);
 
     public static void main(String[] args) {
         No951_Rearrange No951_Rearrange = new No951_Rearrange();

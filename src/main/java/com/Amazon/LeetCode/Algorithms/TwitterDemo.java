@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-23.
  */
 public class TwitterDemo {
-    private final static Logger logger = LoggerFactory.getLogger(TwitterDemo.class);
+    private static final Logger logger = LoggerFactory.getLogger(TwitterDemo.class);
 
     public static void main(String[] arg) {
         new TwitterDemo().testTwitter();

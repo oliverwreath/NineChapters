@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-30.
  */
 public class CoinsInALineII {
-    private final static Logger logger = LoggerFactory.getLogger(CoinsInALineII.class);
+    private static final Logger logger = LoggerFactory.getLogger(CoinsInALineII.class);
 
     public static void main(String[] arg) {
         testCoinsInALine();

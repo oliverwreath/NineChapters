@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No118_DistinctSubsequences {
-    private final static Logger logger = LoggerFactory.getLogger(No118_DistinctSubsequences.class);
+    private static final Logger logger = LoggerFactory.getLogger(No118_DistinctSubsequences.class);
 
     public static void main(String[] args) {
         No118_DistinctSubsequences No118_DistinctSubsequences = new No118_DistinctSubsequences();

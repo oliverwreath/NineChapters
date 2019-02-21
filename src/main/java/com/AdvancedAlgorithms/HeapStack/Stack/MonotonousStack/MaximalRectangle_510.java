@@ -9,7 +9,7 @@ import java.util.Stack;
  * this depends on the maxAreaInHist
  */
 public class MaximalRectangle_510 {
-    private final static Logger logger = LoggerFactory.getLogger(MaximalRectangle_510.class);
+    private static final Logger logger = LoggerFactory.getLogger(MaximalRectangle_510.class);
 
     public static void main(String[] args) {
         MaximalRectangle_510 thisClass = new MaximalRectangle_510();

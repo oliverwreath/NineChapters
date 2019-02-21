@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-01.
  */
 public class SplitArrayLargestSum_410 {
-    private final static Logger logger = LoggerFactory.getLogger(SplitArrayLargestSum_410.class);
+    private static final Logger logger = LoggerFactory.getLogger(SplitArrayLargestSum_410.class);
 
     public static void main(String[] arg) {
         testSplitArrayLargestSum_410();

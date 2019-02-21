@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class MagicDictionary {
-    private final static Logger logger = LoggerFactory.getLogger(MagicDictionary.class);
+    private static final Logger logger = LoggerFactory.getLogger(MagicDictionary.class);
 
     public static void main(String[] args) {
         testMagicDictionary_676();

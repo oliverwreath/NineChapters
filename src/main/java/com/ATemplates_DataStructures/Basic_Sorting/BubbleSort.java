@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class BubbleSort {
-    private final static Logger logger = LoggerFactory.getLogger(BubbleSort.class);
+    private static final Logger logger = LoggerFactory.getLogger(BubbleSort.class);
 
     public static void main(String[] args) {
         testBubbleSort();

@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No756_PyramidTransitionMatrix {
-    private final static Logger logger = LoggerFactory.getLogger(No756_PyramidTransitionMatrix.class);
+    private static final Logger logger = LoggerFactory.getLogger(No756_PyramidTransitionMatrix.class);
 
     public static void main(String[] args) {
         testNo756_PyramidTransitionMatrix();

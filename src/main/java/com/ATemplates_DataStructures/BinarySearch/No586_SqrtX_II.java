@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No586_SqrtX_II {
-    private final static Logger logger = LoggerFactory.getLogger(No586_SqrtX_II.class);
+    private static final Logger logger = LoggerFactory.getLogger(No586_SqrtX_II.class);
 
     public static void main(String[] args) {
         testNo141_SqrtX();

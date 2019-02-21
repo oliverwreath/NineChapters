@@ -19,7 +19,7 @@ import java.util.HashSet;
  * SPACE: O(1)
  */
 public class IntersectionOfTwoLinkedLists {
-    private final static Logger logger = LoggerFactory.getLogger(IntersectionOfTwoLinkedLists.class);
+    private static final Logger logger = LoggerFactory.getLogger(IntersectionOfTwoLinkedLists.class);
 
     public static void main(String[] args) {
         IntersectionOfTwoLinkedLists thisClass = new IntersectionOfTwoLinkedLists();

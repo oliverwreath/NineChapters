@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No788_RotatedDigits {
-    private final static Logger logger = LoggerFactory.getLogger(No788_RotatedDigits.class);
+    private static final Logger logger = LoggerFactory.getLogger(No788_RotatedDigits.class);
 
     public static void main(String[] args) {
         No788_RotatedDigits No788_RotatedDigits = new No788_RotatedDigits();

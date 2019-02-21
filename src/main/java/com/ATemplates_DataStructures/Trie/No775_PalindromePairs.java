@@ -11,7 +11,7 @@ import java.util.List;
  * damn! screwed up. Revisit is recommended.
  */
 public class No775_PalindromePairs {
-    private final static Logger logger = LoggerFactory.getLogger(No775_PalindromePairs.class);
+    private static final Logger logger = LoggerFactory.getLogger(No775_PalindromePairs.class);
 
     public static void main(String[] args) {
         No775_PalindromePairs No775_PalindromePairs = new No775_PalindromePairs();

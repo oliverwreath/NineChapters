@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-20.
  */
 public class StockMaximize {
-    private final static Logger logger = LoggerFactory.getLogger(StockMaximize.class);
+    private static final Logger logger = LoggerFactory.getLogger(StockMaximize.class);
 
     public static void main(String[] arg) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */

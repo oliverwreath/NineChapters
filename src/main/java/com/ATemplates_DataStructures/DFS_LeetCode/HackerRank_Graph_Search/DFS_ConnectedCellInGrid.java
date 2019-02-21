@@ -9,7 +9,7 @@ import java.util.Scanner;
  * recursive DFS
  */
 public class DFS_ConnectedCellInGrid {
-    private final static Logger logger = LoggerFactory.getLogger(DFS_ConnectedCellInGrid.class);
+    private static final Logger logger = LoggerFactory.getLogger(DFS_ConnectedCellInGrid.class);
 
     public static void main(String[] arg) {
         new DFS_ConnectedCellInGrid().testDFS_ConnectedCellInGrid();

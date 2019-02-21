@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-19.
  */
 public class MergeTwoSortedLists_21 {
-    private final static Logger logger = LoggerFactory.getLogger(MergeTwoSortedLists_21.class);
+    private static final Logger logger = LoggerFactory.getLogger(MergeTwoSortedLists_21.class);
 
     public static void main(String[] arg) {
         new MergeTwoSortedLists_21().testSearchA2DMatrix_74();

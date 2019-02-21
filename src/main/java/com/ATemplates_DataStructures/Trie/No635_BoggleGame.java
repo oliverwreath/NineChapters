@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No635_BoggleGame {
-    private final static Logger logger = LoggerFactory.getLogger(No635_BoggleGame.class);
+    private static final Logger logger = LoggerFactory.getLogger(No635_BoggleGame.class);
 
     public static void main(String[] args) {
         No635_BoggleGame No635_BoggleGame = new No635_BoggleGame();

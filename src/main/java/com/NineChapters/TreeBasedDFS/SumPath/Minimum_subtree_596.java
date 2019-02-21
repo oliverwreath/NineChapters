@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Minimum_subtree_596 {
-    private final static Logger logger = LoggerFactory.getLogger(Minimum_subtree_596.class);
+    private static final Logger logger = LoggerFactory.getLogger(Minimum_subtree_596.class);
 
     public static void main(String[] args) {
         testMinimum_subtree_596();

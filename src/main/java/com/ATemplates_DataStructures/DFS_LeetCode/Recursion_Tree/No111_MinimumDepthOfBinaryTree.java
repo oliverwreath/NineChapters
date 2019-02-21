@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class No111_MinimumDepthOfBinaryTree {
-    private final static Logger logger = LoggerFactory.getLogger(No111_MinimumDepthOfBinaryTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(No111_MinimumDepthOfBinaryTree.class);
 
     public static void main(String[] args) {
         testNo111_MinimumDepthOfBinaryTree();

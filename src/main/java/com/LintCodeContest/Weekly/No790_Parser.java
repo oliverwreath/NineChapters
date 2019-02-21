@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No790_Parser {
-    private final static Logger logger = LoggerFactory.getLogger(No790_Parser.class);
+    private static final Logger logger = LoggerFactory.getLogger(No790_Parser.class);
 
     public static void main(String[] args) {
         testNo790_Parser();

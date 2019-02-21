@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class No101_SymmetricTree {
-    private final static Logger logger = LoggerFactory.getLogger(No101_SymmetricTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(No101_SymmetricTree.class);
 
     public static void main(String[] args) {
         testNo101_SymmetricTree();

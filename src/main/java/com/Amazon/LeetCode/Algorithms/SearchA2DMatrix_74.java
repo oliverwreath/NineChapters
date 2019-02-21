@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-19.
  */
 public class SearchA2DMatrix_74 {
-    private final static Logger logger = LoggerFactory.getLogger(SearchA2DMatrix_74.class);
+    private static final Logger logger = LoggerFactory.getLogger(SearchA2DMatrix_74.class);
 
     public static void main(String[] arg) {
         new SearchA2DMatrix_74().testSearchA2DMatrix_74();

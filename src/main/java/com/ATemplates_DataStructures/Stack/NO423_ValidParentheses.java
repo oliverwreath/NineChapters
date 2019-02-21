@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Stack;
 
 public class NO423_ValidParentheses {
-    private final static Logger logger = LoggerFactory.getLogger(NO423_ValidParentheses.class);
+    private static final Logger logger = LoggerFactory.getLogger(NO423_ValidParentheses.class);
 
     public static void main(String[] args) {
         NO423_ValidParentheses NO423_ValidParentheses = new NO423_ValidParentheses();

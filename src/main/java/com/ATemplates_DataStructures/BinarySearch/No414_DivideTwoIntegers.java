@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No414_DivideTwoIntegers {
-    private final static Logger logger = LoggerFactory.getLogger(No414_DivideTwoIntegers.class);
+    private static final Logger logger = LoggerFactory.getLogger(No414_DivideTwoIntegers.class);
 
     public static void main(String[] args) {
         testNo141_SqrtX();

@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-02.
  */
 public class SlidingWindowMedian {
-    private final static Logger logger = LoggerFactory.getLogger(SlidingWindowMedian.class);
+    private static final Logger logger = LoggerFactory.getLogger(SlidingWindowMedian.class);
 
     public static void main(String[] arg) {
         new SlidingWindowMedian().testMedianSlidingWindow();

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-04.
  */
 public class No70_ClimbingStairs {
-    private final static Logger logger = LoggerFactory.getLogger(No70_ClimbingStairs.class);
+    private static final Logger logger = LoggerFactory.getLogger(No70_ClimbingStairs.class);
 
     public static void main(String[] arg) {
         new No70_ClimbingStairs().testHouseRobber_198();

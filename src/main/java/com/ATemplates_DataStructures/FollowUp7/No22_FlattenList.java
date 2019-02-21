@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No22_FlattenList {
-    private final static Logger logger = LoggerFactory.getLogger(No22_FlattenList.class);
+    private static final Logger logger = LoggerFactory.getLogger(No22_FlattenList.class);
 
     public static void main(String[] args) {
         No22_FlattenList No22_FlattenList = new No22_FlattenList();

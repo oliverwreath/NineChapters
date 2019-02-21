@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.PriorityQueue;
 
 public class No970_BigBusiness {
-    private final static Logger logger = LoggerFactory.getLogger(No970_BigBusiness.class);
+    private static final Logger logger = LoggerFactory.getLogger(No970_BigBusiness.class);
 
     public static void main(String[] args) {
         No970_BigBusiness No970_BigBusiness = new No970_BigBusiness();

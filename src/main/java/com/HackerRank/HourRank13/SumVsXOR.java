@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-04.
  */
 public class SumVsXOR {
-    private final static Logger logger = LoggerFactory.getLogger(SumVsXOR.class);
+    private static final Logger logger = LoggerFactory.getLogger(SumVsXOR.class);
 
     public static void main(String[] arg) {
         new SumVsXOR().testSumVsXOR();

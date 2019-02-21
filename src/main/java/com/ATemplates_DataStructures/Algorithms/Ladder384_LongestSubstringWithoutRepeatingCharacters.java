@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class Ladder384_LongestSubstringWithoutRepeatingCharacters {
-    private final static Logger logger = LoggerFactory.getLogger(Ladder384_LongestSubstringWithoutRepeatingCharacters.class);
+    private static final Logger logger = LoggerFactory.getLogger(Ladder384_LongestSubstringWithoutRepeatingCharacters.class);
 
     public static void main(String[] args) {
         testLadder384_LongestSubstringWithoutRepeatingCharacters();

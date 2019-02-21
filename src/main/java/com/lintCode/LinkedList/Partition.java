@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by Yanliang Han on 2016/7/12.
  */
 public class Partition {
-    private final static Logger logger = LoggerFactory.getLogger(Partition.class);
+    private static final Logger logger = LoggerFactory.getLogger(Partition.class);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

@@ -14,7 +14,7 @@ import java.util.Arrays;
  * SPACE: O(NN)
  */
 public class Burst_balloons_168 {
-    private final static Logger logger = LoggerFactory.getLogger(Burst_balloons_168.class);
+    private static final Logger logger = LoggerFactory.getLogger(Burst_balloons_168.class);
 
     public static void main(String[] args) {
         Burst_balloons_168 thisClass = new Burst_balloons_168();

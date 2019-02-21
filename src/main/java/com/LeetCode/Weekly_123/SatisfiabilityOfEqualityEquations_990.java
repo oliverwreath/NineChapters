@@ -17,7 +17,7 @@ import java.util.LinkedList;
  * SPACE: O(?)
  */
 public class SatisfiabilityOfEqualityEquations_990 {
-    private final static Logger logger = LoggerFactory.getLogger(SatisfiabilityOfEqualityEquations_990.class);
+    private static final Logger logger = LoggerFactory.getLogger(SatisfiabilityOfEqualityEquations_990.class);
 
     public static void main(String[] args) {
         SatisfiabilityOfEqualityEquations_990 thisClass = new SatisfiabilityOfEqualityEquations_990();

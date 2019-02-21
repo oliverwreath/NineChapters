@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-01.
  */
 public class LongestPalindrome_409 {
-    private final static Logger logger = LoggerFactory.getLogger(LongestPalindrome_409.class);
+    private static final Logger logger = LoggerFactory.getLogger(LongestPalindrome_409.class);
 
     public static void main(String[] arg) {
         testLongestPalindrome_409();

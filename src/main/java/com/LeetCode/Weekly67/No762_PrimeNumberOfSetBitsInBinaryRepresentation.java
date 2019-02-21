@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashSet;
 
 public class No762_PrimeNumberOfSetBitsInBinaryRepresentation {
-    private final static Logger logger = LoggerFactory.getLogger(No762_PrimeNumberOfSetBitsInBinaryRepresentation.class);
+    private static final Logger logger = LoggerFactory.getLogger(No762_PrimeNumberOfSetBitsInBinaryRepresentation.class);
 
     public static void main(String[] args) {
         testNo762();

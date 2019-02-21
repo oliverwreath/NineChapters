@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class No453_FlattenBinaryTreeToLinkedList {
-    private final static Logger logger = LoggerFactory.getLogger(No453_FlattenBinaryTreeToLinkedList.class);
+    private static final Logger logger = LoggerFactory.getLogger(No453_FlattenBinaryTreeToLinkedList.class);
 
     public static void main(String[] args) {
         No453_FlattenBinaryTreeToLinkedList No453_FlattenBinaryTreeToLinkedList = new No453_FlattenBinaryTreeToLinkedList();

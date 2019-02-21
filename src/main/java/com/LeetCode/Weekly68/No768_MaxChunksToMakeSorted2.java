@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class No768_MaxChunksToMakeSorted2 {
-    private final static Logger logger = LoggerFactory.getLogger(No768_MaxChunksToMakeSorted2.class);
+    private static final Logger logger = LoggerFactory.getLogger(No768_MaxChunksToMakeSorted2.class);
 
     public static void main(String[] args) {
         testNo768_MaxChunksToMakeSorted2();

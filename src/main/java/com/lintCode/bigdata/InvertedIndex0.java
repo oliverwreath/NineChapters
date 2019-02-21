@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/10/2016.
  */
 public class InvertedIndex0 {
-    private final static Logger logger = LoggerFactory.getLogger(InvertedIndex0.class);
+    private static final Logger logger = LoggerFactory.getLogger(InvertedIndex0.class);
 
     public static void main(String[] arg) {
         testInvertedIndex();

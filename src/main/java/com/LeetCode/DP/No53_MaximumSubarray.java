@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-10.
  */
 public class No53_MaximumSubarray {
-    private final static Logger logger = LoggerFactory.getLogger(No53_MaximumSubarray.class);
+    private static final Logger logger = LoggerFactory.getLogger(No53_MaximumSubarray.class);
 
     public static void main(String[] arg) {
         new No53_MaximumSubarray().testMaximumSubarray_53();

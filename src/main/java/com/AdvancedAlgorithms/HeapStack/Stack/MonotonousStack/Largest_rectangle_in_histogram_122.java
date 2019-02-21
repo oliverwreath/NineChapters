@@ -9,7 +9,7 @@ import java.util.Stack;
  * nicely done, could be more concise, consider it done.
  */
 public class Largest_rectangle_in_histogram_122 {
-    private final static Logger logger = LoggerFactory.getLogger(Largest_rectangle_in_histogram_122.class);
+    private static final Logger logger = LoggerFactory.getLogger(Largest_rectangle_in_histogram_122.class);
 
     public static void main(String[] args) {
         Largest_rectangle_in_histogram_122 thisClass = new Largest_rectangle_in_histogram_122();

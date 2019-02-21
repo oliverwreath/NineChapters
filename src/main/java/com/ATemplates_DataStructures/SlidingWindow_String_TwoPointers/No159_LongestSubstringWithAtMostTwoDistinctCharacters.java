@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class No159_LongestSubstringWithAtMostTwoDistinctCharacters {
-    private final static Logger logger = LoggerFactory.getLogger(No159_LongestSubstringWithAtMostTwoDistinctCharacters.class);
+    private static final Logger logger = LoggerFactory.getLogger(No159_LongestSubstringWithAtMostTwoDistinctCharacters.class);
 
     public static void main(String[] args) {
         testNo159_LongestSubstringWithAtMostTwoDistinctCharacters();

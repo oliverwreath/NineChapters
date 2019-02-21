@@ -14,7 +14,7 @@ import static com.lintCode.BinaryTree.BinaryTree.getSmallTree;
  * Created by Yanliang Han on 2016/6/11.
  */
 public class LevelOrder {
-    private final static Logger logger = LoggerFactory.getLogger(LevelOrder.class);
+    private static final Logger logger = LoggerFactory.getLogger(LevelOrder.class);
 
     public static void main(String[] args) {
         testLevelOrder();

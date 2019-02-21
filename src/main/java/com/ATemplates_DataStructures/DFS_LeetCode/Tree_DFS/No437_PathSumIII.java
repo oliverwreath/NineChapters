@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class No437_PathSumIII {
-    private final static Logger logger = LoggerFactory.getLogger(No437_PathSumIII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No437_PathSumIII.class);
 
     public static void main(String[] args) {
         testNo437_PathSumIII();

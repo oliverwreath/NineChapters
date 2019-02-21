@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * SPACE: O(NM)
  */
 public class Longest_continuous_increasing_subsequence_II_398 {
-    private final static Logger logger = LoggerFactory.getLogger(Longest_continuous_increasing_subsequence_II_398.class);
+    private static final Logger logger = LoggerFactory.getLogger(Longest_continuous_increasing_subsequence_II_398.class);
 
     public static void main(String[] args) {
         Longest_continuous_increasing_subsequence_II_398 thisClass = new Longest_continuous_increasing_subsequence_II_398();

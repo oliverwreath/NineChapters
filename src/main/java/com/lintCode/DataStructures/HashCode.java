@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/11/2016.
  */
 public class HashCode {
-    private final static Logger logger = LoggerFactory.getLogger(HashCode.class);
+    private static final Logger logger = LoggerFactory.getLogger(HashCode.class);
 
     public static void main(String[] arg) {
         testHashCode();

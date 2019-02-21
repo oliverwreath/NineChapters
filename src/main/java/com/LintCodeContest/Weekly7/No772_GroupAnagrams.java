@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No772_GroupAnagrams {
-    private final static Logger logger = LoggerFactory.getLogger(No772_GroupAnagrams.class);
+    private static final Logger logger = LoggerFactory.getLogger(No772_GroupAnagrams.class);
 
     public static void main(String[] args) {
         No772_GroupAnagrams No772_GroupAnagrams = new No772_GroupAnagrams();

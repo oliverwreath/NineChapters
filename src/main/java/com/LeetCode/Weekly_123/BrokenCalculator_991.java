@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * SPACE: O(?)
  */
 public class BrokenCalculator_991 {
-    private final static Logger logger = LoggerFactory.getLogger(BrokenCalculator_991.class);
+    private static final Logger logger = LoggerFactory.getLogger(BrokenCalculator_991.class);
 
     public static void main(String[] args) {
         BrokenCalculator_991 thisClass = new BrokenCalculator_991();

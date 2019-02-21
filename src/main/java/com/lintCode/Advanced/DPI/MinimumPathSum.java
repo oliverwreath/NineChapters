@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-28.
  */
 public class MinimumPathSum {
-    private final static Logger logger = LoggerFactory.getLogger(MinimumPathSum.class);
+    private static final Logger logger = LoggerFactory.getLogger(MinimumPathSum.class);
 
     public static void main(String[] arg) {
         testMinimumPathSum();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No832_CountNegativeNumbe {
-    private final static Logger logger = LoggerFactory.getLogger(No832_CountNegativeNumbe.class);
+    private static final Logger logger = LoggerFactory.getLogger(No832_CountNegativeNumbe.class);
 
     public static void main(String[] args) {
         No832_CountNegativeNumbe No832_CountNegativeNumbe = new No832_CountNegativeNumbe();

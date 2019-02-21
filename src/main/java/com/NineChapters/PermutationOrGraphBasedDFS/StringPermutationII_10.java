@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class StringPermutationII_10 {
-    private final static Logger logger = LoggerFactory.getLogger(StringPermutationII_10.class);
+    private static final Logger logger = LoggerFactory.getLogger(StringPermutationII_10.class);
 
     public static void main(String[] args) {
         testStringPermutationII_10();

@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class No132_WordSearchII {
-    private final static Logger logger = LoggerFactory.getLogger(No132_WordSearchII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No132_WordSearchII.class);
 
     public static void main(String[] args) {
         No132_WordSearchII No132_WordSearchII = new No132_WordSearchII();

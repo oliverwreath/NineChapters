@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-10.
  */
 public class TriangleCount {
-    private final static Logger logger = LoggerFactory.getLogger(TriangleCount.class);
+    private static final Logger logger = LoggerFactory.getLogger(TriangleCount.class);
 
     public static void main(String[] arg) {
         new TriangleCount().testKthLargestInNArrays();

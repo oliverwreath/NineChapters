@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Stack;
 
 public class Min_stack_12 {
-    private final static Logger logger = LoggerFactory.getLogger(Min_stack_12.class);
+    private static final Logger logger = LoggerFactory.getLogger(Min_stack_12.class);
 
     public static void main(String[] args) {
         Min_stack_12 thisClass = new Min_stack_12();

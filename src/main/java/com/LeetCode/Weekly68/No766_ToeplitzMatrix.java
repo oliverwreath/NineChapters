@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No766_ToeplitzMatrix {
-    private final static Logger logger = LoggerFactory.getLogger(No766_ToeplitzMatrix.class);
+    private static final Logger logger = LoggerFactory.getLogger(No766_ToeplitzMatrix.class);
 
     public static void main(String[] args) {
         testNo766_ToeplitzMatrix();

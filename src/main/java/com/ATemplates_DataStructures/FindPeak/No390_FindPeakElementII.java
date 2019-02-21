@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class No390_FindPeakElementII {
-    private final static Logger logger = LoggerFactory.getLogger(No390_FindPeakElementII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No390_FindPeakElementII.class);
 
     public static void main(String[] args) {
         testNo390_FindPeakElementII();

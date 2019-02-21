@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * Also sliding Array trick. Be careful that you can't initialize the first column at once now. You need to embedded it in the row scanning.
  */
 public class Minimum_path_sum_110 {
-    private final static Logger logger = LoggerFactory.getLogger(Minimum_path_sum_110.class);
+    private static final Logger logger = LoggerFactory.getLogger(Minimum_path_sum_110.class);
 
     public static void main(String[] args) {
         Minimum_path_sum_110 thisClass = new Minimum_path_sum_110();

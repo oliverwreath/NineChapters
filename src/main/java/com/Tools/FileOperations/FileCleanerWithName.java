@@ -16,7 +16,7 @@ import static com.Tools.FileOperations.FileUtils.getFileList;
  * Created by yanli on 9/15/2016.
  */
 public class FileCleanerWithName {
-    private final static Logger logger = LoggerFactory.getLogger(FileCleanerWithName.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileCleanerWithName.class);
 
     public static void main(String[] arg) {
         testRemoveDuplicateFile();

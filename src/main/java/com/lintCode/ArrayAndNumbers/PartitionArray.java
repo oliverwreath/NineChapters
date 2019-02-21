@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/11/2016.
  */
 public class PartitionArray {
-    private final static Logger logger = LoggerFactory.getLogger(PartitionArray.class);
+    private static final Logger logger = LoggerFactory.getLogger(PartitionArray.class);
 
     public static void main(String[] arg) {
         testPartitionArray();

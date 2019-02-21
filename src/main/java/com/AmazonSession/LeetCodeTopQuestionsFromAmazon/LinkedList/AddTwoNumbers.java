@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * Version 2: TBD.
  */
 public class AddTwoNumbers {
-    private final static Logger logger = LoggerFactory.getLogger(AddTwoNumbers.class);
+    private static final Logger logger = LoggerFactory.getLogger(AddTwoNumbers.class);
 
     public static void main(String[] args) {
         AddTwoNumbers thisClass = new AddTwoNumbers();

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-19.
  */
 public class RectangleArea_223 {
-    private final static Logger logger = LoggerFactory.getLogger(RectangleArea_223.class);
+    private static final Logger logger = LoggerFactory.getLogger(RectangleArea_223.class);
 
     public static void main(String[] arg) {
         new RectangleArea_223().testSearchA2DMatrix_74();

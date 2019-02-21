@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.PriorityQueue;
 
 public class No791_MergeNumber {
-    private final static Logger logger = LoggerFactory.getLogger(No791_MergeNumber.class);
+    private static final Logger logger = LoggerFactory.getLogger(No791_MergeNumber.class);
 
     public static void main(String[] args) {
         testNo791_MergeNumber();

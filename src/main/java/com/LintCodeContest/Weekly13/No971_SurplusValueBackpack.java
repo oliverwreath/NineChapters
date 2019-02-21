@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No971_SurplusValueBackpack {
-    private final static Logger logger = LoggerFactory.getLogger(No971_SurplusValueBackpack.class);
+    private static final Logger logger = LoggerFactory.getLogger(No971_SurplusValueBackpack.class);
 
     public static void main(String[] args) {
         No971_SurplusValueBackpack No971_SurplusValueBackpack = new No971_SurplusValueBackpack();

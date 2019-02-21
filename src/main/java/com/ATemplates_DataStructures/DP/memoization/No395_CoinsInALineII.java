@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class No395_CoinsInALineII {
-    private final static Logger logger = LoggerFactory.getLogger(No395_CoinsInALineII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No395_CoinsInALineII.class);
 
     public static void main(String[] args) {
         No395_CoinsInALineII No394_CoinsInALine = new No395_CoinsInALineII();

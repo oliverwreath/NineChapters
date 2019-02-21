@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Stack;
 
 public class No510_MaximalRectangle {
-    private final static Logger logger = LoggerFactory.getLogger(No510_MaximalRectangle.class);
+    private static final Logger logger = LoggerFactory.getLogger(No510_MaximalRectangle.class);
 
     public static void main(String[] args) {
         testNo510_MaximalRectangle();

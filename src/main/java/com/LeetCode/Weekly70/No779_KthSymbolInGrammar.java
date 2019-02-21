@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No779_KthSymbolInGrammar {
-    private final static Logger logger = LoggerFactory.getLogger(No779_KthSymbolInGrammar.class);
+    private static final Logger logger = LoggerFactory.getLogger(No779_KthSymbolInGrammar.class);
 
     public static void main(String[] args) {
         testNo779_KthSymbolInGrammar();

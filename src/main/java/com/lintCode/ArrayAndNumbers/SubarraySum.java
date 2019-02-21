@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/8/2016.
  */
 public class SubarraySum {
-    private final static Logger logger = LoggerFactory.getLogger(SubarraySum.class);
+    private static final Logger logger = LoggerFactory.getLogger(SubarraySum.class);
 
     public static void main(String[] arg) {
         testSubarraySum();

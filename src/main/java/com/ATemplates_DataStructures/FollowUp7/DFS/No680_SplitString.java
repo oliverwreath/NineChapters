@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class No680_SplitString {
-    private final static Logger logger = LoggerFactory.getLogger(No680_SplitString.class);
+    private static final Logger logger = LoggerFactory.getLogger(No680_SplitString.class);
 
     public static void main(String[] args) {
         No680_SplitString No680_SplitString = new No680_SplitString();

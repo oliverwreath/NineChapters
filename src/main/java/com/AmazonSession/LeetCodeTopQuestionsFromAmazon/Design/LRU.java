@@ -17,7 +17,7 @@ import java.util.HashMap;
  * SPACE: O(N)
  */
 public class LRU {
-    private final static Logger logger = LoggerFactory.getLogger(LRUCache.class);
+    private static final Logger logger = LoggerFactory.getLogger(LRUCache.class);
 
     public static void main(String[] args) {
         LRU thisClass = new LRU();

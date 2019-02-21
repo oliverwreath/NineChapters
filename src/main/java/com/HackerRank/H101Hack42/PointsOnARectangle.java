@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-18.
  */
 public class PointsOnARectangle {
-    private final static Logger logger = LoggerFactory.getLogger(PointsOnARectangle.class);
+    private static final Logger logger = LoggerFactory.getLogger(PointsOnARectangle.class);
 
     public static void main(String[] arg) {
         new PointsOnARectangle().testCuttingPaperSquares();

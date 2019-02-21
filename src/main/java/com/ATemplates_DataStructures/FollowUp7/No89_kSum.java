@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  * dp len, k
  */
 public class No89_kSum {
-    private final static Logger logger = LoggerFactory.getLogger(No89_kSum.class);
+    private static final Logger logger = LoggerFactory.getLogger(No89_kSum.class);
 
     public static void main(String[] args) {
         No89_kSum No89_kSum = new No89_kSum();

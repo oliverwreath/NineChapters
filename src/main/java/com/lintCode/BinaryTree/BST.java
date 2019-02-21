@@ -10,7 +10,7 @@ import static com.lintCode.BinaryTree.BinaryTree.getSmallTree;
  * Created by Yanliang Han on 2016/6/11.
  */
 public class BST {
-    private final static Logger logger = LoggerFactory.getLogger(BST.class);
+    private static final Logger logger = LoggerFactory.getLogger(BST.class);
 
     public static void main(String[] args) {
         testIsValidBST();

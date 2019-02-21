@@ -9,7 +9,7 @@ import java.util.NavigableMap;
 import java.util.TreeMap;
 
 public class No559_TrieService {
-    private final static Logger logger = LoggerFactory.getLogger(No559_TrieService.class);
+    private static final Logger logger = LoggerFactory.getLogger(No559_TrieService.class);
 
     public static void main(String[] args) {
         No559_TrieService No559_TrieService = new No559_TrieService();

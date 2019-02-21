@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-10.
  */
 public class KthSmallestNumberInSortedMatrix {
-    private final static Logger logger = LoggerFactory.getLogger(KthSmallestNumberInSortedMatrix.class);
+    private static final Logger logger = LoggerFactory.getLogger(KthSmallestNumberInSortedMatrix.class);
 
     public static void main(String[] arg) {
         new KthSmallestNumberInSortedMatrix().testKthLargestInNArrays();

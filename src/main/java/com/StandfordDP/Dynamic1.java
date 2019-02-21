@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-26.
  */
 public class Dynamic1 {
-    private final static Logger logger = LoggerFactory.getLogger(Dynamic1.class);
+    private static final Logger logger = LoggerFactory.getLogger(Dynamic1.class);
 
     public static void main(String[] arg) {
         testDynamic1();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No513_PerfectSquares {
-    private final static Logger logger = LoggerFactory.getLogger(No513_PerfectSquares.class);
+    private static final Logger logger = LoggerFactory.getLogger(No513_PerfectSquares.class);
 
     public static void main(String[] args) {
         No513_PerfectSquares No513_PerfectSquares = new No513_PerfectSquares();

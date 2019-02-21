@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/4/2016.
  */
 public class Fibonacci {
-    private final static Logger logger = LoggerFactory.getLogger(Fibonacci.class);
+    private static final Logger logger = LoggerFactory.getLogger(Fibonacci.class);
 
     public static void main(String[] arg) {
         testFibonacci();

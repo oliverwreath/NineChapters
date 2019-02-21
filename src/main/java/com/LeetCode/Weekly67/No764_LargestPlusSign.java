@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No764_LargestPlusSign {
-    private final static Logger logger = LoggerFactory.getLogger(No764_LargestPlusSign.class);
+    private static final Logger logger = LoggerFactory.getLogger(No764_LargestPlusSign.class);
 
     public static void main(String[] args) {
         testNo764_LargestPlusSign();

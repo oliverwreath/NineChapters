@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/4/2016.
  */
 public class Singleton {
-    private final static Logger logger = LoggerFactory.getLogger(Singleton.class);
+    private static final Logger logger = LoggerFactory.getLogger(Singleton.class);
 
-    private final static Singleton solution = new Singleton();
+    private static final Singleton solution = new Singleton();
 
     public static void main(String[] arg) {
         testSingleton();

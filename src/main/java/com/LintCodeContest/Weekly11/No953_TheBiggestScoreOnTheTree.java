@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.function.BiConsumer;
 
 public class No953_TheBiggestScoreOnTheTree {
-    private final static Logger logger = LoggerFactory.getLogger(No953_TheBiggestScoreOnTheTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(No953_TheBiggestScoreOnTheTree.class);
 
     public static void main(String[] args) {
         No953_TheBiggestScoreOnTheTree No953_TheBiggestScoreOnTheTree = new No953_TheBiggestScoreOnTheTree();

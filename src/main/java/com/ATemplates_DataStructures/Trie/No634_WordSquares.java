@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class No634_WordSquares {
-    private final static Logger logger = LoggerFactory.getLogger(No634_WordSquares.class);
+    private static final Logger logger = LoggerFactory.getLogger(No634_WordSquares.class);
 
     public static void main(String[] args) {
         No634_WordSquares No634_WordSquares = new No634_WordSquares();

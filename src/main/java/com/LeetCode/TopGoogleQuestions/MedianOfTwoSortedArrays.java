@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MedianOfTwoSortedArrays {
-    private final static Logger logger = LoggerFactory.getLogger(MedianOfTwoSortedArrays.class);
+    private static final Logger logger = LoggerFactory.getLogger(MedianOfTwoSortedArrays.class);
 
     public static void main(String[] args) {
         testMedianOfTwoSortedArrays();

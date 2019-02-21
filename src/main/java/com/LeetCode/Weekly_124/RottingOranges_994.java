@@ -18,7 +18,7 @@ import java.util.List;
  * SPACE: O(?)
  */
 public class RottingOranges_994 {
-    private final static Logger logger = LoggerFactory.getLogger(RottingOranges_994.class);
+    private static final Logger logger = LoggerFactory.getLogger(RottingOranges_994.class);
 
     public static void main(String[] args) {
         RottingOranges_994 thisClass = new RottingOranges_994();

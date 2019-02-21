@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class RunningMedian {
-    private final static Logger logger = LoggerFactory.getLogger(RunningMedian.class);
+    private static final Logger logger = LoggerFactory.getLogger(RunningMedian.class);
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

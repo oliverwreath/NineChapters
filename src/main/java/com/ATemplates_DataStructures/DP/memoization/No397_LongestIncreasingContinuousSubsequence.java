@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No397_LongestIncreasingContinuousSubsequence {
-    private final static Logger logger = LoggerFactory.getLogger(No397_LongestIncreasingContinuousSubsequence.class);
+    private static final Logger logger = LoggerFactory.getLogger(No397_LongestIncreasingContinuousSubsequence.class);
 
     public static void main(String[] args) {
         testNo397_LongestIncreasingContinuousSubsequence();

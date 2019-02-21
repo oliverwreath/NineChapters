@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-23.
  */
 public class BalancedBinaryTree_110 {
-    private final static Logger logger = LoggerFactory.getLogger(BalancedBinaryTree_110.class);
+    private static final Logger logger = LoggerFactory.getLogger(BalancedBinaryTree_110.class);
 
     public static void main(String[] arg) {
         new BalancedBinaryTree_110().testBalancedBinaryTree_110();

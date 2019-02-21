@@ -18,7 +18,7 @@ import java.util.Arrays;
  * Version 2: TBD. Sliding Array brings the SPACE: O(N)
  */
 public class Backpack_III_440 {
-    private final static Logger logger = LoggerFactory.getLogger(Backpack_III_440.class);
+    private static final Logger logger = LoggerFactory.getLogger(Backpack_III_440.class);
 
     public static void main(String[] args) {
         Backpack_III_440 thisClass = new Backpack_III_440();

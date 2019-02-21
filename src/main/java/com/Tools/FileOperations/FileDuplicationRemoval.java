@@ -18,8 +18,8 @@ import static com.Tools.FileOperations.FileUtils.*;
  * Created by yanli on 9/15/2016.
  */
 public class FileDuplicationRemoval {
-    private final static Logger logger = LoggerFactory.getLogger(FileDuplicationRemoval.class);
-    private final static boolean isDeleting = false;
+    private static final Logger logger = LoggerFactory.getLogger(FileDuplicationRemoval.class);
+    private static final boolean isDeleting = false;
 
     public static void main(String[] arg) {
         testRemoveDuplicateFile();

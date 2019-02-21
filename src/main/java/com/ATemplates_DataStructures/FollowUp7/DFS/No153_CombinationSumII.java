@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class No153_CombinationSumII {
-    private final static Logger logger = LoggerFactory.getLogger(No153_CombinationSumII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No153_CombinationSumII.class);
 
     public static void main(String[] args) {
         No153_CombinationSumII No153_CombinationSumII = new No153_CombinationSumII();

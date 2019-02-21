@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/19/2016.
  */
 public class LargestRectangleArea {
-    private final static Logger logger = LoggerFactory.getLogger(LargestRectangleArea.class);
+    private static final Logger logger = LoggerFactory.getLogger(LargestRectangleArea.class);
 
     public static void main(String[] arg) {
         testLargestRectangleArea();

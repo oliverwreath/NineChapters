@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-22.
  */
 public class SurroundedRegions_130 {
-    private final static Logger logger = LoggerFactory.getLogger(SurroundedRegions_130.class);
+    private static final Logger logger = LoggerFactory.getLogger(SurroundedRegions_130.class);
 
     public static void main(String[] arg) {
         new SurroundedRegions_130().testSurroundedRegions_130();

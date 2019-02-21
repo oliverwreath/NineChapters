@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No473_AddAndSearchWord {
-    private final static Logger logger = LoggerFactory.getLogger(No473_AddAndSearchWord.class);
+    private static final Logger logger = LoggerFactory.getLogger(No473_AddAndSearchWord.class);
 
     public static void main(String[] args) {
         No473_AddAndSearchWord No473_AddAndSearchWord = new No473_AddAndSearchWord();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No617_MaximumAverageSubarray {
-    private final static Logger logger = LoggerFactory.getLogger(No617_MaximumAverageSubarray.class);
+    private static final Logger logger = LoggerFactory.getLogger(No617_MaximumAverageSubarray.class);
 
     public static void main(String[] args) {
         testNo141_SqrtX();

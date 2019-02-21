@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No895_FriendRequest {
-    private final static Logger logger = LoggerFactory.getLogger(No895_FriendRequest.class);
+    private static final Logger logger = LoggerFactory.getLogger(No895_FriendRequest.class);
 
     public static void main(String[] args) {
         No895_FriendRequest No895_FriendRequest = new No895_FriendRequest();

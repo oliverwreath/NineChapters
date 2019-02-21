@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No207_IntervalSumII {
-    private final static Logger logger = LoggerFactory.getLogger(No207_IntervalSumII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No207_IntervalSumII.class);
 
     public static void main(String[] args) {
         testNo207_IntervalSumII();

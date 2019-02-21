@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No722_MaximumSubarrayVI {
-    private final static Logger logger = LoggerFactory.getLogger(No722_MaximumSubarrayVI.class);
+    private static final Logger logger = LoggerFactory.getLogger(No722_MaximumSubarrayVI.class);
 
     public static void main(String[] args) {
         No722_MaximumSubarrayVI No722_MaximumSubarrayVI = new No722_MaximumSubarrayVI();

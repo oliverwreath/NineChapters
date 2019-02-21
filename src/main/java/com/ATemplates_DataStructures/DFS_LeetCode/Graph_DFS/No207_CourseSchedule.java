@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 public class No207_CourseSchedule {
-    private final static Logger logger = LoggerFactory.getLogger(No207_CourseSchedule.class);
+    private static final Logger logger = LoggerFactory.getLogger(No207_CourseSchedule.class);
 
     public static void main(String[] args) {
         testNo207_CourseSchedule();

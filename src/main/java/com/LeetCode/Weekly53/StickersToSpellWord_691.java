@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class StickersToSpellWord_691 {
-    private final static Logger logger = LoggerFactory.getLogger(StickersToSpellWord_691.class);
+    private static final Logger logger = LoggerFactory.getLogger(StickersToSpellWord_691.class);
 
     public static void main(String[] args) {
         testStickersToSpellWord_691();

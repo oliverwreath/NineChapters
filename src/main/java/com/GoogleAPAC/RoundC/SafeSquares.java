@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/18/2016.
  */
 public class SafeSquares {
-    private final static Logger logger = LoggerFactory.getLogger(SafeSquares.class);
+    private static final Logger logger = LoggerFactory.getLogger(SafeSquares.class);
 
     public static void main(String[] arg) {
         testSafeSquares();

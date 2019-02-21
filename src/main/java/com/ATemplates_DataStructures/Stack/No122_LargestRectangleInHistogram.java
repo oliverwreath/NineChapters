@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Stack;
 
 public class No122_LargestRectangleInHistogram {
-    private final static Logger logger = LoggerFactory.getLogger(No122_LargestRectangleInHistogram.class);
+    private static final Logger logger = LoggerFactory.getLogger(No122_LargestRectangleInHistogram.class);
 
     public static void main(String[] args) {
         testNo122_LargestRectangleInHistogram();

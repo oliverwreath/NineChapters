@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-13.
  */
 public class AddAndSearchWord {
-    private final static Logger logger = LoggerFactory.getLogger(AddAndSearchWord.class);
+    private static final Logger logger = LoggerFactory.getLogger(AddAndSearchWord.class);
 
     public static void main(String[] arg) {
         new AddAndSearchWord().testWordSearchII();

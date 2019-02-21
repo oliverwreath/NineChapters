@@ -25,7 +25,7 @@ public class LearningFromthePast {
         System.out.println(globalMax);
     }
 
-//    private final static Logger logger = LoggerFactory.getLogger(LearningFromthePast.class);
+//    private static final Logger logger = LoggerFactory.getLogger(LearningFromthePast.class);
 //
 //    public static void main(String[] arg) {
 //        testLearningFromthePast();

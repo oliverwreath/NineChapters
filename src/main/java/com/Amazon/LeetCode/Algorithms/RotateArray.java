@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class RotateArray {
-    private final static Logger logger = LoggerFactory.getLogger(RotateArray.class);
+    private static final Logger logger = LoggerFactory.getLogger(RotateArray.class);
 
     public static void main(String[] args) {
         testRotateArray();

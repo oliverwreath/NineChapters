@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No476_StoneGame {
-    private final static Logger logger = LoggerFactory.getLogger(No476_StoneGame.class);
+    private static final Logger logger = LoggerFactory.getLogger(No476_StoneGame.class);
 
     public static void main(String[] args) {
         No476_StoneGame No476_StoneGame = new No476_StoneGame();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No110_MinimumPathSum {
-    private final static Logger logger = LoggerFactory.getLogger(No110_MinimumPathSum.class);
+    private static final Logger logger = LoggerFactory.getLogger(No110_MinimumPathSum.class);
 
     public static void main(String[] args) {
         testNo392_HouseRobber();

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2017-07-15.
  */
 public class MaximumAverageSubarrayII_644 {
-    private final static Logger logger = LoggerFactory.getLogger(MaximumAverageSubarrayII_644.class);
+    private static final Logger logger = LoggerFactory.getLogger(MaximumAverageSubarrayII_644.class);
 
     public static void main(String[] args) {
         testMaximumAverageSubarrayII_644();

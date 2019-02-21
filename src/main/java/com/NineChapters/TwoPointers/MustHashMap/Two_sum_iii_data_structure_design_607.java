@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class Two_sum_iii_data_structure_design_607 {
-    private final static Logger logger = LoggerFactory.getLogger(Two_sum_iii_data_structure_design_607.class);
+    private static final Logger logger = LoggerFactory.getLogger(Two_sum_iii_data_structure_design_607.class);
 
     public static void main(String[] args) {
         testtwo_sum_iii_data_structure_design_607();

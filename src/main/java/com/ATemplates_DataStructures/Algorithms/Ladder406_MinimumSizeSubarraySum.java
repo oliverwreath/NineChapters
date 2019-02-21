@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Ladder406_MinimumSizeSubarraySum {
-    private final static Logger logger = LoggerFactory.getLogger(Ladder406_MinimumSizeSubarraySum.class);
+    private static final Logger logger = LoggerFactory.getLogger(Ladder406_MinimumSizeSubarraySum.class);
 
     public static void main(String[] args) {
         testLadder406_MinimumSizeSubarraySum();

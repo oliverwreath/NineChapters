@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No466_CountLinkedListNode {
-    private final static Logger logger = LoggerFactory.getLogger(No466_CountLinkedListNode.class);
+    private static final Logger logger = LoggerFactory.getLogger(No466_CountLinkedListNode.class);
 
     public static void main(String[] args) {
         No466_CountLinkedListNode No466_CountLinkedListNode = new No466_CountLinkedListNode();

@@ -9,7 +9,7 @@ import java.util.List;
  * plain old dfs, nice practice
  */
 public class No551_NestedListWeightSum {
-    private final static Logger logger = LoggerFactory.getLogger(No551_NestedListWeightSum.class);
+    private static final Logger logger = LoggerFactory.getLogger(No551_NestedListWeightSum.class);
 
     public static void main(String[] args) {
         No551_NestedListWeightSum No551_NestedListWeightSum = new No551_NestedListWeightSum();

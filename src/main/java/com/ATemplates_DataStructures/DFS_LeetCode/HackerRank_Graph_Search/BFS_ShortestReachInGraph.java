@@ -9,7 +9,7 @@ import java.util.*;
  * BFS with a queue b
  */
 public class BFS_ShortestReachInGraph {
-    private final static Logger logger = LoggerFactory.getLogger(BFS_ShortestReachInGraph.class);
+    private static final Logger logger = LoggerFactory.getLogger(BFS_ShortestReachInGraph.class);
 
     public static void main(String[] args) {
         testBFS_ShortestReachInGraph();

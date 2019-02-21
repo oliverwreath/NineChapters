@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashSet;
 
 public class No780_ReachingPoints {
-    private final static Logger logger = LoggerFactory.getLogger(No780_ReachingPoints.class);
+    private static final Logger logger = LoggerFactory.getLogger(No780_ReachingPoints.class);
 
     public static void main(String[] args) {
         No780_ReachingPoints No780_ReachingPoints = new No780_ReachingPoints();

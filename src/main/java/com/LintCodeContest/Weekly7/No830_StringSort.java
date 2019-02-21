@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class No830_StringSort {
-    private final static Logger logger = LoggerFactory.getLogger(No830_StringSort.class);
+    private static final Logger logger = LoggerFactory.getLogger(No830_StringSort.class);
 
     public static void main(String[] args) {
         No830_StringSort No830_StringSort = new No830_StringSort();

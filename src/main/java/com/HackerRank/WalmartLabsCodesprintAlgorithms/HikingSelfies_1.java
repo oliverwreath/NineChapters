@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-29.
  */
 public class HikingSelfies_1 {
-    private final static Logger logger = LoggerFactory.getLogger(HikingSelfies_1.class);
+    private static final Logger logger = LoggerFactory.getLogger(HikingSelfies_1.class);
 
     public static void main(String[] arg) {
         new HikingSelfies_1().testHikingSelfies_1();

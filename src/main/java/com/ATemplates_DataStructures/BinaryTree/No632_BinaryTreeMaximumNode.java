@@ -8,7 +8,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class No632_BinaryTreeMaximumNode {
-    private final static Logger logger = LoggerFactory.getLogger(No632_BinaryTreeMaximumNode.class);
+    private static final Logger logger = LoggerFactory.getLogger(No632_BinaryTreeMaximumNode.class);
 
     public static void main(String[] args) {
         No632_BinaryTreeMaximumNode No632_BinaryTreeMaximumNode = new No632_BinaryTreeMaximumNode();

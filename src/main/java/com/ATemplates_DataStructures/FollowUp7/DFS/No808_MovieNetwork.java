@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 
 public class No808_MovieNetwork {
-    private final static Logger logger = LoggerFactory.getLogger(No808_MovieNetwork.class);
+    private static final Logger logger = LoggerFactory.getLogger(No808_MovieNetwork.class);
 
     public static void main(String[] args) {
         No808_MovieNetwork No808_MovieNetwork = new No808_MovieNetwork();

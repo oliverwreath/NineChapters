@@ -11,7 +11,7 @@ import java.util.Deque;
  * Created by yanli on 2016-10-02.
  */
 public class SlidingWindowMaximum {
-    private final static Logger logger = LoggerFactory.getLogger(SlidingWindowMaximum.class);
+    private static final Logger logger = LoggerFactory.getLogger(SlidingWindowMaximum.class);
 
     public static void main(String[] arg) {
         new SlidingWindowMaximum().testSlidingWindowMaximum();

@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Stack;
 
 public class MyQueue {
-    private final static Logger logger = LoggerFactory.getLogger(MyQueue.class);
+    private static final Logger logger = LoggerFactory.getLogger(MyQueue.class);
 
     public static void main(String[] args) {
         testMyQueue();

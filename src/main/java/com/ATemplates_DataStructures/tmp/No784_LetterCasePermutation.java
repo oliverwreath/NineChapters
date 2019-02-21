@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class No784_LetterCasePermutation {
-    private final static Logger logger = LoggerFactory.getLogger(No784_LetterCasePermutation.class);
+    private static final Logger logger = LoggerFactory.getLogger(No784_LetterCasePermutation.class);
 
     public static void main(String[] args) {
         No784_LetterCasePermutation No784_LetterCasePermutation = new No784_LetterCasePermutation();

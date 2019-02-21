@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No430_ScrambleString {
-    private final static Logger logger = LoggerFactory.getLogger(No430_ScrambleString.class);
+    private static final Logger logger = LoggerFactory.getLogger(No430_ScrambleString.class);
 
     public static void main(String[] args) {
         No430_ScrambleString No476_StoneGame = new No430_ScrambleString();

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-23.
  */
 public class NumberOfIslands_200 {
-    private final static Logger logger = LoggerFactory.getLogger(NumberOfIslands_200.class);
+    private static final Logger logger = LoggerFactory.getLogger(NumberOfIslands_200.class);
 
     public static void main(String[] arg) {
         new NumberOfIslands_200().testNumberOfIslands_200();

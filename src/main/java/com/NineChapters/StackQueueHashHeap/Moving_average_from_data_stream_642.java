@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Moving_average_from_data_stream_642 {
-    private final static Logger logger = LoggerFactory.getLogger(Moving_average_from_data_stream_642.class);
+    private static final Logger logger = LoggerFactory.getLogger(Moving_average_from_data_stream_642.class);
 
     public static void main(String[] args) {
         testMoving_average_from_data_stream_642();

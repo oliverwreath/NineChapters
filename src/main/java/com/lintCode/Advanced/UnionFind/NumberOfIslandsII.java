@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-14.
  */
 public class NumberOfIslandsII {
-    private final static Logger logger = LoggerFactory.getLogger(NumberOfIslandsII.class);
+    private static final Logger logger = LoggerFactory.getLogger(NumberOfIslandsII.class);
 
     public static void main(String[] arg) {
         new NumberOfIslandsII().testNumberOfIslands();

@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No763_PartitionLabels {
-    private final static Logger logger = LoggerFactory.getLogger(No763_PartitionLabels.class);
+    private static final Logger logger = LoggerFactory.getLogger(No763_PartitionLabels.class);
 
     public static void main(String[] args) {
         testNo763_PartitionLabels();

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No623_KEditDistance {
-    private final static Logger logger = LoggerFactory.getLogger(No623_KEditDistance.class);
+    private static final Logger logger = LoggerFactory.getLogger(No623_KEditDistance.class);
 
     public static void main(String[] args) {
         No623_KEditDistance No623_KEditDistance = new No623_KEditDistance();

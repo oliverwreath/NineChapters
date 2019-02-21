@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No479_SecondMaxOfArray {
-    private final static Logger logger = LoggerFactory.getLogger(No479_SecondMaxOfArray.class);
+    private static final Logger logger = LoggerFactory.getLogger(No479_SecondMaxOfArray.class);
 
     public static void main(String[] args) {
         No479_SecondMaxOfArray No479_SecondMaxOfArray = new No479_SecondMaxOfArray();

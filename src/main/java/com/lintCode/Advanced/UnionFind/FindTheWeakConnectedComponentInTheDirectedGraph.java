@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-14.
  */
 public class FindTheWeakConnectedComponentInTheDirectedGraph {
-    private final static Logger logger = LoggerFactory.getLogger(FindTheWeakConnectedComponentInTheDirectedGraph.class);
+    private static final Logger logger = LoggerFactory.getLogger(FindTheWeakConnectedComponentInTheDirectedGraph.class);
 
     public static void main(String[] arg) {
         new FindTheWeakConnectedComponentInTheDirectedGraph().testNumberOfIslands();

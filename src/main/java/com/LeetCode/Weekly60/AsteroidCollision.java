@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class AsteroidCollision {
-    private final static Logger logger = LoggerFactory.getLogger(AsteroidCollision.class);
+    private static final Logger logger = LoggerFactory.getLogger(AsteroidCollision.class);
 
     public static void main(String[] args) {
         testAsteroidCollision();

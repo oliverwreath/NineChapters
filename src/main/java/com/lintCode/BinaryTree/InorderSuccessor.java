@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Yanliang Han on 2016/6/11.
  */
 public class InorderSuccessor {
-    private final static Logger logger = LoggerFactory.getLogger(InorderSuccessor.class);
+    private static final Logger logger = LoggerFactory.getLogger(InorderSuccessor.class);
 
     public static void main(String[] args) {
         testInorderSuccessor();

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/3/2016.
  */
 public class MiddleNode {
-    private final static Logger logger = LoggerFactory.getLogger(MiddleNode.class);
+    private static final Logger logger = LoggerFactory.getLogger(MiddleNode.class);
 
     public static void main(String[] arg) {
         testMiddleNode();

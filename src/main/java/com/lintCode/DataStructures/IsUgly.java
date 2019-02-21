@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/18/2016.
  */
 public class IsUgly {
-    private final static Logger logger = LoggerFactory.getLogger(IsUgly.class);
+    private static final Logger logger = LoggerFactory.getLogger(IsUgly.class);
 
     public static void main(String[] arg) {
         testIsUgly();

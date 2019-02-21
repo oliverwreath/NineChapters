@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-01.
  */
 public class LRUCache_146 {
-    private final static Logger logger = LoggerFactory.getLogger(LRUCache_146.class);
+    private static final Logger logger = LoggerFactory.getLogger(LRUCache_146.class);
 
     public static void main(String[] arg) {
         new LRUCache_146().testLongestAbsoluteFilePath_388();

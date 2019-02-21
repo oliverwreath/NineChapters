@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashSet;
 
 public class No793_IntersectionOfArrays {
-    private final static Logger logger = LoggerFactory.getLogger(No793_IntersectionOfArrays.class);
+    private static final Logger logger = LoggerFactory.getLogger(No793_IntersectionOfArrays.class);
 
     public static void main(String[] args) {
         testNo793_IntersectionOfArrays();

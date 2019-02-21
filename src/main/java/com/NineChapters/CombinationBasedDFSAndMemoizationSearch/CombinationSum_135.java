@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CombinationSum_135 {
-    private final static Logger logger = LoggerFactory.getLogger(CombinationSum_135.class);
+    private static final Logger logger = LoggerFactory.getLogger(CombinationSum_135.class);
 
     public static void main(String[] args) {
         testCombinationSum_135();

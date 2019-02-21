@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No108_ConvertSortedArrayToBinarySearchTree {
-    private final static Logger logger = LoggerFactory.getLogger(No108_ConvertSortedArrayToBinarySearchTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(No108_ConvertSortedArrayToBinarySearchTree.class);
 
     public static void main(String[] args) {
         testNo108_ConvertSortedArrayToBinarySearchTree();

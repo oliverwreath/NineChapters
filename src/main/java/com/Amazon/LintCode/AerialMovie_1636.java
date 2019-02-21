@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class AerialMovie_1636 {
-    private final static Logger logger = LoggerFactory.getLogger(AerialMovie_1636.class);
+    private static final Logger logger = LoggerFactory.getLogger(AerialMovie_1636.class);
 
     public static void main(String[] args) {
         AerialMovie_1636 AerialMovie_1636 = new AerialMovie_1636();

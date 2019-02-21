@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-22.
  */
 public class FindAllAnagramsInAString_438 {
-    private final static Logger logger = LoggerFactory.getLogger(FindAllAnagramsInAString_438.class);
+    private static final Logger logger = LoggerFactory.getLogger(FindAllAnagramsInAString_438.class);
 
     public static void main(String[] arg) {
         new FindAllAnagramsInAString_438().testFindAllAnagramsInAString_438();

@@ -16,10 +16,10 @@ import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
  * Created by yanli_000 on 16/7/9.
  */
 public class NotSoRandom {
-    private final static Logger logger = LoggerFactory.getLogger(NotSoRandom.class);
+    private static final Logger logger = LoggerFactory.getLogger(NotSoRandom.class);
 
-    private final static BigInteger BIG_INTEGER_100 = BigInteger.valueOf(100);
-    private final static BigDecimal BIG_DECIMAL_100 = BigDecimal.valueOf(100);
+    private static final BigInteger BIG_INTEGER_100 = BigInteger.valueOf(100);
+    private static final BigDecimal BIG_DECIMAL_100 = BigDecimal.valueOf(100);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No821_TimeIntersection {
-    private final static Logger logger = LoggerFactory.getLogger(No821_TimeIntersection.class);
+    private static final Logger logger = LoggerFactory.getLogger(No821_TimeIntersection.class);
 
     public static void main(String[] args) {
         No821_TimeIntersection No821_TimeIntersection = new No821_TimeIntersection();

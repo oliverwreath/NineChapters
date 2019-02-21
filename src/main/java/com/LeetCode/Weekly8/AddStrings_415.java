@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-01.
  */
 public class AddStrings_415 {
-    private final static Logger logger = LoggerFactory.getLogger(AddStrings_415.class);
+    private static final Logger logger = LoggerFactory.getLogger(AddStrings_415.class);
 
     public static void main(String[] arg) {
         new AddStrings_415().testLongestPalindrome_409();

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-19.
  */
 public class RemoveVowal {
-    private final static Logger logger = LoggerFactory.getLogger(RemoveVowal.class);
+    private static final Logger logger = LoggerFactory.getLogger(RemoveVowal.class);
 
     public static void main(String[] arg) {
         new RemoveVowal().testGrayCode_89();

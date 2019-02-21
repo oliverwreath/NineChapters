@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No119_EditDistance {
-    private final static Logger logger = LoggerFactory.getLogger(No119_EditDistance.class);
+    private static final Logger logger = LoggerFactory.getLogger(No119_EditDistance.class);
 
     public static void main(String[] args) {
         No119_EditDistance No119_EditDistance = new No119_EditDistance();

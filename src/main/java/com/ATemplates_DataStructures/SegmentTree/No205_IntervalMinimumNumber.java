@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No205_IntervalMinimumNumber {
-    private final static Logger logger = LoggerFactory.getLogger(No205_IntervalMinimumNumber.class);
+    private static final Logger logger = LoggerFactory.getLogger(No205_IntervalMinimumNumber.class);
 
     public static void main(String[] args) {
         testNo205_IntervalMinimumNumber();

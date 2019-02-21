@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/3/2016.
  */
 public class RemoveNthFromEnd {
-    private final static Logger logger = LoggerFactory.getLogger(RemoveNthFromEnd.class);
+    private static final Logger logger = LoggerFactory.getLogger(RemoveNthFromEnd.class);
 
     public static void main(String[] arg) {
         testRemoveNthFromEnd();

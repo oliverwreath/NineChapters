@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No192_WildcardMatching {
-    private final static Logger logger = LoggerFactory.getLogger(No192_WildcardMatching.class);
+    private static final Logger logger = LoggerFactory.getLogger(No192_WildcardMatching.class);
 
     public static void main(String[] args) {
         No192_WildcardMatching No192_WildcardMatching = new No192_WildcardMatching();

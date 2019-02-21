@@ -16,7 +16,7 @@ import java.util.Arrays;
  * Version 2: TBD. Could use Sliding array - save space.
  */
 public class Interleaving_String_29 {
-    private final static Logger logger = LoggerFactory.getLogger(Interleaving_String_29.class);
+    private static final Logger logger = LoggerFactory.getLogger(Interleaving_String_29.class);
 
     public static void main(String[] args) {
         Interleaving_String_29 thisClass = new Interleaving_String_29();

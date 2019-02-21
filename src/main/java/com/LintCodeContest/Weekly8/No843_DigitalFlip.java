@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No843_DigitalFlip {
-    private final static Logger logger = LoggerFactory.getLogger(No843_DigitalFlip.class);
+    private static final Logger logger = LoggerFactory.getLogger(No843_DigitalFlip.class);
 
     public static void main(String[] args) {
         No843_DigitalFlip No843_DigitalFlip = new No843_DigitalFlip();

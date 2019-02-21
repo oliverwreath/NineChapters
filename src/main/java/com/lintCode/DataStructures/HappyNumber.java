@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/18/2016.
  */
 public class HappyNumber {
-    private final static Logger logger = LoggerFactory.getLogger(HappyNumber.class);
+    private static final Logger logger = LoggerFactory.getLogger(HappyNumber.class);
 
     public static void main(String[] arg) {
         testHappyNumber();

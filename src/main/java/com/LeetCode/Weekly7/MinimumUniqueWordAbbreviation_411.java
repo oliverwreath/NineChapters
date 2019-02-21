@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-01.
  */
 public class MinimumUniqueWordAbbreviation_411 {
-    private final static Logger logger = LoggerFactory.getLogger(MinimumUniqueWordAbbreviation_411.class);
+    private static final Logger logger = LoggerFactory.getLogger(MinimumUniqueWordAbbreviation_411.class);
 
     public static void main(String[] arg) {
         testMinimumUniqueWordAbbreviation_411();

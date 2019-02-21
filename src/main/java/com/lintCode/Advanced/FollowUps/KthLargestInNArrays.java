@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-10.
  */
 public class KthLargestInNArrays {
-    private final static Logger logger = LoggerFactory.getLogger(KthLargestInNArrays.class);
+    private static final Logger logger = LoggerFactory.getLogger(KthLargestInNArrays.class);
 
     public static void main(String[] arg) {
         new KthLargestInNArrays().testKthLargestInNArrays();

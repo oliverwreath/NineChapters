@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Queue;
 
 public class No972_DeliverTheMessage {
-    private final static Logger logger = LoggerFactory.getLogger(No972_DeliverTheMessage.class);
+    private static final Logger logger = LoggerFactory.getLogger(No972_DeliverTheMessage.class);
 
     public static void main(String[] args) {
         No972_DeliverTheMessage No972_DeliverTheMessage = new No972_DeliverTheMessage();

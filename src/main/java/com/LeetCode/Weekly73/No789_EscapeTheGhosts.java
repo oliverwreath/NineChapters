@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No789_EscapeTheGhosts {
-    private final static Logger logger = LoggerFactory.getLogger(No789_EscapeTheGhosts.class);
+    private static final Logger logger = LoggerFactory.getLogger(No789_EscapeTheGhosts.class);
 
     public static void main(String[] args) {
         No789_EscapeTheGhosts No789_EscapeTheGhosts = new No789_EscapeTheGhosts();

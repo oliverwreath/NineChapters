@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-10.
  */
 public class RandomTmp {
-    private final static Logger logger = LoggerFactory.getLogger(RandomTmp.class);
+    private static final Logger logger = LoggerFactory.getLogger(RandomTmp.class);
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */

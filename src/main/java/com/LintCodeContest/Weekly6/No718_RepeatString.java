@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No718_RepeatString {
-    private final static Logger logger = LoggerFactory.getLogger(No718_RepeatString.class);
+    private static final Logger logger = LoggerFactory.getLogger(No718_RepeatString.class);
 
     public static void main(String[] args) {
         No718_RepeatString No718_RepeatString = new No718_RepeatString();

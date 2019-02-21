@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.TreeSet;
 
 public class No896_PrimeProduct {
-    private final static Logger logger = LoggerFactory.getLogger(No896_PrimeProduct.class);
+    private static final Logger logger = LoggerFactory.getLogger(No896_PrimeProduct.class);
 
     public static void main(String[] args) {
         No896_PrimeProduct No896_PrimeProduct = new No896_PrimeProduct();

@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Stack;
 
 public class No823_InputStream {
-    private final static Logger logger = LoggerFactory.getLogger(No823_InputStream.class);
+    private static final Logger logger = LoggerFactory.getLogger(No823_InputStream.class);
 
     public static void main(String[] args) {
         No823_InputStream No823_InputStream = new No823_InputStream();

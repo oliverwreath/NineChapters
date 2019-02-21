@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No791_CustomSortString {
-    private final static Logger logger = LoggerFactory.getLogger(No791_CustomSortString.class);
+    private static final Logger logger = LoggerFactory.getLogger(No791_CustomSortString.class);
 
     public static void main(String[] args) {
         No791_CustomSortString No791_CustomSortString = new No791_CustomSortString();

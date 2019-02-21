@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No794_ValidTicTacToeState {
-    private final static Logger logger = LoggerFactory.getLogger(No794_ValidTicTacToeState.class);
+    private static final Logger logger = LoggerFactory.getLogger(No794_ValidTicTacToeState.class);
 
     public static void main(String[] args) {
         No794_ValidTicTacToeState No794_ValidTicTacToeState = new No794_ValidTicTacToeState();

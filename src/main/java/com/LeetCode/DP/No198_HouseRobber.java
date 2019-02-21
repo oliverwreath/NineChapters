@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-04.
  */
 public class No198_HouseRobber {
-    private final static Logger logger = LoggerFactory.getLogger(No198_HouseRobber.class);
+    private static final Logger logger = LoggerFactory.getLogger(No198_HouseRobber.class);
 
     public static void main(String[] arg) {
         new No198_HouseRobber().testHouseRobber_198();

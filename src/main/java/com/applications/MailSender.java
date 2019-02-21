@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  */
 
 class MailSender {
-    private final static Logger logger = LoggerFactory.getLogger(MailSender.class);
+    private static final Logger logger = LoggerFactory.getLogger(MailSender.class);
 
     public static void main(String[] args) {
         sendFromCRM();

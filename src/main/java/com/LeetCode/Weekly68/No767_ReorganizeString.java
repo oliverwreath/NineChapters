@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.PriorityQueue;
 
 public class No767_ReorganizeString {
-    private final static Logger logger = LoggerFactory.getLogger(No767_ReorganizeString.class);
+    private static final Logger logger = LoggerFactory.getLogger(No767_ReorganizeString.class);
 
     public static void main(String[] args) {
         testNo767_ReorganizeString();

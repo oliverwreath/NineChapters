@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-25.
  */
 public class BackPack {
-    private final static Logger logger = LoggerFactory.getLogger(BackPack.class);
+    private static final Logger logger = LoggerFactory.getLogger(BackPack.class);
 
     public static void main(String[] arg) {
         testBackPack();

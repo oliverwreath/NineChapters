@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  * Created by yanli on 2016-10-02.
  */
 public class DataStreamMedian {
-    private final static Logger logger = LoggerFactory.getLogger(DataStreamMedian.class);
+    private static final Logger logger = LoggerFactory.getLogger(DataStreamMedian.class);
 
     public static void main(String[] arg) {
         new DataStreamMedian().testTrappingRainWater();

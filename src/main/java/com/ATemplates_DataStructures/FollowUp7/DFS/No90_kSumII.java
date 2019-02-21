@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class No90_kSumII {
-    private final static Logger logger = LoggerFactory.getLogger(No90_kSumII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No90_kSumII.class);
 
     public static void main(String[] args) {
         No90_kSumII No90_kSumII = new No90_kSumII();

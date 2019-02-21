@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/4/2016.
  */
 public class BuildTree {
-    private final static Logger logger = LoggerFactory.getLogger(BuildTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(BuildTree.class);
 
     public static void main(String[] arg) {
         testBuuildTree();

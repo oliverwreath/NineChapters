@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * beautifully done! binary search with caution that if x < 1, we need to search up to 1.
  */
 public class SqrtxII_586 {
-    private final static Logger logger = LoggerFactory.getLogger(SqrtxII_586.class);
+    private static final Logger logger = LoggerFactory.getLogger(SqrtxII_586.class);
 
     public static void main(String[] args) {
         SqrtxII_586 thisClass = new SqrtxII_586();

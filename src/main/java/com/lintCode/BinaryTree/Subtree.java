@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-25.
  */
 public class Subtree {
-    private final static Logger logger = LoggerFactory.getLogger(Subtree.class);
+    private static final Logger logger = LoggerFactory.getLogger(Subtree.class);
 
     public static void main(String[] arg) {
         new Subtree().testSubtree();

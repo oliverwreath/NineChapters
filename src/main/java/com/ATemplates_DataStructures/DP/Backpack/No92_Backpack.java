@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No92_Backpack {
-    private final static Logger logger = LoggerFactory.getLogger(No92_Backpack.class);
+    private static final Logger logger = LoggerFactory.getLogger(No92_Backpack.class);
 
     public static void main(String[] args) {
         No92_Backpack No92_Backpack = new No92_Backpack();

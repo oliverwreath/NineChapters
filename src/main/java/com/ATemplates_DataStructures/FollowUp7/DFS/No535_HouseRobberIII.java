@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class No535_HouseRobberIII {
-    private final static Logger logger = LoggerFactory.getLogger(No535_HouseRobberIII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No535_HouseRobberIII.class);
 
     public static void main(String[] args) {
         No535_HouseRobberIII No535_HouseRobberIII = new No535_HouseRobberIII();

@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No826_ComputerMaintenance {
-    private final static Logger logger = LoggerFactory.getLogger(No826_ComputerMaintenance.class);
+    private static final Logger logger = LoggerFactory.getLogger(No826_ComputerMaintenance.class);
 
     public static void main(String[] args) {
         No826_ComputerMaintenance No826_ComputerMaintenance = new No826_ComputerMaintenance();

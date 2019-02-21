@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No784_TheLongestCommonPrefix {
-    private final static Logger logger = LoggerFactory.getLogger(No784_TheLongestCommonPrefix.class);
+    private static final Logger logger = LoggerFactory.getLogger(No784_TheLongestCommonPrefix.class);
 
     public static void main(String[] args) {
         testNo784_TheLongestCommonPrefix();

@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli_000 on 16/7/8.
  */
 public class Util {
-    private final static Logger logger = LoggerFactory.getLogger(Util.class);
+    private static final Logger logger = LoggerFactory.getLogger(Util.class);
 
     public static void main(String[] args) {
         new Util().test1DTrappingWater();

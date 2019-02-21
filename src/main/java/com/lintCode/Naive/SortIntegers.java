@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-03.
  */
 public class SortIntegers {
-    private final static Logger logger = LoggerFactory.getLogger(SortIntegers.class);
+    private static final Logger logger = LoggerFactory.getLogger(SortIntegers.class);
 
     public static void main(String[] arg) {
         new SortIntegers().testSortIntegers();

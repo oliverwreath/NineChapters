@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No952_DigitalProblem {
-    private final static Logger logger = LoggerFactory.getLogger(No952_DigitalProblem.class);
+    private static final Logger logger = LoggerFactory.getLogger(No952_DigitalProblem.class);
 
     public static void main(String[] args) {
         No952_DigitalProblem No952_DigitalProblem = new No952_DigitalProblem();

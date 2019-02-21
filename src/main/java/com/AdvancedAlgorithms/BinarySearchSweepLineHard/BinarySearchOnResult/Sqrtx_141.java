@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Sqrtx_141 {
-    private final static Logger logger = LoggerFactory.getLogger(Sqrtx_141.class);
+    private static final Logger logger = LoggerFactory.getLogger(Sqrtx_141.class);
 
     public static void main(String[] args) {
         Sqrtx_141 thisClass = new Sqrtx_141();

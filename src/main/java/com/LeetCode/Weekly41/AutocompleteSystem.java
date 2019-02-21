@@ -10,7 +10,7 @@ import java.util.List;
  * Created by yanli on 2017-07-15.
  */
 public class AutocompleteSystem {
-    private final static Logger logger = LoggerFactory.getLogger(AutocompleteSystem.class);
+    private static final Logger logger = LoggerFactory.getLogger(AutocompleteSystem.class);
 
     public static void main(String[] args) {
         testAutocompleteSystem();

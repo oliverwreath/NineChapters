@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class Binary_tree_level_order_traversal_69 {
-    private final static Logger logger = LoggerFactory.getLogger(Binary_tree_level_order_traversal_69.class);
+    private static final Logger logger = LoggerFactory.getLogger(Binary_tree_level_order_traversal_69.class);
 
     public static void main(String[] args) {
         testBinary_tree_level_order_traversal_69();

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-01.
  */
 public class PartitionEqualSubsetSum_416 {
-    private final static Logger logger = LoggerFactory.getLogger(PartitionEqualSubsetSum_416.class);
+    private static final Logger logger = LoggerFactory.getLogger(PartitionEqualSubsetSum_416.class);
 
     public static void main(String[] arg) {
         new PartitionEqualSubsetSum_416().testLongestPalindrome_409();

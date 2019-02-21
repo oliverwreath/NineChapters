@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-30.
  */
 public class LongestIncreasingContinuousSubsequenceII {
-    private final static Logger logger = LoggerFactory.getLogger(LongestIncreasingContinuousSubsequenceII.class);
+    private static final Logger logger = LoggerFactory.getLogger(LongestIncreasingContinuousSubsequenceII.class);
 
     public static void main(String[] arg) {
         testLongestIncreasingContinuousSubsequenceII();

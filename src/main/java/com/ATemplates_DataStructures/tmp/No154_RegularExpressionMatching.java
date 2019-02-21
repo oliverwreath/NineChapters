@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No154_RegularExpressionMatching {
-    private final static Logger logger = LoggerFactory.getLogger(No154_RegularExpressionMatching.class);
+    private static final Logger logger = LoggerFactory.getLogger(No154_RegularExpressionMatching.class);
 
     public static void main(String[] args) {
         No154_RegularExpressionMatching No154_RegularExpressionMatching = new No154_RegularExpressionMatching();

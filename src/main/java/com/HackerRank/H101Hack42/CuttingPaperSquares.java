@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-18.
  */
 public class CuttingPaperSquares {
-    private final static Logger logger = LoggerFactory.getLogger(CuttingPaperSquares.class);
+    private static final Logger logger = LoggerFactory.getLogger(CuttingPaperSquares.class);
 
     public static void main(String[] arg) {
         new CuttingPaperSquares().testCuttingPaperSquares();

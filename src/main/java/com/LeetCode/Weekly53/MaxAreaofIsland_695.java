@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MaxAreaofIsland_695 {
-    private final static Logger logger = LoggerFactory.getLogger(MaxAreaofIsland_695.class);
+    private static final Logger logger = LoggerFactory.getLogger(MaxAreaofIsland_695.class);
 
     public static void main(String[] args) {
         testMaxAreaofIsland_695();

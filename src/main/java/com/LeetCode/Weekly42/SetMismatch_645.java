@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class SetMismatch_645 {
-    private final static Logger logger = LoggerFactory.getLogger(SetMismatch_645.class);
+    private static final Logger logger = LoggerFactory.getLogger(SetMismatch_645.class);
 
     public static void main(String[] args) {
         testSetMismatch_645();

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/4/2016.
  */
 public class CountOnes {
-    private final static Logger logger = LoggerFactory.getLogger(CountOnes.class);
+    private static final Logger logger = LoggerFactory.getLogger(CountOnes.class);
 
     public static void main(String[] arg) {
         testCountOnes();

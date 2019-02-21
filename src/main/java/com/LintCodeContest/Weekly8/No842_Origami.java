@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No842_Origami {
-    private final static Logger logger = LoggerFactory.getLogger(No842_Origami.class);
+    private static final Logger logger = LoggerFactory.getLogger(No842_Origami.class);
 
     public static void main(String[] args) {
         No842_Origami No842_Origami = new No842_Origami();

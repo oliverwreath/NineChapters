@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/10/2016.
  */
 public class IntegerReplacement {
-    private final static Logger logger = LoggerFactory.getLogger(IntegerReplacement.class);
+    private static final Logger logger = LoggerFactory.getLogger(IntegerReplacement.class);
 
     public static void main(String[] arg) {
         testIntegerReplacement();

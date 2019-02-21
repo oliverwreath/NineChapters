@@ -12,7 +12,7 @@ import java.util.List;
  * deque and space compression. Nicely done!
  */
 public class Sliding_window_maximum_362 {
-    private final static Logger logger = LoggerFactory.getLogger(Sliding_window_maximum_362.class);
+    private static final Logger logger = LoggerFactory.getLogger(Sliding_window_maximum_362.class);
 
     public static void main(String[] args) {
         Sliding_window_maximum_362 thisClass = new Sliding_window_maximum_362();

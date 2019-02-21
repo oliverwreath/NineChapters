@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No63_SearchInRotatedSortedArrayII {
-    private final static Logger logger = LoggerFactory.getLogger(No63_SearchInRotatedSortedArrayII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No63_SearchInRotatedSortedArrayII.class);
 
     public static void main(String[] args) {
         No63_SearchInRotatedSortedArrayII No63_SearchInRotatedSortedArrayII = new No63_SearchInRotatedSortedArrayII();

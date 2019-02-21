@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No77_LongestCommonSubsequence {
-    private final static Logger logger = LoggerFactory.getLogger(No77_LongestCommonSubsequence.class);
+    private static final Logger logger = LoggerFactory.getLogger(No77_LongestCommonSubsequence.class);
 
     public static void main(String[] args) {
         No77_LongestCommonSubsequence No77_LongestCommonSubsequence = new No77_LongestCommonSubsequence();

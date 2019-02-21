@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No676_DecodeWaysII {
-    private final static Logger logger = LoggerFactory.getLogger(No676_DecodeWaysII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No676_DecodeWaysII.class);
 
     public static void main(String[] args) {
         No676_DecodeWaysII No676_DecodeWaysII = new No676_DecodeWaysII();

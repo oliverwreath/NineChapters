@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.PriorityQueue;
 
 public class Trapping_rain_water_II_364 {
-    private final static Logger logger = LoggerFactory.getLogger(Trapping_rain_water_II_364.class);
+    private static final Logger logger = LoggerFactory.getLogger(Trapping_rain_water_II_364.class);
 
     public static void main(String[] args) {
         Trapping_rain_water_II_364 thisClass = new Trapping_rain_water_II_364();

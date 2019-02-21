@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No257_BinaryTreePaths {
-    private final static Logger logger = LoggerFactory.getLogger(No257_BinaryTreePaths.class);
+    private static final Logger logger = LoggerFactory.getLogger(No257_BinaryTreePaths.class);
 
     public static void main(String[] args) {
         testNo257_BinaryTreePaths();

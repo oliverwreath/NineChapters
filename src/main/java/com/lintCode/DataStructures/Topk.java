@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/13/2016.
  */
 public class Topk {
-    private final static Logger logger = LoggerFactory.getLogger(Topk.class);
+    private static final Logger logger = LoggerFactory.getLogger(Topk.class);
 
     public static void main(String[] arg) {
         testTopk();

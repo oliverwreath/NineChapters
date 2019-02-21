@@ -16,7 +16,7 @@ import java.util.Arrays;
  * Version 2: TBD. Could use Sliding array - save space.
  */
 public class Edit_Distance_119 {
-    private final static Logger logger = LoggerFactory.getLogger(Edit_Distance_119.class);
+    private static final Logger logger = LoggerFactory.getLogger(Edit_Distance_119.class);
 
     public static void main(String[] args) {
         Edit_Distance_119 thisClass = new Edit_Distance_119();

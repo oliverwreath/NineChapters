@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.PriorityQueue;
 
 public class minmaxGasDist {
-    private final static Logger logger = LoggerFactory.getLogger(minmaxGasDist.class);
+    private static final Logger logger = LoggerFactory.getLogger(minmaxGasDist.class);
 
     public static void main(String[] arg) {
         testTrappingRainWaterII();

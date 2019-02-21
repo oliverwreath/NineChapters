@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-10.
  */
 public class SimplifiedChessEngine {
-    private final static Logger logger = LoggerFactory.getLogger(SimplifiedChessEngine.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimplifiedChessEngine.class);
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */

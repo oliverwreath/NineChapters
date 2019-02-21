@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No436_MaximalSquare {
-    private final static Logger logger = LoggerFactory.getLogger(No436_MaximalSquare.class);
+    private static final Logger logger = LoggerFactory.getLogger(No436_MaximalSquare.class);
 
     public static void main(String[] args) {
         testNo392_HouseRobber();

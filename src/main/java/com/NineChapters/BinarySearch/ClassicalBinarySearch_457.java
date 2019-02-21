@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ClassicalBinarySearch_457 {
-    private final static Logger logger = LoggerFactory.getLogger(ClassicalBinarySearch_457.class);
+    private static final Logger logger = LoggerFactory.getLogger(ClassicalBinarySearch_457.class);
 
     public static void main(String[] args) {
         ClassicalBinarySearch_457 ClassicalBinarySearch_457 = new ClassicalBinarySearch_457();

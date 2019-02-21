@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class AreSentencesSimilar {
-    private final static Logger logger = LoggerFactory.getLogger(AreSentencesSimilar.class);
+    private static final Logger logger = LoggerFactory.getLogger(AreSentencesSimilar.class);
 
     public static void main(String[] args) {
         testAreSentencesSimilar();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No123_WordSearch {
-    private final static Logger logger = LoggerFactory.getLogger(No123_WordSearch.class);
+    private static final Logger logger = LoggerFactory.getLogger(No123_WordSearch.class);
 
     public static void main(String[] args) {
         No123_WordSearch No123_WordSearch = new No123_WordSearch();

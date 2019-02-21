@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * version 3 - nicely done! Sliding Array.
  */
 public class MaximalSquare_436 {
-    private final static Logger logger = LoggerFactory.getLogger(MaximalSquare_436.class);
+    private static final Logger logger = LoggerFactory.getLogger(MaximalSquare_436.class);
 
     public static void main(String[] args) {
         MaximalSquare_436 thisClass = new MaximalSquare_436();

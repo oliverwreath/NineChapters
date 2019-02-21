@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No824_SingleNumberIV {
-    private final static Logger logger = LoggerFactory.getLogger(No824_SingleNumberIV.class);
+    private static final Logger logger = LoggerFactory.getLogger(No824_SingleNumberIV.class);
 
     public static void main(String[] args) {
         No824_SingleNumberIV No824_SingleNumberIV = new No824_SingleNumberIV();

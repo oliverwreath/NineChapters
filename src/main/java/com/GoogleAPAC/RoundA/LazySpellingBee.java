@@ -18,7 +18,7 @@ import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 // Extend HttpServlet class
 public class LazySpellingBee {
-    private final static Logger logger = LoggerFactory.getLogger(LazySpellingBee.class);
+    private static final Logger logger = LoggerFactory.getLogger(LazySpellingBee.class);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

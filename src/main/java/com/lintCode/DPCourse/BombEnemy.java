@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Created by yanli on 2017-07-10.
  */
 public class BombEnemy {
-    private final static Logger logger = LoggerFactory.getLogger(BombEnemy.class);
+    private static final Logger logger = LoggerFactory.getLogger(BombEnemy.class);
 
     public static void main(String[] args) {
         testBombEnemy();

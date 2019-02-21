@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/4/2016.
  */
 public class ReverseList {
-    private final static Logger logger = LoggerFactory.getLogger(ReverseList.class);
+    private static final Logger logger = LoggerFactory.getLogger(ReverseList.class);
 
     public static void main(String[] arg) {
         testReverseList();

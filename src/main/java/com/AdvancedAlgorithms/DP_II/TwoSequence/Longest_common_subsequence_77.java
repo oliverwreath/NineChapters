@@ -16,7 +16,7 @@ import java.util.Arrays;
  * Version 2: TBD. Could be Sliding array - save space.
  */
 public class Longest_common_subsequence_77 {
-    private final static Logger logger = LoggerFactory.getLogger(Longest_common_subsequence_77.class);
+    private static final Logger logger = LoggerFactory.getLogger(Longest_common_subsequence_77.class);
 
     public static void main(String[] args) {
         Longest_common_subsequence_77 thisClass = new Longest_common_subsequence_77();

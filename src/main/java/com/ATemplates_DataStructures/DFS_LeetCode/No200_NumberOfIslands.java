@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No200_NumberOfIslands {
-    private final static Logger logger = LoggerFactory.getLogger(No200_NumberOfIslands.class);
+    private static final Logger logger = LoggerFactory.getLogger(No200_NumberOfIslands.class);
 
     public static void main(String[] args) {
         testNo200_NumberOfIslands();

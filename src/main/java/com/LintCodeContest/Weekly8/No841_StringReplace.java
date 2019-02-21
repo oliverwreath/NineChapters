@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No841_StringReplace {
-    private final static Logger logger = LoggerFactory.getLogger(No841_StringReplace.class);
+    private static final Logger logger = LoggerFactory.getLogger(No841_StringReplace.class);
 
     public static void main(String[] args) {
         No841_StringReplace No841_StringReplace = new No841_StringReplace();

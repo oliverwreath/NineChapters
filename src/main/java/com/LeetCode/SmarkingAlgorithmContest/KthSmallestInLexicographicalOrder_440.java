@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-22.
  */
 public class KthSmallestInLexicographicalOrder_440 {
-    private final static Logger logger = LoggerFactory.getLogger(KthSmallestInLexicographicalOrder_440.class);
+    private static final Logger logger = LoggerFactory.getLogger(KthSmallestInLexicographicalOrder_440.class);
 
     public static void main(String[] arg) {
         new KthSmallestInLexicographicalOrder_440().testKthSmallestInLexicographicalOrder_440();

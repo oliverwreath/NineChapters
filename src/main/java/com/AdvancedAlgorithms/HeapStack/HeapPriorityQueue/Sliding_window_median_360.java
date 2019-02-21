@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class Sliding_window_median_360 {
-    private final static Logger logger = LoggerFactory.getLogger(Sliding_window_median_360.class);
+    private static final Logger logger = LoggerFactory.getLogger(Sliding_window_median_360.class);
 
     public static void main(String[] args) {
         testFind_median_from_data_stream_81();

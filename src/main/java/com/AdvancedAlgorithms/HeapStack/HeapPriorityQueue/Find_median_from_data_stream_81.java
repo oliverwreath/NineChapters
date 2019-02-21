@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.PriorityQueue;
 
 public class Find_median_from_data_stream_81 {
-    private final static Logger logger = LoggerFactory.getLogger(Find_median_from_data_stream_81.class);
+    private static final Logger logger = LoggerFactory.getLogger(Find_median_from_data_stream_81.class);
 
     public static void main(String[] args) {
         testFind_median_from_data_stream_81();

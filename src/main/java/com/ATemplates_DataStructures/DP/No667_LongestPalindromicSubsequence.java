@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No667_LongestPalindromicSubsequence {
-    private final static Logger logger = LoggerFactory.getLogger(No667_LongestPalindromicSubsequence.class);
+    private static final Logger logger = LoggerFactory.getLogger(No667_LongestPalindromicSubsequence.class);
 
     public static void main(String[] args) {
         No667_LongestPalindromicSubsequence No667_LongestPalindromicSubsequence = new No667_LongestPalindromicSubsequence();

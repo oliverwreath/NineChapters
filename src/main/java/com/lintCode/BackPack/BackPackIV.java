@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-09-25.
  */
 public class BackPackIV {
-    private final static Logger logger = LoggerFactory.getLogger(BackPackIV.class);
+    private static final Logger logger = LoggerFactory.getLogger(BackPackIV.class);
 
     public static void main(String[] arg) {
         testBackPackIV();

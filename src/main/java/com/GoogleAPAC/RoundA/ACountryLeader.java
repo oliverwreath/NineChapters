@@ -14,7 +14,7 @@ import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
  * Created by yanli_000 on 16/7/10.
  */
 public class ACountryLeader {
-    private final static Logger logger = LoggerFactory.getLogger(ACountryLeader.class);
+    private static final Logger logger = LoggerFactory.getLogger(ACountryLeader.class);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

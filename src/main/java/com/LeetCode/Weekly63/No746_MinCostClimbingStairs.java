@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No746_MinCostClimbingStairs {
-    private final static Logger logger = LoggerFactory.getLogger(No746_MinCostClimbingStairs.class);
+    private static final Logger logger = LoggerFactory.getLogger(No746_MinCostClimbingStairs.class);
 
     public static void main(String[] args) {
         testNo746_MinCostClimbingStairs();

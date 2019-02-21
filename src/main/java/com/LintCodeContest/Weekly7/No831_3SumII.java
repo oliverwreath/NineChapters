@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No831_3SumII {
-    private final static Logger logger = LoggerFactory.getLogger(No831_3SumII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No831_3SumII.class);
 
     public static void main(String[] args) {
         No831_3SumII No831_3SumII = new No831_3SumII();

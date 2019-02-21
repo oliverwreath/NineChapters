@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/16/2016.
  */
 public class BinaryNumbers {
-    private final static Logger logger = LoggerFactory.getLogger(BinaryNumbers.class);
+    private static final Logger logger = LoggerFactory.getLogger(BinaryNumbers.class);
 
     public static void main(String[] arg) {
         testBinaryNumbers();

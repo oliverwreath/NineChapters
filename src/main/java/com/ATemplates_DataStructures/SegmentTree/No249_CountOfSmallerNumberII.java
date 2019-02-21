@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class No249_CountOfSmallerNumberII {
-    private final static Logger logger = LoggerFactory.getLogger(No249_CountOfSmallerNumberII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No249_CountOfSmallerNumberII.class);
 
     public static void main(String[] args) {
         testNo249_CountOfSmallerNumberII();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Find_peak_element_75 {
-    private final static Logger logger = LoggerFactory.getLogger(Find_peak_element_75.class);
+    private static final Logger logger = LoggerFactory.getLogger(Find_peak_element_75.class);
 
     public static void main(String[] args) {
         Find_peak_element_75 thisClass = new Find_peak_element_75();

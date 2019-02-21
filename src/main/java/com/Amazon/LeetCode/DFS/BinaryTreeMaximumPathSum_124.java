@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-23.
  */
 public class BinaryTreeMaximumPathSum_124 {
-    private final static Logger logger = LoggerFactory.getLogger(BinaryTreeMaximumPathSum_124.class);
+    private static final Logger logger = LoggerFactory.getLogger(BinaryTreeMaximumPathSum_124.class);
 
     public static void main(String[] arg) {
         new BinaryTreeMaximumPathSum_124().testSameTree_100();

@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/8/2016.
  */
 public class TwoSum {
-    private final static Logger logger = LoggerFactory.getLogger(TwoSum.class);
+    private static final Logger logger = LoggerFactory.getLogger(TwoSum.class);
 
     public static void main(String[] arg) {
         testTwoSum();

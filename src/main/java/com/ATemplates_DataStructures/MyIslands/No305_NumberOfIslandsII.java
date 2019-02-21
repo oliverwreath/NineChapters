@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class No305_NumberOfIslandsII {
-    private final static Logger logger = LoggerFactory.getLogger(No305_NumberOfIslandsII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No305_NumberOfIslandsII.class);
 
     public static void main(String[] args) {
         testNo305_NumberOfIslandsII();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No668_OnesAndZeroes {
-    private final static Logger logger = LoggerFactory.getLogger(No668_OnesAndZeroes.class);
+    private static final Logger logger = LoggerFactory.getLogger(No668_OnesAndZeroes.class);
 
     public static void main(String[] args) {
         No668_OnesAndZeroes No668_OnesAndZeroes = new No668_OnesAndZeroes();

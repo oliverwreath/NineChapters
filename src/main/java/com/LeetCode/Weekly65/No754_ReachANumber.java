@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No754_ReachANumber {
-    private final static Logger logger = LoggerFactory.getLogger(No754_ReachANumber.class);
+    private static final Logger logger = LoggerFactory.getLogger(No754_ReachANumber.class);
 
     public static void main(String[] args) {
         testNo754_ReachANumber();

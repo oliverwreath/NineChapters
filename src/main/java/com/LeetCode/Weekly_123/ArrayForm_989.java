@@ -18,7 +18,7 @@ import java.util.List;
  * SPACE: O(?)
  */
 public class ArrayForm_989 {
-    private final static Logger logger = LoggerFactory.getLogger(ArrayForm_989.class);
+    private static final Logger logger = LoggerFactory.getLogger(ArrayForm_989.class);
 
     public static void main(String[] args) {
         ArrayForm_989 thisClass = new ArrayForm_989();

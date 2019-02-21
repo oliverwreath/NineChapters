@@ -13,7 +13,7 @@ import java.util.List;
  * Created by yanli on 2016-10-23.
  */
 public class BinaryTreeRightSideView {
-    private final static Logger logger = LoggerFactory.getLogger(BinaryTreeRightSideView.class);
+    private static final Logger logger = LoggerFactory.getLogger(BinaryTreeRightSideView.class);
 
     public static void main(String[] arg) {
         new BinaryTreeRightSideView().testBinaryTreeRightSideView();

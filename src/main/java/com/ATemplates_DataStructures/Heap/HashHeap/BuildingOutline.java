@@ -9,7 +9,7 @@ import java.util.*;
  * Created by yanli on 2016-10-02.
  */
 public class BuildingOutline {
-    private final static Logger logger = LoggerFactory.getLogger(BuildingOutline.class);
+    private static final Logger logger = LoggerFactory.getLogger(BuildingOutline.class);
 
     public static void main(String[] arg) {
         testBuildingOutline();

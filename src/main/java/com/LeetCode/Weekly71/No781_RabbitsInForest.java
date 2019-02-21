@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class No781_RabbitsInForest {
-    private final static Logger logger = LoggerFactory.getLogger(No781_RabbitsInForest.class);
+    private static final Logger logger = LoggerFactory.getLogger(No781_RabbitsInForest.class);
 
     public static void main(String[] args) {
         No781_RabbitsInForest no781_RabbitsInForest = new No781_RabbitsInForest();

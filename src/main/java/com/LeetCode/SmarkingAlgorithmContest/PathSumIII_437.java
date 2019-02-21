@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-22.
  */
 public class PathSumIII_437 {
-    private final static Logger logger = LoggerFactory.getLogger(PathSumIII_437.class);
+    private static final Logger logger = LoggerFactory.getLogger(PathSumIII_437.class);
 
     public static void main(String[] arg) {
         new PathSumIII_437().testPathSumIII_437();

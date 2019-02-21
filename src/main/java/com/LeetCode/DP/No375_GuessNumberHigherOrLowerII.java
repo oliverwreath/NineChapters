@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No375_GuessNumberHigherOrLowerII {
-    private final static Logger logger = LoggerFactory.getLogger(No375_GuessNumberHigherOrLowerII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No375_GuessNumberHigherOrLowerII.class);
 
     public static void main(String[] args) {
         testNo375_GuessNumberHigherOrLowerII();

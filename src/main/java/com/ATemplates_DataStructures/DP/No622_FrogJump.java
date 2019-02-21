@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class No622_FrogJump {
-    private final static Logger logger = LoggerFactory.getLogger(No622_FrogJump.class);
+    private static final Logger logger = LoggerFactory.getLogger(No622_FrogJump.class);
 
     public static void main(String[] args) {
         No622_FrogJump No622_FrogJump = new No622_FrogJump();

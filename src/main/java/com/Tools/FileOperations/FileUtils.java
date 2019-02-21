@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/20/2016.
  */
 public class FileUtils {
-    private final static Logger logger = LoggerFactory.getLogger(FileUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileUtils.class);
 
     public static void main(String[] arg) {
         testFileUtils();

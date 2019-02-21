@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * dfs simple
  */
 public class No628_MaximumSubtree {
-    private final static Logger logger = LoggerFactory.getLogger(No628_MaximumSubtree.class);
+    private static final Logger logger = LoggerFactory.getLogger(No628_MaximumSubtree.class);
 
     public static void main(String[] args) {
         No628_MaximumSubtree No628_MaximumSubtree = new No628_MaximumSubtree();

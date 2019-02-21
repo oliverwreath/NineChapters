@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No168_BurstBalloons {
-    private final static Logger logger = LoggerFactory.getLogger(No168_BurstBalloons.class);
+    private static final Logger logger = LoggerFactory.getLogger(No168_BurstBalloons.class);
 
     public static void main(String[] args) {
         No168_BurstBalloons No476_StoneGame = new No168_BurstBalloons();

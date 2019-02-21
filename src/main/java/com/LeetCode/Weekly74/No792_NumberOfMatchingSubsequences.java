@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class No792_NumberOfMatchingSubsequences {
-    private final static Logger logger = LoggerFactory.getLogger(No792_NumberOfMatchingSubsequences.class);
+    private static final Logger logger = LoggerFactory.getLogger(No792_NumberOfMatchingSubsequences.class);
 
     public static void main(String[] args) {
         No792_NumberOfMatchingSubsequences No792_NumberOfMatchingSubsequences = new No792_NumberOfMatchingSubsequences();

@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * Version 2: TBD.
  */
 public class MaximumSubarray {
-    private final static Logger logger = LoggerFactory.getLogger(MaximumSubarray.class);
+    private static final Logger logger = LoggerFactory.getLogger(MaximumSubarray.class);
 
     public static void main(String[] args) {
         MaximumSubarray thisClass = new MaximumSubarray();

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/5/2016.
  */
 public class DetectCycle {
-    private final static Logger logger = LoggerFactory.getLogger(DetectCycle.class);
+    private static final Logger logger = LoggerFactory.getLogger(DetectCycle.class);
 
     public static void main(String[] arg) {
         testDetectCycle();

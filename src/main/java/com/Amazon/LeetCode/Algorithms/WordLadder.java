@@ -12,7 +12,7 @@ import java.util.Set;
  * Created by yanli on 2016-10-23.
  */
 public class WordLadder {
-    private final static Logger logger = LoggerFactory.getLogger(WordLadder.class);
+    private static final Logger logger = LoggerFactory.getLogger(WordLadder.class);
 
     public static void main(String[] arg) {
         new WordLadder().testWordLadder();

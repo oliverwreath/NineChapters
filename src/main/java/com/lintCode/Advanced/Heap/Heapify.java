@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-02.
  */
 public class Heapify {
-    private final static Logger logger = LoggerFactory.getLogger(Heapify.class);
+    private static final Logger logger = LoggerFactory.getLogger(Heapify.class);
 
     public static void main(String[] arg) {
         new Heapify().testHeapify();

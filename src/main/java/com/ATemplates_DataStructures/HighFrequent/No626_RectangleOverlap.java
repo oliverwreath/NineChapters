@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No626_RectangleOverlap {
-    private final static Logger logger = LoggerFactory.getLogger(No626_RectangleOverlap.class);
+    private static final Logger logger = LoggerFactory.getLogger(No626_RectangleOverlap.class);
 
     public static void main(String[] args) {
         No626_RectangleOverlap No626_RectangleOverlap = new No626_RectangleOverlap();

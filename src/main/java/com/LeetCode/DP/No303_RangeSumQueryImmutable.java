@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-04.
  */
 public class No303_RangeSumQueryImmutable {
-    private final static Logger logger = LoggerFactory.getLogger(No303_RangeSumQueryImmutable.class);
+    private static final Logger logger = LoggerFactory.getLogger(No303_RangeSumQueryImmutable.class);
 
     public static void main(String[] arg) {
         new No303_RangeSumQueryImmutable().testRangeSumQueryImmutable_303();

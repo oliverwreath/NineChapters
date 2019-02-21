@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-01.
  */
 public class PacificAtlanticWaterFlow_417 {
-    private final static Logger logger = LoggerFactory.getLogger(PacificAtlanticWaterFlow_417.class);
+    private static final Logger logger = LoggerFactory.getLogger(PacificAtlanticWaterFlow_417.class);
 
     public static void main(String[] arg) {
         new PacificAtlanticWaterFlow_417().testLongestPalindrome_409();

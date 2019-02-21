@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-19.
  */
 public class ValidParentheses_20 {
-    private final static Logger logger = LoggerFactory.getLogger(ValidParentheses_20.class);
+    private static final Logger logger = LoggerFactory.getLogger(ValidParentheses_20.class);
 
     public static void main(String[] arg) {
         new ValidParentheses_20().testSearchA2DMatrix_74();

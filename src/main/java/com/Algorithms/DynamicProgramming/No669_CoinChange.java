@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No669_CoinChange {
-    private final static Logger logger = LoggerFactory.getLogger(No669_CoinChange.class);
+    private static final Logger logger = LoggerFactory.getLogger(No669_CoinChange.class);
 
     public static void main(String[] args) {
         testNo669_coinChange();

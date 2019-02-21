@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/18/2016.
  */
 public class MonsterPath {
-    private final static Logger logger = LoggerFactory.getLogger(MonsterPath.class);
+    private static final Logger logger = LoggerFactory.getLogger(MonsterPath.class);
 
     public static void main(String[] arg) {
         testMonsterPath();

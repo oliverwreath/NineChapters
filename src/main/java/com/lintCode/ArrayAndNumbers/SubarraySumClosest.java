@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/11/2016.
  */
 public class SubarraySumClosest {
-    private final static Logger logger = LoggerFactory.getLogger(SubarraySumClosest.class);
+    private static final Logger logger = LoggerFactory.getLogger(SubarraySumClosest.class);
 
     public static void main(String[] arg) {
         testSubarraySumClosest();

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No950_SlidingPuzzleIII {
-    private final static Logger logger = LoggerFactory.getLogger(No950_SlidingPuzzleIII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No950_SlidingPuzzleIII.class);
 
     public static void main(String[] args) {
         No950_SlidingPuzzleIII No950_SlidingPuzzleIII = new No950_SlidingPuzzleIII();

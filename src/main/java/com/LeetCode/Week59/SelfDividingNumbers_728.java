@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class SelfDividingNumbers_728 {
-    private final static Logger logger = LoggerFactory.getLogger(SelfDividingNumbers_728.class);
+    private static final Logger logger = LoggerFactory.getLogger(SelfDividingNumbers_728.class);
 
     public static void main(String[] args) {
         testSelfDividingNumbers_728();

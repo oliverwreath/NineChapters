@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No28_SearchMatrix {
-    private final static Logger logger = LoggerFactory.getLogger(No28_SearchMatrix.class);
+    private static final Logger logger = LoggerFactory.getLogger(No28_SearchMatrix.class);
 
     public static void main(String[] args) {
         No28_SearchMatrix No28_SearchMatrix = new No28_SearchMatrix();

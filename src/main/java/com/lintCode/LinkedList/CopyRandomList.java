@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/5/2016.
  */
 public class CopyRandomList {
-    private final static Logger logger = LoggerFactory.getLogger(CopyRandomList.class);
+    private static final Logger logger = LoggerFactory.getLogger(CopyRandomList.class);
 
     public static void main(String[] arg) {
         testCopyRandomList();

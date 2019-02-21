@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class No969_LongestRepeatingSubsequenceII {
-    private final static Logger logger = LoggerFactory.getLogger(No969_LongestRepeatingSubsequenceII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No969_LongestRepeatingSubsequenceII.class);
 
     public static void main(String[] args) {
         No969_LongestRepeatingSubsequenceII No969_LongestRepeatingSubsequenceII = new No969_LongestRepeatingSubsequenceII();

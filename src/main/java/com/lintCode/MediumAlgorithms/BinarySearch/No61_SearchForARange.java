@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class No61_SearchForARange {
-    private final static Logger logger = LoggerFactory.getLogger(No61_SearchForARange.class);
+    private static final Logger logger = LoggerFactory.getLogger(No61_SearchForARange.class);
 
     public static void main(String[] args) {
         No61_SearchForARange No61_SearchForARange = new No61_SearchForARange();

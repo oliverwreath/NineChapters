@@ -13,7 +13,7 @@ import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
  * Created by yanli_000 on 16/7/8.
  */
 public class RobotRockBand {
-    private final static Logger logger = LoggerFactory.getLogger(RobotRockBand.class);
+    private static final Logger logger = LoggerFactory.getLogger(RobotRockBand.class);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

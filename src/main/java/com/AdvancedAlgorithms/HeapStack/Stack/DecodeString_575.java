@@ -9,7 +9,7 @@ import java.util.Stack;
  * Some say it's medium, I say it's tricky.
  */
 public class DecodeString_575 {
-    private final static Logger logger = LoggerFactory.getLogger(DecodeString_575.class);
+    private static final Logger logger = LoggerFactory.getLogger(DecodeString_575.class);
 
     public static void main(String[] args) {
         DecodeString_575 thisClass = new DecodeString_575();

@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class No765_CouplesHoldingHands {
-    private final static Logger logger = LoggerFactory.getLogger(No765_CouplesHoldingHands.class);
+    private static final Logger logger = LoggerFactory.getLogger(No765_CouplesHoldingHands.class);
 
     public static void main(String[] args) {
         testNo765_CouplesHoldingHands();

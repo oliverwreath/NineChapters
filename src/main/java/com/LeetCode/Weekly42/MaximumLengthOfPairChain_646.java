@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class MaximumLengthOfPairChain_646 {
-    private final static Logger logger = LoggerFactory.getLogger(MaximumLengthOfPairChain_646.class);
+    private static final Logger logger = LoggerFactory.getLogger(MaximumLengthOfPairChain_646.class);
 
     public static void main(String[] args) {
         testMaximumLengthOfPairChain_646();

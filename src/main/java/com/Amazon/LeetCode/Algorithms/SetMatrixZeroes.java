@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-23.
  */
 public class SetMatrixZeroes {
-    private final static Logger logger = LoggerFactory.getLogger(SetMatrixZeroes.class);
+    private static final Logger logger = LoggerFactory.getLogger(SetMatrixZeroes.class);
 
     public static void main(String[] arg) {
         new SetMatrixZeroes().testSetMatrixZeroes();

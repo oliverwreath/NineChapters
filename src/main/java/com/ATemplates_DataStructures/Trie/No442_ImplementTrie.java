@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No442_ImplementTrie {
-    private final static Logger logger = LoggerFactory.getLogger(No442_ImplementTrie.class);
+    private static final Logger logger = LoggerFactory.getLogger(No442_ImplementTrie.class);
 
     public static void main(String[] args) {
         No442_ImplementTrie No442_ImplementTrie = new No442_ImplementTrie();

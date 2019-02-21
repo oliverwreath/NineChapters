@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 9/11/2016.
  */
 public class Rehashing {
-    private final static Logger logger = LoggerFactory.getLogger(Rehashing.class);
+    private static final Logger logger = LoggerFactory.getLogger(Rehashing.class);
 
     public static void main(String[] arg) {
         testRehashing();

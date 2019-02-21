@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-17.
  */
 public class PriyankaAndToys {
-    private final static Logger logger = LoggerFactory.getLogger(PriyankaAndToys.class);
+    private static final Logger logger = LoggerFactory.getLogger(PriyankaAndToys.class);
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */

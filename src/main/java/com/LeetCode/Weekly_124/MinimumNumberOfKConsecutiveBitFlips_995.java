@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * SPACE: O(?)
  */
 public class MinimumNumberOfKConsecutiveBitFlips_995 {
-    private final static Logger logger = LoggerFactory.getLogger(MinimumNumberOfKConsecutiveBitFlips_995.class);
+    private static final Logger logger = LoggerFactory.getLogger(MinimumNumberOfKConsecutiveBitFlips_995.class);
 
     public static void main(String[] args) {
         MinimumNumberOfKConsecutiveBitFlips_995 thisClass = new MinimumNumberOfKConsecutiveBitFlips_995();

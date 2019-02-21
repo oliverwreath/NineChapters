@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CutOffTree_675 {
-    private final static Logger logger = LoggerFactory.getLogger(CutOffTree_675.class);
+    private static final Logger logger = LoggerFactory.getLogger(CutOffTree_675.class);
 
     public static void main(String[] args) {
         testCutOffTree_675();

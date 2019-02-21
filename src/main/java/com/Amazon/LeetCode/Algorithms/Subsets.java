@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Subsets {
-    private final static Logger logger = LoggerFactory.getLogger(Subsets.class);
+    private static final Logger logger = LoggerFactory.getLogger(Subsets.class);
 
     public static void main(String[] args) {
         testSubsets();

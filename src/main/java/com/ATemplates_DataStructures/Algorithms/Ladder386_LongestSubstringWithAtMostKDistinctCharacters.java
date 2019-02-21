@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class Ladder386_LongestSubstringWithAtMostKDistinctCharacters {
-    private final static Logger logger = LoggerFactory.getLogger(Ladder386_LongestSubstringWithAtMostKDistinctCharacters.class);
+    private static final Logger logger = LoggerFactory.getLogger(Ladder386_LongestSubstringWithAtMostKDistinctCharacters.class);
 
     public static void main(String[] args) {
         testLadder386_LongestSubstringWithAtMostKDistinctCharacters();

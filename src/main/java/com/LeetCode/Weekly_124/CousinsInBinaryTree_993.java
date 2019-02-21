@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * SPACE: O(?)
  */
 public class CousinsInBinaryTree_993 {
-    private final static Logger logger = LoggerFactory.getLogger(CousinsInBinaryTree_993.class);
+    private static final Logger logger = LoggerFactory.getLogger(CousinsInBinaryTree_993.class);
 
     public static void main(String[] args) {
         CousinsInBinaryTree_993 thisClass = new CousinsInBinaryTree_993();

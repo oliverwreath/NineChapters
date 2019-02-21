@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 public class No748_shortestCompletingWord {
-    private final static Logger logger = LoggerFactory.getLogger(No748_shortestCompletingWord.class);
+    private static final Logger logger = LoggerFactory.getLogger(No748_shortestCompletingWord.class);
 
     public static void main(String[] args) {
         testNo748_shortestCompletingWord();

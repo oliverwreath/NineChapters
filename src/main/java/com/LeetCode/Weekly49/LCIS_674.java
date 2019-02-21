@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LCIS_674 {
-    private final static Logger logger = LoggerFactory.getLogger(LCIS_674.class);
+    private static final Logger logger = LoggerFactory.getLogger(LCIS_674.class);
 
     public static void main(String[] args) {
         testLCIS();

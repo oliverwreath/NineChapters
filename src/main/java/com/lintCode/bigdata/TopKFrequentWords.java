@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
  * }
  */
 public class TopKFrequentWords {
-    private final static Logger logger = LoggerFactory.getLogger(TopKFrequentWords.class);
+    private static final Logger logger = LoggerFactory.getLogger(TopKFrequentWords.class);
 
     public static void main(String[] args) {
 //        int k = 2;

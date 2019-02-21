@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by Yanliang Han on 2016/7/12.
  */
 public class SortList {
-    private final static Logger logger = LoggerFactory.getLogger(SortList.class);
+    private static final Logger logger = LoggerFactory.getLogger(SortList.class);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

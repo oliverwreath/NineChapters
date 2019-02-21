@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class No392_HouseRobber {
-    private final static Logger logger = LoggerFactory.getLogger(No392_HouseRobber.class);
+    private static final Logger logger = LoggerFactory.getLogger(No392_HouseRobber.class);
 
     public static void main(String[] args) {
         testNo392_HouseRobber();

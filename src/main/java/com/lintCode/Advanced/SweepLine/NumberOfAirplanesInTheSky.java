@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-15.
  */
 public class NumberOfAirplanesInTheSky {
-    private final static Logger logger = LoggerFactory.getLogger(NumberOfAirplanesInTheSky.class);
+    private static final Logger logger = LoggerFactory.getLogger(NumberOfAirplanesInTheSky.class);
 
     public static void main(String[] arg) {
         new NumberOfAirplanesInTheSky().testNumberOfAirplanesInTheSky();

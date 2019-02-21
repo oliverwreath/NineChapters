@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli_000 on 16/7/10.
  */
 public class DeleteDuplicates {
-    private final static Logger logger = LoggerFactory.getLogger(DeleteDuplicates.class);
+    private static final Logger logger = LoggerFactory.getLogger(DeleteDuplicates.class);
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

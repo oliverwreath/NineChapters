@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MyCalendarTwo {
-    private final static Logger logger = LoggerFactory.getLogger(MyCalendarTwo.class);
+    private static final Logger logger = LoggerFactory.getLogger(MyCalendarTwo.class);
 
     public static void main(String[] args) {
         testMyCalendarTwo();

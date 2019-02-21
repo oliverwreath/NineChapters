@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-23.
  */
 public class RotateFunction {
-    private final static Logger logger = LoggerFactory.getLogger(RotateFunction.class);
+    private static final Logger logger = LoggerFactory.getLogger(RotateFunction.class);
 
     public static void main(String[] arg) {
         new RotateFunction().testRotateFunction();

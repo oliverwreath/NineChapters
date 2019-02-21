@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 
 public class No69_BinaryTreeLevelOrderTraversal {
-    private final static Logger logger = LoggerFactory.getLogger(No69_BinaryTreeLevelOrderTraversal.class);
+    private static final Logger logger = LoggerFactory.getLogger(No69_BinaryTreeLevelOrderTraversal.class);
 
     public static void main(String[] args) {
         No69_BinaryTreeLevelOrderTraversal No69_BinaryTreeLevelOrderTraversal = new No69_BinaryTreeLevelOrderTraversal();

@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-10.
  */
 public class HappyLadybugs {
-    private final static Logger logger = LoggerFactory.getLogger(HappyLadybugs.class);
+    private static final Logger logger = LoggerFactory.getLogger(HappyLadybugs.class);
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

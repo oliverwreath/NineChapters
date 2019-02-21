@@ -10,7 +10,7 @@ import java.util.HashMap;
  * Created by yanli on 9/5/2016.
  */
 public class No106_BinaryTreeFromInorderAndPostorder {
-    private final static Logger logger = LoggerFactory.getLogger(No106_BinaryTreeFromInorderAndPostorder.class);
+    private static final Logger logger = LoggerFactory.getLogger(No106_BinaryTreeFromInorderAndPostorder.class);
 
     public static void main(String[] arg) {
         testBuildTree();

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class No434_NumberOfIslandsII {
-    private final static Logger logger = LoggerFactory.getLogger(No434_NumberOfIslandsII.class);
+    private static final Logger logger = LoggerFactory.getLogger(No434_NumberOfIslandsII.class);
 
     public static void main(String[] args) {
         No434_NumberOfIslandsII No434_NumberOfIslandsII = new No434_NumberOfIslandsII();

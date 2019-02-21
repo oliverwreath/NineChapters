@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * SPACE: O(n)
  */
 public class Coins_in_a_line_II_395 {
-    private final static Logger logger = LoggerFactory.getLogger(Coins_in_a_line_II_395.class);
+    private static final Logger logger = LoggerFactory.getLogger(Coins_in_a_line_II_395.class);
 
     public static void main(String[] args) {
         Coins_in_a_line_II_395 thisClass = new Coins_in_a_line_II_395();

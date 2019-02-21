@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
  * Created by yanli on 2016-10-28.
  */
 public class FindMinimumInRotatedSortedArrayII_154 {
-    private final static Logger logger = LoggerFactory.getLogger(FindMinimumInRotatedSortedArrayII_154.class);
+    private static final Logger logger = LoggerFactory.getLogger(FindMinimumInRotatedSortedArrayII_154.class);
 
     public static void main(String[] arg) {
         new FindMinimumInRotatedSortedArrayII_154().testFindMinimumInRotatedSortedArrayII_154();

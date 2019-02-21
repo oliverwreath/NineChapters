@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class HashTableIceCreamParlor {
-    private final static Logger logger = LoggerFactory.getLogger(HashTableIceCreamParlor.class);
+    private static final Logger logger = LoggerFactory.getLogger(HashTableIceCreamParlor.class);
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 
 public class LIS {
-    private final static Logger logger = LoggerFactory.getLogger(LIS.class);
+    private static final Logger logger = LoggerFactory.getLogger(LIS.class);
 
     public static void main(String[] args) {
         //code
