@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by yanli on 9/3/2016.
  */
-public class KClosestNumbers {
-    private static final Logger logger = LoggerFactory.getLogger(KClosestNumbers.class);
+public class No460_KClosestNumbers {
+    private static final Logger logger = LoggerFactory.getLogger(No460_KClosestNumbers.class);
 
     public static void main(String[] arg) {
         testKClosestNumbers();
