@@ -9,13 +9,13 @@ import org.slf4j.LoggerFactory;
  */
 @Slf4j
 public class No437_Copy_Books {
-  private static final Logger logger = LoggerFactory.getLogger(No460_KClosestNumbers.class);
+  private static final Logger logger = LoggerFactory.getLogger(No437_Copy_Books.class);
 
   public static void main(String[] arg) {
-    testKClosestNumbers();
+    test();
   }
 
-  private static void testKClosestNumbers() {
+  private static void test() {
     No437_Copy_Books no437_Copy_Books = new No437_Copy_Books();
     logger.info("5 = {}", no437_Copy_Books.copyBooks(new int[]{3, 2, 4}, 2));
     logger.info("4 = {}", no437_Copy_Books.copyBooks(new int[]{3, 2, 4}, 3));
