@@ -3,6 +3,11 @@ package com.lintCode.BinarySearch1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * Created by yanli on 9/3/2016.
  */
@@ -14,52 +19,42 @@ public class No460_KClosestNumbers {
     }
 
     private static void testKClosestNumbers() {
-        logger.info("{}", kClosestNumbers(new int[]{1, 2, 3}, 2, 2));
-        logger.info("{}", kClosestNumbers(new int[]{1, 4, 6, 8}, 3, 3));
+        No460_KClosestNumbers no460_kClosestNumbers = new No460_KClosestNumbers();
+        logger.info("{}", no460_kClosestNumbers.kClosestNumbers(new int[]{1, 2, 3}, 2, 3));
+        logger.info("{}", no460_kClosestNumbers.kClosestNumbers(new int[]{1, 2, 4, 6, 8}, 3, 4));
     }
 
-    static int[] kClosestNumbers(int[] A, int target, int k) {
-        // filter coner cases
-        if (A == null || A.length == 0) {
-            return new int[]{};
+    public int[] kClosestNumbers(int[] nums, int target, int k) {
+        // write your code here
+        if (nums == null || nums.length == 0) {
+            return new int[0];
         }
 
-        // binary search - most closest
-        int len = A.length;
-        int start = 0;
-        int end = len - 1;
-        int closestIndex = -1;
-        while(start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (A[mid] == target) {
-                closestIndex = mid;
-                break;
-            } else if (A[mid] < target) {
-                start = mid;
-            } else {
-                end = mid;
-            }
+        int n = nums.length;
+        List<Entry> list = new ArrayList<>();
+        for (int num : nums) {
+            list.add(new Entry(num, Math.abs(num - target)));
+        }
+        Comparator<Entry> comparatorByDiff = (o1, o2) -> {if (o1.diff == o2.diff) {return o1.original - o2.original;} else {return o1.diff - o2.diff;}};
+        Collections.sort(list, comparatorByDiff);
+        int[] result = new int[k];
+        int i = 0;
+        for (Entry entry : list) {
+            if (i >= k) {break;}
+            result[i++] = entry.original;
         }
 
-        // scan k closest
-        if (closestIndex == -1) {
-            int startDiff = Math.abs(A[start] - target);
-            int endDiff = Math.abs(A[end] - target);
-            if (startDiff < endDiff) {
-                closestIndex = start;
-            } else {
-                closestIndex = end;
-            }
+        return result;
+    }
+
+    private class Entry {
+        int original = 0;
+        int diff = 0;
+
+        Entry(int original, int diff) {
+            this.original = original;
+            this.diff = diff;
         }
-        int left = closestIndex - 1;
-        int right = closestIndex + 1;
-        for (int i = 1; i < k; i++) {
-
-        }
-
-
-        // return result
-        return new int[0];
     }
 }
 //    Given A = [], target = 2 and k = 3, return [2, 1, 3].
