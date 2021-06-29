@@ -19,8 +19,8 @@ public class No549_TopKFrequentWordsMapReduce {
 //        MyLogger.info("result 2 v.s. " + functionName("12"));
     }
 
-    class OutputCollector<K, V> {
-        public void collect(K key, V value);
+    abstract class OutputCollector<K, V> {
+        public abstract void collect(K key, V value);
         // Adds a key/value pair to the output buffer
     }
 
@@ -29,7 +29,7 @@ public class No549_TopKFrequentWordsMapReduce {
         public String content;
     }
 
-    public class TopKFrequentWords {
+    public static class TopKFrequentWords {
         public static class Map {
             public void map(String _, Document value,
                             OutputCollector<String, Integer> output) {

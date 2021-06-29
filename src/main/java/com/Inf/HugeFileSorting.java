@@ -148,7 +148,7 @@ public class HugeFileSorting {
      * @param smallFiles        a list of k smallFiles (chunks)
      * @param FINAL_OUTPUT_PATH the final output file (k-way merged file (with deduplication))
      */
-    public void kWayMerging(final List<String> smallFiles, final String FINAL_OUTPUT_PATH) {
+    public static void kWayMerging(final List<String> smallFiles, final String FINAL_OUTPUT_PATH) {
         // filter abnormal inputs
         if (smallFiles == null || smallFiles.size() == 0 || isNullOrEmpty(FINAL_OUTPUT_PATH)) {
             return;
@@ -200,7 +200,7 @@ public class HugeFileSorting {
         }
     }
 
-    class Entry {
+    static class Entry {
         String word;
         int index;
 

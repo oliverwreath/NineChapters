@@ -17,12 +17,12 @@ public class No499_WordCountMapReduce {
 //        MyLogger.info("result 2 v.s. " + functionName("12"));
     }
 
-    class OutputCollector<K, V> {
-        public void collect(K key, V value);
+    abstract class OutputCollector<K, V> {
+        public abstract void collect(K key, V value);
         // Adds a key/value pair to the output buffer
     }
 
-    public class WordCount {
+    public static class WordCount {
         public static class Map {
             public void map(String key, String value, OutputCollector<String, Integer> output) {
                 // Write your code here

@@ -20,8 +20,8 @@ public class No504_InvertedIndexMapReduce {
 //        MyLogger.info("result 2 v.s. " + functionName("12"));
     }
 
-    class OutputCollector<K, V> {
-        public void collect(K key, V value);
+    abstract class OutputCollector<K, V> {
+        public abstract void collect(K key, V value);
         // Adds a key/value pair to the output buffer
     }
 
@@ -30,7 +30,7 @@ public class No504_InvertedIndexMapReduce {
         public String content;
     }
 
-    public class InvertedIndex {
+    public static class InvertedIndex {
         public static class Map {
             public void map(String _, Document value,
                             OutputCollector<String, Integer> output) {

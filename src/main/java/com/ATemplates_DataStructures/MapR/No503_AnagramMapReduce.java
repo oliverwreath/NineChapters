@@ -20,12 +20,12 @@ public class No503_AnagramMapReduce {
 //        MyLogger.info("result 2 v.s. " + functionName("12"));
     }
 
-    class OutputCollector<K, V> {
-        public void collect(K key, V value);
+    abstract class OutputCollector<K, V> {
+        public abstract void collect(K key, V value);
         // Adds a key/value pair to the output buffer
     }
 
-    public class Anagram {
+    public static class Anagram {
         public static class Map {
             public void map(String key, String value,
                             OutputCollector<String, String> output) {
