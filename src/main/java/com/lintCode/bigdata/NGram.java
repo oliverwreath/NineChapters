@@ -7,7 +7,7 @@ import java.util.Iterator;
  */
 public class NGram {
     public static class Map {
-        public void map(String _, int n, String str,
+        public void map(int n, String str,
                         OutputCollector<String, Integer> output) {
             // Write your code here
             // Output the results into output buffer.
