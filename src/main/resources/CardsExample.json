@@ -1,0 +1,15 @@
+[{
+  "name": "Clean Code",
+  "tags": ["Arrays&Hashing", "EASY"],
+  "reviewedAt": [
+    [2022, 8, 14],
+    [2022, 8, 7]
+  ]
+}, {
+  "name": "Code Complete",
+  "tags": ["Graph", "HARD"],
+  "reviewedAt": [
+    [2022, 8, 12],
+    [2022, 8, 1]
+  ]
+}]

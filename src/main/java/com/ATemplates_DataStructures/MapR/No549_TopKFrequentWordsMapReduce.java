@@ -31,7 +31,7 @@ public class No549_TopKFrequentWordsMapReduce {
 
     public static class TopKFrequentWords {
         public static class Map {
-            public void map(String _, Document value,
+            public void map(Document value,
                             OutputCollector<String, Integer> output) {
                 // Write your code here
                 // Output the results into output buffer.

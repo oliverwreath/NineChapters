@@ -35,7 +35,7 @@ public class TopKFrequentWords {
         Map map = new Map();
         OutputCollector<String, Integer> output = new OutputCollector<String, Integer>();
         for (Document doc : docs) {
-            map.map("", doc, output);
+            map.map(doc, output);
         }
         java.util.Map<String, List<Integer>> outputBuffer = output.getOutputBuffer();
         Set<String> keys = outputBuffer.keySet();
@@ -54,7 +54,7 @@ public class TopKFrequentWords {
     }
 
     public static class Map {
-        public void map(String _, Document value, OutputCollector<String, Integer> output) {
+        public void map(Document value, OutputCollector<String, Integer> output) {
             // Write your code here
             // Output the results into output buffer.
             // Ps. output.collect(String key, int value);

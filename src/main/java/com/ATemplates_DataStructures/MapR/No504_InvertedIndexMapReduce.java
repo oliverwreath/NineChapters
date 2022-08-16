@@ -32,7 +32,7 @@ public class No504_InvertedIndexMapReduce {
 
     public static class InvertedIndex {
         public static class Map {
-            public void map(String _, Document value,
+            public void map(Document value,
                             OutputCollector<String, Integer> output) {
                 // Write your code here
                 // Output the results into output buffer.
