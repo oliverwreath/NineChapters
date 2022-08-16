@@ -14,10 +14,11 @@ import java.util.function.IntFunction;
  */
 @Slf4j
 @Data
-public class Card {
+public class Card implements Comparable<Card> {
   private String name;
   private List<String> tags;
   private List<LocalDate> reviewedAt;
+  private int estimateMinutes;
   private static final IntFunction<Integer> func = x -> x * x;
 
   public Card() {
@@ -46,11 +47,20 @@ public class Card {
   }
 
   @Override
+  public int compareTo(Card c) {
+    int i = this.getNextReviewedDate().compareTo(c.getNextReviewedDate());
+    if (i != 0) return i;
+    return Integer.compare(this.estimateMinutes, c.estimateMinutes);
+  }
+
+  @Override
   public String toString() {
     return new StringJoiner(", ", Card.class.getSimpleName() + "[", "]")
       .add("name='" + name + "'")
+      .add("estimateMinutes=" + estimateMinutes)
+      .add("getNextReviewedDate=" + getNextReviewedDate())
+      .add("getLastReviewedDate=" + getLastReviewedDate())
       .add("tags=" + tags)
-      .add("reviewedAt=" + reviewedAt)
       .toString();
   }
 }

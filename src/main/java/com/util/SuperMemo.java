@@ -14,10 +14,11 @@ import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.IntFunction;
+import java.util.stream.Collectors;
 
 /**
  * Author: Oliver
- * Spaced repetition Software: reads your provided Customized Cards.csv.
+ * Spaced repetition Software: reads your provided Customized Cards.json.
  */
 @Slf4j
 public class SuperMemo {
@@ -29,7 +30,11 @@ public class SuperMemo {
     printRecommendedSpacedRepetitions();
 //    printJsonStringExample();
     List<Card> cards = readCards();
+    System.out.println(String.format("cards.size()=%d", cards.size()));
     System.out.println(cards);
+    List<Card> sortedList = cards.stream().sorted().collect(Collectors.toList());
+    System.out.println(String.format("sortedList.size()=%d", sortedList.size()));
+    System.out.println(sortedList);
   }
 
   private static void printJsonStringExample() {
