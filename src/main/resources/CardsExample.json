@@ -1,0 +1,266 @@
+[
+  {
+    "name": "LC1wo Sum",
+    "estimateMinutes": 20,
+    "difficulty": "EASY",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Arrays&Hashing"
+    ],
+    "reviewedAt": [
+      [2022,8,14],[2022,8,7]
+    ]
+  },
+  {
+    "name": "LC20alid Parentheses",
+    "estimateMinutes": 20,
+    "difficulty": "EASY",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Stack"
+    ],
+    "reviewedAt": [
+      [2022,7,24],[2022,8,15]
+    ]
+  },
+  {
+    "name": "LC128Longest Consecutive Sequence",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Array&Hashing"
+    ],
+    "reviewedAt": [
+      [2022,8,1],[2022,8,17]
+    ]
+  },
+  {
+    "name": "LC125Valid Palindrome",
+    "estimateMinutes": 15,
+    "difficulty": "EASY",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "TwoPointers"
+    ],
+    "reviewedAt": [
+      [2022,8,2],[2022,8,20]
+    ]
+  },
+  {
+    "name": "LC153Sum",
+    "estimateMinutes": 25,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "TwoPointers"
+    ],
+    "reviewedAt": [
+      [2022,8,2],[2022,8,20]
+    ]
+  },
+  {
+    "name": "LC11Container With Most Water",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "TwoPointers"
+    ],
+    "reviewedAt": [
+      [2022,8,2],[2022,8,24]
+    ]
+  },
+  {
+    "name": "LC121Best Time to Buy and Sell Stock",
+    "estimateMinutes": 15,
+    "difficulty": "EASY",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "SlidingWindow"
+    ],
+    "reviewedAt": [
+      [2022,8,1],[2022,8,16]
+    ]
+  },
+  {
+    "name": "LC33Search in Rotated Sorted Array",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "WORST",
+    "tags": [
+      "BinarySearch"
+    ],
+    "reviewedAt": [
+      [2022,8,1],[2022,8,18]
+    ]
+  },
+  {
+    "name": "LC153Find Minimum in Rotated Sorted Array",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "WORST",
+    "tags": [
+      "BinarySearch"
+    ],
+    "reviewedAt": [
+      [2022,8,1],[2022,8,18]
+    ]
+  },
+  {
+    "name": "LCLinkedListRemaining https://labuladong.github.io/algo/2/19/18/",
+    "estimateMinutes": 130,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "LinkedList"
+    ],
+    "reviewedAt": [
+      [2022,8,14]
+    ]
+  },
+  {
+    "name": "LC876MiddleOfTheLinkedList",
+    "estimateMinutes": 5,
+    "difficulty": "EASY",
+    "lastPerformance": "READY",
+    "tags": [
+      "LinkedList","TwoPointers"
+    ],
+    "reviewedAt": [
+      [2022,8,14],[2022,8,31]
+    ]
+  },
+  {
+    "name": "LC86PartitionList",
+    "estimateMinutes": 25,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "LinkedList","TwoPointers"
+    ],
+    "reviewedAt": [
+      [2022,8,14],[2022,8,29]
+    ]
+  },
+  {
+    "name": "LC21MergeTwoSortedLists",
+    "estimateMinutes": 15,
+    "difficulty": "EASY",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "LinkedList","Recursion"
+    ],
+    "reviewedAt": [
+      [2022,8,14],[2022,8,29]
+    ]
+  },
+  {
+    "name": "LC295Find Median from Data Stream",
+    "estimateMinutes": 40,
+    "difficulty": "HARD",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "HeapPriorityQueue"
+    ],
+    "reviewedAt": [
+      [2022,8,16]
+    ]
+  },
+  {
+    "name": "LC200Number of Islands",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Graphs","BFS"
+    ],
+    "reviewedAt": [
+      [2022,8,3],[2022,8,25]
+    ]
+  },
+  {
+    "name": "LC133Clone Graph",
+    "estimateMinutes": 35,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "WORST",
+    "tags": [
+      "Graphs","DFS"
+    ],
+    "reviewedAt": [
+      [2022,8,3],[2022,8,27]
+    ]
+  },
+  {
+    "name": "LC417Pacific Atlantic Water Flow",
+    "estimateMinutes": 35,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Graphs","BFS"
+    ],
+    "reviewedAt": [
+      [2022,8,3],[2022,8,28]
+    ]
+  },
+  {
+    "name": "LC207Course Schedule",
+    "estimateMinutes": 35,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Graphs","DFS","HasCycle"
+    ],
+    "reviewedAt": [
+      [2022,8,3],[2022,8,28]
+    ]
+  },
+  {
+    "name": "LC767Reorganize String",
+    "estimateMinutes": 35,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "WORST",
+    "tags": [
+      "BucketSort","Greedy"
+    ],
+    "reviewedAt": [
+      [2022,8,24]
+    ]
+  },
+  {
+    "name": "LC46Permutations",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "WORST",
+    "tags": [
+      "Array","Backtracking"
+    ],
+    "reviewedAt": [
+      [2022,8,24]
+    ]
+  },
+  {
+    "name": "LC1329SortTheMatrixDiagonally",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Array","Sorting","Matrix"
+    ],
+    "reviewedAt": [
+      [2022,8,28]
+    ]
+  },
+  {
+    "name": "LC48RotateImage",
+    "estimateMinutes": 30,
+    "difficulty": "MEDIUM",
+    "lastPerformance": "GOOD",
+    "tags": [
+      "Array","Math","Matrix"
+    ],
+    "reviewedAt": [
+      [2022,8,29]
+    ]
+  }
+]
