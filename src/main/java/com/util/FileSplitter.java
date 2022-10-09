@@ -58,7 +58,7 @@ public class FileSplitter {
     try (var lines = Files.lines(filePath)) {
         lineCount = lines.parallel().count();
     } catch (IOException e) {
-        e.printStackTrace();
+        log.error(e.getMessage());
     }
     return lineCount;
   }
