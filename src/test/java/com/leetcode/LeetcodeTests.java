@@ -390,4 +390,48 @@ class LeetcodeTests {
     expected = new ListNode(new int[]{6,5,4,3,2,1});
     assertEquals(expected, lc206ReverseLinkedList.reverseList(head));
   }
+
+  @Test void testLC92ReverseLinkedListII() {
+    LC92ReverseLinkedListII lc92ReverseLinkedListII = new LC92ReverseLinkedListII();
+    ListNode head = new ListNode(new int[]{1,2,3,4,5});
+    ListNode expected = new ListNode(new int[]{5,4,3,2,1});
+    assertEquals(expected, lc92ReverseLinkedListII.reverseBetween(head, 1, 5));
+    head = new ListNode(new int[]{1,2,3,4,5,6});
+    expected = new ListNode(new int[]{1,5,4,3,2,6});
+    assertEquals(expected, lc92ReverseLinkedListII.reverseBetween(head, 2, 5));
+  }
+
+  @Test void testLC104MaximumDepthOfBinaryTree() {
+    LC104MaximumDepthOfBinaryTree lc104MaximumDepthOfBinaryTree = new LC104MaximumDepthOfBinaryTree();
+    TreeNode root = new TreeNode(3);
+    root.addLeft(9);
+    TreeNode right = root.addRight(20);
+    right.addLeft(15);
+    right.addRight(7);
+    assertEquals(3, lc104MaximumDepthOfBinaryTree.maxDepth(root));
+  }
+
+  @Test void testLC543DiameterOfBinaryTree() {
+    LC543DiameterOfBinaryTree lc543DiameterOfBinaryTree = new LC543DiameterOfBinaryTree();
+    TreeNode root = new TreeNode(1);
+    root.addLeft(2);
+    assertEquals(1, lc543DiameterOfBinaryTree.diameterOfBinaryTree(root));
+    root = new TreeNode(1);
+    root.addLeft(2).addLeft(4);
+    assertEquals(2, lc543DiameterOfBinaryTree.diameterOfBinaryTree(root));
+    root = new TreeNode(3);
+    root.addLeft(9);
+    TreeNode right = root.addRight(20);
+    right.addLeft(15);
+    right.addRight(7);
+    root.printTree();
+    assertEquals(3, lc543DiameterOfBinaryTree.diameterOfBinaryTree(root));
+    root = new TreeNode(3);
+    root.addLeft(9).addLeft(1).addLeft(2).addLeft(3).addLeft(4);
+    right = root.addRight(20);
+    right.addLeft(15).addLeft(16).addLeft(17).addLeft(18);
+    right.addRight(7).addRight(8).addRight(9).addRight(10);
+    root.printTree();
+    assertEquals(10, lc543DiameterOfBinaryTree.diameterOfBinaryTree(root));
+  }
 }
