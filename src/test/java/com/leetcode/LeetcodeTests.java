@@ -380,4 +380,14 @@ class LeetcodeTests {
     expected = new ListNode(new int[]{4,5,6});
     assertEquals(expected, lc876MiddleOfTheLinkedList.middleNode(head));
   }
+
+  @Test void testLC206ReverseLinkedList() {
+    LC206ReverseLinkedList lc206ReverseLinkedList = new LC206ReverseLinkedList();
+    ListNode head = new ListNode(new int[]{1,2,3,4,5});
+    ListNode expected = new ListNode(new int[]{5,4,3,2,1});
+    assertEquals(expected, lc206ReverseLinkedList.reverseList(head));
+    head = new ListNode(new int[]{1,2,3,4,5,6});
+    expected = new ListNode(new int[]{6,5,4,3,2,1});
+    assertEquals(expected, lc206ReverseLinkedList.reverseList(head));
+  }
 }
