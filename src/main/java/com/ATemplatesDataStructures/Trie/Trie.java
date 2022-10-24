@@ -4,6 +4,7 @@ package com.ATemplatesDataStructures.Trie;
  * Author: Oliver
  */
 class Trie {
+
   TrieNode root;
 
   public Trie() {
@@ -72,7 +73,7 @@ class Trie {
   @Override
   public String toString() {
     return "Trie{" +
-            "root=" + root +
-            '}';
+        "root=" + root +
+        '}';
   }
 }

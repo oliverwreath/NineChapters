@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.FollowUp7.DFS;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No535_HouseRobberIII {
+
   public static void main(String[] args) {
     No535_HouseRobberIII No535_HouseRobberIII = new No535_HouseRobberIII();
     No535_HouseRobberIII.testNo535_HouseRobberIII();
@@ -22,6 +22,7 @@ public class No535_HouseRobberIII {
   }
 
   class ResultType {
+
     int rob;
     int noRob;
 

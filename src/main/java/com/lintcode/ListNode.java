@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class ListNode {
+
   public int val;
   public ListNode next;
 
@@ -26,9 +27,9 @@ public class ListNode {
   @Override
   public String toString() {
     return "ListNode{" +
-            "val=" + val +
-            ", next=" + next +
-            '}';
+        "val=" + val +
+        ", next=" + next +
+        '}';
   }
 
   public ListNode addNext(int x) {

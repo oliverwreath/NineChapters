@@ -1,19 +1,19 @@
 package com.lintcode.BinaryTree;
 
-import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
+import static com.lintcode.BinaryTree.BinaryTree.getTree;
 
+import com.util.TreeNode;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
-
-import static com.lintcode.BinaryTree.BinaryTree.getTree;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/10.
  */
 @Slf4j
 public class BinaryTreeNonRecursion {
+
   public static void main(String[] args) {
     testPreorderTraversal();
     testInorderTraversal();

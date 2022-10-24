@@ -1,15 +1,15 @@
 package com.leetcode.gg;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC388LongestAbsoluteFilePath {
+
   public static void main(String[] arg) {
     new LC388LongestAbsoluteFilePath().testLongestAbsoluteFilePath_388();
   }
@@ -18,7 +18,8 @@ public class LC388LongestAbsoluteFilePath {
     log.info("{}", lengthLongestPath(""));
     log.info("{}", lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));
     log.debug("");
-    log.info("{}", lengthLongestPath("dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"));
+    log.info("{}",
+        lengthLongestPath("dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"));
   }
 
   public int lengthLongestPath(String input) {
@@ -54,6 +55,7 @@ public class LC388LongestAbsoluteFilePath {
   }
 
   private class Entry {
+
     int level;
     int length;
     boolean isFile;
@@ -70,10 +72,10 @@ public class LC388LongestAbsoluteFilePath {
     @Override
     public String toString() {
       return "ResultEntry{" +
-              "level=" + level +
-              ", length=" + length +
-              ", isFile=" + isFile +
-              '}';
+          "level=" + level +
+          ", length=" + length +
+          ", isFile=" + isFile +
+          '}';
     }
   }
 

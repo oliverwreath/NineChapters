@@ -1,16 +1,16 @@
 package com.lintcode.DataStructures;
 
 import com.util.ListNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.LinkedList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class Rehashing {
+
   public static void main(String[] arg) {
     testRehashing();
   }

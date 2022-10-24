@@ -7,15 +7,16 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class MaximalSquare {
+
   public static void main(String[] arg) {
     testMaximalSquare();
   }
 
   private static void testMaximalSquare() {
     log.info("{}", maxSquare(new int[][]{{1, 0, 1, 0, 0},
-            {1, 0, 1, 1, 1},
-            {1, 1, 1, 1, 1},
-            {1, 0, 0, 1, 0}}));
+        {1, 0, 1, 1, 1},
+        {1, 1, 1, 1, 1},
+        {1, 0, 0, 1, 0}}));
   }
 
   /**

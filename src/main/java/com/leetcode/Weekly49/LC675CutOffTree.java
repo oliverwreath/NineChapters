@@ -1,13 +1,13 @@
 package com.leetcode.Weekly49;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC675CutOffTree {
+
   public static void main(String[] args) {
     testCutOffTree_675();
   }

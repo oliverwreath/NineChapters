@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC153FindMinimumInRotatedSortedArray {
+
   public int findMin(int[] nums) {
     int min = nums[0];
 

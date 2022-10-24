@@ -1,15 +1,15 @@
 package com.leetcode.SmarkingAlgorithmContest;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC437PathSumIII {
+
   public static void main(String[] arg) {
     new LC437PathSumIII().testPathSumIII_437();
   }
@@ -36,7 +36,6 @@ public class LC437PathSumIII {
   private int target;
 
   public int pathSum(TreeNode root, int sum) {
-
 
     counter = 0;
     target = sum;

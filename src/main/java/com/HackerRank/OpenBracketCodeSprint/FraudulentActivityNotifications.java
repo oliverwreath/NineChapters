@@ -1,17 +1,17 @@
 package com.HackerRank.OpenBracketCodeSprint;
 
 import com.lintcode.Advanced.Heap.HashHeap.HashHeap;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Comparator;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class FraudulentActivityNotifications {
+
   private static HashHeap maxHeap;
   private static HashHeap minHeap;
 

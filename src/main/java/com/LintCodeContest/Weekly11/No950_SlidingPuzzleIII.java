@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No950_SlidingPuzzleIII {
+
   public static void main(String[] args) {
     No950_SlidingPuzzleIII No950_SlidingPuzzleIII = new No950_SlidingPuzzleIII();
     No950_SlidingPuzzleIII.testNo950_SlidingPuzzleIII();

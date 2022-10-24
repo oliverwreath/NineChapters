@@ -1,5 +1,9 @@
 package com.AmazonSession;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 import com.AmazonSession.LeetCodeTopQuestionsFromAmazon.DynamicProgramming.LC121BestTimeToBuyAndSellStock;
 import com.AmazonSession.LeetCodeTopQuestionsFromAmazon.DynamicProgramming.LC53MaximumSubarray;
 import com.AmazonSession.LeetCodeTopQuestionsFromAmazon.DynamicProgramming.LC70ClimbingStairs;
@@ -14,13 +18,12 @@ import com.util.ListNode;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * Author: Oliver
  */
 @Slf4j
 class AmazonSessionTest {
+
   @Test void testLC121BestTimeToBuyAndSellStock() {
     LC121BestTimeToBuyAndSellStock lintcode12MinStack = new LC121BestTimeToBuyAndSellStock();
     assertEquals(5, lintcode12MinStack.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
@@ -45,25 +48,25 @@ class AmazonSessionTest {
     ListNode expected = new ListNode(0);
     assertEquals(expected, lc2AddTwoNumbers.addTwoNumbers(node, node2));
 
-    node = new ListNode(new int[]{2,4,3});
-    node2 = new ListNode(new int[]{5,6,4});
-    expected = new ListNode(new int[]{7,0,8});
+    node = new ListNode(new int[]{2, 4, 3});
+    node2 = new ListNode(new int[]{5, 6, 4});
+    expected = new ListNode(new int[]{7, 0, 8});
     assertEquals(expected, lc2AddTwoNumbers.addTwoNumbers(node, node2));
 
-    node = new ListNode(new int[]{2,4,3});
-    node2 = new ListNode(new int[]{5,6,6});
-    expected = new ListNode(new int[]{7,0,0,1});
+    node = new ListNode(new int[]{2, 4, 3});
+    node2 = new ListNode(new int[]{5, 6, 6});
+    expected = new ListNode(new int[]{7, 0, 0, 1});
     assertEquals(expected, lc2AddTwoNumbers.addTwoNumbers(node, node2));
 
-    node = new ListNode(new int[]{9,9,9,9,9,9,9});
-    node2 = new ListNode(new int[]{9,9,9,9});
-    expected = new ListNode(new int[]{8,9,9,9,0,0,0,1});
+    node = new ListNode(new int[]{9, 9, 9, 9, 9, 9, 9});
+    node2 = new ListNode(new int[]{9, 9, 9, 9});
+    expected = new ListNode(new int[]{8, 9, 9, 9, 0, 0, 0, 1});
     assertEquals(expected, lc2AddTwoNumbers.addTwoNumbers(node, node2));
   }
 
   @Test void testLC160IntersectionOfTwoLinkedLists() {
     LC160IntersectionOfTwoLinkedLists lc160IntersectionOfTwoLinkedLists = new LC160IntersectionOfTwoLinkedLists();
-    ListNode node = new ListNode(new int[]{2,4,3});
+    ListNode node = new ListNode(new int[]{2, 4, 3});
     ListNode node2 = new ListNode(5);
     node2.addNext(6).next = node.next.next;
     ListNode expected = new ListNode(3);
@@ -80,15 +83,15 @@ class AmazonSessionTest {
     assertEquals(expected, lc23MergeKSortedLists.mergeKLists(new ListNode[]{expected}));
 
 //    Output: [1,1,2,3,4,4,5,6]
-    ListNode node = new ListNode(new int[]{1,4,5});
-    ListNode node2 = new ListNode(new int[]{1,3,4});
-    ListNode node3 = new ListNode(new int[]{2,6});
-    expected = new ListNode(new int[]{1,1,2,3,4,4,5,6});
+    ListNode node = new ListNode(new int[]{1, 4, 5});
+    ListNode node2 = new ListNode(new int[]{1, 3, 4});
+    ListNode node3 = new ListNode(new int[]{2, 6});
+    expected = new ListNode(new int[]{1, 1, 2, 3, 4, 4, 5, 6});
     assertEquals(expected, lc23MergeKSortedLists.mergeKLists(new ListNode[]{node, node2, node3}));
 
-    node = new ListNode(new int[]{2,4,3});
-    node2 = new ListNode(new int[]{5,6,6});
-    expected = new ListNode(new int[]{2,4,3,5,6,6});
+    node = new ListNode(new int[]{2, 4, 3});
+    node2 = new ListNode(new int[]{5, 6, 6});
+    expected = new ListNode(new int[]{2, 4, 3, 5, 6, 6});
     assertEquals(expected, lc23MergeKSortedLists.mergeKLists(new ListNode[]{node, node2}));
   }
 
@@ -117,7 +120,8 @@ class AmazonSessionTest {
     assertEquals(45, getLc223RectangleArea(lc223RectangleArea, new int[]{-3, 0, 3, 4, 0, -1, 9, 2}));
     assertEquals(4, getLc223RectangleArea(lc223RectangleArea, new int[]{0, 0, 0, 0, -1, -1, 1, 1}));
     assertEquals(16, getLc223RectangleArea(lc223RectangleArea, new int[]{-2, -2, 2, 2, -2, -2, 2, 2}));
-    assertEquals(2, getLc223RectangleArea(lc223RectangleArea, new int[]{-1500000001, 0, -1500000000, 1, 1500000000, 0, 1500000001, 1}));
+    assertEquals(2, getLc223RectangleArea(lc223RectangleArea,
+        new int[]{-1500000001, 0, -1500000000, 1, 1500000000, 0, 1500000001, 1}));
     assertEquals(19, getLc223RectangleArea(lc223RectangleArea, new int[]{-2, -2, 2, 2, 1, -3, 3, -1}));
   }
 

@@ -1,14 +1,22 @@
 package com.AmazonSession.leetcode.algorithms;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class WordLadderII {
+
   public static void main(String[] arg) {
     new WordLadderII().testWordLadder();
   }
@@ -56,7 +64,8 @@ public class WordLadderII {
     return ladder;
   }
 
-  private void dfs(List<List<String>> ladder, List<String> path, Map<String, List<String>> map, Map<String, Integer> distance, String target, String currentNode) {
+  private void dfs(List<List<String>> ladder, List<String> path, Map<String, List<String>> map,
+      Map<String, Integer> distance, String target, String currentNode) {
     path.add(currentNode);
     if (currentNode.equals(target)) {
       Collections.reverse(path);

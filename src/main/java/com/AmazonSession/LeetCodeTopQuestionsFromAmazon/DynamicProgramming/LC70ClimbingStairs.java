@@ -7,13 +7,13 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * Version 1: Simply Working. The most classic simple DP ever.
  * <p>
- * TIME: O(N)
- * SPACE: O(N)
+ * TIME: O(N) SPACE: O(N)
  * <p>
  * Version 2: TBD.
  */
 @Slf4j
 public class LC70ClimbingStairs {
+
   public int climbStairs(int n) {
     if (n < 1) {
       return 1;

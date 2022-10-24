@@ -1,14 +1,14 @@
 package com.LintCodeContest.Weekly;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No792_KthPrimenumber {
+
   public static void main(String[] args) {
     testNo790_Parser();
   }

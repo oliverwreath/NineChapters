@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class BinaryTreeMaximumPathSum_124 {
+
   public static void main(String[] arg) {
     new BinaryTreeMaximumPathSum_124().testSameTree_100();
   }
@@ -58,6 +59,7 @@ public class BinaryTreeMaximumPathSum_124 {
   }
 
   private class ReturnResult {
+
     int maxLocal;
     int maxGlobal;
 
@@ -69,9 +71,9 @@ public class BinaryTreeMaximumPathSum_124 {
     @Override
     public String toString() {
       return "ReturnResult{" +
-              "maxLocal=" + maxLocal +
-              ", maxGlobal=" + maxGlobal +
-              '}';
+          "maxLocal=" + maxLocal +
+          ", maxGlobal=" + maxGlobal +
+          '}';
     }
   }
 

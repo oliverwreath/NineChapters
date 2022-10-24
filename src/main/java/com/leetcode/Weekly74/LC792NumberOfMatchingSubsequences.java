@@ -1,12 +1,12 @@
 package com.leetcode.Weekly74;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC792NumberOfMatchingSubsequences {
+
   public static void main(String[] args) {
     LC792NumberOfMatchingSubsequences LC792NumberOfMatchingSubsequences = new LC792NumberOfMatchingSubsequences();
     LC792NumberOfMatchingSubsequences.testNo792_NumberOfMatchingSubsequences();
@@ -15,14 +15,17 @@ public class LC792NumberOfMatchingSubsequences {
   private void testNo792_NumberOfMatchingSubsequences() {
     log.info("result 1 v.s. " + numMatchingSubseq("abcde", new String[]{"acd"}));
     log.info("result 3 v.s. " + numMatchingSubseq("abcde", new String[]{"a", "bb", "acd", "ace"}));
-    log.info("result 2 v.s. " + numMatchingSubseq("dsahjpjauf", new String[]{"ahjpjau", "ja", "ahbwzgqnuk", "tnmlanowax"}));
+    log.info(
+        "result 2 v.s. " + numMatchingSubseq("dsahjpjauf", new String[]{"ahjpjau", "ja", "ahbwzgqnuk", "tnmlanowax"}));
     log.info("result 1 v.s. " + numMatchingSubseq("dsahjpjauf", new String[]{"ahjpjau"}));
     log.info("result 1 v.s. " + numMatchingSubseq("dsahjpjauf", new String[]{"ja"}));
     log.info("result 2 v.s. " + numMatchingSubseq("dsahjpjauf", new String[]{"ahjpjau", "ja"}));
-    log.info("result 2 v.s. " + numMatchingSubseq("qlhxagxdqh", new String[]{"qlhxagxdq", "qlhxagxdq", "lhyiftwtut", "yfzwraahab"}));
+    log.info("result 2 v.s. " + numMatchingSubseq("qlhxagxdqh",
+        new String[]{"qlhxagxdq", "qlhxagxdq", "lhyiftwtut", "yfzwraahab"}));
   }
 
   class TrieNode {
+
     TrieNode[] next;
     boolean isWord;
     String s;
@@ -36,13 +39,14 @@ public class LC792NumberOfMatchingSubsequences {
     @Override
     public String toString() {
       return "TrieNode{" +
-              "isWord=" + isWord +
-              ", s='" + s + '\'' +
-              '}';
+          "isWord=" + isWord +
+          ", s='" + s + '\'' +
+          '}';
     }
   }
 
   class Trie {
+
     TrieNode root;
 
     public Trie() {
@@ -100,8 +104,8 @@ public class LC792NumberOfMatchingSubsequences {
     @Override
     public String toString() {
       return "Trie{" +
-              "root=" + root +
-              '}';
+          "root=" + root +
+          '}';
     }
   }
 

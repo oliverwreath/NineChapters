@@ -1,15 +1,15 @@
 package com.HackerRank.AnalyzeTest;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.math.BigInteger;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class AsteriskExpressions {
+
   private static BigInteger modder = new BigInteger("1000000007");
   private static long modderLong = 1000000007;
 
@@ -62,7 +62,8 @@ public class AsteriskExpressions {
         ret = ret.multiply(base);
         ret = ret.mod(modder);
       } else {
-        if (number.startsWith("0")) return Long.MIN_VALUE;
+        if (number.startsWith("0"))
+          return Long.MIN_VALUE;
         ret = ret.multiply(new BigInteger(number));
         ret = ret.mod(modder);
       }

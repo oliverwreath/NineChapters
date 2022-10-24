@@ -1,16 +1,16 @@
 package com.ATemplatesDataStructures.Trie;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * damn! screwed up. Revisit is recommended.
  */
 @Slf4j
 public class No775_PalindromePairs {
+
   public static void main(String[] args) {
     No775_PalindromePairs No775_PalindromePairs = new No775_PalindromePairs();
     No775_PalindromePairs.testNo775_PalindromePairs();
@@ -21,10 +21,12 @@ public class No775_PalindromePairs {
 //        log.info("result [[0, 1], [1, 0]] v.s. " + trie.isParlindrome("", -1));
     log.info("result true v.s. " + trie.isParlindrome("s", 0));
     log.info("result [[0, 1], [1, 0]] v.s. " + palindromePairs(new String[]{"bat", "tab", "cat"}));
-    log.info("result [[0, 1], [1, 0], [3, 2], [2, 4]]  v.s. " + palindromePairs(new String[]{"abcd", "dcba", "lls", "s", "sssll"}));
+    log.info("result [[0, 1], [1, 0], [3, 2], [2, 4]]  v.s. " + palindromePairs(
+        new String[]{"abcd", "dcba", "lls", "s", "sssll"}));
   }
 
   class TrieNode {
+
     int index;
     TrieNode[] next;
 
@@ -35,6 +37,7 @@ public class No775_PalindromePairs {
   }
 
   class Trie {
+
     TrieNode root;
 
     Trie(String[] words) {

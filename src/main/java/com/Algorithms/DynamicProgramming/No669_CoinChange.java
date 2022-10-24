@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No669_CoinChange {
+
   public static void main(String[] args) {
     testNo669_coinChange();
   }

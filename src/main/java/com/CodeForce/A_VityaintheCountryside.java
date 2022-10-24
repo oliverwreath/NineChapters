@@ -1,14 +1,14 @@
 package com.CodeForce;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class A_VityaintheCountryside {
+
   public static void main(String[] arg) {
 
     Scanner scan = new Scanner(System.in);

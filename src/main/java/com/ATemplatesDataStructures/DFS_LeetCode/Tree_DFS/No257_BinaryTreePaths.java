@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.DFS_LeetCode.Tree_DFS;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No257_BinaryTreePaths {
+
   public static void main(String[] args) {
     testNo257_BinaryTreePaths();
   }

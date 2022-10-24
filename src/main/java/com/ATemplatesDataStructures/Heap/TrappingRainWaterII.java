@@ -1,25 +1,25 @@
 package com.ATemplatesDataStructures.Heap;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class TrappingRainWaterII {
+
   public static void main(String[] arg) {
     testTrappingRainWaterII();
   }
 
   private static void testTrappingRainWaterII() {
     log.info("14 == {}", new TrappingRainWaterII().trapRainWater(new int[][]{
-            {12, 13, 0, 12},
-            {13, 4, 13, 12},
-            {13, 8, 10, 12},
-            {12, 13, 12, 12},
-            {13, 13, 13, 13}}));
+        {12, 13, 0, 12},
+        {13, 4, 13, 12},
+        {13, 8, 10, 12},
+        {12, 13, 12, 12},
+        {13, 13, 13, 13}}));
   }
 
   /**
@@ -89,6 +89,7 @@ public class TrappingRainWaterII {
   }
 
   class Cell {
+
     int x;
     int y;
     int h;
@@ -102,10 +103,10 @@ public class TrappingRainWaterII {
     @Override
     public String toString() {
       return "Cell{" +
-              "x=" + x +
-              ", y=" + y +
-              ", h=" + h +
-              '}';
+          "x=" + x +
+          ", y=" + y +
+          ", h=" + h +
+          '}';
     }
   }
 }

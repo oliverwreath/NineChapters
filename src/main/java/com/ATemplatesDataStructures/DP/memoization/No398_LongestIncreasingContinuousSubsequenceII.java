@@ -1,31 +1,34 @@
 package com.ATemplatesDataStructures.DP.memoization;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No398_LongestIncreasingContinuousSubsequenceII {
+
   public static void main(String[] args) {
     testNo397_LongestIncreasingContinuousSubsequence();
   }
 
   private static void testNo397_LongestIncreasingContinuousSubsequence() {
     No398_LongestIncreasingContinuousSubsequenceII No397_LongestIncreasingContinuousSubsequence = new No398_LongestIncreasingContinuousSubsequenceII();
-    log.info("result 1 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequenceII(new int[][]{
+    log.info("result 1 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequenceII(
+        new int[][]{
             {3}
-    }));
-    log.info("result 3 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequenceII(new int[][]{
+        }));
+    log.info("result 3 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequenceII(
+        new int[][]{
             {1, 2},
             {3, 5}
-    }));
-    log.info("result 25 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequenceII(new int[][]{
+        }));
+    log.info("result 25 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequenceII(
+        new int[][]{
             {1, 2, 3, 4, 5},
             {16, 17, 24, 23, 6},
             {15, 18, 25, 22, 7},
             {14, 19, 20, 21, 8},
             {13, 12, 11, 10, 9}
-    }));
+        }));
   }
 
   /**

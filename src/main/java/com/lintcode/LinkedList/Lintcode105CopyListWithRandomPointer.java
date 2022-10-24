@@ -1,14 +1,14 @@
 package com.lintcode.LinkedList;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class Lintcode105CopyListWithRandomPointer {
+
   public RandomListNode copyRandomList(RandomListNode head) {
     if (head == null) {
       return null;

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No843_DigitalFlip {
+
   public static void main(String[] args) {
     No843_DigitalFlip No843_DigitalFlip = new No843_DigitalFlip();
     No843_DigitalFlip.testNo843_DigitalFlip();
@@ -13,7 +14,9 @@ public class No843_DigitalFlip {
     log.info("result 2 v.s. " + flipDigit(new int[]{1, 0, 0, 1, 1, 1}));
     log.info("result 2 v.s. " + flipDigit(new int[]{1, 0, 1, 0, 1, 0}));
     log.info("result 3 v.s. " + flipDigit(new int[]{0, 1, 0, 1, 0, 1, 0}));
-    log.info("result 18 v.s. " + flipDigit(new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0}));
+    log.info("result 18 v.s. " + flipDigit(
+        new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0,
+            1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0}));
   }
 
   int flipDigit(int[] A) {
@@ -82,7 +85,6 @@ public class No843_DigitalFlip {
 //        zeroPq.add(tmp2);
 //        return 1 + Math.min(count1, count2);
 //    }
-
 
 //    int flipDigit(int[] A) {
 //        // filter abnormal cases

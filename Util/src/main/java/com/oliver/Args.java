@@ -1,15 +1,22 @@
 package com.oliver;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.text.ParseException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringJoiner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class Args {
+
   private Map<Character, ArgumentMarshaler> marshalers;
   private Set<Character> argsFound;
   private ListIterator<String> currentArgument;
@@ -56,9 +63,10 @@ public class Args {
   }
 
   private void parseSchema(String schema) throws ParseException {
-    for (String element : schema.split(","))
+    for (String element : schema.split(",")) {
       if (element.length() > 0)
         parseSchemaElement(element.trim());
+    }
   }
 
   private void parseSchemaElement(String element) throws ParseException {
@@ -84,10 +92,10 @@ public class Args {
   @Override
   public String toString() {
     return new StringJoiner(", ", Args.class.getSimpleName() + "[", "]")
-            .add("marshalers=" + marshalers)
-            .add("argsFound=" + argsFound)
-            .add("currentArgument=" + currentArgument)
-            .add("errorCode=" + errorCode)
-            .toString();
+        .add("marshalers=" + marshalers)
+        .add("argsFound=" + argsFound)
+        .add("currentArgument=" + currentArgument)
+        .add("errorCode=" + errorCode)
+        .toString();
   }
 }

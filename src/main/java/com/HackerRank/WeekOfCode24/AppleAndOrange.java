@@ -1,14 +1,14 @@
 package com.HackerRank.WeekOfCode24;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class AppleAndOrange {
+
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
     int s = in.nextInt();

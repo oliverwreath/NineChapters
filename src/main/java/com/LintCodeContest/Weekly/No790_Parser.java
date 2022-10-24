@@ -1,22 +1,26 @@
 package com.LintCodeContest.Weekly;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No790_Parser {
+
   public static void main(String[] args) {
     testNo790_Parser();
   }
 
   private static void testNo790_Parser() {
     No790_Parser No790_Parser = new No790_Parser();
-    log.info("result True v.s. " + No790_Parser.canBeGenerated(new String[]{"S -> abc", "S -> aA", "A -> b", "A -> c"}, 'S', "ac"));
-    log.info("result False v.s. " + No790_Parser.canBeGenerated(new String[]{"S -> abc", "S -> aA", "A -> b", "A -> c"}, 'S', "a"));
+    log.info(
+        "result True v.s. " + No790_Parser.canBeGenerated(new String[]{"S -> abc", "S -> aA", "A -> b", "A -> c"}, 'S',
+            "ac"));
+    log.info(
+        "result False v.s. " + No790_Parser.canBeGenerated(new String[]{"S -> abc", "S -> aA", "A -> b", "A -> c"}, 'S',
+            "a"));
   }
 
   /**

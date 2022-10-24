@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
  */
 @Slf4j
 class ToolsTest {
+
   @Test void test_No442ImplementTrie() {
     LintCode442ImplementTrie lintCode442ImplementTrie = new LintCode442ImplementTrie();
     LintCode442ImplementTrie.Trie trie = lintCode442ImplementTrie.new Trie();

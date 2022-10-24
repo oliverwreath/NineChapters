@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.SegmentTree;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No205_IntervalMinimumNumber {
+
   public static void main(String[] args) {
     testNo205_IntervalMinimumNumber();
   }
@@ -18,6 +18,7 @@ public class No205_IntervalMinimumNumber {
   }
 
   public class Interval {
+
     int start, end;
 
     Interval(int start, int end) {
@@ -39,6 +40,7 @@ public class No205_IntervalMinimumNumber {
   SegmentTreeNode root;
 
   class SegmentTreeNode {
+
     int start, end;
     long min;
     SegmentTreeNode left, right;

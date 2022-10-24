@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ConnectingGraph_589 {
+
   private int[] father;
 
   /*

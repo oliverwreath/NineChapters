@@ -1,11 +1,11 @@
 package com.ATemplatesDataStructures.DP.memoization;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No394CoinsInALine {
+
   public boolean firstWillWin(int n) {
     // filter abnormal cases
     if (n <= 0) {

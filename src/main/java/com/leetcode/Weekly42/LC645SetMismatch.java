@@ -1,11 +1,11 @@
 package com.leetcode.Weekly42;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC645SetMismatch {
+
   public static void main(String[] args) {
     testSetMismatch_645();
   }

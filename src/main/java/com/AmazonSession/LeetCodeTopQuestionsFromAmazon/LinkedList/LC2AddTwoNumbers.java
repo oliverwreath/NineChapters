@@ -8,13 +8,13 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * Version 1: Simply Working. Single loop adding up digits and handle carry along the way.
  * <p>
- * TIME: O(N)
- * SPACE: O(N)
+ * TIME: O(N) SPACE: O(N)
  * <p>
  * Version 2: TBD.
  */
 @Slf4j
 public class LC2AddTwoNumbers {
+
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     // filter abnormal cases
     if (l1 == null) {

@@ -1,17 +1,17 @@
 package com.GoogleAPAC.RoundB;
 
-import lombok.extern.slf4j.Slf4j;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
-
-import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SherlockAndParentheses {
+
   public static void main(String[] args) {
     long startTime = System.currentTimeMillis();
 //        testGetResult();
@@ -24,7 +24,8 @@ public class SherlockAndParentheses {
     int numOfCases;
     if (scanner.hasNext()) {
       numOfCases = scanner.nextInt();
-      PrintWriter printWriter = getPrintWriter("C:\\Users\\yanli\\IdeaProjects\\JiuZhang\\src\\main\\resources\\SherlockAndParentheses.out.txt");
+      PrintWriter printWriter = getPrintWriter(
+          "C:\\Users\\yanli\\IdeaProjects\\JiuZhang\\src\\main\\resources\\SherlockAndParentheses.out.txt");
 
       for (int caseI = 1; caseI <= numOfCases; caseI++) {
         int left = scanner.nextInt();

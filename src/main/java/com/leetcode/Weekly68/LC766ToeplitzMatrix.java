@@ -1,11 +1,11 @@
 package com.leetcode.Weekly68;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC766ToeplitzMatrix {
+
   private static final boolean isDebugging = false;
 
   public static void main(String[] args) {
@@ -15,19 +15,19 @@ public class LC766ToeplitzMatrix {
   private static void testNo766_ToeplitzMatrix() {
     LC766ToeplitzMatrix LC766ToeplitzMatrix = new LC766ToeplitzMatrix();
     log.info("result False v.s. " + LC766ToeplitzMatrix.isToeplitzMatrix(new int[][]{
-            {1, 2},
-            {2, 2}
+        {1, 2},
+        {2, 2}
     }));
     log.info("result True v.s. " + LC766ToeplitzMatrix.isToeplitzMatrix(new int[][]{
-            {1, 2}
+        {1, 2}
     }));
     log.info("result True v.s. " + LC766ToeplitzMatrix.isToeplitzMatrix(new int[][]{
-            {1}
+        {1}
     }));
     log.info("result True v.s. " + LC766ToeplitzMatrix.isToeplitzMatrix(new int[][]{
-            {1, 2, 3, 4},
-            {5, 1, 2, 3},
-            {9, 5, 1, 2}
+        {1, 2, 3, 4},
+        {5, 1, 2, 3},
+        {9, 5, 1, 2}
     }));
 //        log.info("result 1 v.s. " + No766_ToeplitzMatrix.isToeplitzMatrix("10"));
   }

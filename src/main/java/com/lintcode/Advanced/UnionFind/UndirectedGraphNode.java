@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Author: Oliver
  */
 public class UndirectedGraphNode {
+
   int label;
   ArrayList<UndirectedGraphNode> neighbors;
 

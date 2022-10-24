@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.Stack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No12_MinStack {
+
   public static void main(String[] args) {
     No12_MinStack No12_MinStack = new No12_MinStack();
     No12_MinStack.testNo12_MinStack();
@@ -35,6 +35,7 @@ public class No12_MinStack {
 //    }
 
   public class MinStack {
+
     private Deque<Integer> minStack;
     private Deque<Integer> stack;
 
@@ -49,7 +50,7 @@ public class No12_MinStack {
      * @return: nothing
      */
     public void push(int number) {
-  
+
       if (minStack.isEmpty() || minStack.peek() >= number) {
         minStack.push(number);
       }
@@ -60,7 +61,7 @@ public class No12_MinStack {
      * @return: An integer
      */
     public int pop() {
-  
+
       if (!minStack.isEmpty() && minStack.peek().equals(stack.peek())) {
         minStack.pop();
       }
@@ -71,7 +72,7 @@ public class No12_MinStack {
      * @return: An integer
      */
     public int min() {
-  
+
       if (!minStack.isEmpty()) {
         return minStack.peek();
       }

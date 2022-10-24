@@ -1,14 +1,19 @@
 package com.lintcode.Advanced.UnionFind;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class FindTheWeakConnectedComponentInTheDirectedGraph {
+
   public static void main(String[] arg) {
     new FindTheWeakConnectedComponentInTheDirectedGraph().testNumberOfIslands();
   }

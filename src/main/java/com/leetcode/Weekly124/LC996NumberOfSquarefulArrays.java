@@ -1,25 +1,21 @@
 package com.leetcode.Weekly124;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply Working.
- * TIME: O(MN)
- * SPACE: O(MN)
+ * Version 1: Simply Working. TIME: O(MN) SPACE: O(MN)
  * <p>
- * Version 2: TBD.
- * TIME: O(?)
- * SPACE: O(?)
+ * Version 2: TBD. TIME: O(?) SPACE: O(?)
  */
 @Slf4j
 public class LC996NumberOfSquarefulArrays {
+
   public int numSquarefulPerms(int[] nums) {
     // filter abnormal cases
     if (nums == null || nums.length == 0) {

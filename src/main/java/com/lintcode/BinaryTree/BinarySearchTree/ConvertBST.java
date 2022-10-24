@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ConvertBST {
+
   public static void main(String[] args) {
     testBinarySearchTree();
   }

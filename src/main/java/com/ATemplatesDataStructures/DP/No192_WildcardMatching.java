@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No192_WildcardMatching {
+
   public static void main(String[] args) {
     No192_WildcardMatching No192_WildcardMatching = new No192_WildcardMatching();
     No192_WildcardMatching.testNo192_WildcardMatching();

@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC92ReverseLinkedListII {
+
   public ListNode reverseBetween(ListNode head, int left, int right) {
     if (head == null || head.next == null)
       return head;
@@ -12,7 +13,7 @@ public class LC92ReverseLinkedListII {
     if (left == 1) {
       return reverseFirstN(head, right);
     }
-    head.next = reverseBetween(head.next, left-1, right-1);
+    head.next = reverseBetween(head.next, left - 1, right - 1);
     return head;
   }
 

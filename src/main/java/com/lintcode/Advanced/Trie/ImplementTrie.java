@@ -7,14 +7,13 @@ package com.lintcode.Advanced.Trie;
 import java.util.HashMap;
 
 /**
- * Your Trie object will be instantiated and called as such:
- * Trie trie = new Trie();
- * trie.insert("lintcode");
- * trie.search("lint"); will return false
- * trie.startsWith("lint"); will return true
+ * Your Trie object will be instantiated and called as such: Trie trie = new Trie(); trie.insert("lintcode");
+ * trie.search("lint"); will return false trie.startsWith("lint"); will return true
  */
 class ImplementTrie {
+
   class TrieNode {
+
     Character s;
     boolean isString;
     HashMap<Character, TrieNode> subtree;
@@ -33,6 +32,7 @@ class ImplementTrie {
   }
 
   public class Trie {
+
     private TrieNode root;
 
     public Trie() {

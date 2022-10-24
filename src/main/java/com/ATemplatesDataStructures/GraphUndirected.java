@@ -1,14 +1,14 @@
 package com.ATemplatesDataStructures;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class GraphUndirected {
+
   private HashMap<Integer, Node> nodeLookup = new HashMap<>();
   private int size;
 
@@ -17,6 +17,7 @@ public class GraphUndirected {
   }
 
   public class Node {
+
     private int id;
     LinkedList<Node> adjacent = new LinkedList<>();
 
@@ -40,6 +41,7 @@ public class GraphUndirected {
   }
 
   private class Entry {
+
     int id;
     int distance;
 

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No667_LongestPalindromicSubsequence {
+
   public static void main(String[] args) {
     No667_LongestPalindromicSubsequence No667_LongestPalindromicSubsequence = new No667_LongestPalindromicSubsequence();
     No667_LongestPalindromicSubsequence.testNo667_LongestPalindromicSubsequence();

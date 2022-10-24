@@ -1,17 +1,18 @@
 package com.leetcode;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC128LongestConsecutiveSequence {
+
   public int longestConsecutive(int[] nums) {
-    if (nums == null || nums.length == 0) return 0;
+    if (nums == null || nums.length == 0)
+      return 0;
 
     Map<Integer, Integer> map = new HashMap<>();
     for (int num : nums) {

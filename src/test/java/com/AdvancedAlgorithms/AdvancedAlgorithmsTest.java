@@ -1,5 +1,13 @@
 package com.AdvancedAlgorithms;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.oneOf;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.AdvancedAlgorithms.BinarySearchSweepLineHard.BinarySearch.Lintcode75FindPeakElement;
 import com.AdvancedAlgorithms.BinarySearchSweepLineHard.BinarySearchOnResult.Lintcode141Sqrtx;
 import com.AdvancedAlgorithms.BinarySearchSweepLineHard.BinarySearchOnResult.Lintcode586SqrtxII;
@@ -23,22 +31,17 @@ import com.AdvancedAlgorithms.HeapStack.Stack.Lintcode575DecodeString;
 import com.AdvancedAlgorithms.HeapStack.Stack.MonotonousStack.Lintcode122LargestRectangleInHistogram;
 import com.AdvancedAlgorithms.HeapStack.Stack.MonotonousStack.Lintcode510MaximalRectangle;
 import com.AdvancedAlgorithms.Memoization.Lintcode398LongestContinuousIncreasingSubsequenceII;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.oneOf;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 class AdvancedAlgorithmsTest {
+
   @Test void test_Lintcode586SqrtxII() {
     Lintcode586SqrtxII lintcode586SqrtxII = new Lintcode586SqrtxII();
     assertEquals(0D, lintcode586SqrtxII.sqrt(0));
@@ -79,7 +82,8 @@ class AdvancedAlgorithmsTest {
   @Test void testLintcode81FindMedianFromDataStream() {
     Lintcode81FindMedianFromDataStream lintcode81FindMedianFromDataStream = new Lintcode81FindMedianFromDataStream();
     assertArrayEquals(new int[]{1, 1, 2, 2, 3}, lintcode81FindMedianFromDataStream.medianII(new int[]{1, 2, 3, 4, 5}));
-    assertArrayEquals(new int[]{4, 4, 4, 3, 3, 3, 3}, lintcode81FindMedianFromDataStream.medianII(new int[]{4, 5, 1, 3, 2, 6, 0}));
+    assertArrayEquals(new int[]{4, 4, 4, 3, 3, 3, 3},
+        lintcode81FindMedianFromDataStream.medianII(new int[]{4, 5, 1, 3, 2, 6, 0}));
     assertArrayEquals(new int[]{2, 2, 20}, lintcode81FindMedianFromDataStream.medianII(new int[]{2, 20, 100}));
   }
 
@@ -107,10 +111,10 @@ class AdvancedAlgorithmsTest {
   @Test void testLintcode436MaximalSquare() {
     Lintcode436MaximalSquare lintcode436MaximalSquare = new Lintcode436MaximalSquare();
     assertEquals(4, lintcode436MaximalSquare.maxSquare(new int[][]{
-            {1, 0, 1, 0, 0},
-            {1, 0, 1, 1, 1},
-            {1, 1, 1, 1, 1},
-            {1, 0, 0, 1, 0}
+        {1, 0, 1, 0, 0},
+        {1, 0, 1, 1, 1},
+        {1, 1, 1, 1, 1},
+        {1, 0, 0, 1, 0}
     }));
   }
 
@@ -128,13 +132,13 @@ class AdvancedAlgorithmsTest {
   @Test void testLintcode510MaximalRectangle() {
     Lintcode510MaximalRectangle lintcode510MaximalRectangle = new Lintcode510MaximalRectangle();
     assertEquals(6, lintcode510MaximalRectangle.maximalRectangle(
-            new boolean[][]{
-                    {true, true, false, false, true},
-                    {false, true, false, false, true},
-                    {false, false, true, true, true},
-                    {false, false, true, true, true},
-                    {false, false, false, false, true}
-            }
+        new boolean[][]{
+            {true, true, false, false, true},
+            {false, true, false, false, true},
+            {false, false, true, true, true},
+            {false, false, true, true, true},
+            {false, false, false, false, true}
+        }
     ));
   }
 
@@ -178,30 +182,32 @@ class AdvancedAlgorithmsTest {
 
   @Test void testLintcode360SlidingWindowMedian() {
     Lintcode360SlidingWindowMedian lintcode360SlidingWindowMedian = new Lintcode360SlidingWindowMedian();
-    assertEquals(List.of(2,7,7), lintcode360SlidingWindowMedian.medianSlidingWindow(new int[]{1, 2, 7, 8, 5}, 3));
-    assertEquals(List.of(1,2,7,2,2,3,3,4), lintcode360SlidingWindowMedian.medianSlidingWindow(new int[]{1, 2, 7, 7, 2, 10, 3, 4, 5}, 2));
+    assertEquals(List.of(2, 7, 7), lintcode360SlidingWindowMedian.medianSlidingWindow(new int[]{1, 2, 7, 8, 5}, 3));
+    assertEquals(List.of(1, 2, 7, 2, 2, 3, 3, 4),
+        lintcode360SlidingWindowMedian.medianSlidingWindow(new int[]{1, 2, 7, 7, 2, 10, 3, 4, 5}, 2));
   }
 
   @Test void testLintcode364TrappingRainWaterII() {
     Lintcode364TrappingRainWaterII lintcode364TrappingRainWaterII = new Lintcode364TrappingRainWaterII();
     assertEquals(14, lintcode364TrappingRainWaterII.trapRainWater(new int[][]{
-            {12, 13, 0, 12},
-            {13, 4, 13, 12},
-            {13, 8, 10, 12},
-            {12, 13, 12, 12},
-            {13, 13, 13, 13}})
+        {12, 13, 0, 12},
+        {13, 4, 13, 12},
+        {13, 8, 10, 12},
+        {12, 13, 12, 12},
+        {13, 13, 13, 13}})
     );
   }
 
   @Test void testLintcode398LongestContinuousIncreasingSubsequenceII() {
     Lintcode398LongestContinuousIncreasingSubsequenceII lintcode398LongestContinuousIncreasingSubsequenceII = new Lintcode398LongestContinuousIncreasingSubsequenceII();
-    assertEquals(25, lintcode398LongestContinuousIncreasingSubsequenceII.longestContinuousIncreasingSubsequence2(new int[][]{
+    assertEquals(25,
+        lintcode398LongestContinuousIncreasingSubsequenceII.longestContinuousIncreasingSubsequence2(new int[][]{
             {1, 2, 3, 4, 5},
             {16, 17, 24, 23, 6},
             {15, 18, 25, 22, 7},
             {14, 19, 20, 21, 8},
             {13, 12, 11, 10, 9}
-    }));
+        }));
   }
 
 //  @Test void testLintcode12MinStack() {

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No436_MaximalSquare {
+
   public static void main(String[] args) {
     testNo392_HouseRobber();
   }
@@ -11,7 +12,7 @@ public class No436_MaximalSquare {
   private static void testNo392_HouseRobber() {
     No436_MaximalSquare No392_HouseRobber = new No436_MaximalSquare();
     log.info("result 1 v.s. " + No392_HouseRobber.maxSquare(new int[][]{
-            {1}
+        {1}
     }));
   }
 

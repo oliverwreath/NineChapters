@@ -7,13 +7,13 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * Version 1: Simply Working. Just single loop, get the current sum and Max.
  * <p>
- * TIME: O(N)
- * SPACE: O(1)
+ * TIME: O(N) SPACE: O(1)
  * <p>
  * Version 2: TBD.
  */
 @Slf4j
 public class LC53MaximumSubarray {
+
   public int maxSubArray(int[] nums) {
     if (nums == null || nums.length < 1) {
       return 0;

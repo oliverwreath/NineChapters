@@ -1,11 +1,11 @@
 package com.AmazonSession.leetcode.algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class RotateArray {
+
   public static void main(String[] args) {
     testRotateArray();
   }

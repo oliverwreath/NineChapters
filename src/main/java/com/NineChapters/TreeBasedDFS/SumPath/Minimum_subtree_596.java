@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Minimum_subtree_596 {
+
   public static void main(String[] args) {
     testMinimum_subtree_596();
   }

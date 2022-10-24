@@ -1,21 +1,21 @@
 package com.GoogleAPAC.RoundA;
 
-import com.GoogleAPAC.RoundA.Util.LeaderEntry;
-import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
+import static com.GoogleAPAC.RoundA.Util.oneDTrappingWater;
 
+import com.GoogleAPAC.RoundA.Util.LeaderEntry;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-
-import static com.GoogleAPAC.RoundA.Util.oneDTrappingWater;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 class UtilTest {
+
   @SneakyThrows
   @Test void test1DTrappingWater() {
     int[] heights = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};

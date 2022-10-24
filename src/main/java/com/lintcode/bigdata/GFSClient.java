@@ -1,9 +1,8 @@
 package com.lintcode.bigdata;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
@@ -23,6 +22,7 @@ import java.util.Map;
  */
 @Slf4j
 public class GFSClient extends BaseGFSClient {
+
   private int chunkSize;
   private Map<String, Integer> map = new HashMap<String, Integer>();
 
@@ -67,6 +67,7 @@ public class GFSClient extends BaseGFSClient {
 }
 
 class BaseGFSClient {
+
   private Map<String, String> chunk_list;
 
   public BaseGFSClient() {
@@ -78,7 +79,7 @@ class BaseGFSClient {
   }
 
   public void writeChunk(String filename, int chunkIndex,
-                         String content) {
+      String content) {
     // Write a chunk to GFS
     return;
   }

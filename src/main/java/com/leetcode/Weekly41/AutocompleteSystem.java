@@ -1,21 +1,22 @@
 package com.leetcode.Weekly41;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class AutocompleteSystem {
+
   public static void main(String[] args) {
     testAutocompleteSystem();
   }
 
   private static void testAutocompleteSystem() {
-    AutocompleteSystem autocompleteSystem = new AutocompleteSystem(new String[]{"i love you", "island", "ironman", "i love leetcode"}, new int[]{5, 3, 2, 2});
+    AutocompleteSystem autocompleteSystem = new AutocompleteSystem(
+        new String[]{"i love you", "island", "ironman", "i love leetcode"}, new int[]{5, 3, 2, 2});
     log.info("result 2 = " + autocompleteSystem.input('i'));
     log.info("result 2 = " + autocompleteSystem.input(' '));
     log.info("result 2 = " + autocompleteSystem.input('a'));
@@ -57,6 +58,7 @@ public class AutocompleteSystem {
 
 
   class Trie {
+
     TrieNode root;
 
     public Trie() {
@@ -125,19 +127,17 @@ public class AutocompleteSystem {
     @Override
     public String toString() {
       return "Trie{" +
-              "root=" + root +
-              '}';
+          "root=" + root +
+          '}';
     }
   }
 
   /**
-   * Your Trie object will be instantiated and called as such:
-   * Trie trie = new Trie();
-   * trie.insert("lintcode");
-   * trie.search("lint"); will return false
-   * trie.startsWith("lint"); will return true
+   * Your Trie object will be instantiated and called as such: Trie trie = new Trie(); trie.insert("lintcode");
+   * trie.search("lint"); will return false trie.startsWith("lint"); will return true
    */
   class TrieNode {
+
     String s;
     boolean isString;
     int times;
@@ -154,10 +154,10 @@ public class AutocompleteSystem {
     @Override
     public String toString() {
       return "TrieNode{" +
-              "s='" + s + '\'' +
-              ", isString=" + isString +
-              ", subtree=" + subtree +
-              '}';
+          "s='" + s + '\'' +
+          ", isString=" + isString +
+          ", subtree=" + subtree +
+          '}';
     }
   }
 }

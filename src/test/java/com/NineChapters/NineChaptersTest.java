@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
  */
 @Slf4j
 class NineChaptersTest {
+
   @Test void testLintcode607TwoSumIiiDataStructureDesign() {
     Lintcode607TwoSumIiiDataStructureDesign lintcode607TwoSumIiiDataStructureDesign = new Lintcode607TwoSumIiiDataStructureDesign();
     Lintcode607TwoSumIiiDataStructureDesign.TwoSum twoSum = lintcode607TwoSumIiiDataStructureDesign.new TwoSum();

@@ -4,6 +4,7 @@ package com.lintcode.Advanced.UnionFind;
  * Author: Oliver
  */
 class Point {
+
   int x;
   int y;
 

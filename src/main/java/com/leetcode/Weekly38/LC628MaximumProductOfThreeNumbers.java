@@ -1,15 +1,15 @@
 package com.leetcode.Weekly38;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Collections;
 import java.util.LinkedList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC628MaximumProductOfThreeNumbers {
+
   public int maximumProduct(int[] nums) {
     if (nums == null || nums.length < 3)
       return 1;
@@ -35,7 +35,7 @@ public class LC628MaximumProductOfThreeNumbers {
     if (negative.isEmpty()) {
       return positive.get(0) * positive.get(1) * positive.get(2);
     } else if (positive.isEmpty()) {
-      return negative.get(negative.size()-1) * negative.get(negative.size()-2) * negative.get(negative.size()-3);
+      return negative.get(negative.size() - 1) * negative.get(negative.size() - 2) * negative.get(negative.size() - 3);
     } else {
       int result = Integer.MIN_VALUE;
       if (positive.size() > 2) {

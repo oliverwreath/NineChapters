@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC303RangeSumQueryImmutable {
+
   public static void main(String[] arg) {
     new LC303RangeSumQueryImmutable().testRangeSumQueryImmutable_303();
   }
@@ -24,6 +25,7 @@ public class LC303RangeSumQueryImmutable {
   }
 
   public class NumArray {
+
     int[] nums;
     int[] sumsFromLeft;
 
@@ -59,7 +61,6 @@ public class LC303RangeSumQueryImmutable {
       }
     }
   }
-
 
   // Your NumArray object will be instantiated and called as such:
   // NumArray numArray = new NumArray(nums);

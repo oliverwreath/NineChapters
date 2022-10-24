@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
  */
 @Slf4j
 class ATemplatesDataStructuresTest {
+
   @Test void testNo141SqrtX() {
     No141SqrtX no141SqrtX = new No141SqrtX();
     Assertions.assertEquals(0, no141SqrtX.sqrt(0));

@@ -1,16 +1,16 @@
 package com.leetcode.Weekly7;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC411MinimumUniqueWordAbbreviation {
+
   public static void main(String[] arg) {
     testMinimumUniqueWordAbbreviation_411();
   }
@@ -127,6 +127,7 @@ public class LC411MinimumUniqueWordAbbreviation {
   }
 
   static class TrieNode {
+
     Character s;
     boolean isString;
     HashMap<Character, TrieNode> subtree;
@@ -134,9 +135,9 @@ public class LC411MinimumUniqueWordAbbreviation {
     @Override
     public String toString() {
       return "TrieNode{" +
-              "s=" + s +
-              ", subtree=" + subtree +
-              '}';
+          "s=" + s +
+          ", subtree=" + subtree +
+          '}';
     }
 
     public TrieNode() {
@@ -153,13 +154,14 @@ public class LC411MinimumUniqueWordAbbreviation {
   }
 
   static class Trie {
+
     private TrieNode root;
 
     @Override
     public String toString() {
       return "Trie{" +
-              "root=" + root +
-              '}';
+          "root=" + root +
+          '}';
     }
 
     public Trie() {

@@ -1,15 +1,15 @@
 package com.AHacker;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.security.SecureRandom;
 import java.util.Random;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class QuickTopKComparable<T extends Comparable<T>> {
+
   private static final SecureRandom random = new SecureRandom();
 
   /**

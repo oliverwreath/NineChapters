@@ -1,17 +1,17 @@
 package com.lintcode.BinaryTree;
 
-import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
-import java.util.ArrayList;
-
 import static com.lintcode.BinaryTree.BinaryTree.getTree;
+
+import com.util.TreeNode;
+import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/10.
  */
 @Slf4j
 public class BinaryTreeTraverse {
+
   public static void main(String[] args) {
     testPreorderTraversal();
     testInorderTraversal();

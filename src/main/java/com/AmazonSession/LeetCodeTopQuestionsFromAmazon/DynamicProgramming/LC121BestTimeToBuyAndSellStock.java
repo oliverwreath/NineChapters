@@ -7,13 +7,13 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * Version 1: Simply Working. Just single loop, get the previous Min and calculate the current Max.
  * <p>
- * TIME: O(N)
- * SPACE: O(1)
+ * TIME: O(N) SPACE: O(1)
  * <p>
  * Version 2: TBD.
  */
 @Slf4j
 public class LC121BestTimeToBuyAndSellStock {
+
   public int maxProfit(int[] prices) {
     if (prices == null || prices.length < 2)
       return 0;

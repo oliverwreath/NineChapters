@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC416PartitionEqualSubsetSum {
+
   public static void main(String[] arg) {
     new LC416PartitionEqualSubsetSum().testLongestPalindrome_409();
   }

@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC629KInversePairsArray {
+
   public static void main(String[] args) {
     LC629KInversePairsArray LC_629KInversePairsArray = new LC629KInversePairsArray();
     log.debug("result = 1 = " + LC_629KInversePairsArray.kInversePairs(3, 0));

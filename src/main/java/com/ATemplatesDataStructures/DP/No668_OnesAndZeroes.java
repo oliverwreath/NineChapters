@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No668_OnesAndZeroes {
+
   public static void main(String[] args) {
     No668_OnesAndZeroes No668_OnesAndZeroes = new No668_OnesAndZeroes();
     No668_OnesAndZeroes.testNo668_OnesAndZeroes();

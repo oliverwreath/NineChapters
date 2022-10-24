@@ -1,18 +1,19 @@
 package com.applications;
 
+import static com.applications.SudokuSolver.charBoardToIntBoard;
+import static com.applications.SudokuSolver.printBoard;
+
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import static com.applications.SudokuSolver.charBoardToIntBoard;
-import static com.applications.SudokuSolver.printBoard;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 class ApplicationsTest {
+
   @Test @Disabled("disabled for not spamming emails!")
   void testGmailSender() {
     final String toRecipient = "skywalkerhunter@gmail.com";
@@ -79,15 +80,15 @@ class ApplicationsTest {
 
   @Test void test_SudokuSolver3() {
     char[][] charBoard = new char[][]{
-            {'.', '.', '.', '.', '5', '.', '.', '1', '.'},
-            {'.', '4', '.', '3', '.', '.', '.', '.', '.'},
-            {'.', '.', '.', '.', '.', '3', '.', '.', '1'},
-            {'8', '.', '.', '.', '.', '.', '.', '2', '.'},
-            {'.', '.', '2', '.', '7', '.', '.', '.', '.'},
-            {'.', '1', '5', '.', '.', '.', '.', '.', '.'},
-            {'.', '.', '.', '.', '.', '2', '.', '.', '.'},
-            {'.', '2', '.', '9', '.', '.', '.', '.', '.'},
-            {'.', '.', '4', '.', '.', '.', '.', '.', '.'}
+        {'.', '.', '.', '.', '5', '.', '.', '1', '.'},
+        {'.', '4', '.', '3', '.', '.', '.', '.', '.'},
+        {'.', '.', '.', '.', '.', '3', '.', '.', '1'},
+        {'8', '.', '.', '.', '.', '.', '.', '2', '.'},
+        {'.', '.', '2', '.', '7', '.', '.', '.', '.'},
+        {'.', '1', '5', '.', '.', '.', '.', '.', '.'},
+        {'.', '.', '.', '.', '.', '2', '.', '.', '.'},
+        {'.', '2', '.', '9', '.', '.', '.', '.', '.'},
+        {'.', '.', '4', '.', '.', '.', '.', '.', '.'}
     };
     log.debug("");
     log.debug("initialization3: ");
@@ -102,15 +103,15 @@ class ApplicationsTest {
 
   @Test void test_SudokuSolver4() {
     int[][] board = new int[][]{
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0}
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0}
     };
     log.debug("initialization4: ");
     printBoard(board);
@@ -123,15 +124,15 @@ class ApplicationsTest {
 
   @Test void test_SudokuSolver5() {
     int[][] board = new int[][]{
-            {5, 0, 0, 0, 0, 7, 0, 0, 0},
-            {0, 0, 0, 1, 0, 4, 8, 0, 0},
-            {0, 3, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 6, 5, 0},
-            {0, 8, 0, 0, 0, 0, 0, 3, 0},
-            {0, 5, 7, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 4, 0},
-            {0, 0, 5, 4, 0, 1, 0, 0, 0},
-            {0, 0, 0, 6, 0, 0, 0, 0, 3}
+        {5, 0, 0, 0, 0, 7, 0, 0, 0},
+        {0, 0, 0, 1, 0, 4, 8, 0, 0},
+        {0, 3, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 6, 5, 0},
+        {0, 8, 0, 0, 0, 0, 0, 3, 0},
+        {0, 5, 7, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 4, 0},
+        {0, 0, 5, 4, 0, 1, 0, 0, 0},
+        {0, 0, 0, 6, 0, 0, 0, 0, 3}
     };
     log.debug("initialization5: ");
     printBoard(board);

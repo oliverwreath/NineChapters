@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class SymmetricTree_101 {
+
   public static void main(String[] arg) {
     new SymmetricTree_101().testBalancedBinaryTree_110();
   }
@@ -36,10 +37,12 @@ public class SymmetricTree_101 {
       return left == right;
     }
 
-    return left.val == right.val && isSymmetricHelper(left.left, right.right) && isSymmetricHelper(left.right, right.left);
+    return left.val == right.val && isSymmetricHelper(left.left, right.right) && isSymmetricHelper(left.right,
+        right.left);
   }
 
   private class ResultEntry {
+
     boolean isBalanced;
     int depth;
 
@@ -51,9 +54,9 @@ public class SymmetricTree_101 {
     @Override
     public String toString() {
       return "ResultEntry{" +
-              "isBalanced=" + isBalanced +
-              ", depth=" + depth +
-              '}';
+          "isBalanced=" + isBalanced +
+          ", depth=" + depth +
+          '}';
     }
   }
 

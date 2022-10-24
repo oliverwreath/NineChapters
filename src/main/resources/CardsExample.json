@@ -8,7 +8,16 @@
       "Arrays&Hashing"
     ],
     "reviewedAt": [
-      [2022,8,14],[2022,8,7]
+      [
+        2022,
+        8,
+        14
+      ],
+      [
+        2022,
+        8,
+        7
+      ]
     ]
   },
   {
@@ -20,7 +29,16 @@
       "Stack"
     ],
     "reviewedAt": [
-      [2022,7,24],[2022,8,15]
+      [
+        2022,
+        7,
+        24
+      ],
+      [
+        2022,
+        8,
+        15
+      ]
     ]
   },
   {
@@ -32,7 +50,16 @@
       "Array&Hashing"
     ],
     "reviewedAt": [
-      [2022,8,1],[2022,8,17]
+      [
+        2022,
+        8,
+        1
+      ],
+      [
+        2022,
+        8,
+        17
+      ]
     ]
   },
   {
@@ -44,7 +71,16 @@
       "TwoPointers"
     ],
     "reviewedAt": [
-      [2022,8,2],[2022,8,20]
+      [
+        2022,
+        8,
+        2
+      ],
+      [
+        2022,
+        8,
+        20
+      ]
     ]
   },
   {
@@ -56,7 +92,16 @@
       "TwoPointers"
     ],
     "reviewedAt": [
-      [2022,8,2],[2022,8,20]
+      [
+        2022,
+        8,
+        2
+      ],
+      [
+        2022,
+        8,
+        20
+      ]
     ]
   },
   {
@@ -68,7 +113,16 @@
       "TwoPointers"
     ],
     "reviewedAt": [
-      [2022,8,2],[2022,8,24]
+      [
+        2022,
+        8,
+        2
+      ],
+      [
+        2022,
+        8,
+        24
+      ]
     ]
   },
   {
@@ -80,7 +134,16 @@
       "SlidingWindow"
     ],
     "reviewedAt": [
-      [2022,8,1],[2022,8,16]
+      [
+        2022,
+        8,
+        1
+      ],
+      [
+        2022,
+        8,
+        16
+      ]
     ]
   },
   {
@@ -92,7 +155,16 @@
       "BinarySearch"
     ],
     "reviewedAt": [
-      [2022,8,1],[2022,8,18]
+      [
+        2022,
+        8,
+        1
+      ],
+      [
+        2022,
+        8,
+        18
+      ]
     ]
   },
   {
@@ -104,7 +176,16 @@
       "BinarySearch"
     ],
     "reviewedAt": [
-      [2022,8,1],[2022,8,18]
+      [
+        2022,
+        8,
+        1
+      ],
+      [
+        2022,
+        8,
+        18
+      ]
     ]
   },
   {
@@ -116,7 +197,11 @@
       "LinkedList"
     ],
     "reviewedAt": [
-      [2022,8,14]
+      [
+        2022,
+        8,
+        14
+      ]
     ]
   },
   {
@@ -125,10 +210,20 @@
     "difficulty": "EASY",
     "lastPerformance": "READY",
     "tags": [
-      "LinkedList","TwoPointers"
+      "LinkedList",
+      "TwoPointers"
     ],
     "reviewedAt": [
-      [2022,8,14],[2022,8,31]
+      [
+        2022,
+        8,
+        14
+      ],
+      [
+        2022,
+        8,
+        31
+      ]
     ]
   },
   {
@@ -137,10 +232,20 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "GOOD",
     "tags": [
-      "LinkedList","TwoPointers"
+      "LinkedList",
+      "TwoPointers"
     ],
     "reviewedAt": [
-      [2022,8,14],[2022,8,29]
+      [
+        2022,
+        8,
+        14
+      ],
+      [
+        2022,
+        8,
+        29
+      ]
     ]
   },
   {
@@ -149,10 +254,20 @@
     "difficulty": "EASY",
     "lastPerformance": "GOOD",
     "tags": [
-      "LinkedList","Recursion"
+      "LinkedList",
+      "Recursion"
     ],
     "reviewedAt": [
-      [2022,8,14],[2022,8,29]
+      [
+        2022,
+        8,
+        14
+      ],
+      [
+        2022,
+        8,
+        29
+      ]
     ]
   },
   {
@@ -164,7 +279,11 @@
       "HeapPriorityQueue"
     ],
     "reviewedAt": [
-      [2022,8,16]
+      [
+        2022,
+        8,
+        16
+      ]
     ]
   },
   {
@@ -173,10 +292,20 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "GOOD",
     "tags": [
-      "Graphs","BFS"
+      "Graphs",
+      "BFS"
     ],
     "reviewedAt": [
-      [2022,8,3],[2022,8,25]
+      [
+        2022,
+        8,
+        3
+      ],
+      [
+        2022,
+        8,
+        25
+      ]
     ]
   },
   {
@@ -185,10 +314,20 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "WORST",
     "tags": [
-      "Graphs","DFS"
+      "Graphs",
+      "DFS"
     ],
     "reviewedAt": [
-      [2022,8,3],[2022,8,27]
+      [
+        2022,
+        8,
+        3
+      ],
+      [
+        2022,
+        8,
+        27
+      ]
     ]
   },
   {
@@ -197,10 +336,20 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "GOOD",
     "tags": [
-      "Graphs","BFS"
+      "Graphs",
+      "BFS"
     ],
     "reviewedAt": [
-      [2022,8,3],[2022,8,28]
+      [
+        2022,
+        8,
+        3
+      ],
+      [
+        2022,
+        8,
+        28
+      ]
     ]
   },
   {
@@ -209,10 +358,21 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "GOOD",
     "tags": [
-      "Graphs","DFS","HasCycle"
+      "Graphs",
+      "DFS",
+      "HasCycle"
     ],
     "reviewedAt": [
-      [2022,8,3],[2022,8,28]
+      [
+        2022,
+        8,
+        3
+      ],
+      [
+        2022,
+        8,
+        28
+      ]
     ]
   },
   {
@@ -221,10 +381,15 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "WORST",
     "tags": [
-      "BucketSort","Greedy"
+      "BucketSort",
+      "Greedy"
     ],
     "reviewedAt": [
-      [2022,8,24]
+      [
+        2022,
+        8,
+        24
+      ]
     ]
   },
   {
@@ -233,10 +398,15 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "WORST",
     "tags": [
-      "Array","Backtracking"
+      "Array",
+      "Backtracking"
     ],
     "reviewedAt": [
-      [2022,8,24]
+      [
+        2022,
+        8,
+        24
+      ]
     ]
   },
   {
@@ -245,10 +415,16 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "GOOD",
     "tags": [
-      "Array","Sorting","Matrix"
+      "Array",
+      "Sorting",
+      "Matrix"
     ],
     "reviewedAt": [
-      [2022,8,28]
+      [
+        2022,
+        8,
+        28
+      ]
     ]
   },
   {
@@ -257,10 +433,16 @@
     "difficulty": "MEDIUM",
     "lastPerformance": "GOOD",
     "tags": [
-      "Array","Math","Matrix"
+      "Array",
+      "Math",
+      "Matrix"
     ],
     "reviewedAt": [
-      [2022,8,29]
+      [
+        2022,
+        8,
+        29
+      ]
     ]
   }
 ]

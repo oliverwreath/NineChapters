@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Lintcode141Sqrtx {
+
   public int sqrt(int x) {
     // filter abnormal cases
     if (x == 0) {

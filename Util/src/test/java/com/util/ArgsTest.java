@@ -1,18 +1,19 @@
 package com.util;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import com.oliver.Args;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import com.oliver.Args;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 class ArgsTest {
+
   @SneakyThrows
   @Test void test_JUnit() {
     String schema = "l,p#,d*";

@@ -1,14 +1,19 @@
 package com.AmazonSession.leetcode.algorithms;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class TwitterDemo {
+
   public static void main(String[] arg) {
     new TwitterDemo().testTwitter();
   }
@@ -51,11 +56,13 @@ public class TwitterDemo {
 //    unfollow(followerId, followeeId): Follower unfollows a followee.
 
   public class Twitter {
+
     HashMap<Integer, HashSet<Integer>> followMap;
     HashMap<Integer, LinkedList<Tweet>> tweetMap;
     int timeCounter = 0;
 
     private class Tweet {
+
       int id;
       int time;
 
@@ -70,9 +77,9 @@ public class TwitterDemo {
       @Override
       public String toString() {
         return "Tweet{" +
-                "id=" + id +
-                ", time=" + time +
-                '}';
+            "id=" + id +
+            ", time=" + time +
+            '}';
       }
     }
 
@@ -95,7 +102,8 @@ public class TwitterDemo {
     }
 
     /**
-     * Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
+     * Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users
+     * who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
      */
     public List<Integer> getNewsFeed(int userId) {
       LinkedList<Tweet> news = new LinkedList<>();

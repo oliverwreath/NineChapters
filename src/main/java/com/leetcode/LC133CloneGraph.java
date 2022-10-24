@@ -1,11 +1,16 @@
 package com.leetcode;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.StringJoiner;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 @Slf4j
 public class LC133CloneGraph {
+
   public Node cloneGraph(Node node) {
     if (node == null)
       return null;
@@ -26,6 +31,7 @@ public class LC133CloneGraph {
   }
 
   public class Node {
+
     public int val;
     public List<Node> neighbors;
 
@@ -46,14 +52,16 @@ public class LC133CloneGraph {
 
     @Override public String toString() {
       return new StringJoiner(", ", Node.class.getSimpleName() + "[", "]")
-              .add("val=" + val)
-              .add("neighbors=" + neighbors)
-              .toString();
+          .add("val=" + val)
+          .add("neighbors=" + neighbors)
+          .toString();
     }
 
     @Override public boolean equals(Object o) {
-      if (this == o) return true;
-      if (o == null || getClass() != o.getClass()) return false;
+      if (this == o)
+        return true;
+      if (o == null || getClass() != o.getClass())
+        return false;
       Node node = (Node) o;
       return val == node.val && Objects.equals(neighbors, node.neighbors);
     }

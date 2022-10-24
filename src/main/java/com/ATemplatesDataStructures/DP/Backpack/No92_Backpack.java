@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No92_Backpack {
+
   public static void main(String[] args) {
     No92_Backpack No92_Backpack = new No92_Backpack();
     No92_Backpack.testNo92_Backpack();

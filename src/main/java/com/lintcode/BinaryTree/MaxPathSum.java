@@ -1,15 +1,16 @@
 package com.lintcode.BinaryTree;
 
+import static com.lintcode.BinaryTree.BinaryTree.getSmallTree;
+
 import com.util.TreeNode;
 import lombok.extern.slf4j.Slf4j;
-
-import static com.lintcode.BinaryTree.BinaryTree.getSmallTree;
 
 /**
  * Created by Yanliang Han on 2016/6/11.
  */
 @Slf4j
 public class MaxPathSum {
+
   public static void main(String[] args) {
     testMaxPathSum2();
     testMaxPathSum();
@@ -38,6 +39,7 @@ public class MaxPathSum {
   }
 
   private static class ResultType {
+
     private int singleMax = 0;
     private int fullMax = Integer.MIN_VALUE;
 

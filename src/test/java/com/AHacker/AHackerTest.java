@@ -1,17 +1,17 @@
 package com.AHacker;
 
+import java.security.SecureRandom;
+import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.security.SecureRandom;
-import java.util.Arrays;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 class AHackerTest {
+
   private static final SecureRandom random = new SecureRandom();
 
   @Test void testQuickTopK() {
@@ -80,7 +80,6 @@ class AHackerTest {
 //            }
 //        }
 //        log.debug("goodCounter = " + goodCounter + "; badCounter = " + badCounter);
-
 
     QuickSortInt.quickSort(numsQuickSorted);
 //    log.debug(Arrays.toString(numsQuickSorted));

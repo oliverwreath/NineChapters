@@ -1,35 +1,35 @@
 package com.lintcode.Advanced.UnionFind;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class GraphValidTree {
+
   public static void main(String[] arg) {
     new GraphValidTree().testNumberOfIslands();
   }
 
   private void testNumberOfIslands() {
     log.info("{}", validTree(5,
-            new int[][]{
-                    {0, 1},
-                    {0, 2},
-                    {0, 3},
-                    {1, 4}
-            }
+        new int[][]{
+            {0, 1},
+            {0, 2},
+            {0, 3},
+            {1, 4}
+        }
     ));
     log.info("{}", validTree(5,
-            new int[][]{
-                    {0, 1},
-                    {1, 2},
-                    {2, 3},
-                    {1, 3},
-                    {1, 4}
-            }
+        new int[][]{
+            {0, 1},
+            {1, 2},
+            {2, 3},
+            {1, 3},
+            {1, 4}
+        }
     ));
   }
 

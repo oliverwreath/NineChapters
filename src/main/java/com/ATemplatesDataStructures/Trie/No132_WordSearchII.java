@@ -1,14 +1,14 @@
 package com.ATemplatesDataStructures.Trie;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No132_WordSearchII {
+
   public static void main(String[] args) {
     No132_WordSearchII No132_WordSearchII = new No132_WordSearchII();
     No132_WordSearchII.testNo132_WordSearchII();
@@ -17,13 +17,14 @@ public class No132_WordSearchII {
   private void testNo132_WordSearchII() {
     List<String> words = Arrays.asList("dog", "dad", "dgdg", "can", "again");
     log.info("result {\"dog\", \"dad\", \"can\", \"again\"} v.s. " + wordSearchII(new char[][]{
-            {'d', 'o', 'a', 'f'},
-            {'a', 'g', 'a', 'i'},
-            {'d', 'c', 'a', 'n'}
+        {'d', 'o', 'a', 'f'},
+        {'a', 'g', 'a', 'i'},
+        {'d', 'c', 'a', 'n'}
     }, words));
   }
 
   class TrieNode {
+
     TrieNode[] next;
     boolean isWord;
     String s;
@@ -37,13 +38,14 @@ public class No132_WordSearchII {
     @Override
     public String toString() {
       return "TrieNode{" +
-              "isWord=" + isWord +
-              ", s='" + s + '\'' +
-              '}';
+          "isWord=" + isWord +
+          ", s='" + s + '\'' +
+          '}';
     }
   }
 
   class Trie {
+
     TrieNode root;
 
     public Trie() {
@@ -101,8 +103,8 @@ public class No132_WordSearchII {
     @Override
     public String toString() {
       return "Trie{" +
-              "root=" + root +
-              '}';
+          "root=" + root +
+          '}';
     }
   }
 
@@ -161,9 +163,9 @@ public class No132_WordSearchII {
     char tmp = board[i][j];
     board[i][j] = '#';
     boolean answer = dfs(i - 1, j, node)
-            || dfs(i + 1, j, node)
-            || dfs(i, j - 1, node)
-            || dfs(i, j + 1, node);
+        || dfs(i + 1, j, node)
+        || dfs(i, j - 1, node)
+        || dfs(i, j + 1, node);
     board[i][j] = tmp;
     return answer;
   }

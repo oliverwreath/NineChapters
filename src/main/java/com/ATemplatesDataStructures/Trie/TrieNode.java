@@ -7,13 +7,11 @@ import java.util.HashMap;
  */
 
 /**
- * Your Trie object will be instantiated and called as such:
- * Trie trie = new Trie();
- * trie.insert("lintcode");
- * trie.search("lint"); will return false
- * trie.startsWith("lint"); will return true
+ * Your Trie object will be instantiated and called as such: Trie trie = new Trie(); trie.insert("lintcode");
+ * trie.search("lint"); will return false trie.startsWith("lint"); will return true
  */
 class TrieNode {
+
   String s;
   boolean isString;
   int times;
@@ -30,10 +28,10 @@ class TrieNode {
   @Override
   public String toString() {
     return "TrieNode{" +
-            "s='" + s + '\'' +
-            ", isString=" + isString +
-            ", subtree=" + subtree +
-            '}';
+        "s='" + s + '\'' +
+        ", isString=" + isString +
+        ", subtree=" + subtree +
+        '}';
   }
 }
 

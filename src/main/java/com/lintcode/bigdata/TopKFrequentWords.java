@@ -1,23 +1,20 @@
 package com.lintcode.bigdata;
 
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
-
 /**
- * Definition of OutputCollector:
- * class OutputCollector<K, V> {
- * public void collect(K key, V value);
- * // Adds a key/value pair to the output buffer
- * }
- * Definition of Document:
- * class Document {
- * public int id;
- * public String content;
- * }
+ * Definition of OutputCollector: class OutputCollector<K, V> { public void collect(K key, V value); // Adds a key/value
+ * pair to the output buffer } Definition of Document: class Document { public int id; public String content; }
  */
 @Slf4j
 public class TopKFrequentWords {
+
   public static void main(String[] args) {
 //        int k = 2;
 //        Document[] docs = new Document[]{
@@ -26,8 +23,8 @@ public class TopKFrequentWords {
 //        };
     int k = 3;
     Document[] docs = new Document[]{
-            new Document(1, "This is  the content of document1"),
-            new Document(2, "This is the       content of document3")
+        new Document(1, "This is  the content of document1"),
+        new Document(2, "This is the       content of document3")
     };
 
     Map map = new Map();
@@ -52,8 +49,9 @@ public class TopKFrequentWords {
   }
 
   public static class Map {
+
     public void map(Document value, OutputCollector<String, Integer> output) {
-  
+
       // Output the results into output buffer.
       // Ps. output.collect(String key, int value);
       String[] strings = value.content.split(" ");
@@ -72,6 +70,7 @@ public class TopKFrequentWords {
   };
 
   public static class Reduce {
+
     PriorityQueue<Pair> queue;
     private static int k;
 
@@ -82,7 +81,7 @@ public class TopKFrequentWords {
     }
 
     public void reduce(String key, Iterator<Integer> values) {
-  
+
       long times = 0;
       while (values.hasNext()) {
         times += values.next();
@@ -106,6 +105,7 @@ public class TopKFrequentWords {
   }
 
   public static class Pair {
+
     String key;
     int value;
 

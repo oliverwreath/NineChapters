@@ -1,18 +1,18 @@
 package com.lintcode.BFS;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class No155_Minimum_Depth_of_Binary_Tree {
+
   public static void main(String[] arg) {
     No155_Minimum_Depth_of_Binary_Tree tester = new No155_Minimum_Depth_of_Binary_Tree();
     tester.test();

@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.DFS_LeetCode.Tree_DFS;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No690_EmployeeImportance {
+
   public static void main(String[] args) {
     testNo690_EmployeeImportance();
   }
@@ -67,6 +67,7 @@ public class No690_EmployeeImportance {
   }
 
   static class Employee {
+
     // It's the unique id of each node;
     // unique id of this employee
     public int id;

@@ -1,14 +1,14 @@
 package com.ATemplatesDataStructures.DFS_LeetCode.Tree_BFS_LevelOrderTraversal;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No102_BinaryTreeLevelOrderTraversal {
+
   public static void main(String[] args) {
     testNo102_BinaryTreeLevelOrderTraversal();
   }
@@ -61,6 +61,7 @@ public class No102_BinaryTreeLevelOrderTraversal {
   }
 
   class Entry {
+
     TreeNode node;
     int depth;
 
@@ -72,9 +73,9 @@ public class No102_BinaryTreeLevelOrderTraversal {
     @Override
     public String toString() {
       return "Entry{" +
-              "node=" + node +
-              ", depth=" + depth +
-              '}';
+          "node=" + node +
+          ", depth=" + depth +
+          '}';
     }
   }
 

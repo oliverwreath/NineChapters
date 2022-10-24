@@ -3,24 +3,18 @@ package com.ATemplatesDataStructures.FollowUp7;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * dynamic programming
- * DP Elements:
- * 1. state:
- * dp ijt means the combinations, of picking j numbers, from the first i numbers. that sum to the t.
+ * dynamic programming DP Elements: 1. state: dp ijt means the combinations, of picking j numbers, from the first i
+ * numbers. that sum to the t.
  * <p>
- * 2. Init
- * dp 0j mean no number to pick, target 0 would meet, otherwise haha
- * dp i0 mean pick 0 numbers, same as above.
+ * 2. Init dp 0j mean no number to pick, target 0 would meet, otherwise haha dp i0 mean pick 0 numbers, same as above.
  * <p>
- * 3. Func
- * dp ijt = no pick -> dp i - 1, j, t
- * pick   -> dp i - 1, j - 1, t - A[i]
+ * 3. Func dp ijt = no pick -> dp i - 1, j, t pick   -> dp i - 1, j - 1, t - A[i]
  * <p>
- * 4. Answer
- * dp len, k
+ * 4. Answer dp len, k
  */
 @Slf4j
 public class No89_kSum {
+
   public static void main(String[] args) {
     No89_kSum No89_kSum = new No89_kSum();
     No89_kSum.testNo89_kSum();
@@ -28,9 +22,15 @@ public class No89_kSum {
 
   private void testNo89_kSum() {
     log.info("result 2 v.s. " + kSum(new int[]{1, 2, 3, 4}, 2, 5));
-    log.info("result 231 v.s. " + kSum(new int[]{1, 4, 6, 8, 10, 13, 15, 17, 18, 21, 23, 26, 27, 28, 29, 30, 32, 35, 36}, 9, 133));
-    log.info("result 1 v.s. " + kSum(new int[]{1, 4, 6, 8, 10, 13, 15, 17, 18, 21, 23, 26, 27, 28, 29, 30, 32, 35, 36}, 2, 71));
-    log.info("result 3 v.s. " + kSum(new int[]{1, 4, 6, 8, 10, 13, 15, 17, 18, 21, 23, 26, 27, 28, 29, 30, 32, 35, 36}, 2, 62));
+    log.info(
+        "result 231 v.s. " + kSum(new int[]{1, 4, 6, 8, 10, 13, 15, 17, 18, 21, 23, 26, 27, 28, 29, 30, 32, 35, 36}, 9,
+            133));
+    log.info(
+        "result 1 v.s. " + kSum(new int[]{1, 4, 6, 8, 10, 13, 15, 17, 18, 21, 23, 26, 27, 28, 29, 30, 32, 35, 36}, 2,
+            71));
+    log.info(
+        "result 3 v.s. " + kSum(new int[]{1, 4, 6, 8, 10, 13, 15, 17, 18, 21, 23, 26, 27, 28, 29, 30, 32, 35, 36}, 2,
+            62));
   }
 
   public int kSum(int[] A, int k, int target) {

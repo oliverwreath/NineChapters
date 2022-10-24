@@ -1,15 +1,15 @@
 package com.AdvancedAlgorithms.HeapStack.Stack.MonotonousStack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * nicely done, could be more concise, consider it done.
  */
 @Slf4j
 public class Lintcode122LargestRectangleInHistogram {
+
   public int largestRectangleArea(int[] height) {
     // filter abnormal cases
     if (height == null || height.length == 0) {

@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC66PlusOne {
+
   public static void main(String[] arg) {
     new LC66PlusOne().testLongestAbsoluteFilePath_388();
   }

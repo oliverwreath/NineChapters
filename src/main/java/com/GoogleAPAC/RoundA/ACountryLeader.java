@@ -1,19 +1,19 @@
 package com.GoogleAPAC.RoundA;
 
-import lombok.extern.slf4j.Slf4j;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
-import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by yanli_000 on 16/7/10.
  */
 @Slf4j
 public class ACountryLeader {
+
   public static void main(String[] args) {
     long startTime = System.currentTimeMillis();
     new ACountryLeader().go();

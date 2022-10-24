@@ -7,11 +7,11 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * Version 1: Simply Working.
  * <p>
- * TIME: O(n)
- * SPACE: O(n)
+ * TIME: O(n) SPACE: O(n)
  */
 @Slf4j
 public class Lintcode395CoinsInALineII {
+
   public boolean firstWillWin(int[] values) {
     // filter abnormal cases
     if (values == null || values.length == 0) {
@@ -30,8 +30,8 @@ public class Lintcode395CoinsInALineII {
     dp[3] = values[n - 3] + values[n - 2];
     for (int i = 4; i <= n; i++) {
       dp[i] = Math.max(
-              Math.min(dp[i - 2], dp[i - 3]) + values[n - i],
-              Math.min(dp[i - 3], dp[i - 4]) + values[n - i] + values[n - i + 1]
+          Math.min(dp[i - 2], dp[i - 3]) + values[n - i],
+          Math.min(dp[i - 3], dp[i - 4]) + values[n - i] + values[n - i + 1]
       );
     }
 //        log.debug(Arrays.toString(dp));

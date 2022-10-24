@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class BinaryTree {
+
   public static void main(String[] args) {
     TreeNode root = getTree();
 
@@ -56,8 +57,10 @@ public class BinaryTree {
   }
 
   private static class MaxPathSumSolution {
+
     //最大路径和
     class ResultType {
+
       private int singleMax;
       private int fullMax;
 
@@ -74,7 +77,7 @@ public class BinaryTree {
     }
 
     public ResultType maxPathSumHelper(TreeNode root) {
-  
+
       if (root == null) {
         return new ResultType(0, Integer.MIN_VALUE);
       }
@@ -99,7 +102,7 @@ public class BinaryTree {
     }
 
     public ResultType maxPathSumHelper2(TreeNode root) {
-  
+
       if (root == null) {
         return new ResultType(Integer.MIN_VALUE, Integer.MIN_VALUE);
       }

@@ -1,15 +1,15 @@
 package com.AdvancedAlgorithms.HeapStack.Stack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Some say it's medium, I say it's tricky.
  */
 @Slf4j
 public class Lintcode575DecodeString {
+
   public String expressionExpand(String s) {
     // filter abnormal cases
     if (s == null || s.length() == 0) {

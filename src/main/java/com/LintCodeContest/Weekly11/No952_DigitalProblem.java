@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No952_DigitalProblem {
+
   public static void main(String[] args) {
     No952_DigitalProblem No952_DigitalProblem = new No952_DigitalProblem();
     No952_DigitalProblem.testNo952_DigitalProblem();

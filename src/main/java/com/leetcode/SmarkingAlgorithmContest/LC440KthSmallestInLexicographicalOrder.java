@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC440KthSmallestInLexicographicalOrder {
+
   public int findKthNumber(int n, int k) {
     long curr = 1;
     k = k - 1;

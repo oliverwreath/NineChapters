@@ -1,17 +1,19 @@
 package com.util;
 
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class FileSplitter {
+
   public static void main(String[] args) {
     log.info("begin");
     splitFileInSameFolder(Path.of("src/main/resources/bigFile.txt"), 3);
@@ -22,7 +24,7 @@ public class FileSplitter {
     long lineCount = countLineJava8(sourceFilePath);
     log.debug("lineCount={}", lineCount);
     long step = (lineCount + partitions) / partitions;
-    log.debug("step={}, lineCount%partitions={}", step, lineCount%partitions);
+    log.debug("step={}, lineCount%partitions={}", step, lineCount % partitions);
     int r;
     for (r = 0; r < partitions; r++) {
       long begin = r * step;
@@ -56,9 +58,9 @@ public class FileSplitter {
   public static long countLineJava8(Path filePath) {
     long lineCount = 0;
     try (var lines = Files.lines(filePath)) {
-        lineCount = lines.parallel().count();
+      lineCount = lines.parallel().count();
     } catch (IOException e) {
-        log.error(e.getMessage());
+      log.error(e.getMessage());
     }
     return lineCount;
   }

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No718_RepeatString {
+
   public static void main(String[] args) {
     No718_RepeatString No718_RepeatString = new No718_RepeatString();
     No718_RepeatString.testNo718_RepeatString();

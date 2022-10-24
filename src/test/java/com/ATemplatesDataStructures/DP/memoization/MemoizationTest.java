@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
  */
 @Slf4j
 class MemoizationTest {
+
   @Test void test_no395CoinsInALineII() {
     No395CoinsInALineII no395CoinsInALineII = new No395CoinsInALineII();
     Assertions.assertFalse(no395CoinsInALineII.firstWillWin(new int[]{}));

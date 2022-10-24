@@ -1,23 +1,19 @@
 package com.leetcode.Weekly124;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply Working.
- * TIME: O(MN)
- * SPACE: O(MN)
+ * Version 1: Simply Working. TIME: O(MN) SPACE: O(MN)
  * <p>
- * Version 2: TBD.
- * TIME: O(?)
- * SPACE: O(?)
+ * Version 2: TBD. TIME: O(?) SPACE: O(?)
  */
 @Slf4j
 public class LC994RottingOranges {
+
   public int orangesRotting(int[][] grid) {
     // filter abnormal cases
     if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
@@ -79,6 +75,7 @@ public class LC994RottingOranges {
   }
 
   private class Point {
+
     int x;
     int y;
 

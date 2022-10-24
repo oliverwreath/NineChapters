@@ -1,17 +1,17 @@
 package com.lintcode.Advanced.SweepLine;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class NumberOfAirplanesInTheSky {
+
   public static void main(String[] arg) {
     new NumberOfAirplanesInTheSky().testNumberOfAirplanesInTheSky();
   }
@@ -80,6 +80,7 @@ public class NumberOfAirplanesInTheSky {
   };
 
   private class Point {
+
     int x;
     boolean isStart;
 
@@ -94,9 +95,9 @@ public class NumberOfAirplanesInTheSky {
     @Override
     public String toString() {
       return "Point{" +
-              "x=" + x +
-              ", isStart=" + isStart +
-              '}';
+          "x=" + x +
+          ", isStart=" + isStart +
+          '}';
     }
   }
 }

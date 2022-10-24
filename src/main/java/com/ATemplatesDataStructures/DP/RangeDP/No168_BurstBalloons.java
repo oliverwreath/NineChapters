@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No168_BurstBalloons {
+
   public static void main(String[] args) {
     No168_BurstBalloons No476_StoneGame = new No168_BurstBalloons();
     No476_StoneGame.testNo476_StoneGame();
@@ -45,8 +46,8 @@ public class No168_BurstBalloons {
       int max = Integer.MIN_VALUE;
       for (int k = i; k <= j; k++) {
         max = Math.max(max,
-                (i - 1 >= 0 ? A[i - 1] : 1) * A[k] * (j + 1 < A.length ? A[j + 1] : 1) +
-                        helper(i, k - 1, A) + helper(k + 1, j, A));
+            (i - 1 >= 0 ? A[i - 1] : 1) * A[k] * (j + 1 < A.length ? A[j + 1] : 1) +
+                helper(i, k - 1, A) + helper(k + 1, j, A));
       }
       dp[i][j] = max;
     }

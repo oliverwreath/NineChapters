@@ -1,14 +1,14 @@
 package com.LintCodeContest.Weekly13;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No972_DeliverTheMessage {
+
   public static void main(String[] args) {
     No972_DeliverTheMessage No972_DeliverTheMessage = new No972_DeliverTheMessage();
     No972_DeliverTheMessage.testNo972_DeliverTheMessage();
@@ -16,16 +16,16 @@ public class No972_DeliverTheMessage {
 
   private void testNo972_DeliverTheMessage() {
     log.info("result 1 v.s. " + deliverMessage(new int[]{1, 2, 3}, new int[][]{
-            {1, 2},
-            {-1},
-            {-1}
+        {1, 2},
+        {-1},
+        {-1}
     }));
     log.info("result 3 v.s. " + deliverMessage(new int[]{1, 2, 1, 4, 5}, new int[][]{
-            {1, 2},
-            {3, 4},
-            {-1},
-            {-1},
-            {-1}
+        {1, 2},
+        {3, 4},
+        {-1},
+        {-1},
+        {-1}
     }));
   }
 

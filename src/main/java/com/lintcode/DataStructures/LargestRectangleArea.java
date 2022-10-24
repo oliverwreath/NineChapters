@@ -1,15 +1,15 @@
 package com.lintcode.DataStructures;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LargestRectangleArea {
+
   public static void main(String[] arg) {
     testLargestRectangleArea();
   }

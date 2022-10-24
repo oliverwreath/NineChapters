@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No897_IslandCity {
+
   public static void main(String[] args) {
     No897_IslandCity No897_IslandCity = new No897_IslandCity();
     No897_IslandCity.testNo897_IslandCity();
@@ -11,18 +12,18 @@ public class No897_IslandCity {
 
   private void testNo897_IslandCity() {
     log.info("result 0 v.s. " + numIslandCities(new int[][]{
-            {1, 1, 0, 0, 0},
-            {0, 1, 0, 0, 1},
-            {0, 0, 0, 1, 1},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 1}
+        {1, 1, 0, 0, 0},
+        {0, 1, 0, 0, 1},
+        {0, 0, 0, 1, 1},
+        {0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 1}
     }));
     log.info("result 2 v.s. " + numIslandCities(new int[][]{
-            {1, 1, 0, 0, 0},
-            {0, 1, 0, 0, 1},
-            {0, 0, 2, 1, 2},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 2}
+        {1, 1, 0, 0, 0},
+        {0, 1, 0, 0, 1},
+        {0, 0, 2, 1, 2},
+        {0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 2}
     }));
   }
 

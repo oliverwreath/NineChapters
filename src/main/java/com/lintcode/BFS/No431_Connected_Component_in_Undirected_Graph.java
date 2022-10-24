@@ -2,16 +2,16 @@ package com.lintcode.BFS;
 
 import com.lintcode.Advanced.UnionFind.UndirectedGraphNode;
 import com.lintcode.BinarySearch1.No437_Copy_Books;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class No431_Connected_Component_in_Undirected_Graph {
+
   public static void main(String[] arg) {
     test();
   }

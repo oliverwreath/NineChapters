@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No842_Origami {
+
   public static void main(String[] args) {
     No842_Origami No842_Origami = new No842_Origami();
     No842_Origami.testNo842_Origami();

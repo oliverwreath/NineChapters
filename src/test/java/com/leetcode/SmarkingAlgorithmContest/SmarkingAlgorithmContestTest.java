@@ -1,17 +1,17 @@
 package com.leetcode.SmarkingAlgorithmContest;
 
+import java.util.Arrays;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 class SmarkingAlgorithmContestTest {
+
   @SneakyThrows
   @Test void testKthSmallestInLexicographicalOrder_440() {
     LC440KthSmallestInLexicographicalOrder LC440KthSmallestInLexicographicalOrder = new LC440KthSmallestInLexicographicalOrder();

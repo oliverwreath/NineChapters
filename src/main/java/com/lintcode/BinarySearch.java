@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class BinarySearch {
+
   public static int totalOccurrence(int[] a, int target) {
     int[] ints = searchRange(a, target);
     if (ints[0] == -1) {
@@ -58,6 +59,7 @@ public class BinarySearch {
   }
 
   static class ArrayReader {
+
     private int[] innerArray = new int[]{1, 3, 6, 9, 21};
 
     public int get(int i) {

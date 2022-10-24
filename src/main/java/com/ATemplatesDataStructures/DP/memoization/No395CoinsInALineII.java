@@ -1,11 +1,11 @@
 package com.ATemplatesDataStructures.DP.memoization;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No395CoinsInALineII {
+
   boolean firstWillWin(int[] values) {
     // filter abnormal cases
     if (values == null || values.length <= 0) {
@@ -34,7 +34,8 @@ public class No395CoinsInALineII {
     }
 
     int answer = Math.max(values[values.length - 1 - key] + Math.min(helper(key - 2, values), helper(key - 3, values)),
-            values[values.length - 1 - key] + values[values.length - 1 - key + 1] + Math.min(helper(key - 3, values), helper(key - 4, values)));
+        values[values.length - 1 - key] + values[values.length - 1 - key + 1] + Math.min(helper(key - 3, values),
+            helper(key - 4, values)));
     map.put(key, answer);
     return answer;
   }

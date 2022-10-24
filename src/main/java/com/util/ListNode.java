@@ -1,14 +1,14 @@
 package com.util;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Objects;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class ListNode {
+
   public int val;
   public ListNode next;
 
@@ -28,9 +28,9 @@ public class ListNode {
   @Override
   public String toString() {
     return "ListNode{" +
-            "val=" + val +
-            ", next=" + next +
-            '}';
+        "val=" + val +
+        ", next=" + next +
+        '}';
   }
 
   public ListNode addNext(int x) {
@@ -39,8 +39,10 @@ public class ListNode {
   }
 
   @Override public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (this == o)
+      return true;
+    if (o == null || getClass() != o.getClass())
+      return false;
     ListNode listNode = (ListNode) o;
     return val == listNode.val && java.util.Objects.equals(next, listNode.next);
   }

@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.UnionFind;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No434_NumberOfIslandsII {
+
   public static void main(String[] args) {
     No434_NumberOfIslandsII No434_NumberOfIslandsII = new No434_NumberOfIslandsII();
     No434_NumberOfIslandsII.testNo434_NumberOfIslandsII();
@@ -14,14 +14,15 @@ public class No434_NumberOfIslandsII {
 
   private void testNo434_NumberOfIslandsII() {
     log.info("result 2 v.s. " + numIslands2(3, 3, new Point[]{
-            new Point(0, 0),
-            new Point(0, 1),
-            new Point(2, 2),
-            new Point(2, 1)
+        new Point(0, 0),
+        new Point(0, 1),
+        new Point(2, 2),
+        new Point(2, 1)
     }));
   }
 
   class Point {
+
     int x;
     int y;
 
@@ -55,6 +56,7 @@ public class No434_NumberOfIslandsII {
   List<Integer> answer;
 
   class UnionFind {
+
     int m;
     int n;
     int count;

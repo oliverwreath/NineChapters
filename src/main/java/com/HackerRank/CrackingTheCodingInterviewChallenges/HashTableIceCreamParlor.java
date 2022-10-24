@@ -1,12 +1,12 @@
 package com.HackerRank.CrackingTheCodingInterviewChallenges;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class HashTableIceCreamParlor {
+
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
     int t = in.nextInt();

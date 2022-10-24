@@ -1,14 +1,14 @@
 package com.lintcode;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/5/23.
  */
 @Slf4j
 public class RemoveDuplicates {
+
   public static void main(String[] args) {
 //        plusOneTest();
 //        strStrTest();

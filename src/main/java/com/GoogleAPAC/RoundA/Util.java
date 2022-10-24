@@ -1,13 +1,12 @@
 package com.GoogleAPAC.RoundA;
 
 import com.google.common.base.Throwables;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by yanli_000 on 16/7/8.
@@ -125,6 +124,7 @@ public class Util {
   }
 
   public static class LeaderEntry implements Comparable {
+
     String name;
     int distinctCount;
 

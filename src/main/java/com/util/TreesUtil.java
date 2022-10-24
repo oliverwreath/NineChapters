@@ -1,14 +1,15 @@
 package com.util;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
-
 @Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class TreesUtil {
+
   static String printWholeTreeByLevel(TreeNode root) {
     if (root == null)
       return "";
@@ -25,7 +26,7 @@ public class TreesUtil {
         TreeNode poll = queue.poll();
         if (d < depth - 1 && i > 0)
           sb.append(spaces);
-        sb.append(String.format("%3.3s%s", (poll==null?"#":poll.val), (i == n - 1?"":",")));
+        sb.append(String.format("%3.3s%s", (poll == null ? "#" : poll.val), (i == n - 1 ? "" : ",")));
         if (poll != null) {
           queue.add(poll.left);
           queue.add(poll.right);

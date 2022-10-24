@@ -1,34 +1,34 @@
 package com.lintcode.Advanced.Heap.HashHeap;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SlidingWindowMatrixMaximum {
+
   public static void main(String[] arg) {
     new SlidingWindowMatrixMaximum().testSlidingWindowMaximum();
   }
 
   private void testSlidingWindowMaximum() {
     log.info("{}", maxSlidingWindow2(new int[][]{
-            {1, 5, 3},
-            {3, 2, 1},
-            {4, 1, 9},
+        {1, 5, 3},
+        {3, 2, 1},
+        {4, 1, 9},
     }, 2));// 13
     log.info("{}", maxSlidingWindow2(new int[][]{
-            {1, 2, 3, 4, 6, 5},
-            {7, 8, 9, 10, 12, 11},
-            {13, 14, 15, 16, 18, 17},
-            {19, 20, 21, 22, 24, 23},
-            {25, 26, 27, 28, 30, 29},
-            {31, 32, 33, 34, 36, 35},
-            {43, 44, 45, 46, 48, 47},
-            {37, 38, 39, 40, 42, 41},
+        {1, 2, 3, 4, 6, 5},
+        {7, 8, 9, 10, 12, 11},
+        {13, 14, 15, 16, 18, 17},
+        {19, 20, 21, 22, 24, 23},
+        {25, 26, 27, 28, 30, 29},
+        {31, 32, 33, 34, 36, 35},
+        {43, 44, 45, 46, 48, 47},
+        {37, 38, 39, 40, 42, 41},
     }, 5));// 850
   }
 

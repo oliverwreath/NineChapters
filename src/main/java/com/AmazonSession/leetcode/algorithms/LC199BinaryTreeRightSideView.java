@@ -1,15 +1,19 @@
 package com.AmazonSession.leetcode.algorithms;
 
 import com.util.TreeNode;
+import java.util.ArrayDeque;
+import java.util.Collections;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC199BinaryTreeRightSideView {
+
   public List<Integer> rightSideView(TreeNode root) {
     if (root == null)
       return Collections.emptyList();

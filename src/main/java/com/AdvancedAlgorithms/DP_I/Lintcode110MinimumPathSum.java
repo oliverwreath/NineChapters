@@ -3,11 +3,12 @@ package com.AdvancedAlgorithms.DP_I;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * nicely done!
- * Also sliding Array trick. Be careful that you can't initialize the first column at once now. You need to embedded it in the row scanning.
+ * nicely done! Also sliding Array trick. Be careful that you can't initialize the first column at once now. You need to
+ * embedded it in the row scanning.
  */
 @Slf4j
 public class Lintcode110MinimumPathSum {
+
   public int minPathSum(int[][] grid) {
     // filter abnormal cases
     if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {

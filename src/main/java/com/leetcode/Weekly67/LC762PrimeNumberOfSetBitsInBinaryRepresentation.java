@@ -1,11 +1,11 @@
 package com.leetcode.Weekly67;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC762PrimeNumberOfSetBitsInBinaryRepresentation {
+
   public static void main(String[] args) {
     testNo762();
   }

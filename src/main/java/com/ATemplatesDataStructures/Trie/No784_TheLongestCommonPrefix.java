@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.Trie;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No784_TheLongestCommonPrefix {
+
   public static void main(String[] args) {
     testNo784_TheLongestCommonPrefix();
   }
@@ -55,6 +55,7 @@ public class No784_TheLongestCommonPrefix {
   }
 
   class Trie {
+
     TrieNode root;
 
     public Trie() {
@@ -123,12 +124,13 @@ public class No784_TheLongestCommonPrefix {
     @Override
     public String toString() {
       return "Trie{" +
-              "root=" + root +
-              '}';
+          "root=" + root +
+          '}';
     }
   }
 
   class TrieNode {
+
     String s;
     boolean isString;
     int times;
@@ -145,10 +147,10 @@ public class No784_TheLongestCommonPrefix {
     @Override
     public String toString() {
       return "TrieNode{" +
-              "s='" + s + '\'' +
-              ", isString=" + isString +
-              ", subtree=" + subtree +
-              '}';
+          "s='" + s + '\'' +
+          ", isString=" + isString +
+          ", subtree=" + subtree +
+          '}';
     }
   }
 

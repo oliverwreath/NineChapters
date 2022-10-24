@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No626_RectangleOverlap {
+
   public static void main(String[] args) {
     No626_RectangleOverlap No626_RectangleOverlap = new No626_RectangleOverlap();
     No626_RectangleOverlap.testNo626_RectangleOverlap();
@@ -15,6 +16,7 @@ public class No626_RectangleOverlap {
   }
 
   class Point {
+
     public int x, y;
 
     public Point() {

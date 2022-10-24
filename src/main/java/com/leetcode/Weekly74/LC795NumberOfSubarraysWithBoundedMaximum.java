@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC795NumberOfSubarraysWithBoundedMaximum {
+
   public static void main(String[] args) {
     LC795NumberOfSubarraysWithBoundedMaximum LC795NumberOfSubarraysWithBoundedMaximum = new LC795NumberOfSubarraysWithBoundedMaximum();
     LC795NumberOfSubarraysWithBoundedMaximum.testNo795_NumberOfSubarraysWithBoundedMaximum();

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC764LargestPlusSign {
+
   public static void main(String[] args) {
     testNo764_LargestPlusSign();
   }
@@ -18,9 +19,9 @@ public class LC764LargestPlusSign {
 //                {0, 0}
 //        }));
     log.info("result 1 v.s. " + LC764LargestPlusSign.orderOfLargestPlusSign(2, new int[][]{
-            {0, 0},
-            {0, 1},
-            {1, 0}
+        {0, 0},
+        {0, 1},
+        {1, 0}
     }));
   }
 
@@ -94,7 +95,8 @@ public class LC764LargestPlusSign {
     for (int i = 1; i < N - 1; i++) {
       for (int j = 1; j < N - 1; j++) {
         if (matrix[i][j] == 1) {
-          maxK = Math.max(maxK, 1 + Math.min(Math.min(dpUp[i][j], dpDown[i][j]), Math.min(dpLeft[i][j], dpRight[i][j])));
+          maxK = Math.max(maxK,
+              1 + Math.min(Math.min(dpUp[i][j], dpDown[i][j]), Math.min(dpLeft[i][j], dpRight[i][j])));
         }
       }
     }

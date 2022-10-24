@@ -7,9 +7,10 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC223RectangleArea {
+
   /**
-   * horizontal CG AE
-   * vertical DH BF
+   * horizontal CG AE vertical DH BF
+   *
    * @return
    */
   public int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {

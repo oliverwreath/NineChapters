@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC104MaximumDepthOfBinaryTree {
+
   public int maxDepth(TreeNode root) {
     if (root == null)
       return 0;

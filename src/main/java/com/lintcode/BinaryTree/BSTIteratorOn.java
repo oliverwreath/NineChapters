@@ -1,18 +1,18 @@
 package com.lintcode.BinaryTree;
 
-import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
+import static com.lintcode.BinaryTree.BinaryTree.getTree;
 
+import com.util.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
-
-import static com.lintcode.BinaryTree.BinaryTree.getTree;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/12.
  */
 @Slf4j
 public class BSTIteratorOn {
+
   private List<TreeNode> treeNodes = new LinkedList<TreeNode>();
   private int index = -1;
 

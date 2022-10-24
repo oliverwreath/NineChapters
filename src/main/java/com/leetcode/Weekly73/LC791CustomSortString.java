@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC791CustomSortString {
+
   public static void main(String[] args) {
     LC791CustomSortString LC791CustomSortString = new LC791CustomSortString();
     LC791CustomSortString.testNo791_CustomSortString();
@@ -60,7 +61,6 @@ public class LC791CustomSortString {
       }
     }
 //        log.debug("count = " + Arrays.toString(count));
-
 
     // return the final result
     return stringBuilder.toString();

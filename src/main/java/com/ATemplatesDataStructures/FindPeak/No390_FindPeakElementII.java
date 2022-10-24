@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.FindPeak;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No390_FindPeakElementII {
+
   public static void main(String[] args) {
     testNo390_FindPeakElementII();
   }
@@ -14,11 +14,11 @@ public class No390_FindPeakElementII {
   private static void testNo390_FindPeakElementII() {
     No390_FindPeakElementII No390_FindPeakElementII = new No390_FindPeakElementII();
     log.info("result [1,1] || [2,2] v.s. " + No390_FindPeakElementII.findPeakII(new int[][]{
-            {1, 2, 3, 6, 5},
-            {16, 41, 23, 22, 6},
-            {15, 17, 24, 21, 7},
-            {14, 18, 19, 20, 10},
-            {13, 14, 11, 10, 9}
+        {1, 2, 3, 6, 5},
+        {16, 41, 23, 22, 6},
+        {15, 17, 24, 21, 7},
+        {14, 18, 19, 20, 10},
+        {13, 14, 11, 10, 9}
     }));
   }
 

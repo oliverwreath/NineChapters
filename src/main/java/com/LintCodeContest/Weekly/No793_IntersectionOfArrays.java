@@ -1,11 +1,11 @@
 package com.LintCodeContest.Weekly;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No793_IntersectionOfArrays {
+
   public static void main(String[] args) {
     testNo793_IntersectionOfArrays();
   }
@@ -13,14 +13,14 @@ public class No793_IntersectionOfArrays {
   private static void testNo793_IntersectionOfArrays() {
     No793_IntersectionOfArrays No793_IntersectionOfArrays = new No793_IntersectionOfArrays();
     log.info("result 1 v.s. " + No793_IntersectionOfArrays.intersectionOfArrays(new int[][]{
-            {1, 2, 3},
-            {3, 4, 5},
-            {3, 9, 10}
+        {1, 2, 3},
+        {3, 4, 5},
+        {3, 9, 10}
     }));
     log.info("result 2 v.s. " + No793_IntersectionOfArrays.intersectionOfArrays(new int[][]{
-            {1, 2, 3, 4},
-            {1, 2, 5, 6, 7},
-            {9, 10, 1, 5, 2, 3}
+        {1, 2, 3, 4},
+        {1, 2, 5, 6, 7},
+        {9, 10, 1, 5, 2, 3}
     }));
   }
 

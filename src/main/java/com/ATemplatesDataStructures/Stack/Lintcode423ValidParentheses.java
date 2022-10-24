@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.Stack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Lintcode423ValidParentheses {
+
   public boolean isValidParentheses(String s) {
     // filter abnormal cases
     if (s == null || s.isEmpty()) {
@@ -34,8 +34,8 @@ public class Lintcode423ValidParentheses {
 
   private boolean isMatching(Character opening, Character closing) {
     return (opening.equals('(') && closing.equals(')')) ||
-            (opening.equals('{') && closing.equals('}')) ||
-            (opening.equals('[') && closing.equals(']'));
+        (opening.equals('{') && closing.equals('}')) ||
+        (opening.equals('[') && closing.equals(']'));
   }
 
   boolean isOpening(Character c) {

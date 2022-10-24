@@ -1,14 +1,14 @@
 package com.ATemplatesDataStructures.Trie;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NavigableMap;
 import java.util.TreeMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No559_TrieService {
+
   public static void main(String[] args) {
     No559_TrieService No559_TrieService = new No559_TrieService();
     No559_TrieService.testNo559_TrieService();
@@ -22,6 +22,7 @@ public class No559_TrieService {
   }
 
   public class TrieNode {
+
     public NavigableMap<Character, TrieNode> children;
     public List<Integer> top10;
 
@@ -32,6 +33,7 @@ public class No559_TrieService {
   }
 
   public class TrieService {
+
     private TrieNode root;
 
     public TrieService() {

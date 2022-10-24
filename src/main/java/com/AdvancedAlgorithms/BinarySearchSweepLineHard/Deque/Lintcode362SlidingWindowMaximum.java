@@ -1,17 +1,17 @@
 package com.AdvancedAlgorithms.BinarySearchSweepLineHard.Deque;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * deque and space compression. Nicely done!
  */
 @Slf4j
 public class Lintcode362SlidingWindowMaximum {
+
   private Deque<Integer> deque = new ArrayDeque<>();
 
   private void inQueue(int number) {

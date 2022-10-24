@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Merge_two_sorted_arrays_6 {
+
   public static void main(String[] args) {
     testMerge_two_sorted_arrays_6();
   }

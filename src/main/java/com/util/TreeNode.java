@@ -1,14 +1,15 @@
 package com.util;
 
-import lombok.extern.slf4j.Slf4j;
-
 import static com.util.TreesUtil.printWholeTreeByLevel;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class TreeNode {
+
   public int val;
   public TreeNode left, right;
 
@@ -19,9 +20,9 @@ public class TreeNode {
   @Override
   public String toString() {
     return "TreeNode{" +
-            val + ";\n" +
-            (left==null?null:left.val) + "," + (right==null?null:right.val) +
-            "}";
+        val + ";\n" +
+        (left == null ? null : left.val) + "," + (right == null ? null : right.val) +
+        "}";
   }
 
   public String printTree() {

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No895_FriendRequest {
+
   public static void main(String[] args) {
     No895_FriendRequest No895_FriendRequest = new No895_FriendRequest();
     No895_FriendRequest.testNo895_FriendReques();

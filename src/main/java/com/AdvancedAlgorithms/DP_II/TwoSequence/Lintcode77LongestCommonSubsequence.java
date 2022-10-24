@@ -1,21 +1,20 @@
 package com.AdvancedAlgorithms.DP_II.TwoSequence;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  * <p>
  * Version 1: Simply Working. Okay DP.
  * <p>
- * TIME: O(MN)
- * SPACE: O(MN)
+ * TIME: O(MN) SPACE: O(MN)
  * <p>
  * Version 2: TBD. Could be Sliding array - save space.
  */
 @Slf4j
 public class Lintcode77LongestCommonSubsequence {
+
   public int longestCommonSubsequence(String a, String b) {
     // filter abnormal cases
     if (a == null || a.length() == 0 || b == null || b.length() == 0) {

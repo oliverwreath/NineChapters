@@ -1,12 +1,12 @@
 package com.LintCodeContest.Weekly6;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No823_InputStream {
+
   public static void main(String[] args) {
     No823_InputStream No823_InputStream = new No823_InputStream();
     No823_InputStream.testNo823_InputStream();

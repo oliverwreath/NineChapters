@@ -1,14 +1,20 @@
 package com.lintcode.BFS;
 
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class No974_01_Matrix {
+
   public static void main(String[] arg) {
     No974_01_Matrix tester = new No974_01_Matrix();
     tester.test();
@@ -16,22 +22,22 @@ public class No974_01_Matrix {
 
   private void test() {
     int[][] ints1 = updateMatrix(new int[][]{
-            {0, 0, 0},
-            {0, 0, 0},
-            {0, 0, 0},
-            {0, 0, 0},
-            {0, 0, 0}
+        {0, 0, 0},
+        {0, 0, 0},
+        {0, 0, 0},
+        {0, 0, 0},
+        {0, 0, 0}
     });
     for (int[] anInt : ints1) {
       log.info("{}", anInt);
     }
     log.info("");
     int[][] ints = updateMatrix(new int[][]{
-            {0, 1, 0, 1, 1},
-            {1, 1, 0, 0, 1},
-            {0, 0, 0, 1, 0},
-            {1, 0, 1, 1, 1},
-            {1, 0, 0, 0, 1}
+        {0, 1, 0, 1, 1},
+        {1, 1, 0, 0, 1},
+        {0, 0, 0, 1, 0},
+        {1, 0, 1, 1, 1},
+        {1, 0, 0, 0, 1}
     });
     for (int[] anInt : ints) {
       log.info("{}", anInt);
@@ -92,6 +98,7 @@ public class No974_01_Matrix {
   }
 
   private class Node {
+
     int x;
     int y;
 

@@ -7,8 +7,10 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC121BestTimeToBuyAndSellStock {
+
   public int maxProfit(int[] prices) {
-    if (prices == null || prices.length < 2) return 0;
+    if (prices == null || prices.length < 2)
+      return 0;
 
     int prefixMin = prices[0];
     int maxProfit = 0;

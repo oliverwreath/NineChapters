@@ -1,21 +1,21 @@
 package com.Tools.FileOperations;
 
-import com.google.common.base.Preconditions;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
+import static com.Tools.FileOperations.FileUtils.getFileList;
 
+import com.google.common.base.Preconditions;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Collections;
 import java.util.List;
-
-import static com.Tools.FileOperations.FileUtils.getFileList;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class FileCleanerWithName {
+
   public static void main(String[] arg) {
     testRemoveDuplicateFile();
   }

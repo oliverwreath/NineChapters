@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.Stack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ExpressionExpand {
+
   public static void main(String[] args) {
     testExpressionExpand();
   }

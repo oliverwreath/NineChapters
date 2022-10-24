@@ -1,14 +1,14 @@
 package com.lintcode.Advanced.Heap;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class DataStreamMedian {
+
   public static void main(String[] arg) {
     new DataStreamMedian().testTrappingRainWater();
   }

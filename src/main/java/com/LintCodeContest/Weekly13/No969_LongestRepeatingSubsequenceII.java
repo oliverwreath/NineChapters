@@ -1,12 +1,12 @@
 package com.LintCodeContest.Weekly13;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No969_LongestRepeatingSubsequenceII {
+
   public static void main(String[] args) {
     No969_LongestRepeatingSubsequenceII No969_LongestRepeatingSubsequenceII = new No969_LongestRepeatingSubsequenceII();
     No969_LongestRepeatingSubsequenceII.testNo969_LongestRepeatingSubsequenceII();

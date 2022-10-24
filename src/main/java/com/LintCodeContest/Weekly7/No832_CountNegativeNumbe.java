@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No832_CountNegativeNumbe {
+
   public static void main(String[] args) {
     No832_CountNegativeNumbe No832_CountNegativeNumbe = new No832_CountNegativeNumbe();
     No832_CountNegativeNumbe.testNo832_CountNegativeNumbe();
@@ -11,14 +12,14 @@ public class No832_CountNegativeNumbe {
 
   private void testNo832_CountNegativeNumbe() {
     log.info("result 5 v.s. " + countNumber(new int[][]{
-            {-5, -3, -1, 0, 1},
-            {-2, -1, 0, 0, 1},
-            {0, 11, 12, 12, 14}
+        {-5, -3, -1, 0, 1},
+        {-2, -1, 0, 0, 1},
+        {0, 11, 12, 12, 14}
     }));
     log.info("result 11 v.s. " + countNumber(new int[][]{
-            {-50, -30, -10, -5},
-            {-30, -20, -5, -1},
-            {-10, -5, -1, 0}
+        {-50, -30, -10, -5},
+        {-30, -20, -5, -1},
+        {-10, -5, -1, 0}
     }));
   }
 

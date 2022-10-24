@@ -1,15 +1,15 @@
 package com.lintcode.Advanced.UnionFind;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class UnionFind {
+
   HashMap<Integer, Integer> father = new HashMap<Integer, Integer>();
 
   public UnionFind() {
@@ -71,7 +71,7 @@ public class UnionFind {
   @Override
   public String toString() {
     return "UnionFindQuiz{" +
-            "father=" + father +
-            '}';
+        "father=" + father +
+        '}';
   }
 }

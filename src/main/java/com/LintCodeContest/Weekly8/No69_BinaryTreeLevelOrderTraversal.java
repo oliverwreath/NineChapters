@@ -1,12 +1,16 @@
 package com.LintCodeContest.Weekly8;
 
 import com.util.TreeNode;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Queue;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 @Slf4j
 public class No69_BinaryTreeLevelOrderTraversal {
+
   public static void main(String[] args) {
     No69_BinaryTreeLevelOrderTraversal No69_BinaryTreeLevelOrderTraversal = new No69_BinaryTreeLevelOrderTraversal();
     No69_BinaryTreeLevelOrderTraversal.testNo69_BinaryTreeLevelOrderTraversal();

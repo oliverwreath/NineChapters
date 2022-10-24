@@ -1,14 +1,14 @@
 package com.LintCodeContest.Weekly7;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No772_GroupAnagrams {
+
   public static void main(String[] args) {
     No772_GroupAnagrams No772_GroupAnagrams = new No772_GroupAnagrams();
     No772_GroupAnagrams.testNo772_GroupAnagrams();
@@ -16,10 +16,10 @@ public class No772_GroupAnagrams {
 
   private void testNo772_GroupAnagrams() {
     log.info("result [\n" +
-            "    [\"ate\", \"eat\",\"tea\"],\n" +
-            "    [\"nat\",\"tan\"],\n" +
-            "    [\"bat\"]\n" +
-            "] v.s. \n" + groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
+        "    [\"ate\", \"eat\",\"tea\"],\n" +
+        "    [\"nat\",\"tan\"],\n" +
+        "    [\"bat\"]\n" +
+        "] v.s. \n" + groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
   }
 
   List<List<String>> groupAnagrams(String[] A) {

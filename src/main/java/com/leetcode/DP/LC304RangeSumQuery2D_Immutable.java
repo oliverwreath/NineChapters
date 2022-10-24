@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC304RangeSumQuery2D_Immutable {
+
   public static void main(String[] arg) {
     new LC304RangeSumQuery2D_Immutable().testRangeSumQueryImmutable_303();
   }
@@ -17,11 +18,11 @@ public class LC304RangeSumQuery2D_Immutable {
 
   int RangeSumQueryImmutable_303() {
     NumMatrix NumMatrix = new NumMatrix(new int[][]{
-            {3, 0, 1, 4, 2},
-            {5, 6, 3, 2, 1},
-            {1, 2, 0, 1, 5},
-            {4, 1, 0, 1, 7},
-            {1, 0, 3, 0, 5}
+        {3, 0, 1, 4, 2},
+        {5, 6, 3, 2, 1},
+        {1, 2, 0, 1, 5},
+        {4, 1, 0, 1, 7},
+        {1, 0, 3, 0, 5}
     });
     log.debug(String.valueOf(NumMatrix.sumRegion(2, 1, 4, 3)));
     log.debug(String.valueOf(NumMatrix.sumRegion(1, 1, 2, 2)));
@@ -30,11 +31,12 @@ public class LC304RangeSumQuery2D_Immutable {
   }
 
   public class NumMatrix {
+
     int[][] matrix;
     int[][] sumsFromUpperLeft;
 
     public NumMatrix(int[][] matrix) {
-  
+
       if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
         this.matrix = matrix;
         this.sumsFromUpperLeft = new int[0][0];
@@ -55,7 +57,9 @@ public class LC304RangeSumQuery2D_Immutable {
       }
       for (int i = 1; i < n; i++) {
         for (int j = 1; j < m; j++) {
-          sumsFromUpperLeft[i][j] = matrix[i][j] + sumsFromUpperLeft[i - 1][j] + sumsFromUpperLeft[i][j - 1] - sumsFromUpperLeft[i - 1][j - 1];
+          sumsFromUpperLeft[i][j] =
+              matrix[i][j] + sumsFromUpperLeft[i - 1][j] + sumsFromUpperLeft[i][j - 1] - sumsFromUpperLeft[i - 1][j
+                  - 1];
         }
       }
 
@@ -84,7 +88,8 @@ public class LC304RangeSumQuery2D_Immutable {
       } else if (col1 == 0) {
         return sumsFromUpperLeft[row2][col2] - sumsFromUpperLeft[row1 - 1][col2];
       } else {
-        int ans = sumsFromUpperLeft[row2][col2] - sumsFromUpperLeft[row2][col1 - 1] - sumsFromUpperLeft[row1 - 1][col2] + sumsFromUpperLeft[row1 - 1][col1 - 1];
+        int ans = sumsFromUpperLeft[row2][col2] - sumsFromUpperLeft[row2][col1 - 1] - sumsFromUpperLeft[row1 - 1][col2]
+            + sumsFromUpperLeft[row1 - 1][col1 - 1];
         return ans;
       }
     }

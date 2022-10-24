@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No752_RogueKnightSven {
+
   public static void main(String[] args) {
     No752_RogueKnightSven No752_RogueKnightSven = new No752_RogueKnightSven();
     No752_RogueKnightSven.testNo752_RogueKnightSven();

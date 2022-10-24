@@ -1,17 +1,17 @@
 package com.HackerRank.WeekOfCode24;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SimplifiedChessEngine {
+
   public static void main(String[] args) {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     Scanner in = new Scanner(System.in);
@@ -53,7 +53,8 @@ public class SimplifiedChessEngine {
     }
   }
 
-  private boolean playOne(Map<Integer, Piece> piecesWhite, Map<Integer, Piece> piecesBlack, boolean isWhiteTurn, int m) {
+  private boolean playOne(Map<Integer, Piece> piecesWhite, Map<Integer, Piece> piecesBlack, boolean isWhiteTurn,
+      int m) {
     if (m == 0) {
       return false;
     }
@@ -130,7 +131,8 @@ public class SimplifiedChessEngine {
     return false;
   }
 
-  private boolean executeMove(Map<Integer, Piece> piecesWhite, Map<Integer, Piece> piecesBlack, int X, int Y, Piece piece, boolean[][] flag, int m, boolean isWhiteTurn) {
+  private boolean executeMove(Map<Integer, Piece> piecesWhite, Map<Integer, Piece> piecesBlack, int X, int Y,
+      Piece piece, boolean[][] flag, int m, boolean isWhiteTurn) {
     if (valideXY(X, Y)) {
       // every valid move
       if (!flag[X][Y]) {
@@ -208,6 +210,7 @@ public class SimplifiedChessEngine {
   }
 
   private class Piece {
+
     Character type;
     boolean isWhite;
     int x;
@@ -226,11 +229,11 @@ public class SimplifiedChessEngine {
     @Override
     public String toString() {
       return "Piece{" +
-              "type=" + type +
-              ", isWhite=" + isWhite +
-              ", x=" + x +
-              ", y=" + y +
-              '}';
+          "type=" + type +
+          ", isWhite=" + isWhite +
+          ", x=" + x +
+          ", y=" + y +
+          '}';
     }
   }
 }

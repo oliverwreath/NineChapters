@@ -1,15 +1,15 @@
 package com.AmazonSession.leetcode.algorithms;
 
 import com.util.ListNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC234PalindromeLinkedList {
+
   public boolean isPalindrome(ListNode head) {
     if (head == null || head.next == null) {
       return true;

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No154RegularExpressionMatching {
+
   public boolean isMatch(String s, String p) {
     // filter abnormal cases
     if (s == null) {

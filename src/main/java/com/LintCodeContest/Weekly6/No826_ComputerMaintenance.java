@@ -1,13 +1,13 @@
 package com.LintCodeContest.Weekly6;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No826_ComputerMaintenance {
+
   public static void main(String[] args) {
     No826_ComputerMaintenance No826_ComputerMaintenance = new No826_ComputerMaintenance();
     No826_ComputerMaintenance.testNo826_ComputerMaintenance();
@@ -15,20 +15,21 @@ public class No826_ComputerMaintenance {
 
   private void testNo826_ComputerMaintenance() {//n = 3, m = 10, List = [[0,0],[0,9],[1,7]]
     log.info("result 9 v.s. " + maintenance(3, 10, new Point[]{
-            new Point(0, 3), new Point(0, 9)
+        new Point(0, 3), new Point(0, 9)
     }));
     log.info("result 8 v.s. " + maintenance(3, 10, new Point[]{
-            new Point(0, 0), new Point(0, 8)
+        new Point(0, 0), new Point(0, 8)
     }));
     log.info("result 15 v.s. " + maintenance(3, 10, new Point[]{
-            new Point(0, 0), new Point(0, 9), new Point(1, 7)
+        new Point(0, 0), new Point(0, 9), new Point(1, 7)
     }));
     log.info("result 17 v.s. " + maintenance(3, 10, new Point[]{
-            new Point(0, 3), new Point(1, 7), new Point(1, 2)
+        new Point(0, 3), new Point(1, 7), new Point(1, 2)
     }));
   }
 
   class Point {
+
     int x;
     int y;
 

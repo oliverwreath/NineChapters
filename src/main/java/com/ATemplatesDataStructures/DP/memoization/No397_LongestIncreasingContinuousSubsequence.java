@@ -4,14 +4,17 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No397_LongestIncreasingContinuousSubsequence {
+
   public static void main(String[] args) {
     testNo397_LongestIncreasingContinuousSubsequence();
   }
 
   private static void testNo397_LongestIncreasingContinuousSubsequence() {
     No397_LongestIncreasingContinuousSubsequence No397_LongestIncreasingContinuousSubsequence = new No397_LongestIncreasingContinuousSubsequence();
-    log.info("result 4 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequence(new int[]{5, 4, 2, 1, 3}));
-    log.info("result 4 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequence(new int[]{5, 1, 2, 3, 4}));
+    log.info("result 4 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequence(
+        new int[]{5, 4, 2, 1, 3}));
+    log.info("result 4 v.s. " + No397_LongestIncreasingContinuousSubsequence.longestIncreasingContinuousSubsequence(
+        new int[]{5, 1, 2, 3, 4}));
   }
 
   /**

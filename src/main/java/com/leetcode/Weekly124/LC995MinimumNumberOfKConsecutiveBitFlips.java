@@ -5,16 +5,13 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply Working.
- * TIME: O(MN)
- * SPACE: O(MN)
+ * Version 1: Simply Working. TIME: O(MN) SPACE: O(MN)
  * <p>
- * Version 2: TBD.
- * TIME: O(?)
- * SPACE: O(?)
+ * Version 2: TBD. TIME: O(?) SPACE: O(?)
  */
 @Slf4j
 public class LC995MinimumNumberOfKConsecutiveBitFlips {
+
   public int minKBitFlips(int[] nums, int k) {
     if (nums == null || nums.length == 0) {
       return 0;

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC767ReorganizeString {
+
   public String reorganizeString(String s) {
     // filter abnormal cases
     if (s == null || s.length() < 2)

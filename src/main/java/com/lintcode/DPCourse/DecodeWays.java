@@ -1,14 +1,14 @@
 package com.lintcode.DPCourse;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class DecodeWays {
+
   public static void main(String[] args) {
     DecodeWays decodeWays = new DecodeWays();
     log.debug("result 2 = " + decodeWays.numDecodings("12"));

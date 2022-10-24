@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC543DiameterOfBinaryTree {
+
   public int diameterOfBinaryTree(TreeNode root) {
     maxDiameter = 0;
     maxDepth(root);
@@ -12,6 +13,7 @@ public class LC543DiameterOfBinaryTree {
   }
 
   private int maxDiameter = 0;
+
   private int maxDepth(TreeNode root) {
     if (root == null)
       return 0;

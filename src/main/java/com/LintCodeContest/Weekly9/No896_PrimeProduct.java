@@ -1,13 +1,13 @@
 package com.LintCodeContest.Weekly9;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.TreeSet;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No896_PrimeProduct {
+
   public static void main(String[] args) {
     No896_PrimeProduct No896_PrimeProduct = new No896_PrimeProduct();
     No896_PrimeProduct.testNo896_PrimeProduct();

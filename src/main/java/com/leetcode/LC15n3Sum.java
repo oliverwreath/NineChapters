@@ -1,16 +1,16 @@
 package com.leetcode;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC15n3Sum {
+
   public List<List<Integer>> threeSum(int[] nums) {
     List<List<Integer>> res = new LinkedList<>();
     Arrays.sort(nums);

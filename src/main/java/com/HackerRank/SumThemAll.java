@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class SumThemAll {
+
   public static void main(String[] args) {
     testSum(new int[]{1, 2, 3, 4, 5});
     testSum(new int[]{12, 12});

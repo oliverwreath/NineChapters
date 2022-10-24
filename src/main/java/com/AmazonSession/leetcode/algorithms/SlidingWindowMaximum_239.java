@@ -1,15 +1,15 @@
 package com.AmazonSession.leetcode.algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SlidingWindowMaximum_239 {
+
   public static void main(String[] arg) {
     new SlidingWindowMaximum_239().testSearchA2DMatrix_74();
   }
@@ -57,6 +57,7 @@ public class SlidingWindowMaximum_239 {
   }
 
   private class MyDeque {
+
     ArrayDeque<Integer> deque = new ArrayDeque<Integer>();
 
     public MyDeque() {
@@ -83,8 +84,8 @@ public class SlidingWindowMaximum_239 {
     @Override
     public String toString() {
       return "MyDeque{" +
-              "deque=" + deque +
-              '}';
+          "deque=" + deque +
+          '}';
     }
   }
 }

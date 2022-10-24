@@ -1,18 +1,18 @@
 package com.lintcode.BinaryTree;
 
-import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
+import static com.lintcode.BinaryTree.BinaryTree.getTree;
 
+import com.util.TreeNode;
 import java.util.ArrayDeque;
 import java.util.Deque;
-
-import static com.lintcode.BinaryTree.BinaryTree.getTree;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/12.
  */
 @Slf4j
 public class BSTIteratorOh {
+
   private TreeNode currentNode = null;
   private Deque<TreeNode> st = new ArrayDeque<TreeNode>();
 

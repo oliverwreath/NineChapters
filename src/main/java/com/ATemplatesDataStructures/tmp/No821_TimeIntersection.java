@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.tmp;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No821_TimeIntersection {
+
   public static void main(String[] args) {
     No821_TimeIntersection No821_TimeIntersection = new No821_TimeIntersection();
     No821_TimeIntersection.testNo821_TimeIntersection();
@@ -24,6 +24,7 @@ public class No821_TimeIntersection {
   }
 
   public class Point {
+
     public int x;
     public int y;
 
@@ -35,9 +36,9 @@ public class No821_TimeIntersection {
     @Override
     public String toString() {
       return "{" +
-              "" + x +
-              ", " + y +
-              '}';
+          "" + x +
+          ", " + y +
+          '}';
     }
   }
 

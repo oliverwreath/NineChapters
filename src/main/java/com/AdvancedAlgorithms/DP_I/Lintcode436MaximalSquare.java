@@ -3,12 +3,12 @@ package com.AdvancedAlgorithms.DP_I;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * version 1 - nicely done! it's working!
- * version 2 - nicely done! One dp array.
- * version 3 - nicely done! Sliding Array.
+ * version 1 - nicely done! it's working! version 2 - nicely done! One dp array. version 3 - nicely done! Sliding
+ * Array.
  */
 @Slf4j
 public class Lintcode436MaximalSquare {
+
   public int maxSquare(int[][] matrix) {
     // filter abnormal cases
     if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {

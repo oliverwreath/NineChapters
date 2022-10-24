@@ -1,18 +1,19 @@
 package com.leetcode.Weekly65;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC755PourWater {
+
   public static void main(String[] args) {
     testNo755_PourWater();
   }
 
   private static void testNo755_PourWater() {
     LC755PourWater lc755PourWater = new LC755PourWater();
-    log.info("result [2,2,2,3,2,2,2] v.s. " + Arrays.toString(lc755PourWater.pourWater(new int[]{2, 1, 1, 2, 1, 2, 2}, 4, 3)));
+    log.info("result [2,2,2,3,2,2,2] v.s. " + Arrays.toString(
+        lc755PourWater.pourWater(new int[]{2, 1, 1, 2, 1, 2, 2}, 4, 3)));
     log.info("result [2,3,3,4] v.s. " + Arrays.toString(lc755PourWater.pourWater(new int[]{1, 2, 3, 4}, 2, 2)));
     log.info("result [4,4,4] v.s. " + Arrays.toString(lc755PourWater.pourWater(new int[]{3, 1, 3}, 5, 1)));
   }

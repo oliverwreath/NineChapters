@@ -1,17 +1,17 @@
 package com.HackerRank.WeekOfCode24;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class RandomTmp {
+
   private static final SecureRandom random = new SecureRandom();
 
   public static void main(String[] args) {
@@ -25,7 +25,6 @@ public class RandomTmp {
     for (int t = 0; t < T; t++) {
       int w = in.nextInt();
       int b = in.nextInt();
-
 
       Map<Integer, Piece> piecesWhite = new HashMap<>();
       Map<Integer, Piece> piecesBlack = new HashMap<>();
@@ -55,6 +54,7 @@ public class RandomTmp {
   }
 
   private static class Piece {
+
     Character type;
     boolean isWhite;
     int x;
@@ -73,11 +73,11 @@ public class RandomTmp {
     @Override
     public String toString() {
       return "Piece{" +
-              "type=" + type +
-              ", isWhite=" + isWhite +
-              ", x=" + x +
-              ", y=" + y +
-              '}';
+          "type=" + type +
+          ", isWhite=" + isWhite +
+          ", x=" + x +
+          ", y=" + y +
+          '}';
     }
   }
 }

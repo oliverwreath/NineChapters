@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class StairCase {
+
   public static void main(String[] args) {
     testStairCase(-1);
     testStairCase(0);

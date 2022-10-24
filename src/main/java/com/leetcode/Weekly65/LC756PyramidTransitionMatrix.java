@@ -1,22 +1,24 @@
 package com.leetcode.Weekly65;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC756PyramidTransitionMatrix {
+
   public static void main(String[] args) {
     testNo756_PyramidTransitionMatrix();
   }
 
   private static void testNo756_PyramidTransitionMatrix() {
     LC756PyramidTransitionMatrix lc756PyramidTransitionMatrix = new LC756PyramidTransitionMatrix();
-    log.info("result 2 v.s. " + lc756PyramidTransitionMatrix.pyramidTransition("XYZ", Arrays.asList("XYD", "YZE", "DEA", "FFF")));
-    log.info("result 1 v.s. " + lc756PyramidTransitionMatrix.pyramidTransition("XXYX", Arrays.asList("XXX", "XXY", "XYX", "XYY", "YXZ")));
+    log.info("result 2 v.s. " + lc756PyramidTransitionMatrix.pyramidTransition("XYZ",
+        Arrays.asList("XYD", "YZE", "DEA", "FFF")));
+    log.info("result 1 v.s. " + lc756PyramidTransitionMatrix.pyramidTransition("XXYX",
+        Arrays.asList("XXX", "XXY", "XYX", "XYY", "YXZ")));
   }
 
   /**

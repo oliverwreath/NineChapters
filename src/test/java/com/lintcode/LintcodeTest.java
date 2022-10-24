@@ -1,5 +1,10 @@
 package com.lintcode;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 import com.lintcode.Advanced.Heap.DataStreamMedian;
 import com.lintcode.BinarySearch1.Lintcode460KClosestNumbers;
 import com.lintcode.LinkedList.Lintcode103LinkedListCycleII;
@@ -8,18 +13,18 @@ import com.lintcode.LinkedList.RandomListNode;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * Author: Oliver
  */
 @Slf4j
 class LintcodeTest {
+
   @Test void testLintcode460KClosestNumbers() {
     Lintcode460KClosestNumbers lintcode460KClosestNumbers = new Lintcode460KClosestNumbers();
     assertArrayEquals(new int[]{2, 1, 3}, lintcode460KClosestNumbers.kClosestNumbers(new int[]{1, 2, 3}, 2, 3));
     assertArrayEquals(new int[]{4, 1, 6}, lintcode460KClosestNumbers.kClosestNumbers(new int[]{1, 4, 6, 8}, 3, 3));
-    assertArrayEquals(new int[]{2, 4, 1, 6}, lintcode460KClosestNumbers.kClosestNumbers(new int[]{1, 2, 4, 6, 8}, 3, 4));
+    assertArrayEquals(new int[]{2, 4, 1, 6},
+        lintcode460KClosestNumbers.kClosestNumbers(new int[]{1, 2, 4, 6, 8}, 3, 4));
   }
 
   @Test void testDataStreamMedian() {
@@ -49,8 +54,8 @@ class LintcodeTest {
 
   private static void searchMatrixTest() {
     int[][] matrix = {{1, 3, 5, 7},
-            {10, 11, 16, 20},
-            {23, 30, 34, 50}};
+        {10, 11, 16, 20},
+        {23, 30, 34, 50}};
     int target = 3;
     assertEquals(-1, BinarySearch.searchMatrix(matrix, target));
   }
@@ -69,7 +74,8 @@ class LintcodeTest {
     assertArrayEquals(new int[]{4, 0}, BinarySearch.findMin(new int[]{4, 5, 6, 7, 0, 1, 2}));
     assertArrayEquals(new int[]{3, -1}, BinarySearch.findMin(new int[]{4, 5, 6, -1, 0, 1, 2}));
     assertArrayEquals(new int[]{2, -2}, BinarySearch.findMin(new int[]{4, 5, -2, -1, 0, 1, 2}));
-    assertArrayEquals(new int[]{8, 999}, BinarySearch.findMin(new int[]{999, 999, 1000, 1000, 10000, 0, 999, 999, 999}));
+    assertArrayEquals(new int[]{8, 999},
+        BinarySearch.findMin(new int[]{999, 999, 1000, 1000, 10000, 0, 999, 999, 999}));
   }
 
   private void testSearchBigSortedArray() {

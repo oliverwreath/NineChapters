@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class MyCalendar {
+
   public static void main(String[] args) {
     testMyCalendar();
   }
@@ -58,6 +59,7 @@ public class MyCalendar {
   }
 
   private class Node {
+
     Node left;
     Node right;
     int start;

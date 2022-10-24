@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No479_SecondMaxOfArray {
+
   public static void main(String[] args) {
     No479_SecondMaxOfArray No479_SecondMaxOfArray = new No479_SecondMaxOfArray();
     No479_SecondMaxOfArray.testNo479_SecondMaxOfArray();

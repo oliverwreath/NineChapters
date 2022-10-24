@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC21MergeTwoSortedLists {
+
   public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
     ListNode dummy = new ListNode(-1), scanner = dummy;
     ListNode l1 = list1, l2 = list2;

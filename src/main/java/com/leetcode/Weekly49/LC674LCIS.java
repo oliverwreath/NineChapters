@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC674LCIS {
+
   public static void main(String[] args) {
     testLCIS();
   }
@@ -36,7 +37,6 @@ public class LC674LCIS {
         currentLength = 1;
       }
     }
-
 
     // return the final result
     return maxLength;

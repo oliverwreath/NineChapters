@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class MiddleNode {
+
   public static void main(String[] arg) {
     testMiddleNode();
   }

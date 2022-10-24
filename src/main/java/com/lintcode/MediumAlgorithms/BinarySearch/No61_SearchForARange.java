@@ -1,11 +1,11 @@
 package com.lintcode.MediumAlgorithms.BinarySearch;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No61_SearchForARange {
+
   public static void main(String[] args) {
     No61_SearchForARange No61_SearchForARange = new No61_SearchForARange();
     No61_SearchForARange.testNo61_SearchForARange();

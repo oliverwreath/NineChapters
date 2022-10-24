@@ -1,15 +1,15 @@
 package com.lintcode.test;
 
 import com.google.common.base.Throwables;
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/5/29.
  */
 @Slf4j
 public class GuavaThrowables {
+
   public static void main(String args[]) {
     GuavaThrowables tester = new GuavaThrowables();
 
@@ -54,7 +54,8 @@ public class GuavaThrowables {
   }
 
   public double sqrt(double input) throws InvalidInputException {
-    if (input < 0) throw new InvalidInputException();
+    if (input < 0)
+      throw new InvalidInputException();
     return Math.sqrt(input);
   }
 
@@ -68,4 +69,5 @@ public class GuavaThrowables {
 }
 
 class InvalidInputException extends Exception {
+
 }

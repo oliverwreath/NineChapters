@@ -1,15 +1,16 @@
 package com.lintcode.BinaryTree;
 
+import static com.lintcode.BinaryTree.BinaryTree.getTree;
+
 import com.util.TreeNode;
 import lombok.extern.slf4j.Slf4j;
-
-import static com.lintcode.BinaryTree.BinaryTree.getTree;
 
 /**
  * Created by Yanliang Han on 2016/6/11.
  */
 @Slf4j
 public class LowestCommonAncestor {
+
   public static void main(String[] args) {
     testLowestCommonAncestor();
   }
