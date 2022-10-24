@@ -1,41 +1,36 @@
-package com.util;
+package com.oliver;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.google.common.collect.Lists;
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.TreeMap;
+import lombok.extern.slf4j.Slf4j;
 
 /**
- * Author: Oliver
- * Spaced repetition Software:
- * Your little assistant that reminds you the right review at the right time.
+ * Author: Oliver Spaced repetition Software: Your little assistant that reminds you the right review at the right time.
  * reads your provided Customized Cards.json.
  */
 @Slf4j
 public class SuperMemo {
+
   private static final int GENERATING_DAYS = 30;
   private static final String CARDS_PATH = "src/main/resources/nocommit/Cards.json";//src/main/resources/CardsExample.json
   private static final ObjectMapper mapper = new ObjectMapper().registerModule(new JavaTimeModule());
 
   public static void main(String[] args) throws ParseException {
-    Args arg = getArgs();
-    boolean isPrintJsonStringExample = arg.getBoolean('l');
-    boolean isPrintInstructions = arg.getBoolean('i');
-//    int port = arg.getInt('p');
-    String directory = arg.getString('d');
-
-    printRecommendedSpacedRepetitions();
-    if (isPrintJsonStringExample) printJsonStringExample();
-    if (isPrintInstructions) printInstructions();
+    String directory = getArgsDirectory();
     List<Card> cards = readCards(directory);
     Map<LocalDate, Queue<Card>> cardsBySortedDate = groupCardsByDate(cards);
     log.info(String.format("cardsBySortedDate.size()=%d", cardsBySortedDate.size()));
@@ -52,9 +47,24 @@ public class SuperMemo {
     log.info("========================================================");
   }
 
+  static String getArgsDirectory() throws ParseException {
+    Args arg = getArgs();
+    boolean isPrintJsonStringExample = arg.getBoolean('l');
+    boolean isPrintInstructions = arg.getBoolean('i');
+    String directory = arg.getString('d');
+
+    printRecommendedSpacedRepetitions();
+    if (isPrintJsonStringExample)
+      printJsonStringExample();
+    if (isPrintInstructions)
+      printInstructions();
+    return directory;
+  }
+
   private static void printInstructions() {
     System.out.println("1. Try to keep up with overdue. It will prevent forgetting.");
-    System.out.println("2. if (performance == worse) Find it efficient to practice recoding the same thing right away.");
+    System.out.println(
+        "2. if (performance == worse) Find it efficient to practice recoding the same thing right away.");
     System.out.println("3. For building blocks like countingSort, you should write as fast as you type.");
   }
 
@@ -80,8 +90,8 @@ public class SuperMemo {
 
   private static void printJsonStringExample() {
     List<Card> listOfDtos = Lists.newArrayList(
-            new Card("a", List.of("Arrays&Hashing", "EASY"), List.of(LocalDate.now(), LocalDate.now().minusDays(7))),
-            new Card("bc", List.of("Arrays&Hashing", "HARD"), List.of(LocalDate.now(), LocalDate.now().minusDays(7)))
+        new Card("a", List.of("Arrays&Hashing", "EASY"), List.of(LocalDate.now(), LocalDate.now().minusDays(7))),
+        new Card("bc", List.of("Arrays&Hashing", "HARD"), List.of(LocalDate.now(), LocalDate.now().minusDays(7)))
     );
     try {
       String jsonArray = mapper.writeValueAsString(listOfDtos);
@@ -101,7 +111,7 @@ public class SuperMemo {
     return true;
   }
 
-  private static List<Card> readCards(String directory) {
+  static List<Card> readCards(String directory) {
     File file = Path.of(directory).toFile();
     if (!isValid(file))
       return Collections.emptyList();

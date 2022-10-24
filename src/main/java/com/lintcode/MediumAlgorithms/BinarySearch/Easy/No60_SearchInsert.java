@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No60_SearchInsert {
+
   public static void main(String[] args) {
     No60_SearchInsert No60_SearchInsert = new No60_SearchInsert();
     No60_SearchInsert.testNo60_SearchInsert();

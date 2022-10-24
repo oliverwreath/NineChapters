@@ -1,14 +1,18 @@
 package com.ATemplatesDataStructures.DFS_LeetCode.HackerRank_Graph_Search;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * BFS with a queue b
  */
 @Slf4j
 public class BFS_ShortestReachInGraph {
+
   public static void main(String[] args) {
     testBFS_ShortestReachInGraph();
   }
@@ -51,6 +55,7 @@ public class BFS_ShortestReachInGraph {
   }
 
   public static class Graph {
+
     private HashMap<Integer, Node> nodeLookup = new HashMap<>();
     private int size;
 
@@ -59,6 +64,7 @@ public class BFS_ShortestReachInGraph {
     }
 
     public class Node {
+
       private int id;
       LinkedList<Node> adjacent = new LinkedList<>();
 
@@ -82,6 +88,7 @@ public class BFS_ShortestReachInGraph {
     }
 
     private class Entry {
+
       int id;
       int distance;
 

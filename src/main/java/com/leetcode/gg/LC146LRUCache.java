@@ -1,23 +1,21 @@
 package com.leetcode.gg;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply Working. HashMap with Deque(LinkedList). But they are not integrated. 257 ms
- * TIME: O(N)
- * SPACE: O(N)
+ * Version 1: Simply Working. HashMap with Deque(LinkedList). But they are not integrated. 257 ms TIME: O(N) SPACE:
+ * O(N)
  * <p>
- * Version 2: TBD. Integrated customized DoublyLinkedList. 0 ms
- * TIME: O(1)
- * SPACE: O(N)
+ * Version 2: TBD. Integrated customized DoublyLinkedList. 0 ms TIME: O(1) SPACE: O(N)
  */
 @Slf4j
 public class LC146LRUCache {
+
   public class LRUCache {
+
     private int capacity;
     private HashMap<Integer, Node> hashMap;
     private Node head;
@@ -79,6 +77,7 @@ public class LC146LRUCache {
     }
 
     class Node {
+
       Node prev;
       Node next;
       int key;
@@ -101,10 +100,10 @@ public class LC146LRUCache {
       @Override
       public String toString() {
         return "Node{" +
-                "prev=" + prev +
-                ", next=" + next +
-                ", val=" + val +
-                '}';
+            "prev=" + prev +
+            ", next=" + next +
+            ", val=" + val +
+            '}';
       }
     }
   }

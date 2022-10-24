@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LongestIncreasingSubsequence {
+
   public static void main(String[] args) {
     testlongestIncreasingSubsequence();
   }
@@ -16,7 +17,9 @@ public class LongestIncreasingSubsequence {
     log.debug("{}", longestIncreasingSubsequence(new int[]{3, 2, 1, 0, 4}));
     log.debug("{}", longestIncreasingSubsequence(new int[]{5, 4, 1, 2, 3}));
     log.debug("{}", longestIncreasingSubsequence(new int[]{4, 2, 4, 5, 3, 7}));
-    log.debug("{}", longestIncreasingSubsequence(new int[]{88, 4, 24, 82, 86, 1, 56, 74, 71, 9, 8, 18, 26, 53, 77, 87, 60, 27, 69, 17, 76, 23, 67, 14, 98, 13, 10, 83, 20, 43, 39, 29, 92, 31, 0, 30, 90, 70, 37, 59}));
+    log.debug("{}", longestIncreasingSubsequence(
+        new int[]{88, 4, 24, 82, 86, 1, 56, 74, 71, 9, 8, 18, 26, 53, 77, 87, 60, 27, 69, 17, 76, 23, 67, 14, 98, 13,
+            10, 83, 20, 43, 39, 29, 92, 31, 0, 30, 90, 70, 37, 59}));
   }
 
   public static int longestIncreasingSubsequence(int[] nums) {

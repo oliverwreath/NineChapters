@@ -1,15 +1,15 @@
 package com.HackerRank;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.math.BigInteger;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class FibonacciModified {
+
   public static void main(String[] args) {
     testMaxLength();
   }

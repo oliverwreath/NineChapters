@@ -1,15 +1,15 @@
-package com.util;
-
-import lombok.extern.slf4j.Slf4j;
+package com.oliver;
 
 import java.text.ParseException;
 import java.util.StringJoiner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class BooleanArgumentMarshaler implements ArgumentMarshaler {
+
   private boolean booleanValue;
 
   @Override
@@ -27,7 +27,7 @@ public class BooleanArgumentMarshaler implements ArgumentMarshaler {
   @Override
   public String toString() {
     return new StringJoiner(", ", BooleanArgumentMarshaler.class.getSimpleName() + "[", "]")
-            .add("booleanValue=" + booleanValue)
-            .toString();
+        .add("booleanValue=" + booleanValue)
+        .toString();
   }
 }

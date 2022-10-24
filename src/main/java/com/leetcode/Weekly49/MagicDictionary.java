@@ -1,12 +1,12 @@
 package com.leetcode.Weekly49;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.LinkedList;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class MagicDictionary {
+
   public static void main(String[] args) {
     testMagicDictionary_676();
   }

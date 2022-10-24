@@ -1,14 +1,20 @@
 package com.lintcode.bigdata;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class InvertedIndex0 {
+
   public static void main(String[] arg) {
     testInvertedIndex();
   }
@@ -16,7 +22,8 @@ public class InvertedIndex0 {
   private static void testInvertedIndex() {
     List<Document> docs = new LinkedList<Document>();
     docs.add(new Document(1, "This is the content of document 1 it is very short"));
-    docs.add(new Document(2, "This is the content of    document 2 it is very long bilabial bilabial heheh hahaha ..."));
+    docs.add(
+        new Document(2, "This is the content of    document 2 it is very long bilabial bilabial heheh hahaha ..."));
     log.info("ret = {}", invertedIndex(docs));
   }
 

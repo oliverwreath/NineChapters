@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No676_DecodeWaysII {
+
   public static void main(String[] args) {
     No676_DecodeWaysII No676_DecodeWaysII = new No676_DecodeWaysII();
     No676_DecodeWaysII.testNo676_DecodeWaysII();

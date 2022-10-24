@@ -1,15 +1,15 @@
 package com.ATemplatesDataStructures.FollowUp7.DFS;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No453_FlattenBinaryTreeToLinkedList {
+
   public static void main(String[] args) {
     No453_FlattenBinaryTreeToLinkedList No453_FlattenBinaryTreeToLinkedList = new No453_FlattenBinaryTreeToLinkedList();
     No453_FlattenBinaryTreeToLinkedList.testNo453_FlattenBinaryTreeToLinkedList();

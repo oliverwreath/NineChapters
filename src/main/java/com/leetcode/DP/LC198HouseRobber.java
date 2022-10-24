@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC198HouseRobber {
+
   public static void main(String[] arg) {
     new LC198HouseRobber().testHouseRobber_198();
   }

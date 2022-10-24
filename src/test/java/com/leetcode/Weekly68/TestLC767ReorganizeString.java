@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
  */
 @Slf4j
 class TestLC767ReorganizeString {
+
   @Test void testNo767ReorganizeString() {
     LC767ReorganizeString LC767ReorganizeString = new LC767ReorganizeString();
     Assertions.assertEquals("aba", LC767ReorganizeString.reorganizeString("aab"));

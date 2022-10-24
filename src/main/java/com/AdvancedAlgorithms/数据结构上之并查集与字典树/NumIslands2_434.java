@@ -1,12 +1,12 @@
 package com.AdvancedAlgorithms.数据结构上之并查集与字典树;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class NumIslands2_434 {
+
   public List<Integer> numIslands2(int n, int m, Point[] operators) {
 
     List<Integer> result = new LinkedList<>();
@@ -45,6 +45,7 @@ public class NumIslands2_434 {
   }
 
   private class UnionFind {
+
     private int[] father;
     private int m;
 
@@ -82,6 +83,7 @@ public class NumIslands2_434 {
   }
 
   private class Point {
+
     int x;
     int y;
 

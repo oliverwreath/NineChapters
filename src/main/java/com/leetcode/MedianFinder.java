@@ -1,17 +1,16 @@
 package com.leetcode;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
- * Author: Oliver
- * LC295FindMedianFromDataStream
+ * Author: Oliver LC295FindMedianFromDataStream
  */
 @Slf4j
 public class MedianFinder {
+
   private Queue<Integer> minHeap;
   private Queue<Integer> maxHeap;
 

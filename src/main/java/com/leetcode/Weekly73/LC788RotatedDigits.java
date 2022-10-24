@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC788RotatedDigits {
+
   public static void main(String[] args) {
     LC788RotatedDigits LC788RotatedDigits = new LC788RotatedDigits();
     LC788RotatedDigits.testNo788_RotatedDigits();

@@ -1,6 +1,6 @@
 package com.GoogleAPAC.RoundA;
 
-import lombok.extern.slf4j.Slf4j;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 import java.io.PrintWriter;
 import java.math.BigDecimal;
@@ -8,14 +8,14 @@ import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
-import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by yanli_000 on 16/7/9.
  */
 @Slf4j
 public class NotSoRandom {
+
   private static final BigInteger BIG_INTEGER_100 = BigInteger.valueOf(100);
   private static final BigDecimal BIG_DECIMAL_100 = BigDecimal.valueOf(100);
 
@@ -53,7 +53,8 @@ public class NotSoRandom {
     }
   }
 
-  private BigDecimal getExpectation(Map<BigInteger, BigDecimal> chanceMap, BigInteger N, BigInteger K, final BigDecimal A, final BigDecimal B, final BigDecimal C) {
+  private BigDecimal getExpectation(Map<BigInteger, BigDecimal> chanceMap, BigInteger N, BigInteger K,
+      final BigDecimal A, final BigDecimal B, final BigDecimal C) {
     log.info("chanceMap = {}, N = {}, K = {}, A = {}, B = {}, C = {}", chanceMap, N, K, A, B, C);
 
     for (long i = 0; i < N.longValue(); i++) {
@@ -67,7 +68,8 @@ public class NotSoRandom {
     return resultDecimal;
   }
 
-  private void getOneExpectation(Map<BigInteger, BigDecimal> chanceMap, BigInteger K, final BigDecimal A, final BigDecimal B, final BigDecimal C) {
+  private void getOneExpectation(Map<BigInteger, BigDecimal> chanceMap, BigInteger K, final BigDecimal A,
+      final BigDecimal B, final BigDecimal C) {
     log.trace("A = {}, B = {}, C = {}", A, B, C);
     log.debug("chanceMap Before = {}", chanceMap);
     Map<BigInteger, BigDecimal> newChanceMap = new HashMap<BigInteger, BigDecimal>();
@@ -100,6 +102,7 @@ public class NotSoRandom {
   }
 
   private class ResultType {
+
     BigInteger positive;
     BigInteger negative;
 
@@ -116,9 +119,9 @@ public class NotSoRandom {
     @Override
     public String toString() {
       return "ResultType{" +
-              "positive=" + positive +
-              ", negative=" + negative +
-              '}';
+          "positive=" + positive +
+          ", negative=" + negative +
+          '}';
     }
   }
 

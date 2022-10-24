@@ -1,16 +1,16 @@
 package com.lintcode.Advanced.Heap.HashHeap;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SlidingWindowMaximum {
+
   public static void main(String[] arg) {
     new SlidingWindowMaximum().testSlidingWindowMaximum();
   }

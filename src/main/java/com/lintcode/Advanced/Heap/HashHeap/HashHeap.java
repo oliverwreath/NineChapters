@@ -1,15 +1,15 @@
 package com.lintcode.Advanced.Heap.HashHeap;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class HashHeap {
+
   ArrayList<Integer> heap;
   String mode;
   int size_t;
@@ -162,14 +162,15 @@ public class HashHeap {
   @Override
   public String toString() {
     return "HashHeap{" +
-            "heap=" + heap +
-            ", mode='" + mode + '\'' +
-            ", size_t=" + size_t +
-            ", hash=" + hash +
-            '}';
+        "heap=" + heap +
+        ", mode='" + mode + '\'' +
+        ", size_t=" + size_t +
+        ", hash=" + hash +
+        '}';
   }
 
   private class Node {
+
     public Integer id;
     public Integer num;
 
@@ -187,9 +188,9 @@ public class HashHeap {
     @Override
     public String toString() {
       return "Node{" +
-              "id=" + id +
-              ", num=" + num +
-              '}';
+          "id=" + id +
+          ", num=" + num +
+          '}';
     }
   }
 }

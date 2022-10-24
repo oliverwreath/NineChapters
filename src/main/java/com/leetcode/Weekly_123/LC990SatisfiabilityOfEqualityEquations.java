@@ -1,22 +1,18 @@
 package com.leetcode.Weekly_123;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply Working.
- * TIME: O(MN)
- * SPACE: O(MN)
+ * Version 1: Simply Working. TIME: O(MN) SPACE: O(MN)
  * <p>
- * Version 2: TBD.
- * TIME: O(?)
- * SPACE: O(?)
+ * Version 2: TBD. TIME: O(?) SPACE: O(?)
  */
 @Slf4j
 public class LC990SatisfiabilityOfEqualityEquations {
+
   public boolean equationsPossible(String[] equations) {
     if (equations == null || equations.length == 0) {
       return true;
@@ -51,6 +47,7 @@ public class LC990SatisfiabilityOfEqualityEquations {
   }
 
   private class UnionFind {
+
     int[] parent;
 
     public UnionFind() {

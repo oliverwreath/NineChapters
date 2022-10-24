@@ -1,15 +1,15 @@
 package com.ATemplatesDataStructures.UnionFind;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class UnionFind {
+
   private HashMap<Integer, Integer> father;
 
   public UnionFind() {
@@ -114,7 +114,7 @@ public class UnionFind {
   @Override
   public String toString() {
     return "UnionFind{" +
-            "father=" + father +
-            '}';
+        "father=" + father +
+        '}';
   }
 }

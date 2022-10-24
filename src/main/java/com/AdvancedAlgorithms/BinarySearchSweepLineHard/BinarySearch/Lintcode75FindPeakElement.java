@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Lintcode75FindPeakElement {
+
   public int findPeak(int[] a) {
     // filter abnormal cases
     if (a == null || a.length == 0) {

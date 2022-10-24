@@ -2,15 +2,15 @@ package com.lintcode.BFS;
 
 import com.lintcode.Advanced.UnionFind.DirectedGraphNode;
 import com.lintcode.BinarySearch1.No437_Copy_Books;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class No127_Topological_Sorting {
+
   public static void main(String[] arg) {
     test();
   }

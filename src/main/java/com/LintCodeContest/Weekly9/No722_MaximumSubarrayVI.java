@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No722_MaximumSubarrayVI {
+
   public static void main(String[] args) {
     No722_MaximumSubarrayVI No722_MaximumSubarrayVI = new No722_MaximumSubarrayVI();
     No722_MaximumSubarrayVI.testNo722_MaximumSubarrayVI();
@@ -29,7 +30,6 @@ public class No722_MaximumSubarrayVI {
       global[i] = global[i - 1] | A[i];
       max = Math.max(max, global[i]);
     }
-
 
     for (int i = 1; i < n; i++) {
       for (int j = i; j < n; j++) {

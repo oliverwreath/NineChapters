@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Ladder406_MinimumSizeSubarraySum {
+
   public static void main(String[] args) {
     testLadder406_MinimumSizeSubarraySum();
   }
@@ -11,7 +12,8 @@ public class Ladder406_MinimumSizeSubarraySum {
   private static void testLadder406_MinimumSizeSubarraySum() {
     Ladder406_MinimumSizeSubarraySum Ladder406_MinimumSizeSubarraySum = new Ladder406_MinimumSizeSubarraySum();
     log.info("result 2 v.s. " + Ladder406_MinimumSizeSubarraySum.minimumSize(new int[]{2, 3, 1, 2, 4, 3}, 7));
-    log.info("result -1 v.s. " + Ladder406_MinimumSizeSubarraySum.minimumSize(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2113, 1, 1}, 12345));
+    log.info("result -1 v.s. " + Ladder406_MinimumSizeSubarraySum.minimumSize(
+        new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2113, 1, 1}, 12345));
   }
 
   /**
@@ -23,7 +25,6 @@ public class Ladder406_MinimumSizeSubarraySum {
     if (nums == null || nums.length < 1) {
       return -1;
     }
-
 
     int left = 0, right = 0;
     int len = nums.length;

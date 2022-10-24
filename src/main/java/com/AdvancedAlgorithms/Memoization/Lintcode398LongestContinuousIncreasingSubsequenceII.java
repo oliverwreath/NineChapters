@@ -5,16 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply working. aka DFS. TLE huh?
- * TIME: O(NM ^ NM)
- * SPACE: O(NM)
+ * Version 1: Simply working. aka DFS. TLE huh? TIME: O(NM ^ NM) SPACE: O(NM)
  * <p>
- * Version 2: DP principle is all about removing redundant computation. So memoization should come in handy.
- * TIME: O(NM)
+ * Version 2: DP principle is all about removing redundant computation. So memoization should come in handy. TIME: O(NM)
  * SPACE: O(NM)
  */
 @Slf4j
 public class Lintcode398LongestContinuousIncreasingSubsequenceII {
+
   private int[][] dp;
 
   public int longestContinuousIncreasingSubsequence2(int[][] grid) {

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC200NumberOfIslands {
+
   public int numIslands(char[][] grid) {
     if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0)
       return 0;
@@ -33,9 +34,9 @@ public class LC200NumberOfIslands {
       return;
 
     grid[r][c] = '#';
-    bfs(grid, r+1, c);
-    bfs(grid, r-1, c);
-    bfs(grid, r, c+1);
-    bfs(grid, r, c-1);
+    bfs(grid, r + 1, c);
+    bfs(grid, r - 1, c);
+    bfs(grid, r, c + 1);
+    bfs(grid, r, c - 1);
   }
 }

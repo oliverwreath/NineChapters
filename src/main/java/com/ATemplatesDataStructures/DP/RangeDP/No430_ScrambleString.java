@@ -1,11 +1,11 @@
 package com.ATemplatesDataStructures.DP.RangeDP;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No430_ScrambleString {
+
   public static void main(String[] args) {
     No430_ScrambleString No476_StoneGame = new No430_ScrambleString();
     No476_StoneGame.testNo476_StoneGame();
@@ -30,9 +30,11 @@ public class No430_ScrambleString {
     dp = new boolean[len][len][len + 1];
 //        sum = new int[len][len];
     flag = new boolean[len][len][len + 1];
-    for (int i = 0; i < len; ++i)
-      for (int j = 0; j < len; ++j)
+    for (int i = 0; i < len; ++i) {
+      for (int j = 0; j < len; ++j) {
         dp[i][j][1] = s1.charAt(i) == s2.charAt(j);
+      }
+    }
 
     for (int i = 0; i < len; ++i) {
       for (int j = 0; j < len; ++j) {
@@ -61,7 +63,7 @@ public class No430_ScrambleString {
 
     for (int k = 1; k < n; k++) {
       dp[x][y][n] |= (helper(x, y, k) && helper(x + k, y + k, n - k)) ||
-              (helper(x, y + n - k, k) && helper(x + k, y, n - k));
+          (helper(x, y + n - k, k) && helper(x + k, y, n - k));
     }
     return dp[x][y][n];
   }

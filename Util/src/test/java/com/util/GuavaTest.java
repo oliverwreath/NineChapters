@@ -6,18 +6,22 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Ordering;
 import com.google.common.collect.Range;
 import com.google.common.primitives.Ints;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.StringJoiner;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.*;
 
 /**
  * Created by Yanliang Han on 2016/5/29.
  */
 @Slf4j
 public class GuavaTest {
+
   @Test void testRange() {
     //create a range [a,b] = { x | a <= x <= b}
     Range<Integer> range1 = Range.closed(0, 9);
@@ -89,11 +93,11 @@ public class GuavaTest {
     Assertions.assertNotEquals(s1, s2);
     log.debug(String.valueOf(s1.hashCode()));
     log.debug(
-            MoreObjects.toStringHelper(s1)
-                    .add("Name", s1.getFirstName() + " " + s1.getLastName())
-                    .add("Class", s1.getClassName())
-                    .add("Roll No", s1.getRollNo())
-                    .toString());
+        MoreObjects.toStringHelper(s1)
+            .add("Name", s1.getFirstName() + " " + s1.getLastName())
+            .add("Class", s1.getClassName())
+            .add("Roll No", s1.getRollNo())
+            .toString());
     log.debug(String.valueOf(s1));
   }
 
@@ -140,7 +144,7 @@ public class GuavaTest {
 
   public static double sqrt(double input) throws IllegalArgumentException {
     Preconditions.checkArgument(input > 0.0,
-            "Illegal Argument passed: Negative value %s.", input);
+        "Illegal Argument passed: Negative value %s.", input);
     return Math.sqrt(input);
   }
 
@@ -220,6 +224,7 @@ public class GuavaTest {
 
   @Data
   private static class Student {
+
     private String firstName;
     private String lastName;
     private int rollNo;
@@ -244,9 +249,9 @@ public class GuavaTest {
       // Objects.equal(null, "com.lintCode.test") == false
       // Objects.equal(null, null) == true
       return Objects.equal(firstName, student.firstName) // first name can be null
-              && Objects.equal(lastName, student.lastName) // last name can be null
-              && Objects.equal(rollNo, student.rollNo)
-              && Objects.equal(className, student.className);// class name can be null
+          && Objects.equal(lastName, student.lastName) // last name can be null
+          && Objects.equal(rollNo, student.rollNo)
+          && Objects.equal(className, student.className);// class name can be null
     }
 
     @Override
@@ -258,11 +263,11 @@ public class GuavaTest {
     @Override
     public String toString() {
       return new StringJoiner(", ", Student.class.getSimpleName() + "[", "]")
-              .add("firstName='" + firstName + "'")
-              .add("lastName='" + lastName + "'")
-              .add("rollNo=" + rollNo)
-              .add("className='" + className + "'")
-              .toString();
+          .add("firstName='" + firstName + "'")
+          .add("lastName='" + lastName + "'")
+          .add("rollNo=" + rollNo)
+          .add("className='" + className + "'")
+          .toString();
     }
   }
 }

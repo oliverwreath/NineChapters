@@ -1,14 +1,14 @@
 package com.LintCodeContest.Weekly7;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No830_StringSort {
+
   public static void main(String[] args) {
     No830_StringSort No830_StringSort = new No830_StringSort();
     No830_StringSort.testNo830_StringSort();
@@ -78,6 +78,7 @@ public class No830_StringSort {
   };
 
   class MyEntry {
+
     char key;
     int frequency;
 
@@ -89,9 +90,9 @@ public class No830_StringSort {
     @Override
     public String toString() {
       return "MyEntry{" +
-              "key=" + key +
-              ", frequency=" + frequency +
-              '}';
+          "key=" + key +
+          ", frequency=" + frequency +
+          '}';
     }
   }
 

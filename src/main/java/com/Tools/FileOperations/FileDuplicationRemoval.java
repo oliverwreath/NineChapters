@@ -1,20 +1,27 @@
 package com.Tools.FileOperations;
 
-import com.google.common.base.Preconditions;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
+import static com.Tools.FileOperations.FileUtils.fileToMd5;
+import static com.Tools.FileOperations.FileUtils.fileToSha512;
+import static com.Tools.FileOperations.FileUtils.getFileList;
+import static com.Tools.FileOperations.FileUtils.shorterNameComparator;
 
+import com.google.common.base.Preconditions;
 import java.io.File;
 import java.io.FilenameFilter;
-import java.util.*;
-
-import static com.Tools.FileOperations.FileUtils.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class FileDuplicationRemoval {
+
   private static final boolean IS_DELETING = false;
 
   public static void main(String[] arg) {

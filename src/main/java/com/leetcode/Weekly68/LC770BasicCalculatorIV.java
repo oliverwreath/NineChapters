@@ -1,12 +1,12 @@
 package com.leetcode.Weekly68;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC770BasicCalculatorIV {
+
   public static void main(String[] args) {
     testNo770_BasicCalculatorIV();
   }

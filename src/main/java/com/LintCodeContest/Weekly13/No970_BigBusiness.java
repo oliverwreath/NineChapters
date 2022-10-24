@@ -1,11 +1,11 @@
 package com.LintCodeContest.Weekly13;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No970_BigBusiness {
+
   public static void main(String[] args) {
     No970_BigBusiness No970_BigBusiness = new No970_BigBusiness();
     No970_BigBusiness.testNo970_BigBusiness();
@@ -49,6 +49,7 @@ public class No970_BigBusiness {
   }
 
   private class Entry {
+
     int cost;
     int profit;
 
@@ -61,9 +62,9 @@ public class No970_BigBusiness {
     @Override
     public String toString() {
       return "Entry{" +
-              "cost=" + cost +
-              ", profit=" + profit +
-              '}';
+          "cost=" + cost +
+          ", profit=" + profit +
+          '}';
     }
   }
 

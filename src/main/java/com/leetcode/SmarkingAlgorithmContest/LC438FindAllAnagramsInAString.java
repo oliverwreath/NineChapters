@@ -1,17 +1,17 @@
 package com.leetcode.SmarkingAlgorithmContest;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC438FindAllAnagramsInAString {
+
   public static void main(String[] arg) {
     new LC438FindAllAnagramsInAString().testFindAllAnagramsInAString_438();
   }

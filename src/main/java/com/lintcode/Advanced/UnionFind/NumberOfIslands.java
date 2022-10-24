@@ -7,19 +7,20 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class NumberOfIslands {
+
   public static void main(String[] arg) {
     new NumberOfIslands().testNumberOfIslands();
   }
 
   private void testNumberOfIslands() {
     log.info("{}", numIslands(
-            new boolean[][]{
-                    {true, true, false, false, false},
-                    {false, true, false, false, true},
-                    {false, false, false, true, true},
-                    {false, false, false, false, false},
-                    {false, false, false, false, true}
-            }
+        new boolean[][]{
+            {true, true, false, false, false},
+            {false, true, false, false, true},
+            {false, false, false, true, true},
+            {false, false, false, false, false},
+            {false, false, false, false, true}
+        }
     ));
   }
 

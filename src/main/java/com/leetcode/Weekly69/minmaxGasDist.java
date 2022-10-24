@@ -1,11 +1,11 @@
 package com.leetcode.Weekly69;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class minmaxGasDist {
+
   public static void main(String[] arg) {
     testTrappingRainWaterII();
   }
@@ -54,6 +54,7 @@ public class minmaxGasDist {
   }
 
   static class Cell {
+
     int distance;
     int count;
     Double val;
@@ -80,10 +81,10 @@ public class minmaxGasDist {
     @Override
     public String toString() {
       return "Cell{" +
-              "distance=" + distance +
-              ", count=" + count +
-              ", val=" + val +
-              '}';
+          "distance=" + distance +
+          ", count=" + count +
+          ", val=" + val +
+          '}';
     }
   }
 

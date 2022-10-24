@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No433_NumberOfIslands {
+
   public static void main(String[] args) {
     No433_NumberOfIslands No433_NumberOfIslands = new No433_NumberOfIslands();
     No433_NumberOfIslands.testNo433_NumberOfIslands();
@@ -11,11 +12,11 @@ public class No433_NumberOfIslands {
 
   private void testNo433_NumberOfIslands() {
     log.info("result 3 v.s. " + numIslands(new boolean[][]{
-            {true, true, false, false, false},
-            {false, true, false, false, true},
-            {false, false, false, true, true},
-            {false, false, false, false, false},
-            {false, false, false, false, true}
+        {true, true, false, false, false},
+        {false, true, false, false, true},
+        {false, false, false, true, true},
+        {false, false, false, false, false},
+        {false, false, false, false, true}
     }));
   }
 

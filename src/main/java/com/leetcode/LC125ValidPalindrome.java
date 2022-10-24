@@ -7,8 +7,10 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC125ValidPalindrome {
+
   public boolean isPalindrome(String s) {
-    if (s == null || s.isEmpty()) return true;
+    if (s == null || s.isEmpty())
+      return true;
 
     int left = 0, right = s.length() - 1;
     char[] chars = s.toCharArray();

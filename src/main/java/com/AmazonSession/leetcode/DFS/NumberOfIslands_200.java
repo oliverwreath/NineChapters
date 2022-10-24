@@ -7,17 +7,18 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class NumberOfIslands_200 {
+
   public static void main(String[] arg) {
     new NumberOfIslands_200().testNumberOfIslands_200();
   }
 
   private void testNumberOfIslands_200() {
     log.info("{}", numIslands(new char[][]{
-                    {'1', '1', '0', '0', '0'},
-                    {'1', '1', '0', '0', '0'},
-                    {'0', '0', '1', '0', '0'},
-                    {'0', '0', '0', '1', '1'},
-            }
+            {'1', '1', '0', '0', '0'},
+            {'1', '1', '0', '0', '0'},
+            {'0', '0', '1', '0', '0'},
+            {'0', '0', '0', '1', '1'},
+        }
     ));
   }
 

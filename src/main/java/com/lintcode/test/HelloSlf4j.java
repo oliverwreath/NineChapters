@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class HelloSlf4j {
+
   public static void main(String[] args) {
     log.trace("this is a trace msg!");
     log.debug("this is a debug msg!");

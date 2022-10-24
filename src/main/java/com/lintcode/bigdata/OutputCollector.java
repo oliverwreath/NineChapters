@@ -8,6 +8,7 @@ import java.util.List;
  * Author: Oliver
  */
 class OutputCollector<K, V> {
+
   private LinkedHashMap<K, List<V>> outputBuffer = new LinkedHashMap<K, List<V>>();
 
   // Adds a key/value pair to the output buffer

@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.DP.PiPeiLei;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No623_KEditDistance {
+
   public static void main(String[] args) {
     No623_KEditDistance No623_KEditDistance = new No623_KEditDistance();
     No623_KEditDistance.testNo623_KEditDistance();

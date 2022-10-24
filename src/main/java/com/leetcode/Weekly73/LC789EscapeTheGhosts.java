@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC789EscapeTheGhosts {
+
   public static void main(String[] args) {
     LC789EscapeTheGhosts LC789EscapeTheGhosts = new LC789EscapeTheGhosts();
     LC789EscapeTheGhosts.testNo789_EscapeTheGhosts();
@@ -11,14 +12,14 @@ public class LC789EscapeTheGhosts {
 
   private void testNo789_EscapeTheGhosts() {
     log.info("result true v.s. " + escapeGhosts(new int[][]{
-            {1, 0},
-            {0, 3}
+        {1, 0},
+        {0, 3}
     }, new int[]{0, 1}));
     log.info("result false v.s. " + escapeGhosts(new int[][]{
-            {1, 0}
+        {1, 0}
     }, new int[]{2, 0}));
     log.info("result false v.s. " + escapeGhosts(new int[][]{
-            {2, 0}
+        {2, 0}
     }, new int[]{1, 0}));
   }
 

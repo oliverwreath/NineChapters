@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class Triangle {
+
   public static void main(String[] args) {
     testMinimumTotal();
   }
@@ -16,9 +17,9 @@ public class Triangle {
     log.debug("{}", minimumTotal(new int[][]{{1}, {3, 4}}));
     log.debug("- -");
     log.debug("{}", minimumTotal(new int[][]{{2},
-            {3, 4},
-            {6, 5, 7},
-            {4, 1, 8, 3}}));
+        {3, 4},
+        {6, 5, 7},
+        {4, 1, 8, 3}}));
   }
 
   private static int minimumTotal(int[][] triangle) {

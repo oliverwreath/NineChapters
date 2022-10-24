@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.FollowUp7;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No22_FlattenList {
+
   public static void main(String[] args) {
     No22_FlattenList No22_FlattenList = new No22_FlattenList();
     No22_FlattenList.testNo22_FlattenList();
@@ -28,6 +28,7 @@ public class No22_FlattenList {
   }
 
   public class NestedInt implements NestedInteger {
+
     boolean isInteger;
     Integer integer;
     List<NestedInteger> list;
@@ -70,17 +71,18 @@ public class No22_FlattenList {
     public String toString() {
       if (isInteger) {
         return "{" +
-                "" + integer +
-                '}';
+            "" + integer +
+            '}';
       } else {
         return "{" +
-                "" + list +
-                '}';
+            "" + list +
+            '}';
       }
     }
   }
 
   public interface NestedInteger {
+
     // @return true if this NestedInteger holds a single integer,
     // rather than a nested combinations.
     public boolean isInteger();

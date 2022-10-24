@@ -1,12 +1,12 @@
 package com.leetcode.Weekly42;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Comparator;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC646MaximumLengthOfPairChain {
+
   public static void main(String[] args) {
     testMaximumLengthOfPairChain_646();
   }
@@ -14,8 +14,10 @@ public class LC646MaximumLengthOfPairChain {
   private static void testMaximumLengthOfPairChain_646() {
     LC646MaximumLengthOfPairChain LC646MaximumLengthOfPairChain = new LC646MaximumLengthOfPairChain();
     log.info("result 2 = " + LC646MaximumLengthOfPairChain.findLongestChain(new int[][]{{1, 2}, {2, 3}, {3, 4}}));
-    log.info("result 3 = " + LC646MaximumLengthOfPairChain.findLongestChain(new int[][]{{1, 2}, {2, 3}, {3, 4}, {5, 6}}));
-    log.info("result 2 = " + LC646MaximumLengthOfPairChain.findLongestChain(new int[][]{{1, 2}, {2, 3}, {3, 4}, {4, 6}}));
+    log.info(
+        "result 3 = " + LC646MaximumLengthOfPairChain.findLongestChain(new int[][]{{1, 2}, {2, 3}, {3, 4}, {5, 6}}));
+    log.info(
+        "result 2 = " + LC646MaximumLengthOfPairChain.findLongestChain(new int[][]{{1, 2}, {2, 3}, {3, 4}, {4, 6}}));
   }
 
   /**
@@ -52,6 +54,7 @@ public class LC646MaximumLengthOfPairChain {
   }
 
   class Pair {
+
     int x;
     int y;
 

@@ -1,15 +1,15 @@
 package com.AmazonSession.leetcode.algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC89GrayCode {
+
   public List<Integer> grayCode(int n) {
 
     if (n < 1) {

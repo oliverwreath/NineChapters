@@ -1,11 +1,11 @@
 package com.ATemplatesDataStructures.Algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LIS {
+
   public static void main(String[] args) {
     //code
     Scanner scanner = new Scanner(System.in);

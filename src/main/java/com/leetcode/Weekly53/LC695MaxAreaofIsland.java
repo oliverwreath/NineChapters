@@ -1,12 +1,12 @@
 package com.leetcode.Weekly53;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Collections;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC695MaxAreaofIsland {
+
   public static void main(String[] args) {
     testMaxAreaofIsland_695();
   }
@@ -14,17 +14,17 @@ public class LC695MaxAreaofIsland {
   private static void testMaxAreaofIsland_695() {
     LC695MaxAreaofIsland LC_695MaxAreaofIsland = new LC695MaxAreaofIsland();
     log.info("result 6 v.s. " + LC_695MaxAreaofIsland.maxAreaOfIsland(new int[][]{
-            {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-            {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
-            {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}
+        {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+        {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+        {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}
     }));
     log.info("result 0 v.s. " + LC_695MaxAreaofIsland.maxAreaOfIsland(new int[][]{
-            {0, 0, 0, 0, 0, 0, 0, 0}
+        {0, 0, 0, 0, 0, 0, 0, 0}
     }));
   }
 

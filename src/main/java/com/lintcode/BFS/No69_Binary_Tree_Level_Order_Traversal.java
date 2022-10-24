@@ -1,15 +1,20 @@
 package com.lintcode.BFS;
 
 import com.util.TreeNode;
+import java.util.ArrayDeque;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class No69_Binary_Tree_Level_Order_Traversal {
+
   public static void main(String[] arg) {
     No69_Binary_Tree_Level_Order_Traversal tester = new No69_Binary_Tree_Level_Order_Traversal();
     tester.test();

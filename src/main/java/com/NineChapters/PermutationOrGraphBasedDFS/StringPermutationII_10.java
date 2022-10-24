@@ -1,13 +1,13 @@
 package com.NineChapters.PermutationOrGraphBasedDFS;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class StringPermutationII_10 {
+
   public static void main(String[] args) {
     testStringPermutationII_10();
   }

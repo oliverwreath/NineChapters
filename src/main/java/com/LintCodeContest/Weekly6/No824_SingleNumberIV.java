@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No824_SingleNumberIV {
+
   public static void main(String[] args) {
     No824_SingleNumberIV No824_SingleNumberIV = new No824_SingleNumberIV();
     No824_SingleNumberIV.testNo824_SingleNumberIV();

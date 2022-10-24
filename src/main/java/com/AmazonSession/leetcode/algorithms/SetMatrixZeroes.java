@@ -1,24 +1,24 @@
 package com.AmazonSession.leetcode.algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SetMatrixZeroes {
+
   public static void main(String[] arg) {
     new SetMatrixZeroes().testSetMatrixZeroes();
   }
 
   private void testSetMatrixZeroes() {
     int[][] matrix = {
-            {9, 9, 0, 9},
-            {9, 0, 9, 9},
-            {9, 9, 0, 9},
-            {9, 9, 9, 9}
+        {9, 9, 0, 9},
+        {9, 0, 9, 9},
+        {9, 9, 0, 9},
+        {9, 9, 9, 9}
     };
     log.info("before = ");
     for (int i = 0; i < matrix.length; i++) {

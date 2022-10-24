@@ -1,13 +1,12 @@
-package com.util;
-
-import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+package com.oliver;
 
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 import java.util.StringJoiner;
 import java.util.function.IntFunction;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
@@ -15,6 +14,7 @@ import java.util.function.IntFunction;
 @Slf4j
 @Data
 public class Card implements Comparable<Card> {
+
   private String name;
   private int estimateMinutes;
   private DIFFICULTY difficulty;
@@ -63,9 +63,11 @@ public class Card implements Comparable<Card> {
   @Override
   public int compareTo(Card c) {
     int compare = this.getNextReviewedDate().compareTo(c.getNextReviewedDate());
-    if (compare != 0) return compare;
+    if (compare != 0)
+      return compare;
     compare = Integer.compare(this.estimateMinutes, c.estimateMinutes);
-    if (compare != 0) return compare;
+    if (compare != 0)
+      return compare;
     return lastPerformance.compareTo(c.lastPerformance);
   }
 
@@ -73,15 +75,15 @@ public class Card implements Comparable<Card> {
   public String toString() {
     return new StringJoiner(", ", Card.class.getSimpleName() + "[", "]")
 //      .add("name='" + (name.length()>=25?name.substring(0, 22)+"...":String.format("%-25s",name)) + "'")
-            .add("name=" + String.format("%-30.30s", name))
-            .add("estimate=" + String.format("%-3d", estimateMinutes))
-            .add(String.format("%-6s", difficulty))
-            .add(String.format("%-5s", lastPerformance))
-            .add("nextReviewedGapInDays=" + getNextReviewedGapInDays())
+        .add("name=" + String.format("%-30.30s", name))
+        .add("estimate=" + String.format("%-3d", estimateMinutes))
+        .add(String.format("%-6s", difficulty))
+        .add(String.format("%-5s", lastPerformance))
+        .add("nextReviewedGapInDays=" + getNextReviewedGapInDays())
 //      .add("nextReviewedDate=" + getNextReviewedDate())
 //      .add("lastReviewedDate=" + getLastReviewedDate())
-            .add("tags=" + tags)
-            .toString();
+        .add("tags=" + tags)
+        .toString();
   }
 
   public static void printRecommendedSpacedRepetitions() {

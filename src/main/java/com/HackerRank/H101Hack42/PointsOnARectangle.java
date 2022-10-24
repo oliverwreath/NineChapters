@@ -1,15 +1,15 @@
 package com.HackerRank.H101Hack42;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class PointsOnARectangle {
+
   public static void main(String[] arg) {
     new PointsOnARectangle().testCuttingPaperSquares();
   }
@@ -66,6 +66,7 @@ public class PointsOnARectangle {
   }
 
   private class Point {
+
     long x;
     long y;
 
@@ -81,9 +82,9 @@ public class PointsOnARectangle {
     @Override
     public String toString() {
       return "Point{" +
-              "x=" + x +
-              ", y=" + y +
-              '}';
+          "x=" + x +
+          ", y=" + y +
+          '}';
     }
   }
 }

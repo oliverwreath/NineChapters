@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class Interval {
+
   int start, end;
 
   Interval(int start, int end) {
@@ -17,8 +18,8 @@ public class Interval {
   @Override
   public String toString() {
     return "Interval{" +
-            "start=" + start +
-            ", end=" + end +
-            '}';
+        "start=" + start +
+        ", end=" + end +
+        '}';
   }
 }

@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class Lintcode586SqrtxII {
+
   private static final double EPSILON = 1e-12;
 
   public double sqrt(double x) {

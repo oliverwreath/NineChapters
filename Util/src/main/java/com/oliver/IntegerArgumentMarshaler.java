@@ -1,15 +1,15 @@
-package com.util;
-
-import lombok.extern.slf4j.Slf4j;
+package com.oliver;
 
 import java.text.ParseException;
 import java.util.StringJoiner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class IntegerArgumentMarshaler implements ArgumentMarshaler {
+
   private int intValue;
 
   @Override
@@ -27,7 +27,7 @@ public class IntegerArgumentMarshaler implements ArgumentMarshaler {
   @Override
   public String toString() {
     return new StringJoiner(", ", IntegerArgumentMarshaler.class.getSimpleName() + "[", "]")
-            .add("intValue=" + intValue)
-            .toString();
+        .add("intValue=" + intValue)
+        .toString();
   }
 }

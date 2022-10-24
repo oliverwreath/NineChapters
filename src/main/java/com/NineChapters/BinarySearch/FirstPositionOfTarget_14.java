@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class FirstPositionOfTarget_14 {
+
   public static void main(String[] args) {
     testFirstPositionOfTarget_14();
   }

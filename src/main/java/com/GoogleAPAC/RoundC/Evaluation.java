@@ -1,14 +1,21 @@
 package com.GoogleAPAC.RoundC;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class Evaluation {
+
   public static void main(String[] arg) {
     testEvaluation();
   }

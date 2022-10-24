@@ -1,11 +1,11 @@
 package com.ATemplatesDataStructures.Algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Ladder384_LongestSubstringWithoutRepeatingCharacters {
+
   public static void main(String[] args) {
     testLadder384_LongestSubstringWithoutRepeatingCharacters();
   }
@@ -14,7 +14,8 @@ public class Ladder384_LongestSubstringWithoutRepeatingCharacters {
     Ladder384_LongestSubstringWithoutRepeatingCharacters Ladder384_LongestSubstringWithoutRepeatingCharacters = new Ladder384_LongestSubstringWithoutRepeatingCharacters();
 //        log.info("result 1 v.s. " + Ladder384_LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("aaaa"));
 //        log.info("result 3 v.s. " + Ladder384_LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("abcabcbb"));
-    log.info("result 9 v.s. " + Ladder384_LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("gehmbfqmozbpripibusbezagafqtypz"));
+    log.info("result 9 v.s. " + Ladder384_LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring(
+        "gehmbfqmozbpripibusbezagafqtypz"));
   }
 
   /**

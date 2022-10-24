@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Author: Oliver
  */
 public class DirectedGraphNode {
+
   int label;
   ArrayList<DirectedGraphNode> neighbors;
 

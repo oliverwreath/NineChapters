@@ -1,17 +1,17 @@
 package com.lintcode.Advanced.TwoPointer;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class TwoSum {
+
   public static void main(String[] arg) {
     new TwoSum().testTwoSum();
   }
@@ -61,6 +61,7 @@ public class TwoSum {
   };
 
   private class Entry {
+
     int val;
     int x;
 
@@ -76,9 +77,9 @@ public class TwoSum {
     @Override
     public String toString() {
       return "Entry{" +
-              "val=" + val +
-              ", x=" + x +
-              '}';
+          "val=" + val +
+          ", x=" + x +
+          '}';
     }
   }
 }

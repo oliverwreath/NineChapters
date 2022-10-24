@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No14_BinarySearch {
+
   public static void main(String[] args) {
     No14_BinarySearch No14_BinarySearch = new No14_BinarySearch();
     No14_BinarySearch.testNo14_BinarySearch();

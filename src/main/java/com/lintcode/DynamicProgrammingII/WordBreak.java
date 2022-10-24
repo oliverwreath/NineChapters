@@ -1,15 +1,15 @@
 package com.lintcode.DynamicProgrammingII;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashSet;
 import java.util.Set;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/12.
  */
 @Slf4j
 public class WordBreak {
+
   public static void main(String[] args) {
     testWordBreak();
   }

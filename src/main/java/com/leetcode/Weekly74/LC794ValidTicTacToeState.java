@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC794ValidTicTacToeState {
+
   public static void main(String[] args) {
     LC794ValidTicTacToeState LC794ValidTicTacToeState = new LC794ValidTicTacToeState();
     LC794ValidTicTacToeState.testNo794_ValidTicTacToeState();

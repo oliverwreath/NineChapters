@@ -1,22 +1,24 @@
 package com.ATemplatesDataStructures.Trie;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No634_WordSquares {
+
   public static void main(String[] args) {
     No634_WordSquares No634_WordSquares = new No634_WordSquares();
     No634_WordSquares.testNo634_WordSquares();
   }
 
   private void testNo634_WordSquares() {
-    log.info("result [[\"wall\",\"area\",\"lead\",\"lady\"],[\"ball\",\"area\",\"lead\",\"lady\"]] v.s. " + wordSquares(new String[]{"area", "lead", "wall", "lady", "ball"}));
+    log.info("result [[\"wall\",\"area\",\"lead\",\"lady\"],[\"ball\",\"area\",\"lead\",\"lady\"]] v.s. " + wordSquares(
+        new String[]{"area", "lead", "wall", "lady", "ball"}));
   }
 
   class TrieNode {
+
     TrieNode[] next;
     List<String> startsWith;
 
@@ -27,6 +29,7 @@ public class No634_WordSquares {
   }
 
   class Trie {
+
     TrieNode root;
 
     Trie(String[] words) {

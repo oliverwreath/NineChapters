@@ -1,11 +1,11 @@
 package com.leetcode.Weekly68;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC769MaxChunksToMakeSorted1 {
+
   public static void main(String[] args) {
     testNo769_MaxChunksToMakeSorted1();
   }

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No200_NumberOfIslands {
+
   public static void main(String[] args) {
     testNo200_NumberOfIslands();
   }
@@ -11,16 +12,16 @@ public class No200_NumberOfIslands {
   private static void testNo200_NumberOfIslands() {
     No200_NumberOfIslands No200_NumberOfIslands = new No200_NumberOfIslands();
     log.info("result 1 v.s. " + No200_NumberOfIslands.numIslands(new char[][]{
-            {'1', '1', '1', '1', '0'},
-            {'1', '1', '0', '1', '0'},
-            {'1', '1', '0', '0', '0'},
-            {'0', '0', '0', '0', '0'}
+        {'1', '1', '1', '1', '0'},
+        {'1', '1', '0', '1', '0'},
+        {'1', '1', '0', '0', '0'},
+        {'0', '0', '0', '0', '0'}
     }));
     log.info("result 3 v.s. " + No200_NumberOfIslands.numIslands(new char[][]{
-            {'1', '1', '0', '0', '0'},
-            {'1', '1', '0', '0', '0'},
-            {'0', '0', '1', '0', '0'},
-            {'0', '0', '0', '1', '1'}
+        {'1', '1', '0', '0', '0'},
+        {'1', '1', '0', '0', '0'},
+        {'0', '0', '1', '0', '0'},
+        {'0', '0', '0', '1', '1'}
     }));
   }
 

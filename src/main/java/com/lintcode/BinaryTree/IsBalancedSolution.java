@@ -1,16 +1,17 @@
 package com.lintcode.BinaryTree;
 
-import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import static com.lintcode.BinaryTree.BinaryTree.getTree;
 import static com.lintcode.BinaryTree.BinaryTree.getUnBalancedTree;
+
+import com.util.TreeNode;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/11.
  */
 @Slf4j
 public class IsBalancedSolution {
+
   public static void main(String[] args) {
     testIsBalanced();
   }
@@ -35,12 +36,15 @@ public class IsBalancedSolution {
     ResultType leftResult = isBalancedHelper(root.left);
     ResultType rightResult = isBalancedHelper(root.right);
 
-    boolean isBalanced = leftResult.isBalanced() && rightResult.isBalanced() && (Math.abs(leftResult.maxDepth - rightResult.maxDepth) <= 1);
+    boolean isBalanced =
+        leftResult.isBalanced() && rightResult.isBalanced() && (Math.abs(leftResult.maxDepth - rightResult.maxDepth)
+            <= 1);
     int maxDepth = Math.max(leftResult.maxDepth, rightResult.maxDepth) + 1;
     return new ResultType(isBalanced, maxDepth);
   }
 
   private static class ResultType {
+
     private boolean isBalanced = true;
     private int maxDepth = 0;
 

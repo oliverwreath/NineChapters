@@ -7,8 +7,10 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC33SearchInRotatedSortedArray {
+
   public int search(int[] nums, int target) {
-    if (nums == null || nums.length == 0) return -1;
+    if (nums == null || nums.length == 0)
+      return -1;
 
     int left = 0, right = nums.length - 1;
     while (left <= right) {

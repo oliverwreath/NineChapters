@@ -1,16 +1,16 @@
 package com.leetcode;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC46Permutations {
+
   public List<List<Integer>> permute(int[] nums) {
     if (nums == null || nums.length == 0)
       return Collections.emptyList();

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class AerialMovie_1636 {
+
   public static void main(String[] args) {
     AerialMovie_1636 AerialMovie_1636 = new AerialMovie_1636();
 //        AerialMovie_1636.testAerialMovie_1636();

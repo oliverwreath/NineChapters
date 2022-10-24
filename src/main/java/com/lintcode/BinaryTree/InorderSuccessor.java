@@ -1,16 +1,16 @@
 package com.lintcode.BinaryTree;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/11.
  */
 @Slf4j
 public class InorderSuccessor {
+
   public static void main(String[] args) {
     testInorderSuccessor();
   }

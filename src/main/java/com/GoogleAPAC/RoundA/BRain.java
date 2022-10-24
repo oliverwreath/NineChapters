@@ -1,18 +1,20 @@
 package com.GoogleAPAC.RoundA;
 
-import lombok.extern.slf4j.Slf4j;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
+import static com.GoogleAPAC.RoundA.Util.oneDTrappingWater;
+import static com.GoogleAPAC.RoundA.Util.printArray;
 
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
-
-import static com.GoogleAPAC.RoundA.Util.*;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by yanli_000 on 16/7/10.
  */
 @Slf4j
 public class BRain {
+
   public static void main(String[] args) {
     long startTime = System.currentTimeMillis();
     new BRain().go();

@@ -1,15 +1,15 @@
 package com.lintcode.Advanced.FollowUps;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class KthSmallestSumInTwoSortedArrays {
+
   public static void main(String[] arg) {
     new KthSmallestSumInTwoSortedArrays().testKthLargestInNArrays();
   }
@@ -62,6 +62,7 @@ public class KthSmallestSumInTwoSortedArrays {
   };
 
   private class Cell {
+
     int val;
     int x;
     int y;

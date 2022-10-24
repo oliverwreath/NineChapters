@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC70ClimbingStairs {
+
   public static void main(String[] arg) {
     new LC70ClimbingStairs().testHouseRobber_198();
   }

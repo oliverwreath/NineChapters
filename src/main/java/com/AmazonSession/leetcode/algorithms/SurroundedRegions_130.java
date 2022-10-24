@@ -1,26 +1,26 @@
 package com.AmazonSession.leetcode.algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SurroundedRegions_130 {
+
   public static void main(String[] arg) {
     new SurroundedRegions_130().testSurroundedRegions_130();
   }
 
   private void testSurroundedRegions_130() {
     char[][] board = {
-            {'X', 'X', 'X', 'X'},
-            {'X', 'O', 'O', 'X'},
-            {'X', 'X', 'O', 'X'},
-            {'X', 'O', 'X', 'X'}
+        {'X', 'X', 'X', 'X'},
+        {'X', 'O', 'O', 'X'},
+        {'X', 'X', 'O', 'X'},
+        {'X', 'O', 'X', 'X'}
     };
     solve(board);
     for (int i = 0; i < 4; i++) {
@@ -109,6 +109,7 @@ public class SurroundedRegions_130 {
   private static Queue<Index> queue = new LinkedList<>();
 
   private static class Index {
+
     int x;
     int y;
 
@@ -124,9 +125,9 @@ public class SurroundedRegions_130 {
     @Override
     public String toString() {
       return "Index{" +
-              "x=" + x +
-              ", y=" + y +
-              '}';
+          "x=" + x +
+          ", y=" + y +
+          '}';
     }
   }
 }

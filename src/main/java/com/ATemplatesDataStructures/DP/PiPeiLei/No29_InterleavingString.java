@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No29_InterleavingString {
+
   public static void main(String[] args) {
     No29_InterleavingString No29_InterleavingString = new No29_InterleavingString();
     No29_InterleavingString.testNo29_InterleavingString();
@@ -47,7 +48,7 @@ public class No29_InterleavingString {
           dp[i][0] = s3.charAt(i - 1) == s1.charAt(i - 1) && dp[i - 1][0];
         } else {
           dp[i][j] = (s3.charAt(i + j - 1) == s1.charAt(i - 1) && dp[i - 1][j]) ||
-                  (s3.charAt(i + j - 1) == s2.charAt(j - 1) && dp[i][j - 1]);
+              (s3.charAt(i + j - 1) == s2.charAt(j - 1) && dp[i][j - 1]);
         }
       }
     }

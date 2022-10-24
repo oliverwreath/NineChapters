@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC415AddStrings {
+
   public static void main(String[] arg) {
     new LC415AddStrings().testLongestPalindrome_409();
   }

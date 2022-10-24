@@ -1,50 +1,50 @@
 package com.lintcode.Advanced.FollowUps;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class KthSmallestNumberInSortedMatrix {
+
   public static void main(String[] arg) {
     new KthSmallestNumberInSortedMatrix().testKthLargestInNArrays();
   }
 
   private void testKthLargestInNArrays() {
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 1));
+        {3, 7, 8},
+        {4, 8, 9},}, 1));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 2));
+        {3, 7, 8},
+        {4, 8, 9},}, 2));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 3));
+        {3, 7, 8},
+        {4, 8, 9},}, 3));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 4));
+        {3, 7, 8},
+        {4, 8, 9},}, 4));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 5));
+        {3, 7, 8},
+        {4, 8, 9},}, 5));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 6));
+        {3, 7, 8},
+        {4, 8, 9},}, 6));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 7));
+        {3, 7, 8},
+        {4, 8, 9},}, 7));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 8));
+        {3, 7, 8},
+        {4, 8, 9},}, 8));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 9));
+        {3, 7, 8},
+        {4, 8, 9},}, 9));
     log.info("{}", kthSmallest(new int[][]{{1, 5, 7},
-            {3, 7, 8},
-            {4, 8, 9},}, 10));
+        {3, 7, 8},
+        {4, 8, 9},}, 10));
 
     log.info("{}", kthSmallest(new int[][]{{9, 3, 2, 4, 7}, {1, 2, 3, 4, 8}}, 3));
     log.info("{}", kthSmallest(new int[][]{{9, 3, 2, 4, 8}, {1, 2, 3, 4, 2}}, 1));
@@ -91,6 +91,7 @@ public class KthSmallestNumberInSortedMatrix {
   };
 
   private class Cell {
+
     int val;
     int x;
     int y;

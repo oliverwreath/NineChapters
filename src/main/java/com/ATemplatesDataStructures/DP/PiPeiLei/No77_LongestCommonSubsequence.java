@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No77_LongestCommonSubsequence {
+
   public static void main(String[] args) {
     No77_LongestCommonSubsequence No77_LongestCommonSubsequence = new No77_LongestCommonSubsequence();
     No77_LongestCommonSubsequence.testNo77_LongestCommonSubsequence();

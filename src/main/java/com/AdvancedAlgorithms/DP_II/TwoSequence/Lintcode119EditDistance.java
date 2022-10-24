@@ -7,13 +7,13 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * Version 1: Simply Working. Okay DP.
  * <p>
- * TIME: O(MN)
- * SPACE: O(MN)
+ * TIME: O(MN) SPACE: O(MN)
  * <p>
  * Version 2: TBD. Could use Sliding array - save space.
  */
 @Slf4j
 public class Lintcode119EditDistance {
+
   public int minDistance(String word1, String word2) {
     // filter abnormal cases
     if (word1 == null || word1.isEmpty()) {

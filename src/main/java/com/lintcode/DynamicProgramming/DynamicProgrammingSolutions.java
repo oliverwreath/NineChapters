@@ -1,9 +1,8 @@
 package com.lintcode.DynamicProgramming;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashSet;
 import java.util.Set;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/3/12.
@@ -12,12 +11,13 @@ import java.util.Set;
 public class DynamicProgrammingSolutions {
 
   public static class TriangleSolutions {
+
     /**
      * @param triangle: a list of lists of integers.
      * @return: An integer, minimum path sum.
      */
     public int minimumTotalTopDown(int[][] triangle) {
-  
+
       if (triangle == null || triangle.length < 1 || triangle[0].length < 1) {
         return 0;
       }
@@ -53,7 +53,7 @@ public class DynamicProgrammingSolutions {
      * @return: An integer, minimum path sum.
      */
     public int minimumTotalBottomUp(int[][] triangle) {
-  
+
       if (triangle == null || triangle.length < 1 || triangle[0].length < 1) {
         return 0;
       }
@@ -80,12 +80,13 @@ public class DynamicProgrammingSolutions {
   }
 
   public static class PathSolutions {
+
     /**
      * @param grid: a list of lists of integers.
      * @return: An integer, minimizes the sum of all numbers along its path
      */
     public int minPathSum(int[][] grid) {
-  
+
       if (grid == null || grid.length < 1 || grid[0].length < 1) {
         return 0;
       }
@@ -119,7 +120,7 @@ public class DynamicProgrammingSolutions {
      * @return an integer
      */
     public int uniquePaths(int m, int n) {
-  
+
       if (m < 1 || n < 1) {
         return 1;
       }
@@ -160,7 +161,7 @@ public class DynamicProgrammingSolutions {
      * @return: An integer
      */
     public int climbStairs(int n) {
-  
+
       if (n <= 1) {
         return 1;
       }
@@ -305,6 +306,7 @@ public class DynamicProgrammingSolutions {
     }
 
     private class JumpResult {
+
       boolean canJump = false;
       int minJump = Integer.MAX_VALUE;
 
@@ -319,20 +321,21 @@ public class DynamicProgrammingSolutions {
       @Override
       public String toString() {
         return "JumpResult{" +
-                "canJump=" + canJump +
-                ", minJump=" + minJump +
-                '}';
+            "canJump=" + canJump +
+            ", minJump=" + minJump +
+            '}';
       }
     }
   }
 
   private static class SubSequenceSolutions {
+
     /**
      * @param nums: The integer array
      * @return: The length of LIS (longest increasing subsequence)
      */
     public int longestIncreasingSubsequence(int[] nums) {
-  
+
       if (nums == null || nums.length == 0) {
         return 0;
       }
@@ -368,12 +371,12 @@ public class DynamicProgrammingSolutions {
   }
 
   private static class PalindromSolutions {
+
     /**
      * @param s a string
      * @return an integer
      */
     public int minCut(String s) {
-  
 
       return 0;
     }
@@ -383,7 +386,7 @@ public class DynamicProgrammingSolutions {
      * @param dict: A dictionary of words dict
      */
     public boolean wordBreak(String s, Set<String> dict) {
-  
+
       if (s == null || s.length() == 0) {
         return true;
       }
@@ -453,7 +456,6 @@ public class DynamicProgrammingSolutions {
 //        triangle[0] = new int[]{0};
 //        triangle[1] = new int[]{-1, 2};
 //        log.debug(new TriangleSolutions().minimumTotalTopDown(triangle));
-
 
 //        int[][] grid = new int[2][];
 //        grid[0] = new int[]{0, 2};

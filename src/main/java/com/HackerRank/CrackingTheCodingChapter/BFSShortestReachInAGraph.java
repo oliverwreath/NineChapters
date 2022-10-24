@@ -1,15 +1,21 @@
 package com.HackerRank.CrackingTheCodingChapter;
 
+import java.util.ArrayDeque;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Scanner;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class BFSShortestReachInAGraph {
+
   public static class Graph {
+
     private Map<Integer, LinkedList<Integer>> idAdjacentListMap = new HashMap<Integer, LinkedList<Integer>>();
     private int size;
 
@@ -76,6 +82,7 @@ public class BFSShortestReachInAGraph {
     }
 
     private class Node {
+
       int id;
       int level;
 
@@ -91,18 +98,18 @@ public class BFSShortestReachInAGraph {
       @Override
       public String toString() {
         return "Node{" +
-                "id=" + id +
-                ", level=" + level +
-                '}';
+            "id=" + id +
+            ", level=" + level +
+            '}';
       }
     }
 
     @Override
     public String toString() {
       return "GraphUndirected{" +
-              "idAdjacentListMap=" + idAdjacentListMap +
-              ", size=" + size +
-              '}';
+          "idAdjacentListMap=" + idAdjacentListMap +
+          ", size=" + size +
+          '}';
     }
   }
 

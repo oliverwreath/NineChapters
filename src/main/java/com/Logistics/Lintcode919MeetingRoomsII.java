@@ -1,23 +1,19 @@
 package com.Logistics;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  * <p>
- * Version 1: Simply Working.
- * TIME: O(MN)
- * SPACE: O(MN)
+ * Version 1: Simply Working. TIME: O(MN) SPACE: O(MN)
  * <p>
- * Version 2: TBD.
- * TIME: O(?)
- * SPACE: O(?)
+ * Version 2: TBD. TIME: O(?) SPACE: O(?)
  */
 @Slf4j
 public class Lintcode919MeetingRoomsII {
+
   public static void main(String[] args) {
     Lintcode919MeetingRoomsII thisClass = new Lintcode919MeetingRoomsII();
     thisClass.testNeedNumberOfTrucks();
@@ -35,7 +31,8 @@ public class Lintcode919MeetingRoomsII {
   }
 
   /**
-   * Oliver solution: 1. Break it down into starting and ending points. 2. Just sweep, sweep, sweep. 3. for O(1) lookup - Optionally caching the results into a 5 min- interval array of boolean(table taken) OR int(num of tables taken).
+   * Oliver solution: 1. Break it down into starting and ending points. 2. Just sweep, sweep, sweep. 3. for O(1) lookup
+   * - Optionally caching the results into a 5 min- interval array of boolean(table taken) OR int(num of tables taken).
    *
    * @param intervals
    * @return
@@ -66,6 +63,7 @@ public class Lintcode919MeetingRoomsII {
   }
 
   private class Point {
+
     int time;
     short flag;
 
@@ -77,13 +75,14 @@ public class Lintcode919MeetingRoomsII {
     @Override
     public String toString() {
       return "Point{" +
-              "time=" + time +
-              ", flag=" + flag +
-              '}';
+          "time=" + time +
+          ", flag=" + flag +
+          '}';
     }
   }
 
   private class Interval {
+
     int start, end;
 
     Interval(int start, int end) {

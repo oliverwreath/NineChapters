@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.BinaryTree;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No632_BinaryTreeMaximumNode {
+
   public static void main(String[] args) {
     No632_BinaryTreeMaximumNode No632_BinaryTreeMaximumNode = new No632_BinaryTreeMaximumNode();
     No632_BinaryTreeMaximumNode.testNo632_BinaryTreeMaximumNode();

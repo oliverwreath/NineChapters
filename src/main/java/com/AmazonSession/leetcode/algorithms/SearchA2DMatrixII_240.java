@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class SearchA2DMatrixII_240 {
+
   public static void main(String[] arg) {
     new SearchA2DMatrixII_240().testSearchA2DMatrix_74();
   }
@@ -15,11 +16,11 @@ public class SearchA2DMatrixII_240 {
     int[] trueArray = new int[]{1, 2, 3, 10, 18, 15, 19, 22, 24, 30, 7};
     for (int i : trueArray) {
       log.info("{} true = {}", i, searchMatrix(new int[][]{
-              {1, 4, 7, 11, 15},
-              {2, 5, 8, 12, 19},
-              {3, 6, 9, 16, 22},
-              {10, 13, 14, 17, 24},
-              {18, 21, 23, 26, 30}
+          {1, 4, 7, 11, 15},
+          {2, 5, 8, 12, 19},
+          {3, 6, 9, 16, 22},
+          {10, 13, 14, 17, 24},
+          {18, 21, 23, 26, 30}
       }, i));
     }
 

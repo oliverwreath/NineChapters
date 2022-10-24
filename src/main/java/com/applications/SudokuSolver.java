@@ -1,15 +1,15 @@
 package com.applications;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.LinkedList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class SudokuSolver {
+
   static void printBoard(int[][] board) {
     for (int i = 0; i < 9; i++) {
       log.debug(Arrays.toString(board[i]));
@@ -63,6 +63,7 @@ public class SudokuSolver {
   }
 
   class Entry {
+
     int x = 0;
     int y = 0;
 
@@ -74,9 +75,9 @@ public class SudokuSolver {
     @Override
     public String toString() {
       return "Entry{" +
-              x +
-              ", " + y +
-              '}';
+          x +
+          ", " + y +
+          '}';
     }
   }
 

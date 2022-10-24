@@ -1,16 +1,16 @@
 package com.lintcode.BinarySearch1;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class Lintcode460KClosestNumbers {
+
   public int[] kClosestNumbers(int[] nums, int target, int k) {
 
     if (nums == null || nums.length == 0) {
@@ -42,6 +42,7 @@ public class Lintcode460KClosestNumbers {
   }
 
   private class Entry {
+
     int original = 0;
     int diff = 0;
 

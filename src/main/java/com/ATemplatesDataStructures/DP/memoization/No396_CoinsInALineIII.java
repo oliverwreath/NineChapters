@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No396_CoinsInALineIII {
+
   public static void main(String[] args) {
     No396_CoinsInALineIII No394_CoinsInALine = new No396_CoinsInALineIII();
     No394_CoinsInALine.testNo394_CoinsInALine();
@@ -50,7 +51,7 @@ public class No396_CoinsInALineIII {
       dp[i][j] = Math.max(values[i], values[j]);
     } else {
       dp[i][j] = Math.max(values[i] + Math.min(helper(i + 2, j, values), helper(i + 1, j - 1, values)),
-              values[j] + Math.min(helper(i + 1, j - 1, values), helper(i, j - 2, values)));
+          values[j] + Math.min(helper(i + 1, j - 1, values), helper(i, j - 2, values)));
     }
     return dp[i][j];
   }

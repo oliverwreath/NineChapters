@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.FollowUp7.DFS;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No680_SplitString {
+
   public static void main(String[] args) {
     No680_SplitString No680_SplitString = new No680_SplitString();
     No680_SplitString.testNo680_SplitString();

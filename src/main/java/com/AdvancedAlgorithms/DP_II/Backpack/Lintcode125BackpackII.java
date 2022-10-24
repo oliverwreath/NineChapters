@@ -1,8 +1,7 @@
 package com.AdvancedAlgorithms.DP_II.Backpack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
@@ -11,13 +10,13 @@ import java.util.Arrays;
  * <p>
  * Version 1: Simply Working. Backpack DP. MLE ok.
  * <p>
- * TIME: O(MN)
- * SPACE: O(MN)
+ * TIME: O(MN) SPACE: O(MN)
  * <p>
  * Version 2: TBD. Sliding Array brings the SPACE: O(N)
  */
 @Slf4j
 public class Lintcode125BackpackII {
+
   public int backPackII(int m, int[] a, int[] v) {
     // filter abnormal cases
     if (a == null || a.length == 0 || v == null || v.length == 0) {

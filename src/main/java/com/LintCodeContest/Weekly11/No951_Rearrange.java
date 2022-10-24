@@ -1,11 +1,11 @@
 package com.LintCodeContest.Weekly11;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No951_Rearrange {
+
   public static void main(String[] args) {
     No951_Rearrange No951_Rearrange = new No951_Rearrange();
     No951_Rearrange.testNo951_Rearrange();

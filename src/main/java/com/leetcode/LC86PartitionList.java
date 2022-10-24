@@ -4,12 +4,12 @@ import com.util.ListNode;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Author: Oliver
- * Approach 1: Rotate Groups of Four Cells.
- * Approach 2: Reverse on Diagonal and then Reverse Left to Right.
+ * Author: Oliver Approach 1: Rotate Groups of Four Cells. Approach 2: Reverse on Diagonal and then Reverse Left to
+ * Right.
  */
 @Slf4j
 public class LC86PartitionList {
+
   public ListNode partition(ListNode head, int x) {
     if (head == null || head.next == null)
       return head;

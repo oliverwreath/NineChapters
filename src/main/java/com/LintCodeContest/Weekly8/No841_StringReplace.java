@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No841_StringReplace {
+
   public static void main(String[] args) {
     No841_StringReplace No841_StringReplace = new No841_StringReplace();
     No841_StringReplace.testNo841_StringReplace();
@@ -12,11 +13,14 @@ public class No841_StringReplace {
   private void testNo841_StringReplace() {
     log.info("result \"cccba\" v.s. " + stringReplace(new String[]{"ab", "aba"}, new String[]{"cc", "ccc"}, "ababa"));
     log.info("result \"aaaaa\" v.s. " + stringReplace(new String[]{"ab", "aba"}, new String[]{"cc", "ccc"}, "aaaaa"));
-    log.info("result \"cccccccccccc\" v.s. " + stringReplace(new String[]{"ab", "aba"}, new String[]{"cc", "ccc"}, "cccccccccccc"));
-    log.info("result \"cccbacccba\" v.s. " + stringReplace(new String[]{"ab", "aba"}, new String[]{"cc", "ccc"}, "ababaababa"));
+    log.info("result \"cccccccccccc\" v.s. " + stringReplace(new String[]{"ab", "aba"}, new String[]{"cc", "ccc"},
+        "cccccccccccc"));
+    log.info("result \"cccbacccba\" v.s. " + stringReplace(new String[]{"ab", "aba"}, new String[]{"cc", "ccc"},
+        "ababaababa"));
   }
 
   class TrieNode {
+
     TrieNode[] next;
     boolean isWord;
     String s;
@@ -32,13 +36,14 @@ public class No841_StringReplace {
     @Override
     public String toString() {
       return "TrieNode{" +
-              "isWord=" + isWord +
-              ", s='" + s + '\'' +
-              '}';
+          "isWord=" + isWord +
+          ", s='" + s + '\'' +
+          '}';
     }
   }
 
   class Trie {
+
     TrieNode root;
 
     public Trie() {
@@ -97,8 +102,8 @@ public class No841_StringReplace {
     @Override
     public String toString() {
       return "Trie{" +
-              "root=" + root +
-              '}';
+          "root=" + root +
+          '}';
     }
   }
 

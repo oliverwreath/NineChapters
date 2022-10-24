@@ -1,14 +1,14 @@
 package com.ATemplatesDataStructures.FollowUp7.DFS;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * plain old dfs, nice practice
  */
 @Slf4j
 public class No551_NestedListWeightSum {
+
   public static void main(String[] args) {
     No551_NestedListWeightSum No551_NestedListWeightSum = new No551_NestedListWeightSum();
     No551_NestedListWeightSum.testNo551_NestedListWeightSum();
@@ -19,6 +19,7 @@ public class No551_NestedListWeightSum {
   }
 
   public interface NestedInteger {
+
     // @return true if this NestedInteger holds a single integer,
     // rather than a nested list.
     public boolean isInteger();
@@ -42,7 +43,6 @@ public class No551_NestedListWeightSum {
 
     this.sum = 0;
     dfs(1, nestedList);
-
 
     // return the final result
     return sum;

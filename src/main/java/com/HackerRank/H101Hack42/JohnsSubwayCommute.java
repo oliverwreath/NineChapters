@@ -1,15 +1,15 @@
 package com.HackerRank.H101Hack42;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class JohnsSubwayCommute {
+
   public static void main(String[] arg) {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     Scanner scan = new Scanner(System.in);
@@ -108,6 +108,7 @@ public class JohnsSubwayCommute {
   }
 
   private class Point {
+
     long x;
     long y;
 
@@ -123,9 +124,9 @@ public class JohnsSubwayCommute {
     @Override
     public String toString() {
       return "Point{" +
-              "x=" + x +
-              ", y=" + y +
-              '}';
+          "x=" + x +
+          ", y=" + y +
+          '}';
     }
   }
 }

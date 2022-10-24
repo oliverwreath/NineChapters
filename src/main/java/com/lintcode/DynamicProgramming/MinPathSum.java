@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class MinPathSum {
+
   public static void main(String[] args) {
     testMinPathSum();
   }
@@ -19,9 +20,9 @@ public class MinPathSum {
     log.debug("result 5 = " + minPathSum(new int[][]{{1}, {4}}));
     log.debug("- -");
     log.debug("result 21 = " + minPathSum(new int[][]{{1, 2, 3},
-            {3, 4, 5},
-            {6, 5, 7},
-            {4, 1, 8}}));
+        {3, 4, 5},
+        {6, 5, 7},
+        {4, 1, 8}}));
   }
 
 //    public static int minPathSum(int[][] grid) {

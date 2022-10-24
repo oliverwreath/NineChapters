@@ -1,16 +1,16 @@
 package com.HackerRank.Implementation;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class DivisiblePairs {
+
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
     int n = in.nextInt();

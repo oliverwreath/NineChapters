@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No207_IntervalSumII {
+
   public static void main(String[] args) {
     testNo207_IntervalSumII();
   }
@@ -19,6 +20,7 @@ public class No207_IntervalSumII {
   SegmentTreeNode root;
 
   class SegmentTreeNode {
+
     int start, end;
     long sum;
     SegmentTreeNode left, right;

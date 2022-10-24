@@ -7,33 +7,34 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class WordSearch {
+
   public static void main(String[] arg) {
     new WordSearch().testWordSearch();
   }
 
   private void testWordSearch() {
     log.info("{}", exist(new char[][]{
-                    {'d', 'o', 'a', 'f'},
-                    {'a', 'g', 'a', 'i'},
-                    {'d', 'c', 'a', 'n'}}
-            , "gaif"));
+            {'d', 'o', 'a', 'f'},
+            {'a', 'g', 'a', 'i'},
+            {'d', 'c', 'a', 'n'}}
+        , "gaif"));
 
     log.info("{}", exist(new char[][]{
-                    {'a', 'b', 'c', 'e'},
-                    {'s', 'f', 'c', 's'},
-                    {'a', 'd', 'e', 'e'}}
-            , "abf"));
+            {'a', 'b', 'c', 'e'},
+            {'s', 'f', 'c', 's'},
+            {'a', 'd', 'e', 'e'}}
+        , "abf"));
     log.info("{}", exist(new char[][]{
-                    {'a', 'b', 'c', 'e'},
-                    {'s', 'f', 'c', 's'},
-                    {'a', 'd', 'e', 'e'}}
-            , "abfb"));
+            {'a', 'b', 'c', 'e'},
+            {'s', 'f', 'c', 's'},
+            {'a', 'd', 'e', 'e'}}
+        , "abfb"));
 
     log.info("{}", exist(new char[][]{
-                    {'a', 'b', 'c', 'e'},
-                    {'s', 'f', 'c', 's'},
-                    {'a', 'd', 'e', 'e'}}
-            , "sfd"));
+            {'a', 'b', 'c', 'e'},
+            {'s', 'f', 'c', 's'},
+            {'a', 'd', 'e', 'e'}}
+        , "sfd"));
   }
 
   /**

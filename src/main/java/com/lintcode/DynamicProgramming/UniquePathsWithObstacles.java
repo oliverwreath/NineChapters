@@ -7,40 +7,41 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class UniquePathsWithObstacles {
+
   public static void main(String[] args) {
     testUniquePathsWithObstacles();
   }
 
   private static void testUniquePathsWithObstacles() {
     int[][] obstacleGrid = new int[][]{
-            {0, 0, 0},
-            {0, 1, 0},
-            {0, 0, 0}
+        {0, 0, 0},
+        {0, 1, 0},
+        {0, 0, 0}
     };
     log.debug("{}", uniquePathsWithObstacles(obstacleGrid));
     log.debug("- -");
     obstacleGrid = new int[][]{
-            {0, 0, 0},
-            {0, 0, 1},
-            {0, 0, 0}
+        {0, 0, 0},
+        {0, 0, 1},
+        {0, 0, 0}
     };
     log.debug("{}", uniquePathsWithObstacles(obstacleGrid));
     log.debug("- -");
     obstacleGrid = new int[][]{
-            {0, 0},
-            {0, 0},
-            {0, 0},
-            {1, 0},
-            {0, 0}
+        {0, 0},
+        {0, 0},
+        {0, 0},
+        {1, 0},
+        {0, 0}
     };
     log.debug("{}", uniquePathsWithObstacles(obstacleGrid));
     log.debug("- -");
     obstacleGrid = new int[][]{
-            {0, 0},
-            {0, 0},
-            {0, 0},
-            {1, 1},
-            {0, 0}
+        {0, 0},
+        {0, 0},
+        {0, 0},
+        {1, 1},
+        {0, 0}
     };
     log.debug("{}", uniquePathsWithObstacles(obstacleGrid));
     log.debug("- -");

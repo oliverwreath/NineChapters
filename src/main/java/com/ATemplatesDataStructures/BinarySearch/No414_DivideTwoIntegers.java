@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No414_DivideTwoIntegers {
+
   public static void main(String[] args) {
     testNo141_SqrtX();
   }

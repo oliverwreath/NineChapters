@@ -1,15 +1,15 @@
 package com.leetcode.Weekly8;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC417PacificAtlanticWaterFlow {
+
   public List<List<Integer>> pacificAtlantic(int[][] heights) {
     List<List<Integer>> res = new ArrayList<>();
     if (heights == null || heights.length == 0 || heights[0] == null || heights[0].length == 0)

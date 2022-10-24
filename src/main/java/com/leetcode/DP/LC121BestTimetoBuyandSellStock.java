@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC121BestTimetoBuyandSellStock {
+
   public static void main(String[] arg) {
     new LC121BestTimetoBuyandSellStock().testHouseRobber_198();
   }

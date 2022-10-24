@@ -1,11 +1,11 @@
 package com.leetcode.Weekly67;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC765CouplesHoldingHands {
+
   public static void main(String[] args) {
     testNo765_CouplesHoldingHands();
   }

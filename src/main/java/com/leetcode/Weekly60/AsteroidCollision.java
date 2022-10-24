@@ -1,11 +1,11 @@
 package com.leetcode.Weekly60;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class AsteroidCollision {
+
   public static void main(String[] args) {
     testAsteroidCollision();
   }
@@ -13,7 +13,8 @@ public class AsteroidCollision {
   private static void testAsteroidCollision() {
     AsteroidCollision AsteroidCollision = new AsteroidCollision();
     log.info("result [5, 10] v.s. " + Arrays.toString(AsteroidCollision.asteroidCollision(new int[]{5, 10, -5})));
-    log.info("result [-2, -2, -2, 1] v.s. " + Arrays.toString(AsteroidCollision.asteroidCollision(new int[]{-2, -2, -2, 1})));
+    log.info("result [-2, -2, -2, 1] v.s. " + Arrays.toString(
+        AsteroidCollision.asteroidCollision(new int[]{-2, -2, -2, 1})));
   }
 
   /**

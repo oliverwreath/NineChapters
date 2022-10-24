@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.Stack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No510_MaximalRectangle {
+
   public static void main(String[] args) {
     testNo510_MaximalRectangle();
   }
@@ -14,11 +14,11 @@ public class No510_MaximalRectangle {
   private static void testNo510_MaximalRectangle() {
     No510_MaximalRectangle No510_MaximalRectangle = new No510_MaximalRectangle();
     boolean[][] matrix = new boolean[][]{
-            {true, true, false, false, true},
-            {false, true, false, false, true},
-            {false, false, true, true, true},
-            {false, false, true, true, true},
-            {false, false, false, false, true},
+        {true, true, false, false, true},
+        {false, true, false, false, true},
+        {false, false, true, true, true},
+        {false, false, true, true, true},
+        {false, false, false, false, true},
     };
     log.info("result 6 v.s. " + No510_MaximalRectangle.maximalRectangle(matrix));
   }

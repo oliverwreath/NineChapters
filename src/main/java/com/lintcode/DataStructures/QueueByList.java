@@ -1,15 +1,15 @@
 package com.lintcode.DataStructures;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class QueueByList {
+
   List<Integer> list;
 
   public QueueByList() {

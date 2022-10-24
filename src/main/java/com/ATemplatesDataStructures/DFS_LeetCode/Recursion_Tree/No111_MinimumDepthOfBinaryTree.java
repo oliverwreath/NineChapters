@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.DFS_LeetCode.Recursion_Tree;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No111_MinimumDepthOfBinaryTree {
+
   public static void main(String[] args) {
     testNo111_MinimumDepthOfBinaryTree();
   }
@@ -50,6 +50,7 @@ public class No111_MinimumDepthOfBinaryTree {
   }
 
   class Entry {
+
     TreeNode node;
     int depth;
 
@@ -61,9 +62,9 @@ public class No111_MinimumDepthOfBinaryTree {
     @Override
     public String toString() {
       return "Entry{" +
-              "node=" + node +
-              ", depth=" + depth +
-              '}';
+          "node=" + node +
+          ", depth=" + depth +
+          '}';
     }
   }
 

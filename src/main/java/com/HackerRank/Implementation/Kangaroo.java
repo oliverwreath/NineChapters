@@ -1,14 +1,14 @@
 package com.HackerRank.Implementation;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class Kangaroo {
+
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
     int x1 = in.nextInt();

@@ -1,14 +1,14 @@
 package com.lintcode.DPCourse;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class BombEnemy {
+
   public static void main(String[] args) {
     testBombEnemy();
   }
@@ -16,9 +16,9 @@ public class BombEnemy {
   private static void testBombEnemy() {
     BombEnemy bombEnemy = new BombEnemy();
     char[][] grid = new char[][]{
-            {'0', 'E', '0', '0'},
-            {'E', '0', 'W', 'E'},
-            {'0', 'E', '0', '0'}
+        {'0', 'E', '0', '0'},
+        {'E', '0', 'W', 'E'},
+        {'0', 'E', '0', '0'}
     };
     log.debug("result 3 = " + bombEnemy.maxKilledEnemies(grid));
 //        log.debug("result 1 = " + bombEnemy.maxKilledEnemies("10"));

@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.tmp;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No784_LetterCasePermutation {
+
   public static void main(String[] args) {
     No784_LetterCasePermutation No784_LetterCasePermutation = new No784_LetterCasePermutation();
     No784_LetterCasePermutation.testNo784_LetterCasePermutation();

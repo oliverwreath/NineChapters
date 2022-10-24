@@ -1,14 +1,19 @@
 package com.ATemplatesDataStructures.DFS_LeetCode.Graph_DFS;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Approach 2: Postorder DFS (Depth-First Search)
  */
 @Slf4j
 public class LC207CourseSchedule {
+
   public boolean canFinish(int numCourses, int[][] pre) {
     if (pre == null || pre.length == 0)
       return true;

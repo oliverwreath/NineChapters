@@ -1,19 +1,18 @@
 package com.AdvancedAlgorithms.DP_I.Interval;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  * <p>
  * Version 1: Simply Working. Ok w/ memoization.
  * <p>
- * TIME: O(NNN)
- * SPACE: O(NN)
+ * TIME: O(NNN) SPACE: O(NN)
  */
 @Slf4j
 public class Lintcode168BurstBalloons {
+
   private long[][] dp;
 
   public int maxCoins(int[] nums) {
@@ -48,7 +47,7 @@ public class Lintcode168BurstBalloons {
 
     for (int k = start + 1; k < end; k++) {
       dp[start][end] = Math.max(dp[start][end],
-              search(newNums, start, k) + search(newNums, k, end) + (long) newNums[start] * newNums[k] * newNums[end]);
+          search(newNums, start, k) + search(newNums, k, end) + (long) newNums[start] * newNums[k] * newNums[end]);
     }
     return dp[start][end];
   }

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No110_MinimumPathSum {
+
   public static void main(String[] args) {
     testNo392_HouseRobber();
   }
@@ -11,11 +12,11 @@ public class No110_MinimumPathSum {
   private static void testNo392_HouseRobber() {
     No110_MinimumPathSum No392_HouseRobber = new No110_MinimumPathSum();
     log.info("result 3 v.s. " + No392_HouseRobber.minPathSum(new int[][]{
-            {3}
+        {3}
     }));
     log.info("result 5 v.s. " + No392_HouseRobber.minPathSum(new int[][]{
-            {3, 2},
-            {1, 1}
+        {3, 2},
+        {1, 1}
     }));
   }
 

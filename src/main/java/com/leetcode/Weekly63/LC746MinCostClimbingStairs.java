@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC746MinCostClimbingStairs {
+
   public static void main(String[] args) {
     testNo746_MinCostClimbingStairs();
   }
@@ -11,7 +12,8 @@ public class LC746MinCostClimbingStairs {
   private static void testNo746_MinCostClimbingStairs() {
     LC746MinCostClimbingStairs LC746MinCostClimbingStairs = new LC746MinCostClimbingStairs();
     log.info("result 15 v.s. " + LC746MinCostClimbingStairs.minCostClimbingStairs(new int[]{10, 15, 20}));
-    log.info("result 6 v.s. " + LC746MinCostClimbingStairs.minCostClimbingStairs(new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}));
+    log.info("result 6 v.s. " + LC746MinCostClimbingStairs.minCostClimbingStairs(
+        new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}));
   }
 
   /**

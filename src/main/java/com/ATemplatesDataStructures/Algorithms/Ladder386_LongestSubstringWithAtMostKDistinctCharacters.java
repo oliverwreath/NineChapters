@@ -1,11 +1,11 @@
 package com.ATemplatesDataStructures.Algorithms;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Ladder386_LongestSubstringWithAtMostKDistinctCharacters {
+
   public static void main(String[] args) {
     testLadder386_LongestSubstringWithAtMostKDistinctCharacters();
   }
@@ -13,7 +13,9 @@ public class Ladder386_LongestSubstringWithAtMostKDistinctCharacters {
   private static void testLadder386_LongestSubstringWithAtMostKDistinctCharacters() {
     Ladder386_LongestSubstringWithAtMostKDistinctCharacters Ladder386_LongestSubstringWithAtMostKDistinctCharacters = new Ladder386_LongestSubstringWithAtMostKDistinctCharacters();
 //        log.info("result 4 v.s. " + Ladder386_LongestSubstringWithAtMostKDistinctCharacters.lengthOfLongestSubstringKDistinct("eceba", 3));
-    log.info("result 0 v.s. " + Ladder386_LongestSubstringWithAtMostKDistinctCharacters.lengthOfLongestSubstringKDistinct("onykowalsrolughyufhxigqkwalvfo", 0));
+    log.info(
+        "result 0 v.s. " + Ladder386_LongestSubstringWithAtMostKDistinctCharacters.lengthOfLongestSubstringKDistinct(
+            "onykowalsrolughyufhxigqkwalvfo", 0));
   }
 
   /**

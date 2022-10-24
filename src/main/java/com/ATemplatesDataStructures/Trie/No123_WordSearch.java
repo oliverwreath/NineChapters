@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No123_WordSearch {
+
   public static void main(String[] args) {
     No123_WordSearch No123_WordSearch = new No123_WordSearch();
     No123_WordSearch.testNo123_WordSearch();
@@ -26,9 +27,9 @@ public class No123_WordSearch {
 //                {'A', 'D', 'E', 'E'}
 //        }, "ABCB"));
     log.info("result true v.s. " + exist(new char[][]{
-            {'A', 'B', 'C', 'E'},
-            {'S', 'F', 'E', 'S'},
-            {'A', 'D', 'E', 'E'}
+        {'A', 'B', 'C', 'E'},
+        {'S', 'F', 'E', 'S'},
+        {'A', 'D', 'E', 'E'}
     }, "ABCESEEEFS"));
   }
 
@@ -76,9 +77,9 @@ public class No123_WordSearch {
 
     board[i][j] = '#';
     boolean answer = dfs(i - 1, j, start + 1)
-            || dfs(i + 1, j, start + 1)
-            || dfs(i, j - 1, start + 1)
-            || dfs(i, j + 1, start + 1);
+        || dfs(i + 1, j, start + 1)
+        || dfs(i, j - 1, start + 1)
+        || dfs(i, j + 1, start + 1);
     board[i][j] = word.charAt(start);
     return answer;
   }

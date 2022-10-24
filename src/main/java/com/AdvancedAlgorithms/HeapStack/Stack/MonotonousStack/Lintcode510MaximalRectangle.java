@@ -1,15 +1,15 @@
 package com.AdvancedAlgorithms.HeapStack.Stack.MonotonousStack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * this depends on the maxAreaInHist
  */
 @Slf4j
 public class Lintcode510MaximalRectangle {
+
   public int maximalRectangle(boolean[][] matrix) {
     // filter abnormal cases
     if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {

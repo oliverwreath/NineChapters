@@ -1,14 +1,14 @@
 package com.NineChapters.BFSTopologicalSorting;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Binary_tree_level_order_traversal_69 {
+
   public static void main(String[] args) {
     testBinary_tree_level_order_traversal_69();
   }

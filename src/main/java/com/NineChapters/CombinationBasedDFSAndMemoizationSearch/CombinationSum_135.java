@@ -1,14 +1,14 @@
 package com.NineChapters.CombinationBasedDFSAndMemoizationSearch;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class CombinationSum_135 {
+
   public static void main(String[] args) {
     testCombinationSum_135();
   }
@@ -31,7 +31,8 @@ public class CombinationSum_135 {
     return results;
   }
 
-  private static void dfs(int[] candidates, int target, int index, List<Integer> combination, List<List<Integer>> results) {
+  private static void dfs(int[] candidates, int target, int index, List<Integer> combination,
+      List<List<Integer>> results) {
     if (index == candidates.length) {
       if (target == 0) {
         results.add(new ArrayList<>(combination));

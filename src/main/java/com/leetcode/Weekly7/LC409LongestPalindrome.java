@@ -1,15 +1,15 @@
 package com.leetcode.Weekly7;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Set;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class LC409LongestPalindrome {
+
   public static void main(String[] arg) {
     testLongestPalindrome_409();
   }

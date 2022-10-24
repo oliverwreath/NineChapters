@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC410SplitArrayLargestSum {
+
   public static void main(String[] arg) {
     testSplitArrayLargestSum_410();
   }

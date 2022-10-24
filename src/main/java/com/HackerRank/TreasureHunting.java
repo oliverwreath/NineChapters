@@ -1,14 +1,14 @@
 package com.HackerRank;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class TreasureHunting {
+
   public static void main(String[] arg) {
     testTreasureHunting();
   }

@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
  */
 @Slf4j
 class TmpTest {
+
   @Test void test_no154RegularExpressionMatching() {
     No154RegularExpressionMatching no154RegularExpressionMatching = new No154RegularExpressionMatching();
     Assertions.assertTrue(no154RegularExpressionMatching.isMatch("aa", ".*"));

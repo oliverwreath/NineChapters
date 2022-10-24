@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No466_CountLinkedListNode {
+
   public static void main(String[] args) {
     No466_CountLinkedListNode No466_CountLinkedListNode = new No466_CountLinkedListNode();
     No466_CountLinkedListNode.testNo466_CountLinkedListNode();

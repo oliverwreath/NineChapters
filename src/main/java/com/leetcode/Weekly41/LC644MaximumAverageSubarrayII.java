@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC644MaximumAverageSubarrayII {
+
   public static void main(String[] args) {
     testMaximumAverageSubarrayII_644();
   }

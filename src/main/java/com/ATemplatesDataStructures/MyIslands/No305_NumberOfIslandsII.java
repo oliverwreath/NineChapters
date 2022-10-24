@@ -1,13 +1,13 @@
 package com.ATemplatesDataStructures.MyIslands;
 
 import com.ATemplatesDataStructures.UnionFind.UnionFind;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No305_NumberOfIslandsII {
+
   public static void main(String[] args) {
     testNo305_NumberOfIslandsII();
   }
@@ -15,12 +15,12 @@ public class No305_NumberOfIslandsII {
   private static void testNo305_NumberOfIslandsII() {
     No305_NumberOfIslandsII No305_NumberOfIslandsII = new No305_NumberOfIslandsII();
     log.info("result 2 v.s. " + No305_NumberOfIslandsII.numIslands2(3, 3,
-            new int[][]{
-                    {0, 0},
-                    {0, 1},
-                    {1, 2},
-                    {2, 1}
-            }));
+        new int[][]{
+            {0, 0},
+            {0, 1},
+            {1, 2},
+            {2, 1}
+        }));
 //        log.info("result 1 v.s. " + No305_NumberOfIslandsII.numIslands2("10"));
   }
 
@@ -49,7 +49,8 @@ public class No305_NumberOfIslandsII {
       // up
       if (isValid(x - 1, y, m, n)) {
         if (islandMatrix[x - 1][y] == 1) {
-          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n), unionFind.convert2Id(x - 1, y, n));
+          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n),
+              unionFind.convert2Id(x - 1, y, n));
           if (hasMerged) {
             numberOfIslands--;
           }
@@ -58,7 +59,8 @@ public class No305_NumberOfIslandsII {
       // down
       if (isValid(x + 1, y, m, n)) {
         if (islandMatrix[x + 1][y] == 1) {
-          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n), unionFind.convert2Id(x + 1, y, n));
+          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n),
+              unionFind.convert2Id(x + 1, y, n));
           if (hasMerged) {
             numberOfIslands--;
           }
@@ -67,7 +69,8 @@ public class No305_NumberOfIslandsII {
       // left
       if (isValid(x, y - 1, m, n)) {
         if (islandMatrix[x][y - 1] == 1) {
-          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n), unionFind.convert2Id(x, y - 1, n));
+          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n),
+              unionFind.convert2Id(x, y - 1, n));
           if (hasMerged) {
             numberOfIslands--;
           }
@@ -76,7 +79,8 @@ public class No305_NumberOfIslandsII {
       // right
       if (isValid(x, y + 1, m, n)) {
         if (islandMatrix[x][y + 1] == 1) {
-          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n), unionFind.convert2Id(x, y + 1, n));
+          boolean hasMerged = unionFind.union_Number_Of_Island2(unionFind.convert2Id(x, y, n),
+              unionFind.convert2Id(x, y + 1, n));
           if (hasMerged) {
             numberOfIslands--;
           }

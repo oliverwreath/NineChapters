@@ -1,32 +1,36 @@
 package com.ATemplatesDataStructures.Heap.HashHeap;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class BuildingOutline {
+
   public static void main(String[] arg) {
     testBuildingOutline();
   }
 
   private static void testBuildingOutline() {
     log.info("{}", buildingOutline(new int[][]{{1, 3, 3},
-            {2, 4, 4},
-            {5, 6, 1}}));
+        {2, 4, 4},
+        {5, 6, 1}}));
     log.info("{}", buildingOutline(new int[][]{{1, 3, 3},
-            {2, 3, 5},
-            {2, 4, 4},
-            {5, 6, 1}}));
+        {2, 3, 5},
+        {2, 4, 4},
+        {5, 6, 1}}));
     log.info("{}", buildingOutline(new int[][]{{1, 3, 3},
-            {2, 4, 4},
-            {2, 4, 5},
-            {2, 4, 6},
-            {2, 4, 7},
-            {5, 6, 1}}));
+        {2, 4, 4},
+        {2, 4, 5},
+        {2, 4, 6},
+        {2, 4, 7},
+        {5, 6, 1}}));
   }
 
   /**
@@ -104,6 +108,7 @@ public class BuildingOutline {
   };
 
   static class Point {
+
     int x;
     boolean isStart;
     int height;

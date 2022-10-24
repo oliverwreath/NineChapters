@@ -1,5 +1,8 @@
 package com.ATemplatesDataStructures;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.ATemplatesDataStructures.DFS_LeetCode.Graph_DFS.LC207CourseSchedule;
 import com.ATemplatesDataStructures.Stack.Lintcode423ValidParentheses;
 import com.ATemplatesDataStructures.Trie.LintCode442ImplementTrie;
@@ -7,14 +10,12 @@ import com.ATemplatesDataStructures.Trie.Lintcode473AddAndSearchWord;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 /**
  * Author: Oliver
  */
 @Slf4j
 class ATemplatesDataStructuresTest {
+
   @Test void test_No442ImplementTrie() {
     LintCode442ImplementTrie lintCode442ImplementTrie = new LintCode442ImplementTrie();
     LintCode442ImplementTrie.Trie trie = lintCode442ImplementTrie.new Trie();
@@ -52,11 +53,11 @@ class ATemplatesDataStructuresTest {
   @Test void testLC207CourseSchedule() {
     LC207CourseSchedule LC207CourseSchedule = new LC207CourseSchedule();
     assertTrue(LC207CourseSchedule.canFinish(2, new int[][]{
-            {1, 0}
+        {1, 0}
     }));
     assertFalse(LC207CourseSchedule.canFinish(2, new int[][]{
-            {1, 0},
-            {0, 1}
+        {1, 0},
+        {0, 1}
     }));
   }
 }

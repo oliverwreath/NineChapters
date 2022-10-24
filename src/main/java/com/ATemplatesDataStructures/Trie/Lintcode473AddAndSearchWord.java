@@ -4,13 +4,15 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Lintcode473AddAndSearchWord {
+
   public class WordDictionary {
+
     /*
      * @param word: Adds a word into the data structure.
      * @return: nothing
      */
     public void addWord(String word) {
-  
+
       trie.insert(word);
     }
 
@@ -19,13 +21,14 @@ public class Lintcode473AddAndSearchWord {
      * @return: if the word is in the data structure.
      */
     public boolean search(String word) {
-  
+
       return trie.search(word);
     }
 
     Trie trie = new Trie();
 
     class TrieNode {
+
       TrieNode[] next;
       boolean isWord;
 
@@ -36,6 +39,7 @@ public class Lintcode473AddAndSearchWord {
     }
 
     class Trie {
+
       TrieNode root;
 
       public Trie() {

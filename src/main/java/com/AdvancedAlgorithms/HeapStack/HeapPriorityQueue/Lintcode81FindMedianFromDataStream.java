@@ -1,11 +1,11 @@
 package com.AdvancedAlgorithms.HeapStack.HeapPriorityQueue;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Lintcode81FindMedianFromDataStream {
+
   public int[] medianII(int[] nums) {
     // filter abnormal cases
     if (nums == null || nums.length == 0) {

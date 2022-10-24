@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No476_StoneGame {
+
   public static void main(String[] args) {
     No476_StoneGame No476_StoneGame = new No476_StoneGame();
     No476_StoneGame.testNo476_StoneGame();

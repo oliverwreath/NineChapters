@@ -1,11 +1,16 @@
 package com.ATemplatesDataStructures.FollowUp7.DFS;
 
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 @Slf4j
 public class No808_MovieNetwork {
+
   public static void main(String[] args) {
     No808_MovieNetwork No808_MovieNetwork = new No808_MovieNetwork();
     No808_MovieNetwork.testNo808_MovieNetwork();
@@ -13,18 +18,18 @@ public class No808_MovieNetwork {
 
   private void testNo808_MovieNetwork() {
     log.info("result 2 v.s. " + Arrays.toString(topKMovie(
-            new int[]{10, 20, 30, 40, 50, 60, 70, 80, 90},
-            new int[][]{
-                    {1, 4, 5},
-                    {0, 2, 3},
-                    {1, 7},
-                    {1, 6, 7},
-                    {0},
-                    {0},
-                    {3},
-                    {2, 3},
-                    {}
-            }, 5, 3)));
+        new int[]{10, 20, 30, 40, 50, 60, 70, 80, 90},
+        new int[][]{
+            {1, 4, 5},
+            {0, 2, 3},
+            {1, 7},
+            {1, 6, 7},
+            {0},
+            {0},
+            {3},
+            {2, 3},
+            {}
+        }, 5, 3)));
   }
 
   int[] topKMovie(int[] rating, int[][] G, int S, int K) {
@@ -72,6 +77,7 @@ public class No808_MovieNetwork {
   }
 
   class Movie {
+
     int id;
     int rating;
 
@@ -83,9 +89,9 @@ public class No808_MovieNetwork {
     @Override
     public String toString() {
       return "Movie{" +
-              "id=" + id +
-              ", rating=" + rating +
-              '}';
+          "id=" + id +
+          ", rating=" + rating +
+          '}';
     }
   }
 

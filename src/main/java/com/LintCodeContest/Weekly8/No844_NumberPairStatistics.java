@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No844_NumberPairStatistics {
+
   public static void main(String[] args) {
     No844_NumberPairStatistics No844_NumberPairStatistics = new No844_NumberPairStatistics();
     No844_NumberPairStatistics.testNo844_NumberPairStatistics();
@@ -11,16 +12,17 @@ public class No844_NumberPairStatistics {
 
   private void testNo844_NumberPairStatistics() {
     Point[] tmp = new Point[]{
-            new Point(1, 2), new Point(3, 4), new Point(5, 6)
+        new Point(1, 2), new Point(3, 4), new Point(5, 6)
     };
     log.info("result 3 v.s. " + pairNumbers(tmp));
     Point[] tmp2 = new Point[]{
-            new Point(0, 3), new Point(1, 1), new Point(3, 4), new Point(5, 6)
+        new Point(0, 3), new Point(1, 1), new Point(3, 4), new Point(5, 6)
     };
     log.info("result 1 v.s. " + pairNumbers(tmp2));
   }
 
   class Point {
+
     int x;
     int y;
 

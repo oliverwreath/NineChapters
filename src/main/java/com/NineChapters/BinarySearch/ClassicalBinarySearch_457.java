@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ClassicalBinarySearch_457 {
+
   public static void main(String[] args) {
     ClassicalBinarySearch_457 ClassicalBinarySearch_457 = new ClassicalBinarySearch_457();
     ClassicalBinarySearch_457.testClassicalBinarySearch_457();

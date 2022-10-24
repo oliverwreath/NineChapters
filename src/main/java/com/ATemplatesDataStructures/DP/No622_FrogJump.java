@@ -1,12 +1,12 @@
 package com.ATemplatesDataStructures.DP;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No622_FrogJump {
+
   public static void main(String[] args) {
     No622_FrogJump No622_FrogJump = new No622_FrogJump();
     No622_FrogJump.testNo622_FrogJump();
@@ -44,7 +44,8 @@ public class No622_FrogJump {
 
         for (int to = i + 1; to < len; to++) {
           int require = stones[to] - stones[i];
-          if (ksList.get(i).contains(require - 1) || ksList.get(i).contains(require) || ksList.get(i).contains(require + 1)) {
+          if (ksList.get(i).contains(require - 1) || ksList.get(i).contains(require) || ksList.get(i)
+              .contains(require + 1)) {
 //                        log.debug(i + " -> " + to + "; require = " + require);
             dp[to] = true;
             ksList.get(to).add(require);

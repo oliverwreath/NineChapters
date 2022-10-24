@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class BalancedBinaryTree_110 {
+
   public static void main(String[] arg) {
     new BalancedBinaryTree_110().testBalancedBinaryTree_110();
   }
@@ -55,6 +56,7 @@ public class BalancedBinaryTree_110 {
   }
 
   private class ResultEntry {
+
     boolean isBalanced;
     int depth;
 
@@ -66,9 +68,9 @@ public class BalancedBinaryTree_110 {
     @Override
     public String toString() {
       return "ResultEntry{" +
-              "isBalanced=" + isBalanced +
-              ", depth=" + depth +
-              '}';
+          "isBalanced=" + isBalanced +
+          ", depth=" + depth +
+          '}';
     }
   }
 

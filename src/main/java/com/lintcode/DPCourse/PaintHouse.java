@@ -1,19 +1,19 @@
 package com.lintcode.DPCourse;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class PaintHouse {
+
   public static void main(String[] args) {
     PaintHouse paintHouse = new PaintHouse();
     int[][] costs = {{14, 2, 11}, {
-            11, 14, 5}, {
-            14, 3, 10}};
+        11, 14, 5}, {
+        14, 3, 10}};
     log.debug("10 = " + paintHouse.minCost(costs));
   }
 

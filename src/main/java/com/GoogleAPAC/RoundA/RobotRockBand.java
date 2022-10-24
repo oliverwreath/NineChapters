@@ -1,18 +1,23 @@
 package com.GoogleAPAC.RoundA;
 
-import lombok.extern.slf4j.Slf4j;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 import java.io.PrintWriter;
 import java.math.BigInteger;
-import java.util.*;
-
-import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by yanli_000 on 16/7/8.
  */
 @Slf4j
 public class RobotRockBand {
+
   public static void main(String[] args) {
     long startTime = System.currentTimeMillis();
     new RobotRockBand().robotRockBand();
@@ -56,6 +61,7 @@ public class RobotRockBand {
   }
 
   private class myCountedSet<E> implements Iterable<E> {
+
     Set<E> set = new HashSet<E>();
     Map<E, BigInteger> map = new HashMap<E, BigInteger>();
 
@@ -103,12 +109,13 @@ public class RobotRockBand {
     @Override
     public String toString() {
       return "myCountedSet{" +
-              "map=" + map +
-              '}';
+          "map=" + map +
+          '}';
     }
   }
 
-  private BigInteger getXORHitCount(myCountedSet<Long> set1, myCountedSet<Long> set2, myCountedSet<Long> set3, myCountedSet<Long> set4, long target) {
+  private BigInteger getXORHitCount(myCountedSet<Long> set1, myCountedSet<Long> set2, myCountedSet<Long> set3,
+      myCountedSet<Long> set4, long target) {
     log.debug("{}", set1);
     log.debug("{}", set2);
     log.debug("{}", set3);

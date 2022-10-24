@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No898_LeftmostOne {
+
   public static void main(String[] args) {
     No898_LeftmostOne No898_LeftmostOne = new No898_LeftmostOne();
     No898_LeftmostOne.testNo898_LeftmostOne();
@@ -11,12 +12,12 @@ public class No898_LeftmostOne {
 
   private void testNo898_LeftmostOne() {
     log.info("result 0 v.s. " + getColumn(new int[][]{
-            {0, 0, 0, 1},
-            {1, 1, 1, 1}
+        {0, 0, 0, 1},
+        {1, 1, 1, 1}
     }));
     log.info("result 1 v.s. " + getColumn(new int[][]{
-            {0, 0, 0, 1},
-            {0, 1, 1, 1}
+        {0, 0, 0, 1},
+        {0, 1, 1, 1}
     }));
   }
 

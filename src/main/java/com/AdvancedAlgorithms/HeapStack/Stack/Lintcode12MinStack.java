@@ -1,13 +1,14 @@
 package com.AdvancedAlgorithms.HeapStack.Stack;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Lintcode12MinStack {
+
   public class MinStack {
+
     Deque<Integer> stack;
     Deque<Integer> minDeque;
 
@@ -22,7 +23,7 @@ public class Lintcode12MinStack {
      * @return: nothing
      */
     public void push(int number) {
-  
+
       stack.push(number);
       if (minDeque.isEmpty()) {
         minDeque.push(number);
@@ -37,7 +38,7 @@ public class Lintcode12MinStack {
      * @return: An integer
      */
     public int pop() {
-  
+
       if (stack.peek().equals(minDeque.peek())) {
         minDeque.pop();
       }
@@ -48,7 +49,7 @@ public class Lintcode12MinStack {
      * @return: An integer
      */
     public int min() {
-  
+
       return minDeque.peek();
     }
   }

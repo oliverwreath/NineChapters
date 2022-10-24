@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class No628_MaximumSubtree {
+
   public static void main(String[] args) {
     No628_MaximumSubtree No628_MaximumSubtree = new No628_MaximumSubtree();
     No628_MaximumSubtree.testNo628_MaximumSubtree();

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class MedianOfTwoSortedArrays {
+
   public static void main(String[] args) {
     testMedianOfTwoSortedArrays();
   }
@@ -41,7 +42,6 @@ public class MedianOfTwoSortedArrays {
           int xMid = xBegin + (xEnd - xBegin) / 2;
           int yMid = yBegin + (yEnd - yBegin) / 2;
         } else {
-
 
         }
       }

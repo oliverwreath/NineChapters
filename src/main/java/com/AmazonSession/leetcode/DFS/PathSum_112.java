@@ -1,16 +1,16 @@
 package com.AmazonSession.leetcode.DFS;
 
 import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class PathSum_112 {
+
   public static void main(String[] arg) {
     new PathSum_112().testSameTree_100();
   }

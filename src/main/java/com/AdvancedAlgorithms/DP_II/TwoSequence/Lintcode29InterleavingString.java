@@ -7,13 +7,13 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * Version 1: Simply Working. Okay DP.
  * <p>
- * TIME: O(MN)
- * SPACE: O(MN)
+ * TIME: O(MN) SPACE: O(MN)
  * <p>
  * Version 2: TBD. Could use Sliding array - save space.
  */
 @Slf4j
 public class Lintcode29InterleavingString {
+
   public boolean isInterleave(String A, String B, String C) {
     // filter abnormal cases
     if (C == null || C.length() == 0) {
@@ -40,7 +40,7 @@ public class Lintcode29InterleavingString {
       dp[i][0] = dp[i - 1][0] && (A.charAt(i - 1) == C.charAt(i - 1));
       for (int j = 1; j <= n; j++) {
         dp[i][j] = (dp[i - 1][j] && (A.charAt(i - 1) == C.charAt(i + j - 1))) ||
-                (dp[i][j - 1] && (B.charAt(j - 1) == C.charAt(i + j - 1)));
+            (dp[i][j - 1] && (B.charAt(j - 1) == C.charAt(i + j - 1)));
       }
     }
 

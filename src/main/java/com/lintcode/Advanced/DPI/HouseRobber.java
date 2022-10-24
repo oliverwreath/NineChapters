@@ -1,14 +1,14 @@
 package com.lintcode.Advanced.DPI;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class HouseRobber {
+
   public static void main(String[] arg) {
     testHouseRobber();
   }
@@ -19,8 +19,7 @@ public class HouseRobber {
   }
 
   /**
-   * @param A: An array of non-negative integers.
-   *           return: The maximum amount of money you can rob tonight
+   * @param A: An array of non-negative integers. return: The maximum amount of money you can rob tonight
    */
   static long houseRobber(int[] A) {
 

@@ -1,20 +1,21 @@
 package com.ATemplatesDataStructures.SegmentTree;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No249_CountOfSmallerNumberII {
+
   public static void main(String[] args) {
     testNo249_CountOfSmallerNumberII();
   }
 
   private static void testNo249_CountOfSmallerNumberII() {
     No249_CountOfSmallerNumberII no249_CountOfSmallerNumberII = new No249_CountOfSmallerNumberII();
-    log.info("result [0,1,2,3,2] v.s. " + no249_CountOfSmallerNumberII.countOfSmallerNumberII(new int[]{1, 2, 7, 8, 5}));
+    log.info(
+        "result [0,1,2,3,2] v.s. " + no249_CountOfSmallerNumberII.countOfSmallerNumberII(new int[]{1, 2, 7, 8, 5}));
 //        log.info("result 1 v.s. " + no249_CountOfSmallerNumberII.longestIncreasingContinuousSubsequence("10"));
   }
 
@@ -40,6 +41,7 @@ public class No249_CountOfSmallerNumberII {
   }
 
   class SegmentTreeNode {
+
     int start, end;
     int sum;
     SegmentTreeNode left, right;
@@ -54,10 +56,10 @@ public class No249_CountOfSmallerNumberII {
     @Override
     public String toString() {
       return "SegmentTreeNode{" +
-              "start=" + start +
-              ", end=" + end +
-              ", sum=" + sum +
-              '}';
+          "start=" + start +
+          ", end=" + end +
+          ", sum=" + sum +
+          '}';
     }
   }
 

@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC754ReachANumber {
+
   public static void main(String[] args) {
     testNo754_ReachANumber();
   }

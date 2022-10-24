@@ -1,19 +1,23 @@
 package com.ATemplatesDataStructures.SlidingWindow_String_TwoPointers;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No159_LongestSubstringWithAtMostTwoDistinctCharacters {
+
   public static void main(String[] args) {
     testNo159_LongestSubstringWithAtMostTwoDistinctCharacters();
   }
 
   private static void testNo159_LongestSubstringWithAtMostTwoDistinctCharacters() {
     No159_LongestSubstringWithAtMostTwoDistinctCharacters No159_LongestSubstringWithAtMostTwoDistinctCharacters = new No159_LongestSubstringWithAtMostTwoDistinctCharacters();
-    log.info("result 3 v.s. " + No159_LongestSubstringWithAtMostTwoDistinctCharacters.lengthOfLongestSubstringTwoDistinct("eceba"));
-    log.info("result 0 v.s. " + No159_LongestSubstringWithAtMostTwoDistinctCharacters.lengthOfLongestSubstringTwoDistinct(""));
+    log.info(
+        "result 3 v.s. " + No159_LongestSubstringWithAtMostTwoDistinctCharacters.lengthOfLongestSubstringTwoDistinct(
+            "eceba"));
+    log.info(
+        "result 0 v.s. " + No159_LongestSubstringWithAtMostTwoDistinctCharacters.lengthOfLongestSubstringTwoDistinct(
+            ""));
   }
 
   /**

@@ -1,15 +1,16 @@
 package com.lintcode.BinaryTree;
 
+import static com.lintcode.BinaryTree.BinaryTree.getSmallTree;
+
 import com.util.TreeNode;
 import lombok.extern.slf4j.Slf4j;
-
-import static com.lintcode.BinaryTree.BinaryTree.getSmallTree;
 
 /**
  * Created by Yanliang Han on 2016/6/11.
  */
 @Slf4j
 public class BST {
+
   public static void main(String[] args) {
     testIsValidBST();
   }
@@ -32,6 +33,7 @@ public class BST {
   }
 
   private static class ResultType {
+
     boolean isValidBST;
     int min;
     int max;

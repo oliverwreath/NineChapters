@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class SameTree_100 {
+
   public static void main(String[] arg) {
     new SameTree_100().testSameTree_100();
   }

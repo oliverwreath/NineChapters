@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC53MaximumSubarray {
+
   public static void main(String[] arg) {
     new LC53MaximumSubarray().testMaximumSubarray_53();
   }

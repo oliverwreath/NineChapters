@@ -1,21 +1,23 @@
 package com.leetcode.Weekly63;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC748shortestCompletingWord {
+
   public static void main(String[] args) {
     testNo748_shortestCompletingWord();
   }
 
   private static void testNo748_shortestCompletingWord() {
     LC748shortestCompletingWord LC748shortestCompletingWord = new LC748shortestCompletingWord();
-    log.info("result steps v.s. " + LC748shortestCompletingWord.shortestCompletingWord("1s3 PSt", new String[]{"step", "steps", "stripe", "stepple"}));
-    log.info("result pest v.s. " + LC748shortestCompletingWord.shortestCompletingWord("1s3 456", new String[]{"looks", "pest", "stew", "show"}));
+    log.info("result steps v.s. " + LC748shortestCompletingWord.shortestCompletingWord("1s3 PSt",
+        new String[]{"step", "steps", "stripe", "stepple"}));
+    log.info("result pest v.s. " + LC748shortestCompletingWord.shortestCompletingWord("1s3 456",
+        new String[]{"looks", "pest", "stew", "show"}));
   }
 
   /**

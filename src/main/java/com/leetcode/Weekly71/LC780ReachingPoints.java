@@ -1,11 +1,11 @@
 package com.leetcode.Weekly71;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC780ReachingPoints {
+
   public static void main(String[] args) {
     LC780ReachingPoints LC780ReachingPoints = new LC780ReachingPoints();
     LC780ReachingPoints.testNo780_ReachingPoints();
@@ -146,6 +146,7 @@ public class LC780ReachingPoints {
   }
 
   class Entry {
+
     int x;
     int y;
 

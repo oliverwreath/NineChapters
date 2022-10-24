@@ -1,12 +1,12 @@
 package com.NineChapters.StackQueueHashHeap;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.LinkedList;
 import java.util.Queue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Moving_average_from_data_stream_642 {
+
   public static void main(String[] args) {
     testMoving_average_from_data_stream_642();
   }
@@ -20,6 +20,7 @@ public class Moving_average_from_data_stream_642 {
   }
 
   public static class MovingAverage {
+
     private static Queue<Integer> queue;
     private int targetSize;
     private long sum;
@@ -38,7 +39,7 @@ public class Moving_average_from_data_stream_642 {
      * @return:
      */
     public double next(int val) {
-  
+
       if (queue.size() >= targetSize) {
         sum -= queue.poll();
       }

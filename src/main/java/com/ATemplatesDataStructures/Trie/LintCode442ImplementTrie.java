@@ -4,8 +4,11 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LintCode442ImplementTrie {
+
   public class Trie {
+
     class TrieNode {
+
       TrieNode[] next;
       boolean isWord;
 

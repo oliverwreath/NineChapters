@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class IsInterleave {
+
   public static void main(String[] args) {
     testIsInterleave();
   }
@@ -41,7 +42,9 @@ public class IsInterleave {
 
     for (int i = 1; i <= m; i++) {
       for (int j = 1; j <= n; j++) {
-        f[i][j] = (f[i - 1][j] && s1.charAt(i - 1) == s3.charAt(i + j - 1)) || (f[i][j - 1] && s2.charAt(j - 1) == s3.charAt(i + j - 1));
+        f[i][j] =
+            (f[i - 1][j] && s1.charAt(i - 1) == s3.charAt(i + j - 1)) || (f[i][j - 1] && s2.charAt(j - 1) == s3.charAt(
+                i + j - 1));
       }
     }
 

@@ -1,14 +1,14 @@
 package com.lintcode.Advanced.FollowUps;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class TriangleCount {
+
   public static void main(String[] arg) {
     new TriangleCount().testKthLargestInNArrays();
   }
@@ -16,7 +16,8 @@ public class TriangleCount {
   private void testKthLargestInNArrays() {
     log.info("{}", triangleCount(new int[]{3, 4, 6, 7}));
     log.info("{}", triangleCount(new int[]{4, 4, 4, 4}));
-    log.info("{}", triangleCount(new int[]{8990, 3146, 9568, 3889, 7253, 7395, 10032, 6179, 1299, 8738, 1315, 1280, 830, 6593}));
+    log.info("{}",
+        triangleCount(new int[]{8990, 3146, 9568, 3889, 7253, 7395, 10032, 6179, 1299, 8738, 1315, 1280, 830, 6593}));
   }
 
   /**

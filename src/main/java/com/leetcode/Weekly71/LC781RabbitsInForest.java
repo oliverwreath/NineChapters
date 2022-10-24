@@ -1,12 +1,12 @@
 package com.leetcode.Weekly71;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LC781RabbitsInForest {
+
   public static void main(String[] args) {
     LC781RabbitsInForest LC781_RabbitsInForest = new LC781RabbitsInForest();
     LC781_RabbitsInForest.testNo781_RabbitsInForest();

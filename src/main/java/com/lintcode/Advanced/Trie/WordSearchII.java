@@ -1,15 +1,15 @@
 package com.lintcode.Advanced.Trie;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.HashSet;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class WordSearchII {
+
   public static void main(String[] arg) {
     new WordSearchII().testWordSearchII();
   }
@@ -22,29 +22,29 @@ public class WordSearchII {
     dict.add("can");
     dict.add("again");
     log.info("{}", wordSearchII(new char[][]{
-                    {'d', 'o', 'a', 'f'},
-                    {'a', 'g', 'a', 'i'},
-                    {'d', 'c', 'a', 'n'}}
-            , dict));
+            {'d', 'o', 'a', 'f'},
+            {'a', 'g', 'a', 'i'},
+            {'d', 'c', 'a', 'n'}}
+        , dict));
 
     dict.clear();
     dict.add("see");
     dict.add("se");
     log.info("{}", wordSearchII(new char[][]{
-                    {'a', 'b', 'c', 'e'},
-                    {'s', 'f', 'c', 's'},
-                    {'a', 'd', 'e', 'e'}}
-            , dict));
+            {'a', 'b', 'c', 'e'},
+            {'s', 'f', 'c', 's'},
+            {'a', 'd', 'e', 'e'}}
+        , dict));
 
     dict.clear();
     dict.add("abcb");
     dict.add("ninechapter");
     dict.add("lintcode");
     log.info("{}", wordSearchII(new char[][]{
-                    {'a', 'b', 'c', 'e'},
-                    {'s', 'f', 'c', 's'},
-                    {'a', 'd', 'e', 'e'}}
-            , dict));
+            {'a', 'b', 'c', 'e'},
+            {'s', 'f', 'c', 's'},
+            {'a', 'd', 'e', 'e'}}
+        , dict));
   }
 
   /**

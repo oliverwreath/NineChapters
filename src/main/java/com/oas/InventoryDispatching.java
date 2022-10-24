@@ -1,14 +1,20 @@
 package com.oas;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.*;
 
 /**
  * Author: Oliver
  */
 @Slf4j
 public class InventoryDispatching {
+
   public static void main(String[] arg) {
     InventoryDispatching inventoryDispatching = new InventoryDispatching();
     List<int[]> result = inventoryDispatching.dispatching(new int[]{2, 4}, new int[]{3, 4}, new int[]{5, 4}, 2);
@@ -76,7 +82,8 @@ public class InventoryDispatching {
 //    log.debug("");
   }
 
-  public List<int[]> dispatching(int[] currentInventories, int[] minimumInventories, int[] desiredInventories, int warehouseInventory) {
+  public List<int[]> dispatching(int[] currentInventories, int[] minimumInventories, int[] desiredInventories,
+      int warehouseInventory) {
     // assuming the input has sorted by store names in alphabetical order.
     int numOfStores = currentInventories.length;
     List<int[]> result = new LinkedList<>();
@@ -88,8 +95,10 @@ public class InventoryDispatching {
     // 1st step - assese the situation - T O(n), with n being numOfStores;
     int diffToMeetMinimum = 0, diffToFullyStock = 0;
     for (int i = 0; i < numOfStores; i++) {
-      diffToMeetMinimum += (minimumInventories[i] > currentInventories[i]) ? (minimumInventories[i] - currentInventories[i]) : 0;
-      diffToFullyStock += (desiredInventories[i] > currentInventories[i]) ? (desiredInventories[i] - currentInventories[i]) : 0;
+      diffToMeetMinimum +=
+          (minimumInventories[i] > currentInventories[i]) ? (minimumInventories[i] - currentInventories[i]) : 0;
+      diffToFullyStock +=
+          (desiredInventories[i] > currentInventories[i]) ? (desiredInventories[i] - currentInventories[i]) : 0;
     }
 
     // 2nd step - let's stock accordingly.
@@ -169,6 +178,7 @@ public class InventoryDispatching {
   }
 
   private class ComparatorLeastFair4Minimum implements Comparator<Store> {
+
     @Override
     public int compare(Store o1, Store o2) {
       if (o1.currentInventory < o1.minimumInventory && o2.currentInventory >= o2.minimumInventory) {
@@ -189,6 +199,7 @@ public class InventoryDispatching {
   }
 
   private class ComparatorLeastFair4Desired implements Comparator<Store> {
+
     @Override
     public int compare(Store o1, Store o2) {
       if (o1.currentInventory < o1.desiredInventory && o2.currentInventory >= o2.desiredInventory) {
@@ -209,6 +220,7 @@ public class InventoryDispatching {
   }
 
   private class Store {
+
     int storeId;
     int currentInventory;
     int minimumInventory;

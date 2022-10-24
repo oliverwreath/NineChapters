@@ -1,19 +1,19 @@
 package com.lintcode.BinaryTree;
 
-import com.util.TreeNode;
-import lombok.extern.slf4j.Slf4j;
+import static com.lintcode.BinaryTree.BinaryTree.getSmallTree;
 
+import com.util.TreeNode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-
-import static com.lintcode.BinaryTree.BinaryTree.getSmallTree;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by Yanliang Han on 2016/6/11.
  */
 @Slf4j
 public class LevelOrder {
+
   public static void main(String[] args) {
     testLevelOrder();
   }

@@ -1,15 +1,14 @@
 package com.GoogleAPAC.RoundA;
 
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
+import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 
 import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-
-import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by yanli_000 on 16/7/6.
@@ -18,6 +17,7 @@ import static com.GoogleAPAC.RoundA.Util.getPrintWriter;
 // Extend HttpServlet class
 @Slf4j
 public class LazySpellingBee {
+
   public static void main(String[] args) {
     long startTime = System.currentTimeMillis();
     new LazySpellingBee().lazySpellingBee();

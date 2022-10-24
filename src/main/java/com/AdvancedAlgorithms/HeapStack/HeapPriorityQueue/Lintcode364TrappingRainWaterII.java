@@ -1,11 +1,11 @@
 package com.AdvancedAlgorithms.HeapStack.HeapPriorityQueue;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.PriorityQueue;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Lintcode364TrappingRainWaterII {
+
   public int trapRainWater(int[][] heights) {
     // filter abnormal cases
     if (heights == null || heights.length == 0 || heights[0] == null || heights[0].length == 0) {
@@ -58,6 +58,7 @@ public class Lintcode364TrappingRainWaterII {
   private final int[] dy = new int[]{1, -1, 0, 0};
 
   class Cell {
+
     int height;
     int x;
     int y;
@@ -71,10 +72,10 @@ public class Lintcode364TrappingRainWaterII {
     @Override
     public String toString() {
       return "Cell{" +
-              "height=" + height +
-              ", x=" + x +
-              ", y=" + y +
-              '}';
+          "height=" + height +
+          ", x=" + x +
+          ", y=" + y +
+          '}';
     }
   }
 

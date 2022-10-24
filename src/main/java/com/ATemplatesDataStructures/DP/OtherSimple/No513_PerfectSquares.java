@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class No513_PerfectSquares {
+
   public static void main(String[] args) {
     No513_PerfectSquares No513_PerfectSquares = new No513_PerfectSquares();
     No513_PerfectSquares.testNo513_PerfectSquares();

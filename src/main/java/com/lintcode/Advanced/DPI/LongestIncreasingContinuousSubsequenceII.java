@@ -7,16 +7,17 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LongestIncreasingContinuousSubsequenceII {
+
   public static void main(String[] arg) {
     testLongestIncreasingContinuousSubsequenceII();
   }
 
   private static void testLongestIncreasingContinuousSubsequenceII() {
     log.info("{}", longestIncreasingContinuousSubsequenceII(new int[][]{{1, 2, 3, 4, 5},
-            {16, 17, 24, 23, 6},
-            {15, 18, 25, 22, 7},
-            {14, 19, 20, 21, 8},
-            {13, 12, 11, 10, 9}}));
+        {16, 17, 24, 23, 6},
+        {15, 18, 25, 22, 7},
+        {14, 19, 20, 21, 8},
+        {13, 12, 11, 10, 9}}));
   }
 
   static int search(int i, int j, int n, int m, int[][] A) {

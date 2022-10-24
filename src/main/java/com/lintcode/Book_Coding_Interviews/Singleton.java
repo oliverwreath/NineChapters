@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class Singleton {
+
   private static final Singleton solution = new Singleton();
 
   public static void main(String[] arg) {

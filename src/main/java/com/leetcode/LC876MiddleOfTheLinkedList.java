@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LC876MiddleOfTheLinkedList {
+
   public ListNode middleNode(ListNode head) {
     ListNode slow = head, fast = head;
     while (fast != null && fast.next != null) {
