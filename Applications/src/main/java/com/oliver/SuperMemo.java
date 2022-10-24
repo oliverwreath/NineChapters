@@ -1,4 +1,4 @@
-package util;
+package com.oliver;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -27,15 +27,7 @@ public class SuperMemo {
   private static final ObjectMapper mapper = new ObjectMapper().registerModule(new JavaTimeModule());
 
   public static void main(String[] args) throws ParseException {
-    Args arg = getArgs();
-    boolean isPrintJsonStringExample = arg.getBoolean('l');
-    boolean isPrintInstructions = arg.getBoolean('i');
-//    int port = arg.getInt('p');
-    String directory = arg.getString('d');
-
-    printRecommendedSpacedRepetitions();
-    if (isPrintJsonStringExample) printJsonStringExample();
-    if (isPrintInstructions) printInstructions();
+    String directory = getArgsDirectory();
     List<Card> cards = readCards(directory);
     Map<LocalDate, Queue<Card>> cardsBySortedDate = groupCardsByDate(cards);
     log.info(String.format("cardsBySortedDate.size()=%d", cardsBySortedDate.size()));
@@ -50,6 +42,18 @@ public class SuperMemo {
         System.out.println("");
     }
     log.info("========================================================");
+  }
+
+  static String getArgsDirectory() throws ParseException {
+    Args arg = getArgs();
+    boolean isPrintJsonStringExample = arg.getBoolean('l');
+    boolean isPrintInstructions = arg.getBoolean('i');
+    String directory = arg.getString('d');
+
+    printRecommendedSpacedRepetitions();
+    if (isPrintJsonStringExample) printJsonStringExample();
+    if (isPrintInstructions) printInstructions();
+    return directory;
   }
 
   private static void printInstructions() {
@@ -101,7 +105,7 @@ public class SuperMemo {
     return true;
   }
 
-  private static List<Card> readCards(String directory) {
+  static List<Card> readCards(String directory) {
     File file = Path.of(directory).toFile();
     if (!isValid(file))
       return Collections.emptyList();
