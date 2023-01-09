@@ -18,13 +18,13 @@ import org.junit.jupiter.api.Test;
 class FileSplitterTest {
 
   @Test void testReadCards() {
-    long lineJava8 = countLineJava8(Path.of("Applications/src/test/resources/TestFile.txt"));
+    long lineJava8 = countLineJava8(Path.of("src/test/resources/TestFile.txt"));
     Assertions.assertEquals(5, lineJava8);
   }
 
   @Test void testSplitFileInSameFolder() throws IOException {
     for (int i = 1; i < 8; i++) {
-      List<Path> chunkFiles = splitFileInSameFolder(Path.of("Applications/src/test/resources/TestFile.txt"), i);
+      List<Path> chunkFiles = splitFileInSameFolder(Path.of("src/test/resources/TestFile.txt"), i);
       Assertions.assertEquals(i, chunkFiles.size());
       for (Path chunkFile : chunkFiles) {
         Files.deleteIfExists(chunkFile);
