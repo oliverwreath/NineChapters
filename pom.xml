@@ -11,6 +11,7 @@
   <modules>
     <module>Util</module>
     <module>Applications</module>
+    <module>Algo</module>
   </modules>
 
   <properties>
