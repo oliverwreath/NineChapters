@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.Weekly438;
 
 import lombok.extern.slf4j.Slf4j;
 
