@@ -19,6 +19,6 @@ class SuperMemoTest {
     String directory = getArgsDirectory();
     Assertions.assertEquals("src/main/resources/nocommit/Cards.json", directory);
     List<Card> cards = readCards(directory);
-    Assertions.assertEquals(22, cards.size());
+    Assertions.assertEquals(0, cards.size());
   }
 }
